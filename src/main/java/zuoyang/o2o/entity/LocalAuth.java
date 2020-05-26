@@ -1,4 +1,4 @@
-package zuoyang.o2o.domain;
+package zuoyang.o2o.entity;
 
 import lombok.Getter;
 import lombok.Setter;
@@ -10,7 +10,7 @@ import java.util.Date;
 public class LocalAuth {
     private Long localAuthId;
     private String password;
-    private String userName;
+    private String username;
     private PersonInfo personInfo;
     private Date createTime;
     private Date lastEditTime;

@@ -1,4 +1,4 @@
-package zuoyang.o2o.domain;
+package zuoyang.o2o.entity;
 
 import lombok.Getter;
 import lombok.Setter;
@@ -12,7 +12,7 @@ public class Product {
     private Long productId;
     private String productName;
 //    default img
-    private String productImg;
+    private String imgAddr;
     private String productDesc;
     private String normalPrice;
     private String promotePrice;

@@ -1,4 +1,4 @@
-package zuoyang.o2o.domain;
+package zuoyang.o2o.entity;
 
 import lombok.Getter;
 import lombok.Setter;

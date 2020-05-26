@@ -1,4 +1,4 @@
-package zuoyang.o2o.domain;
+package zuoyang.o2o.entity;
 
 import lombok.Getter;
 import lombok.Setter;
@@ -12,7 +12,7 @@ public class Shop {
     private String shopName;
     private String shopDesc;
     private String shopAddress;
-    private String phoneNumber;
+    private String phone;
     private String shopImg;
     private Integer priority;
 //    -1 for ban, 0 for review, 1 for active

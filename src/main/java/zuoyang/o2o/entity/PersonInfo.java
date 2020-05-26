@@ -1,4 +1,4 @@
-package zuoyang.o2o.domain;
+package zuoyang.o2o.entity;
 
 import lombok.Getter;
 import lombok.Setter;
@@ -9,7 +9,7 @@ import java.util.Date;
 @Setter
 public class PersonInfo {
     private Long userId;
-    private String userName;
+    private String name;
     private String profileImg;
     private String email;
     private String gender;
