@@ -28,7 +28,7 @@ public class DataSourceConfiguration {
         // set url
         comboPooledDataSource.setJdbcUrl(jdbcUrl);
         // set username
-        comboPooledDataSource.setJdbcUrl(jdbcUserName);
+        comboPooledDataSource.setUser(jdbcUserName);
         // set password
         comboPooledDataSource.setPassword(jdbcPassword);
         return comboPooledDataSource;
