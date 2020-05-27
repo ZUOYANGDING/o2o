@@ -1,0 +1,8 @@
+2020-05-27 11:07:13.733 [restartedMain] INFO  zuoyang.o2o.O2oApplication - Starting O2oApplication on DingZuoyangdeMacBook-Pro.local with PID 63139 (/Users/zuoyangding/IdeaProjects/o2o/target/classes started by zuoyangding in /Users/zuoyangding/IdeaProjects/o2o)
+2020-05-27 11:07:13.736 [restartedMain] INFO  zuoyang.o2o.O2oApplication - No active profile set, falling back to default profiles: default
+2020-05-27 11:07:15.976 [restartedMain] INFO  zuoyang.o2o.O2oApplication - Started O2oApplication in 2.648 seconds (JVM running for 3.538)
+2020-05-27 11:14:48.439 [restartedMain] INFO  zuoyang.o2o.O2oApplication - Starting O2oApplication on DingZuoyangdeMacBook-Pro.local with PID 63186 (/Users/zuoyangding/IdeaProjects/o2o/target/classes started by zuoyangding in /Users/zuoyangding/IdeaProjects/o2o)
+2020-05-27 11:14:48.442 [restartedMain] INFO  zuoyang.o2o.O2oApplication - No active profile set, falling back to default profiles: default
+2020-05-27 11:14:50.101 [restartedMain] INFO  zuoyang.o2o.O2oApplication - Started O2oApplication in 1.904 seconds (JVM running for 7.752)
+2020-05-27 11:15:22.657 [http-nio-8080-exec-1] INFO  zuoyang.o2o.web.superadmin.AreaController - ====start====
+2020-05-27 11:15:23.344 [http-nio-8080-exec-1] INFO  zuoyang.o2o.web.superadmin.AreaController - ======end======

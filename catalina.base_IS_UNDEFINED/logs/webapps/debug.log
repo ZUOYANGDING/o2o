@@ -1,0 +1,6 @@
+2020-05-27 11:07:13.735 [restartedMain] DEBUG zuoyang.o2o.O2oApplication - Running with Spring Boot v2.3.0.RELEASE, Spring v5.2.6.RELEASE
+2020-05-27 11:14:48.442 [restartedMain] DEBUG zuoyang.o2o.O2oApplication - Running with Spring Boot v2.3.0.RELEASE, Spring v5.2.6.RELEASE
+2020-05-27 11:15:23.256 [http-nio-8080-exec-1] DEBUG zuoyang.o2o.dao.AreaDao.queryArea - ==>  Preparing: SELECT area_id, area_name, priority, create_time, last_edit_time FROM tb_area ORDER BY priority DESC 
+2020-05-27 11:15:23.277 [http-nio-8080-exec-1] DEBUG zuoyang.o2o.dao.AreaDao.queryArea - ==> Parameters: 
+2020-05-27 11:15:23.339 [http-nio-8080-exec-1] DEBUG zuoyang.o2o.dao.AreaDao.queryArea - <==      Total: 2
+2020-05-27 11:15:23.343 [http-nio-8080-exec-1] DEBUG zuoyang.o2o.web.superadmin.AreaController - costTime:[685ms]
