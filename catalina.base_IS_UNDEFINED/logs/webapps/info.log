@@ -6,3 +6,6 @@
 2020-05-27 11:14:50.101 [restartedMain] INFO  zuoyang.o2o.O2oApplication - Started O2oApplication in 1.904 seconds (JVM running for 7.752)
 2020-05-27 11:15:22.657 [http-nio-8080-exec-1] INFO  zuoyang.o2o.web.superadmin.AreaController - ====start====
 2020-05-27 11:15:23.344 [http-nio-8080-exec-1] INFO  zuoyang.o2o.web.superadmin.AreaController - ======end======
+2020-05-27 11:31:38.042 [main] INFO  zuoyang.o2o.dao.AreaDaoTest - Starting AreaDaoTest on DingZuoyangdeMacBook-Pro.local with PID 63271 (started by zuoyangding in /Users/zuoyangding/IdeaProjects/o2o)
+2020-05-27 11:31:38.043 [main] INFO  zuoyang.o2o.dao.AreaDaoTest - No active profile set, falling back to default profiles: default
+2020-05-27 11:31:39.873 [main] INFO  zuoyang.o2o.dao.AreaDaoTest - Started AreaDaoTest in 7.075 seconds (JVM running for 8.35)

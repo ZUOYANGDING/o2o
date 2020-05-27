@@ -31,6 +31,19 @@ public class DataSourceConfiguration {
         comboPooledDataSource.setUser(jdbcUserName);
         // set password
         comboPooledDataSource.setPassword(jdbcPassword);
+
+        //setup c3p0 connection pool
+        // max number of thread in pool
+        comboPooledDataSource.setMaxPoolSize(30);
+        // min number of thread in pool
+        comboPooledDataSource.setMinPoolSize(10);
+        comboPooledDataSource.setInitialPoolSize(10);
+        // set auto commit as false after close the connection
+        comboPooledDataSource.setAutoCommitOnClose(false);
+        // set up timeout for connection
+        comboPooledDataSource.setCheckoutTimeout(10000);
+        // set up retry times after connection failed
+        comboPooledDataSource.setAcquireRetryAttempts(2);
         return comboPooledDataSource;
     }
 
