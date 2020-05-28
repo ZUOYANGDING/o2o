@@ -47,4 +47,24 @@ class ShopDaoTest {
         int returnNumber = shopDao.insertShop(shop);
         assertEquals(1, returnNumber);
     }
+
+    @Test
+    void updateShop() {
+        Shop shop = new Shop();
+        PersonInfo personInfo = new PersonInfo();
+        ShopCategory shopCategory = new ShopCategory();
+        Area area = new Area();
+
+        shop.setShopId(1L);
+        area.setAreaId(2);
+        shop.setPersonInfo(personInfo);
+        shop.setShopCategory(shopCategory);
+        shop.setArea(area);
+
+
+        shop.setShopDesc("foo desc test update");
+        shop.setShopAddress("foo address test update");
+        int returnNumber = shopDao.updateShop(shop);
+        assertEquals(1, returnNumber);
+    }
 }

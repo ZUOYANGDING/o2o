@@ -1,20 +1,7 @@
-2020-05-27 11:07:13.735 [restartedMain] DEBUG zuoyang.o2o.O2oApplication - Running with Spring Boot v2.3.0.RELEASE, Spring v5.2.6.RELEASE
-2020-05-27 11:14:48.442 [restartedMain] DEBUG zuoyang.o2o.O2oApplication - Running with Spring Boot v2.3.0.RELEASE, Spring v5.2.6.RELEASE
-2020-05-27 11:15:23.256 [http-nio-8080-exec-1] DEBUG zuoyang.o2o.dao.AreaDao.queryArea - ==>  Preparing: SELECT area_id, area_name, priority, create_time, last_edit_time FROM tb_area ORDER BY priority DESC 
-2020-05-27 11:15:23.277 [http-nio-8080-exec-1] DEBUG zuoyang.o2o.dao.AreaDao.queryArea - ==> Parameters: 
-2020-05-27 11:15:23.339 [http-nio-8080-exec-1] DEBUG zuoyang.o2o.dao.AreaDao.queryArea - <==      Total: 2
-2020-05-27 11:15:23.343 [http-nio-8080-exec-1] DEBUG zuoyang.o2o.web.superadmin.AreaController - costTime:[685ms]
-2020-05-27 11:31:38.043 [main] DEBUG zuoyang.o2o.dao.AreaDaoTest - Running with Spring Boot v2.3.0.RELEASE, Spring v5.2.6.RELEASE
-2020-05-27 11:31:40.751 [main] DEBUG zuoyang.o2o.dao.AreaDao.queryArea - ==>  Preparing: SELECT area_id, area_name, priority, create_time, last_edit_time FROM tb_area ORDER BY priority DESC 
-2020-05-27 11:31:40.793 [main] DEBUG zuoyang.o2o.dao.AreaDao.queryArea - ==> Parameters: 
-2020-05-27 11:31:40.829 [main] DEBUG zuoyang.o2o.dao.AreaDao.queryArea - <==      Total: 2
-2020-05-27 21:55:29.871 [main] DEBUG zuoyang.o2o.dao.ShopDaoTest - Running with Spring Boot v2.3.0.RELEASE, Spring v5.2.6.RELEASE
-2020-05-27 21:55:33.090 [main] DEBUG zuoyang.o2o.dao.ShopDao.insertShop - ==>  Preparing: INSERT INTO tb_shop(shop_id, shop_name, shop_desc, shop_address, phone, shop_img, priority, enable_status, create_time, last_edit_time, advice, area_id, owner_id, shop_category_id) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?) 
-2020-05-27 21:55:33.143 [main] DEBUG zuoyang.o2o.dao.ShopDao.insertShop - ==> Parameters: null, foo shop(String), foo address(String), foo phone(String), foo img(String), 1(Integer), 1(Integer), 2020-05-27 21:55:32.311(Timestamp), 2020-05-27 21:55:32.311(Timestamp), under review(String), 1(Integer), 1(Long), 1(Long)
-2020-05-27 21:57:10.079 [main] DEBUG zuoyang.o2o.dao.ShopDaoTest - Running with Spring Boot v2.3.0.RELEASE, Spring v5.2.6.RELEASE
-2020-05-27 21:57:12.663 [main] DEBUG zuoyang.o2o.dao.ShopDao.insertShop - ==>  Preparing: INSERT INTO tb_shop(shop_id, shop_name, shop_desc, shop_address, phone, shop_img, priority, enable_status, create_time, last_edit_time, advice, area_id, owner_id, shop_category_id) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?) 
-2020-05-27 21:57:12.731 [main] DEBUG zuoyang.o2o.dao.ShopDao.insertShop - ==> Parameters: null, foo shop(String), foo address(String), foo phone(String), foo img(String), 1(Integer), 1(Integer), 2020-05-27 21:57:12.161(Timestamp), 2020-05-27 21:57:12.161(Timestamp), under review(String), 1(Integer), 1(Long), 1(Long)
-2020-05-27 21:58:47.211 [main] DEBUG zuoyang.o2o.dao.ShopDaoTest - Running with Spring Boot v2.3.0.RELEASE, Spring v5.2.6.RELEASE
-2020-05-27 21:58:49.668 [main] DEBUG zuoyang.o2o.dao.ShopDao.insertShop - ==>  Preparing: INSERT INTO tb_shop(shop_id, shop_name, shop_desc, shop_address, phone, shop_img, priority, enable_status, create_time, last_edit_time, advice, area_id, owner_id, shop_category_id) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?) 
-2020-05-27 21:58:49.731 [main] DEBUG zuoyang.o2o.dao.ShopDao.insertShop - ==> Parameters: null, foo shop(String), foo desc(String), foo address(String), foo phone(String), foo img(String), 1(Integer), 1(Integer), 2020-05-27 21:58:49.212(Timestamp), 2020-05-27 21:58:49.212(Timestamp), under review(String), 1(Integer), 1(Long), 1(Long)
-2020-05-27 21:58:49.756 [main] DEBUG zuoyang.o2o.dao.ShopDao.insertShop - <==    Updates: 1
+2020-05-28 09:46:31.078 [main] DEBUG zuoyang.o2o.dao.ShopDaoTest - Running with Spring Boot v2.3.0.RELEASE, Spring v5.2.6.RELEASE
+2020-05-28 09:46:34.256 [main] DEBUG zuoyang.o2o.dao.ShopDao.insertShop - ==>  Preparing: INSERT INTO tb_shop(shop_id, shop_name, shop_desc, shop_address, phone, shop_img, priority, enable_status, create_time, last_edit_time, advice, area_id, owner_id, shop_category_id) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?) 
+2020-05-28 09:46:34.308 [main] DEBUG zuoyang.o2o.dao.ShopDao.insertShop - ==> Parameters: 1(Long), null, foo desc test update(String), foo address test update(String), null, null, null, null, null, null, null, 2(Integer), null, null
+2020-05-28 09:47:06.772 [main] DEBUG zuoyang.o2o.dao.ShopDaoTest - Running with Spring Boot v2.3.0.RELEASE, Spring v5.2.6.RELEASE
+2020-05-28 09:47:09.446 [main] DEBUG zuoyang.o2o.dao.ShopDao.updateShop - ==>  Preparing: update tb_shop SET shop_desc=?, shop_address=?, area_id=?, shop_category_id=? WHERE shop_id=? 
+2020-05-28 09:47:09.516 [main] DEBUG zuoyang.o2o.dao.ShopDao.updateShop - ==> Parameters: foo desc test update(String), foo address test update(String), 2(Integer), null, 1(Long)
+2020-05-28 09:47:09.523 [main] DEBUG zuoyang.o2o.dao.ShopDao.updateShop - <==    Updates: 1
