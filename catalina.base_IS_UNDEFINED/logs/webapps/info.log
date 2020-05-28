@@ -9,3 +9,12 @@
 2020-05-27 11:31:38.042 [main] INFO  zuoyang.o2o.dao.AreaDaoTest - Starting AreaDaoTest on DingZuoyangdeMacBook-Pro.local with PID 63271 (started by zuoyangding in /Users/zuoyangding/IdeaProjects/o2o)
 2020-05-27 11:31:38.043 [main] INFO  zuoyang.o2o.dao.AreaDaoTest - No active profile set, falling back to default profiles: default
 2020-05-27 11:31:39.873 [main] INFO  zuoyang.o2o.dao.AreaDaoTest - Started AreaDaoTest in 7.075 seconds (JVM running for 8.35)
+2020-05-27 21:55:29.871 [main] INFO  zuoyang.o2o.dao.ShopDaoTest - Starting ShopDaoTest on DingZuoyangdeMacBook-Pro.local with PID 65833 (started by zuoyangding in /Users/zuoyangding/IdeaProjects/o2o)
+2020-05-27 21:55:29.872 [main] INFO  zuoyang.o2o.dao.ShopDaoTest - No active profile set, falling back to default profiles: default
+2020-05-27 21:55:31.908 [main] INFO  zuoyang.o2o.dao.ShopDaoTest - Started ShopDaoTest in 7.462 seconds (JVM running for 9.272)
+2020-05-27 21:57:10.079 [main] INFO  zuoyang.o2o.dao.ShopDaoTest - Starting ShopDaoTest on DingZuoyangdeMacBook-Pro.local with PID 65842 (started by zuoyangding in /Users/zuoyangding/IdeaProjects/o2o)
+2020-05-27 21:57:10.080 [main] INFO  zuoyang.o2o.dao.ShopDaoTest - No active profile set, falling back to default profiles: default
+2020-05-27 21:57:11.860 [main] INFO  zuoyang.o2o.dao.ShopDaoTest - Started ShopDaoTest in 7.065 seconds (JVM running for 8.384)
+2020-05-27 21:58:47.210 [main] INFO  zuoyang.o2o.dao.ShopDaoTest - Starting ShopDaoTest on DingZuoyangdeMacBook-Pro.local with PID 65848 (started by zuoyangding in /Users/zuoyangding/IdeaProjects/o2o)
+2020-05-27 21:58:47.211 [main] INFO  zuoyang.o2o.dao.ShopDaoTest - No active profile set, falling back to default profiles: default
+2020-05-27 21:58:48.924 [main] INFO  zuoyang.o2o.dao.ShopDaoTest - Started ShopDaoTest in 7.025 seconds (JVM running for 8.195)

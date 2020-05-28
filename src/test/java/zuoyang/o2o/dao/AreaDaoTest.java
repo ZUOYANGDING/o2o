@@ -18,11 +18,6 @@ class AreaDaoTest {
     @Autowired
     private AreaDao areaDao;
 
-    @BeforeEach
-    void setUp() {
-
-    }
-
     @Test
     void queryArea() {
         List<Area> areaList = areaDao.queryArea();
