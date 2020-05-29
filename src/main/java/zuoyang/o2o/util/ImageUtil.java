@@ -53,9 +53,11 @@ public class ImageUtil {
         log.debug("current complete file path: " + destFile);
 
         try {
+            // path of the watermark should be rewrite when deploy the project
             Thumbnails.of(classicFile).size(200, 200).
                     watermark(Positions.BOTTOM_RIGHT,
-                            ImageIO.read(new File(basePath + "/watemark.jpg")), 0.25f).
+                            ImageIO.read(new File("/Users/zuoyangding/IdeaProjects/o2o/src/main/resources/watermark.jpg")),
+                            0.25f).
                     outputQuality(0.9f).toFile(destFile);
         } catch (Exception e) {
             log.error(e.toString());

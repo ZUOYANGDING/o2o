@@ -1,1 +1,9 @@
-2020-05-28 16:58:49.707 [http-nio-8080-exec-2] ERROR zuoyang.o2o.web.superadmin.AreaController - test error
+2020-05-29 11:57:34.290 [main] ERROR zuoyang.o2o.util.ImageUtil - javax.imageio.IIOException: Can't read input file!
+2020-05-29 11:57:34.293 [main] ERROR zuoyang.o2o.service.serviceImp.ShopServiceImpl - store shop image failed: failed to create imagejavax.imageio.IIOException: Can't read input file!
+2020-05-29 11:57:34.294 [main] ERROR zuoyang.o2o.service.serviceImp.ShopServiceImpl - store shop image failed: failed to create imagejavax.imageio.IIOException: Can't read input file!
+2020-05-29 12:46:11.718 [main] ERROR zuoyang.o2o.util.ImageUtil - javax.imageio.IIOException: Can't read input file!
+2020-05-29 12:46:11.719 [main] ERROR zuoyang.o2o.service.serviceImp.ShopServiceImpl - store shop image failed: failed to create imagejavax.imageio.IIOException: Can't read input file!
+2020-05-29 12:46:11.719 [main] ERROR zuoyang.o2o.service.serviceImp.ShopServiceImpl - store shop image failed: failed to create imagejavax.imageio.IIOException: Can't read input file!
+2020-05-29 12:50:14.614 [main] ERROR zuoyang.o2o.util.ImageUtil - javax.imageio.IIOException: Can't create an ImageInputStream!
+2020-05-29 12:50:14.615 [main] ERROR zuoyang.o2o.service.serviceImp.ShopServiceImpl - store shop image failed: failed to create imagejavax.imageio.IIOException: Can't create an ImageInputStream!
+2020-05-29 12:50:14.615 [main] ERROR zuoyang.o2o.service.serviceImp.ShopServiceImpl - store shop image failed: failed to create imagejavax.imageio.IIOException: Can't create an ImageInputStream!

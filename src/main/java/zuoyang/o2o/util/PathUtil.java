@@ -12,17 +12,17 @@ public class PathUtil {
 
     // set up base path in windows os
     @Value("${win_base_path}")
-    public void setWinPath() {
+    public void setWinPath(String winPath) {
         PathUtil.winPath = winPath;
     }
     // set up base path in linux os
     @Value("${linux_base_path}")
-    public void setLinuxPath() {
+    public void setLinuxPath(String linuxPath) {
         PathUtil.linuxPath=linuxPath;
     }
     // set up relevant path for shop
     @Value("${shop_relevant_path}")
-    public void setShopPath() {
+    public void setShopPath(String shopPath) {
         PathUtil.shopPath = shopPath;
     }
 
