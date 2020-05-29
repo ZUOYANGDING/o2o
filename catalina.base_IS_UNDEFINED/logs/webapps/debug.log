@@ -5,3 +5,14 @@
 2020-05-28 09:47:09.446 [main] DEBUG zuoyang.o2o.dao.ShopDao.updateShop - ==>  Preparing: update tb_shop SET shop_desc=?, shop_address=?, area_id=?, shop_category_id=? WHERE shop_id=? 
 2020-05-28 09:47:09.516 [main] DEBUG zuoyang.o2o.dao.ShopDao.updateShop - ==> Parameters: foo desc test update(String), foo address test update(String), 2(Integer), null, 1(Long)
 2020-05-28 09:47:09.523 [main] DEBUG zuoyang.o2o.dao.ShopDao.updateShop - <==    Updates: 1
+2020-05-28 16:54:06.313 [main] DEBUG zuoyang.o2o.dao.ShopDaoTest - Running with Spring Boot v2.3.0.RELEASE, Spring v5.2.6.RELEASE
+2020-05-28 16:54:09.358 [main] DEBUG zuoyang.o2o.dao.ShopDao.updateShop - ==>  Preparing: update tb_shop SET shop_desc=?, shop_address=?, area_id=?, shop_category_id=? WHERE shop_id=? 
+2020-05-28 16:54:09.409 [main] DEBUG zuoyang.o2o.dao.ShopDao.updateShop - ==> Parameters: foo desc test update(String), foo address test update(String), 2(Integer), null, 1(Long)
+2020-05-28 16:54:09.411 [main] DEBUG zuoyang.o2o.dao.ShopDao.updateShop - <==    Updates: 1
+2020-05-28 16:55:53.948 [restartedMain] DEBUG zuoyang.o2o.O2oApplication - Running with Spring Boot v2.3.0.RELEASE, Spring v5.2.6.RELEASE
+2020-05-28 16:58:17.734 [restartedMain] DEBUG zuoyang.o2o.O2oApplication - Running with Spring Boot v2.3.0.RELEASE, Spring v5.2.6.RELEASE
+2020-05-28 16:58:49.603 [http-nio-8080-exec-2] DEBUG zuoyang.o2o.dao.AreaDao.queryArea - ==>  Preparing: SELECT area_id, area_name, priority, create_time, last_edit_time FROM tb_area ORDER BY priority DESC 
+2020-05-28 16:58:49.629 [http-nio-8080-exec-2] DEBUG zuoyang.o2o.dao.AreaDao.queryArea - ==> Parameters: 
+2020-05-28 16:58:49.703 [http-nio-8080-exec-2] DEBUG zuoyang.o2o.dao.AreaDao.queryArea - <==      Total: 2
+2020-05-28 16:58:49.709 [http-nio-8080-exec-2] DEBUG zuoyang.o2o.web.superadmin.AreaController - costTime:[489ms]
+2020-05-28 17:00:37.017 [restartedMain] DEBUG zuoyang.o2o.O2oApplication - Running with Spring Boot v2.3.0.RELEASE, Spring v5.2.6.RELEASE

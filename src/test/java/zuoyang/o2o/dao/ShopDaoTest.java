@@ -61,7 +61,6 @@ class ShopDaoTest {
         shop.setShopCategory(shopCategory);
         shop.setArea(area);
 
-
         shop.setShopDesc("foo desc test update");
         shop.setShopAddress("foo address test update");
         int returnNumber = shopDao.updateShop(shop);
