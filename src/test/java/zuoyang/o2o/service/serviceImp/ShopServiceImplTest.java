@@ -39,10 +39,10 @@ class ShopServiceImplTest {
         shop.setShopCategory(shopCategory);
         shop.setArea(area);
 
-        shop.setShopName("foo shop 1");
-        shop.setShopDesc("foo desc 1");
-        shop.setShopAddress("foo address 1");
-        shop.setPhone("foo phone 1");
+        shop.setShopName("foo shop 2");
+        shop.setShopDesc("foo desc 2");
+        shop.setShopAddress("foo address 2");
+        shop.setPhone("foo phone 2");
         shop.setEnableStatus(ShopStateEnum.CHECK.getState());
         shop.setAdvice("under review");
 

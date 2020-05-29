@@ -61,6 +61,8 @@ public class ImageUtil {
                     outputQuality(0.9f).toFile(destFile);
         } catch (Exception e) {
             log.error(e.toString());
+            String createdDirectory = basePath + targetPath;
+            removeCreatedDirectory(createdDirectory);
             throw new RuntimeException("failed to create image" + e.toString());
         }
         return relativePath;
@@ -96,6 +98,23 @@ public class ImageUtil {
         File dirPath = new File(fileDirtPath);
         if (!dirPath.exists()) {
             dirPath.mkdirs();
+        }
+    }
+
+    /**
+     * delete the created directory when store image failed
+     * @param createdDirectory
+     */
+    public static void removeCreatedDirectory(String createdDirectory) {
+        log.info("delete the created directory: " + createdDirectory);
+        File rDirectory = new File(createdDirectory);
+        if (rDirectory.exists()) {
+            if (rDirectory.isDirectory()) {
+                for (File f : rDirectory.listFiles()) {
+                    f.delete();
+                }
+            }
+            rDirectory.delete();
         }
     }
 

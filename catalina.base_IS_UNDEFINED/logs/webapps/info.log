@@ -28,3 +28,13 @@
 2020-05-29 12:50:53.919 [main] INFO  zuoyang.o2o.service.serviceImp.ShopServiceImplTest - Starting ShopServiceImplTest on dingzuoangdembp.lan with PID 69590 (started by zuoyangding in /Users/zuoyangding/IdeaProjects/o2o)
 2020-05-29 12:50:53.920 [main] INFO  zuoyang.o2o.service.serviceImp.ShopServiceImplTest - No active profile set, falling back to default profiles: default
 2020-05-29 12:50:55.753 [main] INFO  zuoyang.o2o.service.serviceImp.ShopServiceImplTest - Started ShopServiceImplTest in 2.132 seconds (JVM running for 3.459)
+2020-05-29 16:44:17.476 [main] INFO  zuoyang.o2o.service.serviceImp.ShopServiceImplTest - Starting ShopServiceImplTest on dingzuoangdembp.lan with PID 69975 (started by zuoyangding in /Users/zuoyangding/IdeaProjects/o2o)
+2020-05-29 16:44:17.478 [main] INFO  zuoyang.o2o.service.serviceImp.ShopServiceImplTest - No active profile set, falling back to default profiles: default
+2020-05-29 16:44:19.453 [main] INFO  zuoyang.o2o.service.serviceImp.ShopServiceImplTest - Started ShopServiceImplTest in 2.414 seconds (JVM running for 3.956)
+2020-05-29 16:45:36.083 [main] INFO  zuoyang.o2o.service.serviceImp.ShopServiceImplTest - Starting ShopServiceImplTest on dingzuoangdembp.lan with PID 69982 (started by zuoyangding in /Users/zuoyangding/IdeaProjects/o2o)
+2020-05-29 16:45:36.084 [main] INFO  zuoyang.o2o.service.serviceImp.ShopServiceImplTest - No active profile set, falling back to default profiles: default
+2020-05-29 16:45:37.957 [main] INFO  zuoyang.o2o.service.serviceImp.ShopServiceImplTest - Started ShopServiceImplTest in 2.134 seconds (JVM running for 3.431)
+2020-05-29 16:45:39.012 [main] INFO  zuoyang.o2o.util.ImageUtil - delete the created directory: /Users/zuoyangding/work/image/upload/images/item/shop/11/
+2020-05-29 16:48:02.693 [main] INFO  zuoyang.o2o.service.serviceImp.ShopServiceImplTest - Starting ShopServiceImplTest on dingzuoangdembp.lan with PID 69990 (started by zuoyangding in /Users/zuoyangding/IdeaProjects/o2o)
+2020-05-29 16:48:02.694 [main] INFO  zuoyang.o2o.service.serviceImp.ShopServiceImplTest - No active profile set, falling back to default profiles: default
+2020-05-29 16:48:04.472 [main] INFO  zuoyang.o2o.service.serviceImp.ShopServiceImplTest - Started ShopServiceImplTest in 2.047 seconds (JVM running for 3.259)

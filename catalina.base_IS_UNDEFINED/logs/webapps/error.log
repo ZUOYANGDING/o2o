@@ -7,3 +7,9 @@
 2020-05-29 12:50:14.614 [main] ERROR zuoyang.o2o.util.ImageUtil - javax.imageio.IIOException: Can't create an ImageInputStream!
 2020-05-29 12:50:14.615 [main] ERROR zuoyang.o2o.service.serviceImp.ShopServiceImpl - store shop image failed: failed to create imagejavax.imageio.IIOException: Can't create an ImageInputStream!
 2020-05-29 12:50:14.615 [main] ERROR zuoyang.o2o.service.serviceImp.ShopServiceImpl - store shop image failed: failed to create imagejavax.imageio.IIOException: Can't create an ImageInputStream!
+2020-05-29 16:44:20.855 [main] ERROR zuoyang.o2o.util.ImageUtil - javax.imageio.IIOException: Can't create an ImageInputStream!
+2020-05-29 16:44:20.857 [main] ERROR zuoyang.o2o.service.serviceImp.ShopServiceImpl - store shop image failed: failed to create imagejavax.imageio.IIOException: Can't create an ImageInputStream!
+2020-05-29 16:44:20.857 [main] ERROR zuoyang.o2o.service.serviceImp.ShopServiceImpl - store shop image failed: failed to create imagejavax.imageio.IIOException: Can't create an ImageInputStream!
+2020-05-29 16:45:39.011 [main] ERROR zuoyang.o2o.util.ImageUtil - javax.imageio.IIOException: Can't create an ImageInputStream!
+2020-05-29 16:45:39.012 [main] ERROR zuoyang.o2o.service.serviceImp.ShopServiceImpl - store shop image failed: failed to create imagejavax.imageio.IIOException: Can't create an ImageInputStream!
+2020-05-29 16:45:39.013 [main] ERROR zuoyang.o2o.service.serviceImp.ShopServiceImpl - store shop image failed: failed to create imagejavax.imageio.IIOException: Can't create an ImageInputStream!
