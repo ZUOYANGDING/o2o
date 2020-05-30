@@ -20,6 +20,6 @@ class AreaServiceImplTest {
     @Test
     void getAreaList() {
         List<Area> areaList = areaService.getAreaList();
-        assertEquals("are 2", areaList.get(0).getAreaName());
+        assertEquals("Fremont", areaList.get(0).getAreaName());
     }
 }

@@ -1,15 +1,19 @@
-2020-05-29 11:57:34.290 [main] ERROR zuoyang.o2o.util.ImageUtil - javax.imageio.IIOException: Can't read input file!
-2020-05-29 11:57:34.293 [main] ERROR zuoyang.o2o.service.serviceImp.ShopServiceImpl - store shop image failed: failed to create imagejavax.imageio.IIOException: Can't read input file!
-2020-05-29 11:57:34.294 [main] ERROR zuoyang.o2o.service.serviceImp.ShopServiceImpl - store shop image failed: failed to create imagejavax.imageio.IIOException: Can't read input file!
-2020-05-29 12:46:11.718 [main] ERROR zuoyang.o2o.util.ImageUtil - javax.imageio.IIOException: Can't read input file!
-2020-05-29 12:46:11.719 [main] ERROR zuoyang.o2o.service.serviceImp.ShopServiceImpl - store shop image failed: failed to create imagejavax.imageio.IIOException: Can't read input file!
-2020-05-29 12:46:11.719 [main] ERROR zuoyang.o2o.service.serviceImp.ShopServiceImpl - store shop image failed: failed to create imagejavax.imageio.IIOException: Can't read input file!
-2020-05-29 12:50:14.614 [main] ERROR zuoyang.o2o.util.ImageUtil - javax.imageio.IIOException: Can't create an ImageInputStream!
-2020-05-29 12:50:14.615 [main] ERROR zuoyang.o2o.service.serviceImp.ShopServiceImpl - store shop image failed: failed to create imagejavax.imageio.IIOException: Can't create an ImageInputStream!
-2020-05-29 12:50:14.615 [main] ERROR zuoyang.o2o.service.serviceImp.ShopServiceImpl - store shop image failed: failed to create imagejavax.imageio.IIOException: Can't create an ImageInputStream!
-2020-05-29 16:44:20.855 [main] ERROR zuoyang.o2o.util.ImageUtil - javax.imageio.IIOException: Can't create an ImageInputStream!
-2020-05-29 16:44:20.857 [main] ERROR zuoyang.o2o.service.serviceImp.ShopServiceImpl - store shop image failed: failed to create imagejavax.imageio.IIOException: Can't create an ImageInputStream!
-2020-05-29 16:44:20.857 [main] ERROR zuoyang.o2o.service.serviceImp.ShopServiceImpl - store shop image failed: failed to create imagejavax.imageio.IIOException: Can't create an ImageInputStream!
-2020-05-29 16:45:39.011 [main] ERROR zuoyang.o2o.util.ImageUtil - javax.imageio.IIOException: Can't create an ImageInputStream!
-2020-05-29 16:45:39.012 [main] ERROR zuoyang.o2o.service.serviceImp.ShopServiceImpl - store shop image failed: failed to create imagejavax.imageio.IIOException: Can't create an ImageInputStream!
-2020-05-29 16:45:39.013 [main] ERROR zuoyang.o2o.service.serviceImp.ShopServiceImpl - store shop image failed: failed to create imagejavax.imageio.IIOException: Can't create an ImageInputStream!
+2020-05-30 11:57:42.639 [main] ERROR zuoyang.o2o.util.ImageUtil - javax.imageio.IIOException: Can't read input file!
+2020-05-30 11:57:42.642 [main] ERROR zuoyang.o2o.service.serviceImp.ShopServiceImpl - store shop image failed: failed to create imagejavax.imageio.IIOException: Can't read input file!
+2020-05-30 11:57:42.643 [main] ERROR zuoyang.o2o.service.serviceImp.ShopServiceImpl - store shop image failed: failed to create imagejavax.imageio.IIOException: Can't read input file!
+2020-05-30 12:01:22.434 [main] ERROR zuoyang.o2o.util.ImageUtil - javax.imageio.IIOException: Can't read input file!
+2020-05-30 12:01:22.435 [main] ERROR zuoyang.o2o.util.ImageUtil - watermarkpath: /Users/zuoyangding/work/image/watermark.jpg
+2020-05-30 12:01:22.436 [main] ERROR zuoyang.o2o.service.serviceImp.ShopServiceImpl - store shop image failed: failed to create imagejavax.imageio.IIOException: Can't read input file!
+2020-05-30 12:01:22.436 [main] ERROR zuoyang.o2o.service.serviceImp.ShopServiceImpl - store shop image failed: failed to create imagejavax.imageio.IIOException: Can't read input file!
+2020-05-30 12:10:15.550 [main] ERROR zuoyang.o2o.util.ImageUtil - javax.imageio.IIOException: Can't read input file!
+2020-05-30 12:10:15.551 [main] ERROR zuoyang.o2o.util.ImageUtil - watermarkpath: /Users/zuoyangding/work/image/watermark.jpg
+2020-05-30 12:10:15.552 [main] ERROR zuoyang.o2o.service.serviceImp.ShopServiceImpl - store shop image failed: failed to create imagejavax.imageio.IIOException: Can't read input file!
+2020-05-30 12:10:15.552 [main] ERROR zuoyang.o2o.service.serviceImp.ShopServiceImpl - store shop image failed: failed to create imagejavax.imageio.IIOException: Can't read input file!
+2020-05-30 12:11:27.447 [main] ERROR zuoyang.o2o.util.ImageUtil - javax.imageio.IIOException: Can't read input file!
+2020-05-30 12:11:27.448 [main] ERROR zuoyang.o2o.util.ImageUtil - watermarkpath: /Users/zuoyangding/work/image/watermark.jpg
+2020-05-30 12:11:27.449 [main] ERROR zuoyang.o2o.service.serviceImp.ShopServiceImpl - store shop image failed: failed to create imagejavax.imageio.IIOException: Can't read input file!
+2020-05-30 12:11:27.450 [main] ERROR zuoyang.o2o.service.serviceImp.ShopServiceImpl - store shop image failed: failed to create imagejavax.imageio.IIOException: Can't read input file!
+2020-05-30 12:28:03.627 [main] ERROR zuoyang.o2o.util.ImageUtil - javax.imageio.IIOException: Can't read input file!
+2020-05-30 12:28:03.628 [main] ERROR zuoyang.o2o.util.ImageUtil - watermarkpath: /Users/zuoyangding/work/image/watermark.jpg
+2020-05-30 12:28:03.630 [main] ERROR zuoyang.o2o.service.serviceImp.ShopServiceImpl - store shop image failed: failed to create imagejavax.imageio.IIOException: Can't read input file!
+2020-05-30 12:28:03.630 [main] ERROR zuoyang.o2o.service.serviceImp.ShopServiceImpl - store shop image failed: failed to create imagejavax.imageio.IIOException: Can't read input file!

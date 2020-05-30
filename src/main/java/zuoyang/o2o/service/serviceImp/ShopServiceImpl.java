@@ -14,6 +14,7 @@ import zuoyang.o2o.util.ImageUtil;
 import zuoyang.o2o.util.PathUtil;
 
 import java.io.File;
+import java.io.InputStream;
 import java.util.Date;
 
 @Service
@@ -27,7 +28,8 @@ public class ShopServiceImpl implements ShopService {
 
     @Override
     @Transactional
-    public ShopExecution addShop(Shop shop, File shopImg) {
+    public ShopExecution addShop(Shop shop, InputStream shopImgInputStream,
+                                 String imgFileName) throws ShopOperationException{
         if (shop == null) {
             return new ShopExecution(ShopStateEnum.NULL_SHOP);
         }
@@ -46,9 +48,9 @@ public class ShopServiceImpl implements ShopService {
                 throw new ShopOperationException("create shop failed");
             } else {
                 // store shop Image
-                if (shopImg != null) {
+                if (shopImgInputStream != null) {
                     try {
-                        storeShopImage(shop, shopImg);
+                        storeShopImage(shop, shopImgInputStream, imgFileName);
                     } catch (Exception e) {
                         log.error("store shop image failed: " + e.getMessage());
                         throw new ShopOperationException("store shop image failed: " + e.getMessage());
@@ -70,11 +72,12 @@ public class ShopServiceImpl implements ShopService {
     /**
      * store shop image
      * @param shop
-     * @param shopImage
+     * @param shopImgInputStream
+     * @param imgFileName
      */
-    public void storeShopImage(Shop shop, File shopImage) {
+    public void storeShopImage(Shop shop, InputStream shopImgInputStream, String imgFileName) {
         String shopImagePath = PathUtil.getShopImagePath(shop.getShopId());
-        String shopImageRelativePath = ImageUtil.generateThumbnail(shopImage, shopImagePath);
+        String shopImageRelativePath = ImageUtil.generateThumbnail(shopImgInputStream, imgFileName, shopImagePath);
         shop.setShopImg(shopImageRelativePath);
     }
 }

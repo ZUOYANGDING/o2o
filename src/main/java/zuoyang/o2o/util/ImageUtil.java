@@ -8,6 +8,7 @@ import org.springframework.web.multipart.commons.CommonsMultipartFile;
 import javax.imageio.ImageIO;
 import java.io.File;
 import java.io.IOException;
+import java.io.InputStream;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.Random;
@@ -35,13 +36,14 @@ public class ImageUtil {
 
     /**
      * deal with uploaded image, return the relative file path of the image stored
-     * @param classicFile
+     * @param imgInputStream
+     * @param imgFileName
      * @param targetPath
      * @return
      */
-    public static String generateThumbnail(File classicFile, String targetPath) {
+    public static String generateThumbnail(InputStream imgInputStream, String imgFileName, String targetPath) {
         String fileName = getRandomFileName();
-        String extension = getFileExtension(classicFile);
+        String extension = getFileExtension(imgFileName);
 
         // create the directory to store the image if it does not exist
         makeDirPath(targetPath);
@@ -54,13 +56,14 @@ public class ImageUtil {
 
         try {
             // path of the watermark should be rewrite when deploy the project
-            Thumbnails.of(classicFile).size(200, 200).
+            Thumbnails.of(imgInputStream).size(200, 200).
                     watermark(Positions.BOTTOM_RIGHT,
                             ImageIO.read(new File("/Users/zuoyangding/IdeaProjects/o2o/src/main/resources/watermark.jpg")),
                             0.25f).
                     outputQuality(0.9f).toFile(destFile);
         } catch (Exception e) {
             log.error(e.toString());
+            log.error("watermarkpath: " + basePath +"/watermark.jpg");
             String createdDirectory = basePath + targetPath;
             removeCreatedDirectory(createdDirectory);
             throw new RuntimeException("failed to create image" + e.toString());
@@ -80,12 +83,11 @@ public class ImageUtil {
 
     /**
      * get the suffix extension of the unloaded file
-     * @param classicFile
+     * @param fileName
      * @return
      */
-    public static String getFileExtension(File classicFile) {
-        String originFileName = classicFile.getName();
-        return originFileName.substring(originFileName.lastIndexOf("."));
+    public static String getFileExtension(String fileName) {
+        return fileName.substring(fileName.lastIndexOf("."));
     }
 
     /**

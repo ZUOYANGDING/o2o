@@ -11,9 +11,13 @@ import zuoyang.o2o.entity.PersonInfo;
 import zuoyang.o2o.entity.Shop;
 import zuoyang.o2o.entity.ShopCategory;
 import zuoyang.o2o.enums.ShopStateEnum;
+import zuoyang.o2o.exception.ShopOperationException;
 import zuoyang.o2o.service.ShopService;
 
 import java.io.File;
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+import java.io.InputStream;
 import java.util.Date;
 
 import static org.junit.jupiter.api.Assertions.*;
@@ -25,7 +29,7 @@ class ShopServiceImplTest {
     private ShopService shopService;
 
     @Test
-    void addShop() {
+    void addShop() throws ShopOperationException, FileNotFoundException {
         Shop shop = new Shop();
         PersonInfo personInfo = new PersonInfo();
         ShopCategory shopCategory = new ShopCategory();
@@ -39,15 +43,16 @@ class ShopServiceImplTest {
         shop.setShopCategory(shopCategory);
         shop.setArea(area);
 
-        shop.setShopName("foo shop 2");
-        shop.setShopDesc("foo desc 2");
-        shop.setShopAddress("foo address 2");
-        shop.setPhone("foo phone 2");
+        shop.setShopName("foo shop 5");
+        shop.setShopDesc("foo desc 5");
+        shop.setShopAddress("foo address 5");
+        shop.setPhone("foo phone 5");
         shop.setEnableStatus(ShopStateEnum.CHECK.getState());
         shop.setAdvice("under review");
 
         File shopImage = new File ("/Users/zuoyangding/work/image/fgo.jpg");
-        ShopExecution shopExecution = shopService.addShop(shop, shopImage);
+        InputStream inputStream = new FileInputStream(shopImage);
+        ShopExecution shopExecution = shopService.addShop(shop, inputStream, shopImage.getName());
         assertEquals(ShopStateEnum.CHECK.getState(), shopExecution.getState());
     }
 }
