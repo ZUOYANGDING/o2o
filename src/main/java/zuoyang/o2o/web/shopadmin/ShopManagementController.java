@@ -15,8 +15,6 @@ import zuoyang.o2o.enums.ShopStateEnum;
 import zuoyang.o2o.exception.ShopOperationException;
 import zuoyang.o2o.service.ShopService;
 import zuoyang.o2o.util.HttpServletRequestUtil;
-import zuoyang.o2o.util.ImageUtil;
-import zuoyang.o2o.util.PathUtil;
 
 import javax.servlet.http.HttpServletRequest;
 import java.io.*;
