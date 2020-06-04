@@ -24,7 +24,7 @@
                 <span class="icon icon-left"></span>
                 返回
             </a>
-            <h1 class="title">表单</h1>
+            <h1 class="title">Shop Information</h1>
         </header>
         <div class="content">
             <div class="list-block">
@@ -33,87 +33,92 @@
                     <li>
                         <div class="item-content">
                             <div class="item-inner">
-                                <div class="item-title label">Name</div>
+                                <div class="item-title label">Shop Name</div>
                                 <div class="item-input">
-                                    <input type="text" placeholder="Your name">
+                                    <input type="text" id="shop-name" placeholder="Shop Name">
                                 </div>
                             </div>
                         </div>
                     </li>
+                    <!-- shop category   -->
                     <li>
                         <div class="item-content">
                             <div class="item-inner">
-                                <div class="item-title label">E-mail</div>
+                                <div class="item-title label">Shop Category</div>
                                 <div class="item-input">
-                                    <input type="email" placeholder="E-mail">
-                                </div>
-                            </div>
-                        </div>
-                    </li>
-                    <li>
-                        <div class="item-content">
-                            <div class="item-inner">
-                                <div class="item-title label">Password</div>
-                                <div class="item-input">
-                                    <input type="password" placeholder="Password" class="">
-                                </div>
-                            </div>
-                        </div>
-                    </li>
-                    <li>
-                        <div class="item-content">
-                            <div class="item-inner">
-                                <div class="item-title label">Gender</div>
-                                <div class="item-input">
-                                    <select>
-                                        <option>Male</option>
-                                        <option>Female</option>
+                                    <select id="shop-category">
+
                                     </select>
                                 </div>
                             </div>
                         </div>
                     </li>
-                    <!-- Date -->
+                    <!-- area category   -->
                     <li>
                         <div class="item-content">
                             <div class="item-inner">
-                                <div class="item-title label">Birth date</div>
+                                <div class="item-title label">Area</div>
                                 <div class="item-input">
-                                    <input type="date" placeholder="Birth day" value="2014-04-30">
+                                    <select id="area">
+
+                                    </select>
                                 </div>
                             </div>
                         </div>
                     </li>
-                    <!-- Switch (Checkbox) -->
+                    <!-- address   -->
                     <li>
                         <div class="item-content">
                             <div class="item-inner">
-                                <div class="item-title label">Switch</div>
+                                <div class="item-title label">Shop Address</div>
                                 <div class="item-input">
-                                    <label class="label-switch">
-                                        <input type="checkbox">
-                                        <div class="checkbox"></div>
-                                    </label>
+                                    <input type="text" id="shop-address" placeholder="Shop Address">
                                 </div>
                             </div>
                         </div>
                     </li>
+                    <!--  phone number   -->
+                    <li>
+                        <div class="item-content">
+                            <div class="item-inner">
+                                <div class="item-title label">Phone Number</div>
+                                <div class="item-input">
+                                    <input type="text" id="shop-phone" placeholder="Shop Phone">
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <!--  shop description   -->
                     <li class="align-top">
                         <div class="item-content">
                             <div class="item-inner">
-                                <div class="item-title label">Textarea</div>
+                                <div class="item-title label">Shop Description</div>
                                 <div class="item-input">
-                                    <textarea></textarea>
+                                    <textarea id="shop-desc" placeholder="Shop Description"></textarea>
                                 </div>
                             </div>
                         </div>
                     </li>
+                    <!--  shop img   -->
+                    <li>
+                        <div class="item-content">
+                            <div class="item-inner">
+                                <div class="item-title label">Shop Image</div>
+                                <div class="item-input">
+                                    <input type="file" id="shop-img">
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <!--  kaptcha   -->
                 </ul>
             </div>
             <div class="content-block">
                 <div class="row">
-                    <div class="col-50"><a href="#" class="button button-big button-fill button-danger">取消</a></div>
-                    <div class="col-50"><a href="#" class="button button-big button-fill button-success">提交</a></div>
+                    <div class="col-50"><a href="#" class="button button-big button-fill button-danger">Back</a></div>
+                    <div class="col-50">
+                        <a href="#" class="button button-big button-fill button-success" id="submit">Submit</a>
+                    </div>
                 </div>
             </div>
         </div>
@@ -123,5 +128,6 @@
 <script type="text/javascript" th:src="@{/js/suimobile/zepto.js}" charset="utf-8"></script>
 <script type="text/javascript" th:src="@{/js/suimobile/sm.js}" charset="utf-8"></script>
 <script type="text/javascript" th:src="@{/js/suimobile/sm-extend.js}" charset="utf-8"></script>
+<script type="text/javascript" th:src="@{/js/shop/shopOperation.js}" charset="utf-8"></script>
 </body>
 </html>

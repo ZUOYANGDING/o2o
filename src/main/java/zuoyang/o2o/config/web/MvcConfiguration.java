@@ -55,10 +55,4 @@ public class MvcConfiguration implements WebMvcConfigurer {
 //        internalResourceViewResolver.setSuffix(".html");
 //        return internalResourceViewResolver;
 //    }
-
-//    public void addInterceptors(InterceptorRegistry registry) {
-//        registry.addInterceptor(new TestInterceptor()).addPathPatterns("/index.html").
-//                excludePathPatterns("/static/css/**", "/static/js/**", "/img/**");
-//        WebMvcConfigurer.super.addInterceptors(registry);
-//    }
 }

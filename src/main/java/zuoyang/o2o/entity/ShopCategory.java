@@ -9,13 +9,13 @@ import java.util.Date;
 @Setter
 public class ShopCategory {
     private Long shopCategoryId;
-//    null for super category, id for subcategory
-    private Long parentId;
     private String shopCategoryName;
     private String shopCategoryDescription;
     private String shopCategoryImg;
     private Integer priority;
     private Date createTime;
     private Date lastEditTime;
+    // if null means this one is root category, if non-null means this one is subCategory
+    private ShopCategory parent;
 
 }

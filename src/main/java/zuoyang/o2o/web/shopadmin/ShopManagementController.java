@@ -2,6 +2,7 @@ package zuoyang.o2o.web.shopadmin;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
@@ -9,27 +10,42 @@ import org.springframework.web.multipart.MultipartHttpServletRequest;
 import org.springframework.web.multipart.commons.CommonsMultipartFile;
 import org.springframework.web.multipart.commons.CommonsMultipartResolver;
 import zuoyang.o2o.dto.ShopExecution;
+import zuoyang.o2o.entity.Area;
 import zuoyang.o2o.entity.PersonInfo;
 import zuoyang.o2o.entity.Shop;
+import zuoyang.o2o.entity.ShopCategory;
 import zuoyang.o2o.enums.ShopStateEnum;
 import zuoyang.o2o.exception.ShopOperationException;
+import zuoyang.o2o.service.AreaService;
+import zuoyang.o2o.service.ShopCategoryService;
 import zuoyang.o2o.service.ShopService;
 import zuoyang.o2o.util.HttpServletRequestUtil;
 
 import javax.servlet.http.HttpServletRequest;
 import java.io.*;
+import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 
 @Controller
 @RequestMapping("/shopadmin")
 public class ShopManagementController {
     private final ShopService shopService;
+    private final ShopCategoryService shopCategoryService;
+    private final AreaService areaService;
 
-    public ShopManagementController(ShopService shopService) {
+    public ShopManagementController(ShopService shopService, ShopCategoryService shopCategoryService, AreaService areaService) {
         this.shopService = shopService;
+        this.shopCategoryService = shopCategoryService;
+        this.areaService = areaService;
     }
 
+    /**
+     * shop register controller
+     * @param request
+     * @return
+     */
     @PostMapping("/registershop")
     @ResponseBody
     public Map<String, Object> registerShop(HttpServletRequest request) {
@@ -93,6 +109,30 @@ public class ShopManagementController {
             return modelMap;
         }
     }
+
+    /**
+     * shop info controller connect with json
+     * @return
+     */
+    @GetMapping("/getshopinitinfo")
+    @ResponseBody
+    public Map<String , Object> getShopInfo() {
+        Map<String, Object> shopInfoMap = new HashMap<>();
+        try {
+            // get all shop categories in second level (under root level)
+            List<ShopCategory> shopCategoryList = shopCategoryService.getShopCategoryList(new ShopCategory());
+            List<Area> areaList = areaService.getAreaList();
+            shopInfoMap.put("success", true);
+            shopInfoMap.put("shopCategoryList", shopCategoryList);
+            shopInfoMap.put("areaList", areaList);
+        } catch (ShopOperationException e) {
+            shopInfoMap.put("success", false);
+            shopInfoMap.put("errMsg", e.getMessage());
+        }
+        return shopInfoMap;
+    }
+
+
 
     /**
      * depreciated
