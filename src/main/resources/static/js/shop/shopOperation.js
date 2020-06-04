@@ -44,6 +44,13 @@ $(function() {
         var formData = new FormData();
         formData.append('shopImg',shopImg);
         formData.append('shopStr', JSON.stringify(shop));
+        var verifyCodeActual = $('#j-captcha').val();
+        if (!verifyCodeActual) {
+            $.toast("please enter the verify code");
+            return;
+        } else {
+            formData.append('verifyCodeActual', verifyCodeActual);
+        }
         $.ajax({
             url: registerShopUrl,
             type: 'POST',
@@ -55,8 +62,9 @@ $(function() {
                 if (data.success) {
                     $.toast("success submit");
                 } else {
-                    $.toast("failed to submit" + data.errMsg);
+                    $.toast("failed to submit: " + data.errMsg);
                 }
+                $('#captcha_img').click();
             }
         });
     });

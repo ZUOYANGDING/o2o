@@ -19,6 +19,7 @@ import zuoyang.o2o.exception.ShopOperationException;
 import zuoyang.o2o.service.AreaService;
 import zuoyang.o2o.service.ShopCategoryService;
 import zuoyang.o2o.service.ShopService;
+import zuoyang.o2o.util.CodeUtil;
 import zuoyang.o2o.util.HttpServletRequestUtil;
 
 import javax.servlet.http.HttpServletRequest;
@@ -49,8 +50,19 @@ public class ShopManagementController {
     @PostMapping("/registershop")
     @ResponseBody
     public Map<String, Object> registerShop(HttpServletRequest request) {
-        // get shop info from frontend, transfer it into shop entity, use jackson-databind
         Map<String, Object> modelMap = new HashMap<>();
+        // check the verify code
+        Boolean checkVerifyCode = CodeUtil.checkVerifyCode(request);
+        if (checkVerifyCode) {
+            modelMap.put("success", true);
+        } else {
+            modelMap.put("success", false);
+            modelMap.put("errMsg", "Verify Code does not match");
+            return modelMap;
+        }
+
+
+        // get json part of shop info from front end use jackson-databind
         String shopStr = HttpServletRequestUtil.getString(request, "shopStr");
         ObjectMapper mapper = new ObjectMapper();
         Shop shop = null;

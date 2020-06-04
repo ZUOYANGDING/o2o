@@ -111,6 +111,18 @@
                         </div>
                     </li>
                     <!--  kaptcha   -->
+                    <li>
+                        <div class="item-content">
+                            <div class="item-inner">
+                                <div class="item-title label">Captcha</div>
+                                <input type="text" id="j-captcha" placeholder="captcha">
+                                <div class="item-input">
+                                    <img id="captcha_img" alt="click to refresh" title="click to refresh"
+                                    onclick="changeVerifyCode(this)" src="../Kaptcha">
+                                </div>
+                            </div>
+                        </div>
+                    </li>
                 </ul>
             </div>
             <div class="content-block">
@@ -128,6 +140,7 @@
 <script type="text/javascript" th:src="@{/js/suimobile/zepto.js}" charset="utf-8"></script>
 <script type="text/javascript" th:src="@{/js/suimobile/sm.js}" charset="utf-8"></script>
 <script type="text/javascript" th:src="@{/js/suimobile/sm-extend.js}" charset="utf-8"></script>
+<script type="text/javascript" th:src="@{/js/common/common.js}" charset="utf-8"></script>
 <script type="text/javascript" th:src="@{/js/shop/shopOperation.js}" charset="utf-8"></script>
 </body>
 </html>

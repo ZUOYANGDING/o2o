@@ -1,6 +1,9 @@
 package zuoyang.o2o.config.web;
 
+import com.google.code.kaptcha.servlet.KaptchaServlet;
 import org.springframework.beans.BeansException;
+import org.springframework.beans.factory.annotation.Value;
+import org.springframework.boot.web.servlet.ServletRegistrationBean;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.ApplicationContextAware;
 import org.springframework.context.annotation.Bean;
@@ -55,4 +58,51 @@ public class MvcConfiguration implements WebMvcConfigurer {
 //        internalResourceViewResolver.setSuffix(".html");
 //        return internalResourceViewResolver;
 //    }
+
+
+    /**
+     * set up bean for kaptcha
+     */
+    @Value("${kaptcha.border}")
+    private String border;
+
+    @Value("${kaptcha.textproducer.font.color}")
+    private String fontColor;
+
+    @Value("${kaptcha.image.width}")
+    private String imgWidth;
+
+    @Value("${kaptcha.textproducer.char.string}")
+    private String charString;
+
+    @Value("${kaptcha.image.height}")
+    private String imgHeight;
+
+    @Value("${kaptcha.textproducer.font.size}")
+    private String fontSize;
+
+    @Value("${kaptcha.noise.color}")
+    private String noiseColor;
+
+    @Value("${kaptcha.textproducer.char.length}")
+    private String charLength;
+
+    @Value("${kaptcha.textproducer.font.names}")
+    private String fontName;
+
+    @Bean
+    public ServletRegistrationBean<KaptchaServlet> servletServletRegistrationBean() throws SecurityException {
+        ServletRegistrationBean<KaptchaServlet> kaptchaServlet =
+                new ServletRegistrationBean<>(new KaptchaServlet(), "/Kaptcha");
+        kaptchaServlet.addInitParameter("kaptcha.border", border);
+        kaptchaServlet.addInitParameter("kaptcha.textproducer.font.color", fontColor);
+        kaptchaServlet.addInitParameter("kaptcha.image.width", imgWidth);
+        kaptchaServlet.addInitParameter("kaptcha.image.height", imgHeight);
+        kaptchaServlet.addInitParameter("kaptcha.textproducer.char.string", charString);
+        kaptchaServlet.addInitParameter("kaptcha.textproducer.font.size", fontSize);
+        kaptchaServlet.addInitParameter("kaptcha.noise.color", noiseColor);
+        kaptchaServlet.addInitParameter("kaptcha.textproducer.char.length", charLength);
+        kaptchaServlet.addInitParameter("kaptcha.textproducer.font.names", fontName);
+        return kaptchaServlet;
+    }
 }
