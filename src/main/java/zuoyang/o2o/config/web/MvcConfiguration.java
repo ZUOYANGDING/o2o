@@ -8,6 +8,7 @@ import org.springframework.context.ApplicationContext;
 import org.springframework.context.ApplicationContextAware;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.web.multipart.commons.CommonsMultipartResolver;
 import org.springframework.web.servlet.ViewResolver;
 import org.springframework.web.servlet.config.annotation.*;
 import org.springframework.web.servlet.view.InternalResourceViewResolver;
@@ -105,4 +106,19 @@ public class MvcConfiguration implements WebMvcConfigurer {
         kaptchaServlet.addInitParameter("kaptcha.textproducer.font.names", fontName);
         return kaptchaServlet;
     }
+
+    /**
+     * set up the file upload resolver
+     * @return
+     */
+    @Bean(name="multipartResolver")
+    public CommonsMultipartResolver createMultipartResolver() {
+        CommonsMultipartResolver resolver = new CommonsMultipartResolver();
+        resolver.setDefaultEncoding("utf-8");
+        // 1024*1024*20 = 20M
+        resolver.setMaxUploadSize(20971520);
+        resolver.setMaxInMemorySize(20971520);
+        return resolver;
+    }
+
 }
