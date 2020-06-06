@@ -1,5 +1,6 @@
 package zuoyang.o2o.dao;
 
+import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -65,5 +66,18 @@ class ShopDaoTest {
         shop.setShopAddress("foo address test update");
         int returnNumber = shopDao.updateShop(shop);
         assertEquals(1, returnNumber);
+    }
+
+    @Test
+    void queryByShopId() {
+        Shop nullShop = shopDao.queryByShopId(1L);
+        assertNull(nullShop);
+        Shop shop = shopDao.queryByShopId(31L);
+        assertNotNull(shop);
+        assertEquals("test name 2", shop.getShopName());
+        assertEquals("test desc 2", shop.getShopDesc());
+        assertEquals("123456", shop.getPhone());
+        assertEquals("Fremont", shop.getArea().getAreaName());
+        assertEquals("mac shop", shop.getShopCategory().getShopCategoryName());
     }
 }
