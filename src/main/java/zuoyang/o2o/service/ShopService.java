@@ -19,7 +19,7 @@ public interface ShopService {
     ShopExecution addShop(Shop shop, InputStream shopImgInputStream, String fileName) throws ShopOperationException;
 
     /**
-     *
+     *Cannot modify the shop owner and shop category
      * @param shop
      * @param shopImgInputStream
      * @param fileName
@@ -29,7 +29,7 @@ public interface ShopService {
     ShopExecution modifyShop(Shop shop, InputStream shopImgInputStream, String fileName) throws ShopOperationException;
 
     /**
-     *
+     *Return shopInfo for shop modify. Without owner info. Mask shopCategory, only return category name and id.
      * @param shopId
      * @return
      */

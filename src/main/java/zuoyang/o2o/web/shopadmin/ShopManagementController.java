@@ -49,7 +49,7 @@ public class ShopManagementController {
      */
     @PostMapping("/registershop")
     @ResponseBody
-    public Map<String, Object> registerShop(HttpServletRequest request) {
+    private Map<String, Object> registerShop(HttpServletRequest request) throws ShopOperationException, IOException {
         Map<String, Object> modelMap = new HashMap<>();
         // check the verify code
         Boolean checkVerifyCode = CodeUtil.checkVerifyCode(request);
@@ -89,9 +89,8 @@ public class ShopManagementController {
 
         // register shop
         if (shop!=null && shopImg!=null) {
-            //TODO apply session to get user
-            PersonInfo user = new PersonInfo();
-            user.setUserId(1L);
+            // user from frontend when login
+            PersonInfo user = (PersonInfo) request.getSession().getAttribute("user");
             shop.setPersonInfo(user);
             ShopExecution shopExecution = null;
             try {
@@ -103,6 +102,14 @@ public class ShopManagementController {
                 shopExecution = shopService.addShop(shop, shopImg.getInputStream(), originalFileName);
                 if (shopExecution.getState() == ShopStateEnum.CHECK.getState()) {
                     modelMap.put("success", true);
+                    // shopList belong to this user
+                    @SuppressWarnings("unchecked")
+                    List<Shop> shopList = (List<Shop>) request.getSession().getAttribute("shopList");
+                    if (shopList == null) {
+                        shopList = new ArrayList<>();
+                    }
+                    shopList.add(shopExecution.getShop());
+                    request.getSession().setAttribute("shopList", shopList);
                 } else {
                     modelMap.put("success", false);
                     modelMap.put("errMsg", shopExecution.getState());
@@ -128,7 +135,7 @@ public class ShopManagementController {
      */
     @GetMapping("/getshopinitinfo")
     @ResponseBody
-    public Map<String , Object> getShopInfo() {
+    private Map<String , Object> getShopInfo() {
         Map<String, Object> shopInfoMap = new HashMap<>();
         try {
             // get all shop categories in second level (under root level)
@@ -144,6 +151,118 @@ public class ShopManagementController {
         return shopInfoMap;
     }
 
+    /**
+     *
+     * @param request
+     * @return
+     */
+    @GetMapping("/getshopbyid")
+    @ResponseBody
+    private Map<String, Object> getShopById(HttpServletRequest request) {
+        Map<String, Object> shopMap = new HashMap<>();
+        Long shopId = HttpServletRequestUtil.getLong(request, "shopId");
+        if (shopId > -1) {
+            try {
+                Shop shop = shopService.getShopById(shopId);
+                if (shop != null) {
+                    List<Area> areaList = areaService.getAreaList();
+                    if (areaList != null) {
+                        shopMap.put("success", true);
+                        shopMap.put("areaList", areaList);
+                        shopMap.put("shop", shop);
+                    } else {
+                        shopMap.put("success", false);
+                        shopMap.put("errMsg", "No area in database");
+                    }
+                } else {
+                    shopMap.put("success", false);
+                    shopMap.put("errMsg", "shop does not exist");
+                }
+            } catch (Exception e) {
+                shopMap.put("success", false);
+                shopMap.put("errMsg", e.getMessage());
+            }
+        } else {
+            shopMap.put("success", false);
+            shopMap.put("errMsg", "empty shopId");
+        }
+        return shopMap;
+    }
+
+    /**
+     *
+     * @param request
+     * @return
+     * @throws ShopOperationException
+     * @throws IOException
+     */
+    @PostMapping("/modifyshop")
+    @ResponseBody
+    private Map<String, Object> modifyShop(HttpServletRequest request) throws ShopOperationException, IOException {
+        Map<String, Object> modelMap = new HashMap<>();
+        // check verification code
+        if (!CodeUtil.checkVerifyCode(request)) {
+            modelMap.put("success", false);
+            modelMap.put("errMsg", "Verify Code does not match");
+            return modelMap;
+        }
+
+        // get shop info in JSON from frontend
+        String shopStr = HttpServletRequestUtil.getString(request, "shopStr");
+        ObjectMapper objectMapper = new ObjectMapper();
+        Shop shop = null;
+        try {
+            shop = objectMapper.readValue(shopStr, Shop.class);
+        } catch (Exception e) {
+            modelMap.put("success", false);
+            modelMap.put("errMsg", e.getMessage());
+            return modelMap;
+        }
+
+        // deal with new photo if need
+        CommonsMultipartFile shopImg = null;
+        CommonsMultipartResolver commonsMultipartResolver =
+                new CommonsMultipartResolver(request.getSession().getServletContext());
+        if (commonsMultipartResolver.isMultipart(request)) {
+            MultipartHttpServletRequest multipartHttpServletRequest = (MultipartHttpServletRequest) request;
+            shopImg = (CommonsMultipartFile) multipartHttpServletRequest.getFile("shopImg");
+        }
+
+        //update shop info
+        if (shop!=null && shop.getShopId()!=null) {
+            // TODO verify the person's identity
+            ShopExecution shopExecution = null;
+            try {
+                if (shopImg == null) {
+                    shopExecution = shopService.modifyShop(shop, null, null);
+                } else {
+                    // the source code of getOriginalFileName will return "" if fileItem.getName() is null
+                    String originalFileName = shopImg.getOriginalFilename();
+                    if (originalFileName.isEmpty()) {
+                        throw new RuntimeException("the original file name is empty");
+                    }
+                    shopExecution = shopService.modifyShop(shop, shopImg.getInputStream(), originalFileName);
+                }
+                if (shopExecution.getState() == ShopStateEnum.SUCCESS.getState()) {
+                    modelMap.put("success", true);
+                } else {
+                    modelMap.put("success", false);
+                    modelMap.put("errMsg", shopExecution.getState());
+                }
+            } catch (ShopOperationException e) {
+                modelMap.put("success", false);
+                modelMap.put("errMsg", shopExecution.getState());
+            } catch (IOException e) {
+                modelMap.put("success", false);
+                modelMap.put("errMsg", e.getMessage());
+            }
+            return modelMap;
+        } else {
+            modelMap.put("success", false);
+            modelMap.put("errMsg", "No input for shopId");
+            return modelMap;
+        }
+    }
 
 
     /**
