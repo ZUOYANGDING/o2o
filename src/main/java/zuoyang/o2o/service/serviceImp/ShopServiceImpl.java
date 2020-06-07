@@ -69,6 +69,48 @@ public class ShopServiceImpl implements ShopService {
         return new ShopExecution(ShopStateEnum.CHECK, shop);
     }
 
+    @Override
+    @Transactional
+    public ShopExecution modifyShop(Shop shop, InputStream shopImgInputStream,
+                                    String fileName) throws ShopOperationException {
+        if (shop == null) {
+            return new ShopExecution(ShopStateEnum.NULL_SHOP);
+        }
+        if (shop.getShopId() == null) {
+            return new ShopExecution(ShopStateEnum.NULL_SHOPID);
+        }
+        try {
+            // check if need to update shopImg or not
+            if (shopImgInputStream != null && fileName != null) {
+                Shop originShop = getShopById(shop.getShopId());
+                if (originShop.getShopImg()!=null) {
+                    //delete the old shopImg
+                    ImageUtil.deleteFileOrDirectory(originShop.getShopImg());
+                }
+                //add new shopImage
+                storeShopImage(shop, shopImgInputStream, fileName);
+            }
+
+            //update shop info
+            shop.setLastEditTime(new Date());
+            int effectedNum = shopDao.updateShop(shop);
+            if (effectedNum<=0) {
+                return new ShopExecution(ShopStateEnum.INNER_ERROR);
+            } else {
+                Shop updatedShop = getShopById(shop.getShopId());
+                return new ShopExecution(ShopStateEnum.SUCCESS, updatedShop);
+            }
+        } catch (ShopOperationException e) {
+            throw new ShopOperationException(e.getMessage());
+        }
+    }
+
+
+    @Override
+    public Shop getShopById(Long shopId) {
+        return shopDao.queryByShopId(shopId);
+    }
+
     /**
      * store shop image
      * @param shop

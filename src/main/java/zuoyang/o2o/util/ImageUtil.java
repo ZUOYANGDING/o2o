@@ -120,6 +120,23 @@ public class ImageUtil {
         }
     }
 
+    /**
+     * delete the file or directory for modify frontend object
+     * @param path
+     */
+    public static void deleteFileOrDirectory(String path) {
+        log.info("file or directory to delete: " + basePath + path);
+        File fileOrDirectory = new File(basePath + path);
+        if (fileOrDirectory.exists()) {
+            if (fileOrDirectory.isDirectory()) {
+                for (File f : fileOrDirectory.listFiles()) {
+                    f.delete();
+                }
+            }
+            fileOrDirectory.delete();
+        }
+    }
+
     public static void main(String[] args) throws IOException {
         Thumbnails.of(new File("/Users/zuoyangding/work/image/fgo.jpg")).size(200, 200).
                 watermark(Positions.BOTTOM_RIGHT,
