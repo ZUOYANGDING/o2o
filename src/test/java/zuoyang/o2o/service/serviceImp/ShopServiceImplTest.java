@@ -37,21 +37,21 @@ class ShopServiceImplTest {
         Area area = new Area();
 
         personInfo.setUserId(1L);
-        area.setAreaId(1);
+        area.setAreaId(3);
         shopCategory.setShopCategoryId(1L);
 
         shop.setPersonInfo(personInfo);
         shop.setShopCategory(shopCategory);
         shop.setArea(area);
 
-        shop.setShopName("foo shop 6");
-        shop.setShopDesc("foo desc 6");
-        shop.setShopAddress("foo address 6");
-        shop.setPhone("foo phone 6");
+        shop.setShopName("test shop 12");
+        shop.setShopDesc("test desc 12");
+        shop.setShopAddress("test address 12");
+        shop.setPhone("test phone 12");
         shop.setEnableStatus(ShopStateEnum.CHECK.getState());
         shop.setAdvice("under review");
 
-        File shopImage = new File ("/Users/zuoyangding/work/image/fgo.jpg");
+        File shopImage = new File ("/Users/zuoyangding/work/image/tengyuan.jpg");
         InputStream inputStream = new FileInputStream(shopImage);
         ShopExecution shopExecution = shopService.addShop(shop, inputStream, shopImage.getName());
         assertEquals(ShopStateEnum.CHECK.getState(), shopExecution.getState());

@@ -10,8 +10,12 @@ import zuoyang.o2o.entity.Area;
 import zuoyang.o2o.entity.PersonInfo;
 import zuoyang.o2o.entity.Shop;
 import zuoyang.o2o.entity.ShopCategory;
+import zuoyang.o2o.enums.ShopStateEnum;
 
+import java.io.File;
+import java.io.FileNotFoundException;
 import java.util.Date;
+import java.util.List;
 
 import static org.junit.jupiter.api.Assertions.*;
 @ExtendWith(SpringExtension.class)
@@ -21,7 +25,7 @@ class ShopDaoTest {
     private ShopDao shopDao;
 
     @Test
-    void insertShop() {
+    void insertShop() throws FileNotFoundException {
         Shop shop = new Shop();
         PersonInfo personInfo = new PersonInfo();
         ShopCategory shopCategory = new ShopCategory();
@@ -35,11 +39,11 @@ class ShopDaoTest {
         shop.setShopCategory(shopCategory);
         shop.setArea(area);
 
-        shop.setShopName("foo shop");
-        shop.setShopDesc("foo desc");
-        shop.setShopAddress("foo address");
-        shop.setPhone("foo phone");
-        shop.setShopImg("foo img");
+        shop.setShopName("test shop 1");
+        shop.setShopDesc("test desc 1");
+        shop.setShopAddress("test address");
+        shop.setPhone("test phone");
+        shop.setShopImg("test img");
         shop.setCreateTime(new Date());
         shop.setLastEditTime(new Date());
         shop.setEnableStatus(1);
@@ -79,5 +83,96 @@ class ShopDaoTest {
         assertEquals("123456", shop.getPhone());
         assertEquals("Fremont", shop.getArea().getAreaName());
         assertEquals("mac shop", shop.getShopCategory().getShopCategoryName());
+    }
+
+    @Test
+    void queryShopListAndShopCountByOwnerId() {
+        Shop shopCondition = new Shop();
+        PersonInfo personInfo = new PersonInfo();
+
+        personInfo.setUserId(1L);
+        shopCondition.setPersonInfo(personInfo);
+        List<Shop> shopList = shopDao.queryShopList(shopCondition, 0, 5);
+        int count = shopDao.queryShopCount(shopCondition);
+        assertEquals(15, count);
+        for (Shop shop : shopList) {
+            System.out.println(shop.getShopName());
+        }
+    }
+
+    @Test
+    void queryShopListAndShopCountByCategoryId() {
+        Shop shopCondition = new Shop();
+        ShopCategory shopCategory = new ShopCategory();
+
+        shopCategory.setShopCategoryId(2L);
+        shopCondition.setShopCategory(shopCategory);
+        List<Shop> shopList = shopDao.queryShopList(shopCondition, 0, 3);
+        int count = shopDao.queryShopCount(shopCondition);
+        assertEquals(6, count);
+        for (Shop shop : shopList) {
+            System.out.println(shop.getShopName());
+        }
+    }
+
+    @Test
+    void queryShopListAndShopCountByAreaId() {
+        Shop shopCondition = new Shop();
+        Area area = new Area();
+
+        area.setAreaId(3);
+        shopCondition.setArea(area);
+        List<Shop> shopList = shopDao.queryShopList(shopCondition, 0, 2);
+        int count = shopDao.queryShopCount(shopCondition);
+        assertEquals(4, count);
+        for (Shop shop : shopList) {
+            System.out.println(shop.getShopName());
+        }
+    }
+
+    @Test
+    void queryShopListAndShopCountByShopName() {
+        Shop shopCondition = new Shop();
+
+        shopCondition.setShopName("test shop");
+        List<Shop> shopList = shopDao.queryShopList(shopCondition, 0, 6);
+        int count = shopDao.queryShopCount(shopCondition);
+        assertEquals(12, count);
+        for (Shop shop : shopList) {
+            System.out.println(shop.getShopName());
+        }
+    }
+
+    @Test
+    void queryShopListAndShopCountByShopStatus() {
+        Shop shopCondition = new Shop();
+
+        shopCondition.setEnableStatus(ShopStateEnum.CHECK.getState());
+        List<Shop> shopList = shopDao.queryShopList(shopCondition, 0, 6);
+        int count = shopDao.queryShopCount(shopCondition);
+        assertEquals(13, count);
+        for (Shop shop : shopList) {
+            System.out.println(shop.getShopName());
+        }
+    }
+
+    @Test
+    void queryShopListAndShopCountForSameParentShopCategory() {
+        Shop shopCondition = new Shop();
+        ShopCategory shopCategory = new ShopCategory();
+        Shop parentShop = new Shop();
+        ShopCategory parentShopCategory = new ShopCategory();
+
+        parentShopCategory.setShopCategoryId(1L);
+        parentShop.setShopCategory(parentShopCategory);
+        shopCategory.setShopCategoryId(2L);
+        shopCondition.setShopCategory(shopCategory);
+
+        List<Shop> shopList = shopDao.queryShopList(shopCondition, 0, 6);
+        int count = shopDao.queryShopCount(shopCondition);
+        assertEquals(6, count);
+        for (Shop shop : shopList) {
+            System.out.println(shop.getShopName());
+        }
     }
 }
