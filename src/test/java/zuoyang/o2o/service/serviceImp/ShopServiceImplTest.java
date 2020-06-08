@@ -20,6 +20,7 @@ import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.InputStream;
 import java.util.Date;
+import java.util.List;
 
 import static org.junit.jupiter.api.Assertions.*;
 
@@ -123,5 +124,19 @@ class ShopServiceImplTest {
         ShopExecution shopExecution = shopService.modifyShop(shop, imageInputStream, imgFile.getName());
         assertEquals("TEST MODIFY SHOPNAME 1", shopExecution.getShop().getShopName());
 
+    }
+
+    @Test
+    void getShopList() {
+        Shop shopCondition = new Shop();
+        ShopCategory shopCategory = new ShopCategory();
+
+        shopCategory.setShopCategoryId(2L);
+        shopCondition.setShopCategory(shopCategory);
+        ShopExecution shopExecution = shopService.getShopList(shopCondition, 3, 3);
+        assertEquals(6, shopExecution.getCount());
+        for (Shop shop : shopExecution.getShopList()) {
+            System.out.println(shop.getShopName());
+        }
     }
 }

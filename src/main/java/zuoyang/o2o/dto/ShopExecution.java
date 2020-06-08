@@ -49,9 +49,10 @@ public class ShopExecution {
      * @param stateEnum
      * @param shopList
      */
-    public ShopExecution(ShopStateEnum stateEnum, List<Shop> shopList) {
+    public ShopExecution(ShopStateEnum stateEnum, List<Shop> shopList, int count) {
         this.state = stateEnum.getState();
         this.stateInfo = stateEnum.getStateInfo();
         this.shopList = shopList;
+        this.count = count;
     }
 }

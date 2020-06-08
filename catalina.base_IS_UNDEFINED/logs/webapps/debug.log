@@ -222,3 +222,31 @@
 2020-06-08 10:38:02.905 [main] DEBUG zuoyang.o2o.dao.ShopDao.queryShopCount - ==>  Preparing: SELECT count(1) FROM tb_shop AS s, tb_shop_category AS sc, tb_area AS a WHERE s.shop_category_id = ? AND s.area_id = a.area_id AND s.shop_category_id = sc.shop_category_id 
 2020-06-08 10:38:02.905 [main] DEBUG zuoyang.o2o.dao.ShopDao.queryShopCount - ==> Parameters: 2(Long)
 2020-06-08 10:38:02.907 [main] DEBUG zuoyang.o2o.dao.ShopDao.queryShopCount - <==      Total: 1
+2020-06-08 11:23:11.821 [main] DEBUG zuoyang.o2o.service.serviceImp.ShopServiceImplTest - Running with Spring Boot v2.3.0.RELEASE, Spring v5.2.6.RELEASE
+2020-06-08 11:23:14.776 [main] DEBUG zuoyang.o2o.dao.ShopDao.queryShopList - ==>  Preparing: SELECT s.shop_id, s.shop_name, s.shop_desc, s.shop_address, s.phone, s.shop_img, s.priority, s.enable_status, s.create_time, s.last_edit_time, s.advice, a.area_id, a.area_name, sc.shop_category_id, sc.shop_category_name FROM tb_shop AS s, tb_area AS a, tb_shop_category AS sc WHERE s.shop_category_id = ? AND s.area_id = a.area_id AND s.shop_category_id = sc.shop_category_id ORDER BY s.priority DESC LIMIT ?, ?; 
+2020-06-08 11:23:14.840 [main] DEBUG zuoyang.o2o.dao.ShopDao.queryShopList - ==> Parameters: 2(Long), 0(Integer), 3(Integer)
+2020-06-08 11:23:14.878 [main] DEBUG zuoyang.o2o.dao.ShopDao.queryShopList - <==      Total: 3
+2020-06-08 11:23:14.885 [main] DEBUG zuoyang.o2o.dao.ShopDao.queryShopCount - ==>  Preparing: SELECT count(1) FROM tb_shop AS s, tb_shop_category AS sc, tb_area AS a WHERE s.shop_category_id = ? AND s.area_id = a.area_id AND s.shop_category_id = sc.shop_category_id 
+2020-06-08 11:23:14.886 [main] DEBUG zuoyang.o2o.dao.ShopDao.queryShopCount - ==> Parameters: 2(Long)
+2020-06-08 11:23:14.888 [main] DEBUG zuoyang.o2o.dao.ShopDao.queryShopCount - <==      Total: 1
+2020-06-08 11:24:18.740 [main] DEBUG zuoyang.o2o.service.serviceImp.ShopServiceImplTest - Running with Spring Boot v2.3.0.RELEASE, Spring v5.2.6.RELEASE
+2020-06-08 11:24:21.749 [main] DEBUG zuoyang.o2o.dao.ShopDao.queryShopList - ==>  Preparing: SELECT s.shop_id, s.shop_name, s.shop_desc, s.shop_address, s.phone, s.shop_img, s.priority, s.enable_status, s.create_time, s.last_edit_time, s.advice, a.area_id, a.area_name, sc.shop_category_id, sc.shop_category_name FROM tb_shop AS s, tb_area AS a, tb_shop_category AS sc WHERE s.shop_category_id = ? AND s.area_id = a.area_id AND s.shop_category_id = sc.shop_category_id ORDER BY s.priority DESC LIMIT ?, ?; 
+2020-06-08 11:24:21.817 [main] DEBUG zuoyang.o2o.dao.ShopDao.queryShopList - ==> Parameters: 2(Long), 0(Integer), 3(Integer)
+2020-06-08 11:24:21.855 [main] DEBUG zuoyang.o2o.dao.ShopDao.queryShopList - <==      Total: 3
+2020-06-08 11:24:21.863 [main] DEBUG zuoyang.o2o.dao.ShopDao.queryShopCount - ==>  Preparing: SELECT count(1) FROM tb_shop AS s, tb_shop_category AS sc, tb_area AS a WHERE s.shop_category_id = ? AND s.area_id = a.area_id AND s.shop_category_id = sc.shop_category_id 
+2020-06-08 11:24:21.863 [main] DEBUG zuoyang.o2o.dao.ShopDao.queryShopCount - ==> Parameters: 2(Long)
+2020-06-08 11:24:21.865 [main] DEBUG zuoyang.o2o.dao.ShopDao.queryShopCount - <==      Total: 1
+2020-06-08 11:24:34.916 [main] DEBUG zuoyang.o2o.service.serviceImp.ShopServiceImplTest - Running with Spring Boot v2.3.0.RELEASE, Spring v5.2.6.RELEASE
+2020-06-08 11:24:37.939 [main] DEBUG zuoyang.o2o.dao.ShopDao.queryShopList - ==>  Preparing: SELECT s.shop_id, s.shop_name, s.shop_desc, s.shop_address, s.phone, s.shop_img, s.priority, s.enable_status, s.create_time, s.last_edit_time, s.advice, a.area_id, a.area_name, sc.shop_category_id, sc.shop_category_name FROM tb_shop AS s, tb_area AS a, tb_shop_category AS sc WHERE s.shop_category_id = ? AND s.area_id = a.area_id AND s.shop_category_id = sc.shop_category_id ORDER BY s.priority DESC LIMIT ?, ?; 
+2020-06-08 11:24:38.008 [main] DEBUG zuoyang.o2o.dao.ShopDao.queryShopList - ==> Parameters: 2(Long), 3(Integer), 3(Integer)
+2020-06-08 11:24:38.049 [main] DEBUG zuoyang.o2o.dao.ShopDao.queryShopList - <==      Total: 3
+2020-06-08 11:24:38.057 [main] DEBUG zuoyang.o2o.dao.ShopDao.queryShopCount - ==>  Preparing: SELECT count(1) FROM tb_shop AS s, tb_shop_category AS sc, tb_area AS a WHERE s.shop_category_id = ? AND s.area_id = a.area_id AND s.shop_category_id = sc.shop_category_id 
+2020-06-08 11:24:38.057 [main] DEBUG zuoyang.o2o.dao.ShopDao.queryShopCount - ==> Parameters: 2(Long)
+2020-06-08 11:24:38.059 [main] DEBUG zuoyang.o2o.dao.ShopDao.queryShopCount - <==      Total: 1
+2020-06-08 11:24:54.357 [main] DEBUG zuoyang.o2o.service.serviceImp.ShopServiceImplTest - Running with Spring Boot v2.3.0.RELEASE, Spring v5.2.6.RELEASE
+2020-06-08 11:24:57.218 [main] DEBUG zuoyang.o2o.dao.ShopDao.queryShopList - ==>  Preparing: SELECT s.shop_id, s.shop_name, s.shop_desc, s.shop_address, s.phone, s.shop_img, s.priority, s.enable_status, s.create_time, s.last_edit_time, s.advice, a.area_id, a.area_name, sc.shop_category_id, sc.shop_category_name FROM tb_shop AS s, tb_area AS a, tb_shop_category AS sc WHERE s.shop_category_id = ? AND s.area_id = a.area_id AND s.shop_category_id = sc.shop_category_id ORDER BY s.priority DESC LIMIT ?, ?; 
+2020-06-08 11:24:57.283 [main] DEBUG zuoyang.o2o.dao.ShopDao.queryShopList - ==> Parameters: 2(Long), 6(Integer), 3(Integer)
+2020-06-08 11:24:57.323 [main] DEBUG zuoyang.o2o.dao.ShopDao.queryShopList - <==      Total: 0
+2020-06-08 11:24:57.331 [main] DEBUG zuoyang.o2o.dao.ShopDao.queryShopCount - ==>  Preparing: SELECT count(1) FROM tb_shop AS s, tb_shop_category AS sc, tb_area AS a WHERE s.shop_category_id = ? AND s.area_id = a.area_id AND s.shop_category_id = sc.shop_category_id 
+2020-06-08 11:24:57.332 [main] DEBUG zuoyang.o2o.dao.ShopDao.queryShopCount - ==> Parameters: 2(Long)
+2020-06-08 11:24:57.334 [main] DEBUG zuoyang.o2o.dao.ShopDao.queryShopCount - <==      Total: 1

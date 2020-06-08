@@ -11,11 +11,13 @@ import zuoyang.o2o.enums.ShopStateEnum;
 import zuoyang.o2o.exception.ShopOperationException;
 import zuoyang.o2o.service.ShopService;
 import zuoyang.o2o.util.ImageUtil;
+import zuoyang.o2o.util.PageCalculate;
 import zuoyang.o2o.util.PathUtil;
 
 import java.io.File;
 import java.io.InputStream;
 import java.util.Date;
+import java.util.List;
 
 @Service
 @Slf4j
@@ -109,6 +111,22 @@ public class ShopServiceImpl implements ShopService {
     @Override
     public Shop getShopById(Long shopId) {
         return shopDao.queryByShopId(shopId);
+    }
+
+    @Override
+    public ShopExecution getShopList(Shop shopCondition, int pageIndex, int pageSize) {
+        int rowIndex = PageCalculate.calculateRowIndex(pageIndex, pageSize);
+        List<Shop> shopList = shopDao.queryShopList(shopCondition, rowIndex, pageSize);
+        int count = shopDao.queryShopCount(shopCondition);
+        // Must have init dataset for shop in database
+        // or cause empty return but not error in code
+        ShopExecution shopExecution;
+        if (shopList != null) {
+            shopExecution = new ShopExecution(ShopStateEnum.SUCCESS, shopList, count);
+        } else {
+            shopExecution = new ShopExecution(ShopStateEnum.INNER_ERROR);
+        }
+        return shopExecution;
     }
 
     /**
