@@ -250,3 +250,24 @@
 2020-06-08 11:24:57.331 [main] DEBUG zuoyang.o2o.dao.ShopDao.queryShopCount - ==>  Preparing: SELECT count(1) FROM tb_shop AS s, tb_shop_category AS sc, tb_area AS a WHERE s.shop_category_id = ? AND s.area_id = a.area_id AND s.shop_category_id = sc.shop_category_id 
 2020-06-08 11:24:57.332 [main] DEBUG zuoyang.o2o.dao.ShopDao.queryShopCount - ==> Parameters: 2(Long)
 2020-06-08 11:24:57.334 [main] DEBUG zuoyang.o2o.dao.ShopDao.queryShopCount - <==      Total: 1
+2020-06-08 19:47:32.266 [main] DEBUG zuoyang.o2o.dao.ShopDaoTest - Running with Spring Boot v2.3.0.RELEASE, Spring v5.2.6.RELEASE
+2020-06-08 19:47:35.984 [main] DEBUG zuoyang.o2o.dao.ShopDao.queryShopList - ==>  Preparing: SELECT s.shop_id, s.shop_name, s.shop_desc, s.shop_address, s.phone, s.shop_img, s.priority, s.enable_status, s.create_time, s.last_edit_time, s.advice, a.area_id, a.area_name, sc.shop_category_id, sc.shop_category_name FROM tb_shop AS s, tb_area AS a, tb_shop_category AS sc WHERE s.owner_id = ? AND s.area_id = a.area_id AND s.shop_category_id = sc.shop_category_id ORDER BY s.shop_id DESC LIMIT ?, ?; 
+2020-06-08 19:47:36.057 [main] DEBUG zuoyang.o2o.dao.ShopDao.queryShopList - ==> Parameters: 1(Long), 0(Integer), 5(Integer)
+2020-06-08 19:47:36.115 [main] DEBUG zuoyang.o2o.dao.ShopDao.queryShopList - <==      Total: 5
+2020-06-08 19:47:36.123 [main] DEBUG zuoyang.o2o.dao.ShopDao.queryShopCount - ==>  Preparing: SELECT count(1) FROM tb_shop AS s, tb_shop_category AS sc, tb_area AS a WHERE s.owner_id = ? AND s.area_id = a.area_id AND s.shop_category_id = sc.shop_category_id 
+2020-06-08 19:47:36.123 [main] DEBUG zuoyang.o2o.dao.ShopDao.queryShopCount - ==> Parameters: 1(Long)
+2020-06-08 19:47:36.125 [main] DEBUG zuoyang.o2o.dao.ShopDao.queryShopCount - <==      Total: 1
+2020-06-08 19:48:04.815 [main] DEBUG zuoyang.o2o.dao.ShopDaoTest - Running with Spring Boot v2.3.0.RELEASE, Spring v5.2.6.RELEASE
+2020-06-08 19:48:07.719 [main] DEBUG zuoyang.o2o.dao.ShopDao.queryShopList - ==>  Preparing: SELECT s.shop_id, s.shop_name, s.shop_desc, s.shop_address, s.phone, s.shop_img, s.priority, s.enable_status, s.create_time, s.last_edit_time, s.advice, a.area_id, a.area_name, sc.shop_category_id, sc.shop_category_name FROM tb_shop AS s, tb_area AS a, tb_shop_category AS sc WHERE s.owner_id = ? AND s.area_id = a.area_id AND s.shop_category_id = sc.shop_category_id ORDER BY s.priority DESC LIMIT ?, ?; 
+2020-06-08 19:48:07.805 [main] DEBUG zuoyang.o2o.dao.ShopDao.queryShopList - ==> Parameters: 1(Long), 0(Integer), 5(Integer)
+2020-06-08 19:48:07.844 [main] DEBUG zuoyang.o2o.dao.ShopDao.queryShopList - <==      Total: 5
+2020-06-08 19:48:07.851 [main] DEBUG zuoyang.o2o.dao.ShopDao.queryShopCount - ==>  Preparing: SELECT count(1) FROM tb_shop AS s, tb_shop_category AS sc, tb_area AS a WHERE s.owner_id = ? AND s.area_id = a.area_id AND s.shop_category_id = sc.shop_category_id 
+2020-06-08 19:48:07.851 [main] DEBUG zuoyang.o2o.dao.ShopDao.queryShopCount - ==> Parameters: 1(Long)
+2020-06-08 19:48:07.853 [main] DEBUG zuoyang.o2o.dao.ShopDao.queryShopCount - <==      Total: 1
+2020-06-08 23:27:28.937 [restartedMain] DEBUG zuoyang.o2o.O2oApplication - Running with Spring Boot v2.3.0.RELEASE, Spring v5.2.6.RELEASE
+2020-06-08 23:28:09.530 [http-nio-8080-exec-1] DEBUG zuoyang.o2o.dao.ShopDao.queryShopList - ==>  Preparing: SELECT s.shop_id, s.shop_name, s.shop_desc, s.shop_address, s.phone, s.shop_img, s.priority, s.enable_status, s.create_time, s.last_edit_time, s.advice, a.area_id, a.area_name, sc.shop_category_id, sc.shop_category_name FROM tb_shop AS s, tb_area AS a, tb_shop_category AS sc WHERE s.owner_id = ? AND s.area_id = a.area_id AND s.shop_category_id = sc.shop_category_id ORDER BY s.priority DESC LIMIT ?, ?; 
+2020-06-08 23:28:09.559 [http-nio-8080-exec-1] DEBUG zuoyang.o2o.dao.ShopDao.queryShopList - ==> Parameters: 1(Long), 0(Integer), 100(Integer)
+2020-06-08 23:28:09.630 [http-nio-8080-exec-1] DEBUG zuoyang.o2o.dao.ShopDao.queryShopList - <==      Total: 15
+2020-06-08 23:28:09.635 [http-nio-8080-exec-1] DEBUG zuoyang.o2o.dao.ShopDao.queryShopCount - ==>  Preparing: SELECT count(1) FROM tb_shop AS s, tb_shop_category AS sc, tb_area AS a WHERE s.owner_id = ? AND s.area_id = a.area_id AND s.shop_category_id = sc.shop_category_id 
+2020-06-08 23:28:09.635 [http-nio-8080-exec-1] DEBUG zuoyang.o2o.dao.ShopDao.queryShopCount - ==> Parameters: 1(Long)
+2020-06-08 23:28:09.637 [http-nio-8080-exec-1] DEBUG zuoyang.o2o.dao.ShopDao.queryShopCount - <==      Total: 1

@@ -90,6 +90,7 @@ public class ShopManagementController {
         // register shop
         if (shop!=null && shopImg!=null) {
             // user from frontend when login
+            // TODO verify the user has already login
             PersonInfo user = (PersonInfo) request.getSession().getAttribute("user");
             shop.setPersonInfo(user);
             ShopExecution shopExecution = null;
@@ -264,6 +265,74 @@ public class ShopManagementController {
         }
     }
 
+
+    /**
+     *
+     * @param request
+     * @return
+     * @throws ShopOperationException
+     */
+    @GetMapping("/getshoplist")
+    @ResponseBody
+    private Map<String, Object> getShopList(HttpServletRequest request) throws ShopOperationException {
+        Map<String, Object> modelMap = new HashMap<>();
+        //TODO get user from session, after create the login module
+        PersonInfo user = new PersonInfo();
+        user.setUserId(1L);
+        user.setName("test user name");
+        try {
+            Shop shopCondition = new Shop();
+            shopCondition.setPersonInfo(user);
+            // create 100 shops is enough to hold personal seller
+            ShopExecution shopExecution = shopService.getShopList(shopCondition, 0, 100);
+            if (shopExecution.getState() == ShopStateEnum.SUCCESS.getState()) {
+                modelMap.put("success", true);
+                modelMap.put("shopList", shopExecution.getShopList());
+                modelMap.put("user", user);
+            } else {
+                modelMap.put("success", false);
+                modelMap.put("errMsg", shopExecution.getState());
+            }
+        } catch (ShopOperationException e) {
+            modelMap.put("success", false);
+            modelMap.put("errMsg", e.getMessage());
+        }
+        return modelMap;
+    }
+
+    /**
+     *
+     * @param request
+     * @return
+     * @throws ShopOperationException
+     */
+    @GetMapping("/getshopmanagementinfo")
+    @ResponseBody
+    private Map<String, Object> getShopManagementInfo(HttpServletRequest request) {
+        Map<String, Object> modelMap = new HashMap<>();
+        Long shopId = HttpServletRequestUtil.getLong(request, "shopId");
+        if (shopId <= 0) {
+            // shopId<=0 means did not get shopId, try to get shopId from currentShop if the user has already login
+            Object currentShop = request.getSession().getAttribute("currentShop");
+            if (currentShop == null) {
+                // if currentShop is null which means illegal operation at frontend, redirect the request
+                modelMap.put("redirect", true);
+                modelMap.put("url", "/o2o/shopadmin/shopList");
+            } else {
+                Shop tempShop = (Shop) currentShop;
+                modelMap.put("redirect", false);
+                modelMap.put("shopId", tempShop.getShopId());
+            }
+        } else {
+            Shop currentShop = new Shop();
+            currentShop.setShopId(shopId);
+            // put the shop into session, more convenience for later operation
+            request.getSession().setAttribute("currentShop", currentShop);
+            modelMap.put("redirect", false);
+            modelMap.put("shopId", shopId);
+        }
+        return modelMap;
+    }
 
     /**
      * depreciated
