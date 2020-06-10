@@ -14,3 +14,19 @@
 2020-06-10 10:32:50.833 [main] DEBUG z.o2o.dao.ProductCategoryDao.queryProductCategory - ==>  Preparing: SELECT product_category_id, product_category_name, priority, create_time, last_edit_time FROM tb_product_category WHERE shop_id = ? ORDER BY priority 
 2020-06-10 10:32:50.899 [main] DEBUG z.o2o.dao.ProductCategoryDao.queryProductCategory - ==> Parameters: 29(Long)
 2020-06-10 10:32:50.937 [main] DEBUG z.o2o.dao.ProductCategoryDao.queryProductCategory - <==      Total: 2
+2020-06-10 10:42:04.520 [main] DEBUG zuoyang.o2o.dao.productCategoryDaoTest - Running with Spring Boot v2.3.0.RELEASE, Spring v5.2.6.RELEASE
+2020-06-10 10:42:07.987 [main] DEBUG z.o.d.ProductCategoryDao.queryProductCategoryList - ==>  Preparing: SELECT product_category_id, product_category_name, priority, create_time, last_edit_time FROM tb_product_category WHERE shop_id = ? ORDER BY priority 
+2020-06-10 10:42:08.039 [main] DEBUG z.o.d.ProductCategoryDao.queryProductCategoryList - ==> Parameters: 29(Long)
+2020-06-10 10:42:08.074 [main] DEBUG z.o.d.ProductCategoryDao.queryProductCategoryList - <==      Total: 2
+2020-06-10 10:47:31.067 [main] DEBUG zuoyang.o2o.dao.productCategoryDaoTest - Running with Spring Boot v2.3.0.RELEASE, Spring v5.2.6.RELEASE
+2020-06-10 10:47:33.871 [main] DEBUG z.o.d.ProductCategoryDao.queryProductCategoryList - ==>  Preparing: SELECT product_category_id, product_category_name, priority, create_time, last_edit_time FROM tb_product_category WHERE shop_id = ? ORDER BY priority 
+2020-06-10 10:47:33.934 [main] DEBUG z.o.d.ProductCategoryDao.queryProductCategoryList - ==> Parameters: 29(Long)
+2020-06-10 10:47:33.975 [main] DEBUG z.o.d.ProductCategoryDao.queryProductCategoryList - <==      Total: 2
+2020-06-10 10:52:29.675 [main] DEBUG z.o.s.serviceImp.ProductCategoryServiceImplTest - Running with Spring Boot v2.3.0.RELEASE, Spring v5.2.6.RELEASE
+2020-06-10 10:52:32.640 [main] DEBUG z.o.d.ProductCategoryDao.queryProductCategoryList - ==>  Preparing: SELECT product_category_id, product_category_name, priority, create_time, last_edit_time FROM tb_product_category WHERE shop_id = ? ORDER BY priority 
+2020-06-10 10:52:32.685 [main] DEBUG z.o.d.ProductCategoryDao.queryProductCategoryList - ==> Parameters: 29(Long)
+2020-06-10 10:52:32.719 [main] DEBUG z.o.d.ProductCategoryDao.queryProductCategoryList - <==      Total: 2
+2020-06-10 10:53:28.344 [main] DEBUG z.o.s.serviceImp.ProductCategoryServiceImplTest - Running with Spring Boot v2.3.0.RELEASE, Spring v5.2.6.RELEASE
+2020-06-10 10:53:31.335 [main] DEBUG z.o.d.ProductCategoryDao.queryProductCategoryList - ==>  Preparing: SELECT product_category_id, product_category_name, priority, create_time, last_edit_time FROM tb_product_category WHERE shop_id = ? ORDER BY priority DESC 
+2020-06-10 10:53:31.388 [main] DEBUG z.o.d.ProductCategoryDao.queryProductCategoryList - ==> Parameters: 29(Long)
+2020-06-10 10:53:31.448 [main] DEBUG z.o.d.ProductCategoryDao.queryProductCategoryList - <==      Total: 2
