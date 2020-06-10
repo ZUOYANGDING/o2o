@@ -317,7 +317,7 @@ public class ShopManagementController {
             if (currentShop == null) {
                 // if currentShop is null which means illegal operation at frontend, redirect the request
                 modelMap.put("redirect", true);
-                modelMap.put("url", "/o2o/shopadmin/shopList");
+                modelMap.put("url", "/o2o/shopadmin/shoplist");
             } else {
                 Shop tempShop = (Shop) currentShop;
                 modelMap.put("redirect", false);

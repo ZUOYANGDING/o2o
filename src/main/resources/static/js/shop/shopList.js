@@ -1,6 +1,6 @@
 $(function() {
     getList();
-    function getList(e){
+    function getList(){
         $.ajax({
             url: "/o2o/shopadmin/getshoplist",
             type: "get",
@@ -43,7 +43,7 @@ $(function() {
 
     function goShop(enableStatus, shopId) {
         if (enableStatus == 1) {
-            return '<a href="/o2o/shopadmin/shopmanage?shopId=?' + shopId + '">Enter</a>';
+            return '<a href="/o2o/shopadmin/shopmanagement?shopId=' + shopId + '">Enter</a>';
         } else {
             return '';
         }
