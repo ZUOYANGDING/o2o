@@ -1,6 +1,8 @@
 package zuoyang.o2o.service;
 
+import zuoyang.o2o.dto.ProductCategoryExecution;
 import zuoyang.o2o.entity.ProductCategory;
+import zuoyang.o2o.exception.ProductOperationException;
 
 import java.util.List;
 
@@ -11,4 +13,14 @@ public interface ProductCategoryService {
      * @return
      */
     List<ProductCategory> getProductCategoryList(Long shopId);
+
+    /**
+     *
+     * @param productCategoryList
+     * @return
+     * @throws ProductOperationException
+     */
+    ProductCategoryExecution batchInsertProductCategory(List<ProductCategory> productCategoryList)
+            throws ProductOperationException;
+
 }
