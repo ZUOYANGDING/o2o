@@ -11,6 +11,7 @@ import zuoyang.o2o.service.ProductCategoryService;
 import zuoyang.o2o.util.HttpServletRequestUtil;
 
 import javax.servlet.http.HttpServletRequest;
+import java.util.Date;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -72,6 +73,8 @@ public class ProductCategoryManagementController {
             if (productCategoryList != null && productCategoryList.size()!=0) {
                 for (ProductCategory productCategory : productCategoryList) {
                     productCategory.setShopId(shop.getShopId());
+                    productCategory.setCreateTime(new Date());
+                    productCategory.setLastEditTime(new Date());
                 }
                 try {
                     ProductCategoryExecution productCategoryExecution =
