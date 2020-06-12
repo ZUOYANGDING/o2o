@@ -1,9 +1,8 @@
 package zuoyang.o2o.web.shopadmin;
 
 import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.ResponseBody;
+import org.springframework.web.bind.annotation.*;
+import zuoyang.o2o.dto.ProductCategoryExecution;
 import zuoyang.o2o.entity.ProductCategory;
 import zuoyang.o2o.entity.Shop;
 import zuoyang.o2o.enums.ProductCategoryStateEnum;
@@ -29,11 +28,10 @@ public class ProductCategoryManagementController {
      *
      * @param request contains shop session, in getShopManagementInfo of shopManagementController
      * @return
-     * @throws ProductOperationException
      */
     @GetMapping("/getproductcategorylist")
     @ResponseBody
-    private Map<String, Object> getProductCategoryList(HttpServletRequest request) throws ProductOperationException {
+    private Map<String, Object> getProductCategoryList(HttpServletRequest request) {
         Map<String, Object> modelMap = new HashMap<>();
         Shop currentShop = (Shop) request.getSession().getAttribute("currentShop");
         if (currentShop!=null && currentShop.getShopId()>0) {
@@ -49,6 +47,53 @@ public class ProductCategoryManagementController {
         } else {
             modelMap.put("success", false);
             modelMap.put("errMsg", ProductCategoryStateEnum.INNER_ERROR.getStateInfo());
+        }
+        return modelMap;
+    }
+
+    /**
+     *
+     * @param productCategoryList
+     * @param request
+     * @return
+     */
+    @PostMapping("/addproductcategories")
+    @ResponseBody
+    private Map<String, Object> addProductCategoryList(@RequestBody List<ProductCategory> productCategoryList,
+                                                       HttpServletRequest request) {
+        Map<String, Object> modelMap = new HashMap<>();
+        Object currentShop = request.getSession().getAttribute("currentShop");
+        if (currentShop == null) {
+            modelMap.put("success", false);
+            modelMap.put("redirect", true);
+            modelMap.put("url", "/o2o/shopadmin/shoplist");
+        } else {
+            Shop shop = (Shop) currentShop;
+            if (productCategoryList != null && productCategoryList.size()!=0) {
+                for (ProductCategory productCategory : productCategoryList) {
+                    productCategory.setShopId(shop.getShopId());
+                }
+                try {
+                    ProductCategoryExecution productCategoryExecution =
+                            productCategoryService.batchInsertProductCategory(productCategoryList);
+                    if (productCategoryExecution.getState() == ProductCategoryStateEnum.SUCCESS.getState()) {
+                        modelMap.put("success", true);
+                        modelMap.put("redirect", false);
+                    } else {
+                        modelMap.put("success", false);
+                        modelMap.put("redirect", false);
+                        modelMap.put("errMsg", productCategoryExecution.getStateInfo());
+                    }
+                } catch (ProductOperationException e) {
+                    modelMap.put("success", false);
+                    modelMap.put("redirect", false);
+                    modelMap.put("errMsg", e.getMessage());
+                }
+            } else {
+                modelMap.put("success", false);
+                modelMap.put("redirect", false);
+                modelMap.put("errMsg", "Add At least One Product Category");
+            }
         }
         return modelMap;
     }
