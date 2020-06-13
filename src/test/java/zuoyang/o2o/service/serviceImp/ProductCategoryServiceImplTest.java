@@ -78,4 +78,31 @@ class ProductCategoryServiceImplTest {
         assertEquals(-1002, productCategoryExecution.getState());
         assertEquals("INVALID NUMBER OF ADD", productCategoryExecution.getStateInfo());
     }
+
+    @Test
+    void deleteProductCategory() {
+        Long productCategoryId = 19L;
+        Long shopId = 29L;
+        ProductCategoryExecution productCategoryExecution =
+                productCategoryService.deleteProductCategory(productCategoryId, shopId);
+        assertEquals(1, productCategoryExecution.getState());
+        assertEquals("Operation Succeed", productCategoryExecution.getStateInfo());
+    }
+
+    @Test
+    void deleteProductCategoryWithInvalidId() {
+        Long productCategoryId_nag = -1L;
+        Long shopId_nag = -1L;
+        ProductCategoryExecution productCategoryExecution =
+                productCategoryService.deleteProductCategory(productCategoryId_nag, shopId_nag);
+        assertEquals(-1001, productCategoryExecution.getState());
+        assertEquals("Operation Failed", productCategoryExecution.getStateInfo());
+
+        Long productCategoryId = 19L;
+        Long shopId = 29L;
+        ProductCategoryExecution productCategoryExecution_1 =
+                productCategoryService.deleteProductCategory(productCategoryId, shopId);
+        assertEquals(-1001, productCategoryExecution.getState());
+        assertEquals("Operation Failed", productCategoryExecution.getStateInfo());
+    }
 }

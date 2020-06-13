@@ -1,6 +1,7 @@
 package zuoyang.o2o.service;
 
 import zuoyang.o2o.dto.ProductCategoryExecution;
+import zuoyang.o2o.entity.Product;
 import zuoyang.o2o.entity.ProductCategory;
 import zuoyang.o2o.exception.ProductOperationException;
 
@@ -23,4 +24,13 @@ public interface ProductCategoryService {
     ProductCategoryExecution batchInsertProductCategory(List<ProductCategory> productCategoryList)
             throws ProductOperationException;
 
+    /**
+     *
+     * @param productCategoryId
+     * @param shopId
+     * @return
+     * @throws ProductOperationException
+     */
+    ProductCategoryExecution deleteProductCategory(Long productCategoryId, Long shopId)
+            throws ProductOperationException;
 }

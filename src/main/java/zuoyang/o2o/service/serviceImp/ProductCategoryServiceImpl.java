@@ -33,13 +33,34 @@ public class ProductCategoryServiceImpl implements ProductCategoryService {
         } else {
             try {
                 int effNum = productCategoryDao.batchInsertProductCategory(productCategoryList);
-                if (effNum < 0 || effNum!=productCategoryList.size()) {
+                if (effNum <= 0 || effNum!=productCategoryList.size()) {
                     return new ProductCategoryExecution(ProductCategoryStateEnum.INNER_ERROR);
                 } else {
                     return new ProductCategoryExecution(ProductCategoryStateEnum.SUCCESS);
                 }
             } catch (ProductOperationException e) {
                 throw new RuntimeException("Product category insert List error: " + e.getMessage());
+            }
+        }
+    }
+
+    @Override
+    @Transactional
+    public ProductCategoryExecution deleteProductCategory(Long productCategoryId, Long shopId)
+            throws ProductOperationException {
+        if (productCategoryId==null || shopId==null || productCategoryId<0 || shopId<0) {
+            return new ProductCategoryExecution(ProductCategoryStateEnum.INNER_ERROR);
+        } else {
+            //TODO dispatch the connect between product and productCategoryId
+            try {
+                int effNum = productCategoryDao.deleteProductCategory(productCategoryId, shopId);
+                if (effNum <= 0) {
+                    return new ProductCategoryExecution(ProductCategoryStateEnum.INNER_ERROR);
+                } else {
+                    return new ProductCategoryExecution(ProductCategoryStateEnum.SUCCESS);
+                }
+            } catch (ProductOperationException e) {
+                throw new ProductOperationException("Product category delete failed: " + e.getMessage());
             }
         }
     }

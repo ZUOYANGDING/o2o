@@ -10,3 +10,11 @@
 2020-06-13 09:46:24.462 [main] DEBUG z.o2o.dao.ProductCategoryDao.deleteProductCategory - ==>  Preparing: DELETE FROM tb_product_category WHERE product_category_id=? AND shop_id=? 
 2020-06-13 09:46:24.598 [main] DEBUG z.o2o.dao.ProductCategoryDao.deleteProductCategory - ==> Parameters: 18(Long), 29(Long)
 2020-06-13 09:46:24.605 [main] DEBUG z.o2o.dao.ProductCategoryDao.deleteProductCategory - <==    Updates: 0
+2020-06-13 10:12:05.961 [main] DEBUG z.o.s.serviceImp.ProductCategoryServiceImplTest - Running with Spring Boot v2.3.0.RELEASE, Spring v5.2.6.RELEASE
+2020-06-13 10:12:09.684 [main] DEBUG z.o2o.dao.ProductCategoryDao.deleteProductCategory - ==>  Preparing: DELETE FROM tb_product_category WHERE product_category_id=? AND shop_id=? 
+2020-06-13 10:12:09.755 [main] DEBUG z.o2o.dao.ProductCategoryDao.deleteProductCategory - ==> Parameters: 19(Long), 29(Long)
+2020-06-13 10:12:09.769 [main] DEBUG z.o2o.dao.ProductCategoryDao.deleteProductCategory - <==    Updates: 1
+2020-06-13 10:15:48.763 [main] DEBUG z.o.s.serviceImp.ProductCategoryServiceImplTest - Running with Spring Boot v2.3.0.RELEASE, Spring v5.2.6.RELEASE
+2020-06-13 10:15:52.705 [main] DEBUG z.o2o.dao.ProductCategoryDao.deleteProductCategory - ==>  Preparing: DELETE FROM tb_product_category WHERE product_category_id=? AND shop_id=? 
+2020-06-13 10:15:52.745 [main] DEBUG z.o2o.dao.ProductCategoryDao.deleteProductCategory - ==> Parameters: 19(Long), 29(Long)
+2020-06-13 10:15:52.842 [main] DEBUG z.o2o.dao.ProductCategoryDao.deleteProductCategory - <==    Updates: 0
