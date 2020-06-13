@@ -64,4 +64,16 @@ class productCategoryDaoTest {
         int effNum = productCategoryDao.batchInsertProductCategory(productCategoryList);
         assertEquals(4, effNum);
     }
+
+    @Test
+    void deleteProductCategory() {
+        Long productCategoryId = 18L;
+        Long shopCategoryId = 29L;
+        int effNum = productCategoryDao.deleteProductCategory(productCategoryId, shopCategoryId);
+        assertEquals(1, effNum);
+//        Long productCategoryId_fake = 18L;
+//        Long shopCategoryId_fake = 29L;
+//        int effNum_failed = productCategoryDao.deleteProductCategory(productCategoryId_fake, shopCategoryId_fake);
+//        assertEquals(0, effNum_failed);
+    }
 }
