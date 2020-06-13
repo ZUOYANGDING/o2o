@@ -100,4 +100,47 @@ public class ProductCategoryManagementController {
         }
         return modelMap;
     }
+
+    /**
+     *
+     * @param productCategoryId
+     * @param request
+     * @return
+     */
+    @PostMapping("/deleteproductcategory")
+    @ResponseBody
+    private Map<String, Object> deleteProductCategory(Long productCategoryId, HttpServletRequest request) {
+        Map<String, Object> modelMap = new HashMap<>();
+        Shop currentShop = (Shop) request.getSession().getAttribute("currentShop");
+        if (currentShop == null || currentShop.getShopId()<0) {
+            modelMap.put("success", false);
+            modelMap.put("redirect", true);
+            modelMap.put("url", "/o2o/shopadmin/shoplist");
+        } else {
+            if (productCategoryId!=null || productCategoryId>=0) {
+                try {
+                    ProductCategoryExecution productCategoryExecution =
+                            productCategoryService.deleteProductCategory(productCategoryId, currentShop.getShopId());
+                    if (productCategoryExecution.getState() == ProductCategoryStateEnum.SUCCESS.getState()) {
+                        modelMap.put("success", true);
+                    } else {
+                        modelMap.put("success", false);
+                        modelMap.put("redirect", false);
+                        modelMap.put("errMsg", productCategoryExecution.getStateInfo());
+                    }
+                } catch (ProductOperationException e) {
+                    modelMap.put("success", false);
+                    modelMap.put("redirect", false);
+                    modelMap.put("errMsg", e.getMessage());
+                }
+            } else {
+                modelMap.put("success", false);
+                modelMap.put("redirect", true);
+                // redirect url might be change
+                // right now to shoplist to get shop session again to refresh the categories belong to it
+                modelMap.put("url", "/o2o/shopadmin/shoplist");
+            }
+        }
+        return modelMap;
+    }
 }

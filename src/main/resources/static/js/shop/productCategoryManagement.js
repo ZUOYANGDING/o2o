@@ -63,4 +63,35 @@ $(function () {
             }
         });
     });
+
+    $('.category-wrap').on('click', '.row-product-category.temp .delete', function () {
+        console.log($(this).parent().parent());
+        $(this).parent().parent().remove();
+    });
+
+    $('.category-wrap').on('click', '.row-product-category.now .delete', function (e) {
+        var target = e.currentTarget;
+        $.confirm('Are you sure to delete it?', function () {
+            $.ajax({
+                url: deleteCategoryUrl,
+                type: 'POST',
+                data: {
+                    productCategoryId: target.dataset.id
+                },
+                dataType: 'json',
+                success: function(data) {
+                    if (data.success) {
+                        $.toast("Category has been delete successfully");
+                        getList();
+                    } else {
+                        if (data.redirect) {
+                            window.location.href = data.redirect;
+                        } else {
+                            $.toast(data.errMsg);
+                        }
+                    }
+                }
+            });
+        });
+    });
 });

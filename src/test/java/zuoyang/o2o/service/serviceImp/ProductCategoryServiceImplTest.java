@@ -70,6 +70,7 @@ class ProductCategoryServiceImplTest {
         assertEquals("Operation Succeed", productCategoryExecution.getStateInfo());
     }
 
+
     @Test
     void batchInsertProductCategoryWithEmptyList() {
         List<ProductCategory> productCategoryList = new ArrayList<>();
@@ -81,14 +82,17 @@ class ProductCategoryServiceImplTest {
 
     @Test
     void deleteProductCategory() {
-        Long productCategoryId = 19L;
-        Long shopId = 29L;
+        Long productCategoryId = 3L;
+        Long shopId = 38L;
         ProductCategoryExecution productCategoryExecution =
                 productCategoryService.deleteProductCategory(productCategoryId, shopId);
         assertEquals(1, productCategoryExecution.getState());
         assertEquals("Operation Succeed", productCategoryExecution.getStateInfo());
     }
 
+    /**
+     * depreciated, block the illegal id at the controller layer
+     */
     @Test
     void deleteProductCategoryWithInvalidId() {
         Long productCategoryId_nag = -1L;
