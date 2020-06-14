@@ -39,8 +39,8 @@ class ShopDaoTest {
         shop.setShopCategory(shopCategory);
         shop.setArea(area);
 
-        shop.setShopName("test shop 1");
-        shop.setShopDesc("test desc 1");
+        shop.setShopName("test shop 2");
+        shop.setShopDesc("test desc 2");
         shop.setShopAddress("test address");
         shop.setPhone("test phone");
         shop.setShopImg("test img");

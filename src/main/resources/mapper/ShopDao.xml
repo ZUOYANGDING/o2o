@@ -108,12 +108,13 @@
 
     </select>
 
-    <insert id="insertShop" useGeneratedKeys="true" keyColumn="shop_id" keyProperty="shopId">
+    <insert id="insertShop" parameterType="zuoyang.o2o.entity.Shop" useGeneratedKeys="true"
+            keyColumn="shop_id" keyProperty="shopId">
         INSERT INTO
-        tb_shop(shop_id, shop_name, shop_desc, shop_address, phone, shop_img, priority, enable_status, create_time,
+        tb_shop(shop_name, shop_desc, shop_address, phone, shop_img, priority, enable_status, create_time,
         last_edit_time, advice, area_id, owner_id, shop_category_id)
         VALUES
-        (#{shopId}, #{shopName}, #{shopDesc}, #{shopAddress}, #{phone}, #{shopImg}, #{priority}, #{enableStatus},
+        (#{shopName}, #{shopDesc}, #{shopAddress}, #{phone}, #{shopImg}, #{priority}, #{enableStatus},
         #{createTime}, #{lastEditTime}, #{advice}, #{area.areaId}, #{personInfo.userId}, #{shopCategory.shopCategoryId})
 
     </insert>

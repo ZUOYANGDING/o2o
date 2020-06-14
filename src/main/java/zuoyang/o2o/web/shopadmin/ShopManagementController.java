@@ -89,7 +89,7 @@ public class ShopManagementController {
 
         // register shop
         if (shop!=null && shopImg!=null) {
-            // user from frontend when login
+            // user from frontend when login, right now this controller does not work
             // TODO verify the user has already login
             PersonInfo user = (PersonInfo) request.getSession().getAttribute("user");
             shop.setPersonInfo(user);

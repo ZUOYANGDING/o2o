@@ -39,16 +39,16 @@ class ShopServiceImplTest {
 
         personInfo.setUserId(1L);
         area.setAreaId(3);
-        shopCategory.setShopCategoryId(1L);
+        shopCategory.setShopCategoryId(2L);
 
         shop.setPersonInfo(personInfo);
         shop.setShopCategory(shopCategory);
         shop.setArea(area);
 
-        shop.setShopName("test shop 12");
-        shop.setShopDesc("test desc 12");
-        shop.setShopAddress("test address 12");
-        shop.setPhone("test phone 12");
+        shop.setShopName("test shop 13");
+        shop.setShopDesc("test desc 13");
+        shop.setShopAddress("test address 13");
+        shop.setPhone("test phone 13");
         shop.setEnableStatus(ShopStateEnum.CHECK.getState());
         shop.setAdvice("under review");
 
