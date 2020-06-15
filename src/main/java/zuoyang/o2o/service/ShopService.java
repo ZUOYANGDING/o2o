@@ -1,5 +1,6 @@
 package zuoyang.o2o.service;
 
+import zuoyang.o2o.dto.ImageHolder;
 import zuoyang.o2o.dto.ShopExecution;
 import zuoyang.o2o.entity.Shop;
 import zuoyang.o2o.exception.ShopOperationException;
@@ -12,22 +13,20 @@ public interface ShopService {
     /**
      *
      * @param shop
-     * @param shopImgInputStream
-     * @param fileName
+     * @param thumbnail
      * @return
      * @throws ShopOperationException
      */
-    ShopExecution addShop(Shop shop, InputStream shopImgInputStream, String fileName) throws ShopOperationException;
+    ShopExecution addShop(Shop shop, ImageHolder thumbnail) throws ShopOperationException;
 
     /**
      *Cannot modify the shop owner and shop category
      * @param shop
-     * @param shopImgInputStream
-     * @param fileName
+     * @param thumbnail
      * @return
      * @throws ShopOperationException
      */
-    ShopExecution modifyShop(Shop shop, InputStream shopImgInputStream, String fileName) throws ShopOperationException;
+    ShopExecution modifyShop(Shop shop, ImageHolder thumbnail) throws ShopOperationException;
 
     /**
      * Return shopInfo for shop modify. Without owner info. Mask shopCategory, only return category name and id.

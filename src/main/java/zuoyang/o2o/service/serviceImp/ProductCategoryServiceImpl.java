@@ -38,8 +38,8 @@ public class ProductCategoryServiceImpl implements ProductCategoryService {
                 } else {
                     return new ProductCategoryExecution(ProductCategoryStateEnum.SUCCESS);
                 }
-            } catch (ProductOperationException e) {
-                throw new RuntimeException("Product category insert List error: " + e.getMessage());
+            } catch (Exception e) {
+                throw new ProductOperationException("Product category insert List error: " + e.getMessage());
             }
         }
     }
@@ -56,7 +56,7 @@ public class ProductCategoryServiceImpl implements ProductCategoryService {
             } else {
                 return new ProductCategoryExecution(ProductCategoryStateEnum.SUCCESS);
             }
-        } catch (ProductOperationException e) {
+        } catch (Exception e) {
             throw new ProductOperationException("Product category delete failed: " + e.getMessage());
         }
     }

@@ -9,6 +9,7 @@ import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.multipart.MultipartHttpServletRequest;
 import org.springframework.web.multipart.commons.CommonsMultipartFile;
 import org.springframework.web.multipart.commons.CommonsMultipartResolver;
+import zuoyang.o2o.dto.ImageHolder;
 import zuoyang.o2o.dto.ShopExecution;
 import zuoyang.o2o.entity.Area;
 import zuoyang.o2o.entity.PersonInfo;
@@ -100,7 +101,8 @@ public class ShopManagementController {
                 if (originalFileName.isEmpty()) {
                     throw new RuntimeException("the original file name is empty");
                 }
-                shopExecution = shopService.addShop(shop, shopImg.getInputStream(), originalFileName);
+                ImageHolder shopImageHolder = new ImageHolder(originalFileName, shopImg.getInputStream());
+                shopExecution = shopService.addShop(shop, shopImageHolder);
                 if (shopExecution.getState() == ShopStateEnum.CHECK.getState()) {
                     modelMap.put("success", true);
                     // shopList belong to this user
@@ -235,14 +237,15 @@ public class ShopManagementController {
             ShopExecution shopExecution = null;
             try {
                 if (shopImg == null) {
-                    shopExecution = shopService.modifyShop(shop, null, null);
+                    shopExecution = shopService.modifyShop(shop, null);
                 } else {
                     // the source code of getOriginalFileName will return "" if fileItem.getName() is null
                     String originalFileName = shopImg.getOriginalFilename();
                     if (originalFileName.isEmpty()) {
                         throw new RuntimeException("the original file name is empty");
                     }
-                    shopExecution = shopService.modifyShop(shop, shopImg.getInputStream(), originalFileName);
+                    ImageHolder shopImgHolder = new ImageHolder(originalFileName, shopImg.getInputStream());
+                    shopExecution = shopService.modifyShop(shop, shopImgHolder);
                 }
                 if (shopExecution.getState() == ShopStateEnum.SUCCESS.getState()) {
                     modelMap.put("success", true);

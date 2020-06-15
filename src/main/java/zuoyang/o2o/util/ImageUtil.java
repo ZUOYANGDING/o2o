@@ -4,6 +4,7 @@ import lombok.extern.slf4j.Slf4j;
 import net.coobird.thumbnailator.Thumbnails;
 import net.coobird.thumbnailator.geometry.Positions;
 import org.springframework.web.multipart.commons.CommonsMultipartFile;
+import zuoyang.o2o.dto.ImageHolder;
 
 import javax.imageio.ImageIO;
 import java.io.File;
@@ -36,14 +37,13 @@ public class ImageUtil {
 
     /**
      * deal with uploaded image, return the relative file path of the image stored
-     * @param imgInputStream
-     * @param imgFileName
+     * @param imageHolder
      * @param targetPath
      * @return
      */
-    public static String generateThumbnail(InputStream imgInputStream, String imgFileName, String targetPath) {
+    public static String generateThumbnail(ImageHolder imageHolder, String targetPath) {
         String fileName = getRandomFileName();
-        String extension = getFileExtension(imgFileName);
+        String extension = getFileExtension(imageHolder.getImageName());
 
         // create the directory to store the image if it does not exist
         makeDirPath(targetPath);
@@ -55,8 +55,8 @@ public class ImageUtil {
         log.debug("current complete file path: " + destFile);
 
         try {
-            // path of the watermark should be rewrite when deploy the project
-            Thumbnails.of(imgInputStream).size(200, 200).
+            // TODO path of the watermark should be rewrite when deploy the project
+            Thumbnails.of(imageHolder.getImage()).size(200, 200).
                     watermark(Positions.BOTTOM_RIGHT,
                             ImageIO.read(new File("/Users/zuoyangding/IdeaProjects/o2o/src/main/resources/watermark.jpg")),
                             0.25f).
@@ -64,8 +64,47 @@ public class ImageUtil {
         } catch (Exception e) {
             log.error(e.toString());
             log.error("watermarkpath: " + basePath +"/watermark.jpg");
+            // remove the directory for shop
             String createdDirectory = basePath + targetPath;
             removeCreatedDirectory(createdDirectory);
+            throw new RuntimeException("failed to create image" + e.toString());
+        }
+        return relativePath;
+    }
+
+
+    /**
+     * deal with uploaded image, return the relative file path of the image stored
+     * only different to shop thumbnail is, that when create file failed do not delete the directory,
+     * since the directory belongs to shop, not the product
+     * @param imageHolder
+     * @param targetPath
+     * @return
+     */
+    // TODO might can be rewrite generateThumbnail and this function into overload format
+    public static String generateThumbnailForProduct(ImageHolder imageHolder, String targetPath) {
+        String fileName = getRandomFileName();
+        String extension = getFileExtension(imageHolder.getImageName());
+
+        // create the directory to store the image if it does not exist
+        makeDirPath(targetPath);
+        // create relative file path with fileName and file extension
+        String relativePath = targetPath + fileName + extension;
+        log.debug("current relative file path: " + relativePath);
+        // create complete file path to store the image
+        File destFile = new File(basePath + relativePath);
+        log.debug("current complete file path: " + destFile);
+
+        try {
+            // TODO path of the watermark should be rewrite when deploy the project
+            Thumbnails.of(imageHolder.getImage()).size(200, 200).
+                    watermark(Positions.BOTTOM_RIGHT,
+                            ImageIO.read(new File("/Users/zuoyangding/IdeaProjects/o2o/src/main/resources/watermark.jpg")),
+                            0.25f).
+                    outputQuality(0.9f).toFile(destFile);
+        } catch (Exception e) {
+            log.error(e.toString());
+            log.error("watermarkpath: " + basePath +"/watermark.jpg");
             throw new RuntimeException("failed to create image" + e.toString());
         }
         return relativePath;

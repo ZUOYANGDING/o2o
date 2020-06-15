@@ -6,6 +6,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.junit.jupiter.SpringExtension;
 import org.xmlunit.builder.Input;
+import zuoyang.o2o.dto.ImageHolder;
 import zuoyang.o2o.dto.ShopExecution;
 import zuoyang.o2o.entity.Area;
 import zuoyang.o2o.entity.PersonInfo;
@@ -54,18 +55,19 @@ class ShopServiceImplTest {
 
         File shopImage = new File ("/Users/zuoyangding/work/image/tengyuan.jpg");
         InputStream inputStream = new FileInputStream(shopImage);
-        ShopExecution shopExecution = shopService.addShop(shop, inputStream, shopImage.getName());
+        ImageHolder imageHolder = new ImageHolder(shopImage.getName(), inputStream);
+        ShopExecution shopExecution = shopService.addShop(shop, imageHolder);
         assertEquals(ShopStateEnum.CHECK.getState(), shopExecution.getState());
     }
 
     @Test
     void modifyShopForNull() throws ShopOperationException {
         // null shop
-        ShopExecution shopExecution_1 = shopService.modifyShop(null, null, null);
+        ShopExecution shopExecution_1 = shopService.modifyShop(null, null);
         assertEquals(shopExecution_1.getState(), ShopStateEnum.NULL_SHOP.getState());
 
         //null shopId
-        ShopExecution shopExecution_2 = shopService.modifyShop(new Shop(), null, null);
+        ShopExecution shopExecution_2 = shopService.modifyShop(new Shop(), null);
         assertEquals(shopExecution_2.getState(), ShopStateEnum.NULL_SHOPID.getState());
     }
 
@@ -92,7 +94,7 @@ class ShopServiceImplTest {
         shop.setEnableStatus(ShopStateEnum.PASS.getState());
         shop.setAdvice("PASS REVIEW");
 
-        ShopExecution shopExecution = shopService.modifyShop(shop, null, null);
+        ShopExecution shopExecution = shopService.modifyShop(shop, null);
         assertEquals("TEST MODIFY SHOPNAME", shopExecution.getShop().getShopName());
     }
 
@@ -121,7 +123,8 @@ class ShopServiceImplTest {
 
         File imgFile = new File("/Users/zuoyangding/work/image/tengyuan.jpg");
         InputStream imageInputStream = new FileInputStream(imgFile);
-        ShopExecution shopExecution = shopService.modifyShop(shop, imageInputStream, imgFile.getName());
+        ImageHolder imageHolder = new ImageHolder(imgFile.getName(), imageInputStream);
+        ShopExecution shopExecution = shopService.modifyShop(shop, imageHolder);
         assertEquals("TEST MODIFY SHOPNAME 1", shopExecution.getShop().getShopName());
 
     }
