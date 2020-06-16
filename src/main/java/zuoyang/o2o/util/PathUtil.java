@@ -42,4 +42,14 @@ public class PathUtil {
         String shopImagePath = shopPath + shopId + separator;
         return shopImagePath.replace("/", separator);
     }
+
+    public static String getProductThumbnailPath(Long shopId) {
+        String productThumbnailPath = shopPath + shopId + separator + "product" + separator;
+        return productThumbnailPath.replace("/", separator);
+    }
+
+    public static String getProductImagePath(Long shopId, Long productId) {
+        String productImgPath = shopPath + shopId + separator + "product" + separator + productId + separator;
+        return productImgPath.replace("/", separator);
+    }
 }

@@ -1,16 +1,8 @@
-2020-06-14 12:01:45.602 [http-nio-8080-exec-6] ERROR zuoyang.o2o.service.serviceImp.ShopServiceImpl - 
-### Error updating database.  Cause: java.sql.SQLIntegrityConstraintViolationException: Column 'owner_id' cannot be null
-### The error may exist in file [/Users/zuoyangding/IdeaProjects/o2o/target/classes/mapper/ShopDao.xml]
-### The error may involve defaultParameterMap
-### The error occurred while setting parameters
-### SQL: INSERT INTO         tb_shop(shop_name, shop_desc, shop_address, phone, shop_img, priority, enable_status, create_time,         last_edit_time, advice, area_id, owner_id, shop_category_id)         VALUES         (?, ?, ?, ?, ?, ?, ?,         ?, ?, ?, ?, ?, ?)
-### Cause: java.sql.SQLIntegrityConstraintViolationException: Column 'owner_id' cannot be null
-; Column 'owner_id' cannot be null; nested exception is java.sql.SQLIntegrityConstraintViolationException: Column 'owner_id' cannot be null
-2020-06-14 12:01:52.516 [http-nio-8080-exec-1] ERROR zuoyang.o2o.service.serviceImp.ShopServiceImpl - 
-### Error updating database.  Cause: java.sql.SQLIntegrityConstraintViolationException: Column 'owner_id' cannot be null
-### The error may exist in file [/Users/zuoyangding/IdeaProjects/o2o/target/classes/mapper/ShopDao.xml]
-### The error may involve defaultParameterMap
-### The error occurred while setting parameters
-### SQL: INSERT INTO         tb_shop(shop_name, shop_desc, shop_address, phone, shop_img, priority, enable_status, create_time,         last_edit_time, advice, area_id, owner_id, shop_category_id)         VALUES         (?, ?, ?, ?, ?, ?, ?,         ?, ?, ?, ?, ?, ?)
-### Cause: java.sql.SQLIntegrityConstraintViolationException: Column 'owner_id' cannot be null
-; Column 'owner_id' cannot be null; nested exception is java.sql.SQLIntegrityConstraintViolationException: Column 'owner_id' cannot be null
+2020-06-16 10:42:14.598 [main] ERROR zuoyang.o2o.util.ImageUtil - javax.imageio.IIOException: Can't read input file!
+2020-06-16 10:42:14.601 [main] ERROR zuoyang.o2o.util.ImageUtil - watermarkpath: /Users/zuoyangding/work/image/watermark.jpg
+2020-06-16 10:43:48.806 [main] ERROR zuoyang.o2o.util.ImageUtil - javax.imageio.IIOException: Can't read input file!
+2020-06-16 10:43:48.807 [main] ERROR zuoyang.o2o.util.ImageUtil - watermarkpath: /Users/zuoyangding/work/image/watermark.jpg
+2020-06-16 10:52:16.962 [main] ERROR zuoyang.o2o.util.ImageUtil - javax.imageio.IIOException: Can't read input file!
+2020-06-16 10:52:16.963 [main] ERROR zuoyang.o2o.util.ImageUtil - watermarkpath: /Users/zuoyangding/work/image/watermark.jpg
+2020-06-16 10:59:17.106 [main] ERROR zuoyang.o2o.util.ImageUtil - Can't read input file!
+2020-06-16 10:59:17.106 [main] ERROR zuoyang.o2o.util.ImageUtil - watermarkpath: /Users/zuoyangding/work/image/watermark.jpg

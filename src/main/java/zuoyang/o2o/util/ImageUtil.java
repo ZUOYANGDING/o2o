@@ -46,7 +46,7 @@ public class ImageUtil {
         String extension = getFileExtension(imageHolder.getImageName());
 
         // create the directory to store the image if it does not exist
-        makeDirPath(targetPath);
+        boolean create = makeDirPath(targetPath);
         // create relative file path with fileName and file extension
         String relativePath = targetPath + fileName + extension;
         log.debug("current relative file path: " + relativePath);
@@ -65,50 +65,46 @@ public class ImageUtil {
             log.error(e.toString());
             log.error("watermarkpath: " + basePath +"/watermark.jpg");
             // remove the directory for shop
-            String createdDirectory = basePath + targetPath;
-            removeCreatedDirectory(createdDirectory);
+            if (create) {
+                String createdDirectory = basePath + targetPath;
+                removeCreatedDirectory(createdDirectory);
+            }
             throw new RuntimeException("failed to create image" + e.toString());
         }
         return relativePath;
     }
 
 
-    /**
-     * deal with uploaded image, return the relative file path of the image stored
-     * only different to shop thumbnail is, that when create file failed do not delete the directory,
-     * since the directory belongs to shop, not the product
-     * @param imageHolder
-     * @param targetPath
-     * @return
-     */
-    // TODO might can be rewrite generateThumbnail and this function into overload format
-    public static String generateThumbnailForProduct(ImageHolder imageHolder, String targetPath) {
+    public static String generateProductDetailImage(ImageHolder imageHolder, String targetPath) {
         String fileName = getRandomFileName();
         String extension = getFileExtension(imageHolder.getImageName());
 
-        // create the directory to store the image if it does not exist
-        makeDirPath(targetPath);
-        // create relative file path with fileName and file extension
+        // make directory if it does not exit
+        boolean create = makeDirPath(targetPath);
+        // create relative path
         String relativePath = targetPath + fileName + extension;
         log.debug("current relative file path: " + relativePath);
         // create complete file path to store the image
         File destFile = new File(basePath + relativePath);
         log.debug("current complete file path: " + destFile);
-
         try {
-            // TODO path of the watermark should be rewrite when deploy the project
-            Thumbnails.of(imageHolder.getImage()).size(200, 200).
+            Thumbnails.of(imageHolder.getImage()).size(337, 640).
                     watermark(Positions.BOTTOM_RIGHT,
                             ImageIO.read(new File("/Users/zuoyangding/IdeaProjects/o2o/src/main/resources/watermark.jpg")),
-                            0.25f).
-                    outputQuality(0.9f).toFile(destFile);
+                            0.25f).outputQuality(0.9f).toFile(destFile);
         } catch (Exception e) {
-            log.error(e.toString());
+            log.error(e.getMessage());
             log.error("watermarkpath: " + basePath +"/watermark.jpg");
+            if (create) {
+                String createdDirectory = basePath + targetPath;
+                removeCreatedDirectory(createdDirectory);
+            }
             throw new RuntimeException("failed to create image" + e.toString());
         }
+
         return relativePath;
     }
+
 
     /**
      * create random fileName
@@ -134,12 +130,15 @@ public class ImageUtil {
      * the directories foo and foo1 should be created here
      * @param targetPath
      */
-    public static void makeDirPath(String targetPath) {
+    public static boolean makeDirPath(String targetPath) {
         String fileDirtPath = basePath + targetPath;
         File dirPath = new File(fileDirtPath);
+        boolean create = false;
         if (!dirPath.exists()) {
             dirPath.mkdirs();
+            create = true;
         }
+        return create;
     }
 
     /**
