@@ -36,7 +36,7 @@ public class ImageUtil {
     }
 
     /**
-     * deal with uploaded image, return the relative file path of the image stored
+     * deal with uploaded thumbnail, return the relative file path of the image stored
      * @param imageHolder
      * @param targetPath
      * @return
@@ -74,7 +74,12 @@ public class ImageUtil {
         return relativePath;
     }
 
-
+    /**
+     * deal with upload detail image
+     * @param imageHolder
+     * @param targetPath
+     * @return
+     */
     public static String generateProductDetailImage(ImageHolder imageHolder, String targetPath) {
         String fileName = getRandomFileName();
         String extension = getFileExtension(imageHolder.getImageName());
