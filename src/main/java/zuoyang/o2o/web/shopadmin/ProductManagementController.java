@@ -1,6 +1,7 @@
 package zuoyang.o2o.web.shopadmin;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -27,6 +28,7 @@ import java.util.List;
 import java.util.Map;
 
 @Controller
+@Slf4j
 @RequestMapping("/shopadmin")
 public class ProductManagementController {
     private final ProductService productService;
@@ -127,6 +129,11 @@ public class ProductManagementController {
                            List<ImageHolder> productDetailImgList) throws IOException, ProductOperationException {
         MultipartHttpServletRequest multipartHttpServletRequest  = (MultipartHttpServletRequest) request;
 
+        // get the size of image file stream from frontend, 0 means null image stream from frontend
+        int multipartFilesSize = multipartHttpServletRequest.getMultiFileMap().size();
+        if (multipartFilesSize<=0) {
+            throw new ProductOperationException("Image for shop request");
+        }
         // get thumbnail file
         CommonsMultipartFile thumbnailImg = (CommonsMultipartFile) multipartHttpServletRequest.getFile("thumbnail");
         if (thumbnailImg != null) {
@@ -139,7 +146,18 @@ public class ProductManagementController {
         }
 
         // get detail image file, max number is 6
-        for (int i=0; i<MAX_IMAGE_UPLOAD; i++) {
+        // thumbnail file has been got, size--
+        multipartFilesSize--;
+        if (multipartFilesSize <=0 ) {
+            throw new ProductOperationException("No detail image files");
+        }
+
+//        if (multipartFilesSize>MAX_IMAGE_UPLOAD) {
+//            log.info("detail images over 6");
+//        }
+
+        for (int i=0; i<multipartFilesSize; i++) {
+            // prevent frontend stream provide null/bad detail image back
             CommonsMultipartFile detailImg =
                     (CommonsMultipartFile) multipartHttpServletRequest.getFile("productImg" + i);
             ImageHolder tempImageHolder = new ImageHolder();
