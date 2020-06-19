@@ -3,12 +3,19 @@
         PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="zuoyang.o2o.dao.ProductImgDao">
+
     <insert id="batchInsertProductImg" parameterType="java.util.List">
         INSERT INTO tb_product_img(img_address, img_desc, priority, create_time, last_edit_time, product_id)
         VALUES
-        <foreach collection="list" item="productImg" index="index" separator=",">
-            (#{productImg.imgAddress}, #{productImg.imgDesc}, #{productImg.priority}, #{productImg.createTime},
-            #{productImg.lastEditTime}, #{productImg.productId})
-        </foreach>
+            <foreach collection="list" item="productImg" index="index" separator=",">
+                (#{productImg.imgAddress}, #{productImg.imgDesc}, #{productImg.priority}, #{productImg.createTime},
+                #{productImg.lastEditTime}, #{productImg.productId})
+            </foreach>
     </insert>
+    
+    <delete id="deleteProductImgByProductId" parameterType="Long">
+        DELETE FROM tb_product_img
+        WHERE
+            product_id = #{productId}
+    </delete>
 </mapper>

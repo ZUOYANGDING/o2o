@@ -3,13 +3,87 @@
         PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="zuoyang.o2o.dao.ProductDao">
+    <resultMap id="productMap" type="zuoyang.o2o.entity.Product">
+        <id column="product_id" property="productId"/>
+        <result column="product_name" property="productName"/>
+        <result column="img_addr" property="imgAddr"/>
+        <result column="product_desc" property="productDesc"/>
+        <result column="normal_price" property="normalPrice"/>
+        <result column="promote_price" property="promotePrice"/>
+        <result column="priority" property="priority"/>
+        <result column="create_time" property="createTime"/>
+        <result column="last_edit_time" property="lastEditTime"/>
+        <result column="enable_status" property="enableStatus"/>
+        <association property="productCategory" column="product_category_id" javaType="zuoyang.o2o.entity.ProductCategory">
+            <id column="product_category_id" property="productCategoryId"/>
+            <result column="product_category_name" property="productCategoryName"/>
+        </association>
+        <association property="shop" column="shop_id" javaType="zuoyang.o2o.entity.Shop">
+            <id column="shop_id" property="shopId"/>
+            <result column="shop_name" property="shopName"/>
+            <result column="owner_id" property="personalInfo.userId"/>
+        </association>
+        <collection property="productImgList" column="product_id" ofType="zuoyang.o2o.entity.ProductImg">
+            <id column="product_img_id" property="productImgId"/>
+            <result column="img_address" property="imgAddress"/>
+            <result column="img_desc" property="imgDesc"/>
+            <result column="priority" property="priority"/>
+            <result column="create_time" property="createTime"/>
+            <result column="last_edit_time" property="lastEditTime"/>
+            <result column="product_id" property="productId"/>
+        </collection>
+    </resultMap>
+
+    <select id="queryProductByProductId" resultMap="productMap" parameterType="Long">
+        SELECT
+            p.product_id, p.product_name, p.img_addr, p.product_desc, p.normal_price, p.promote_price, p.priority,
+            p.create_time, p.last_edit_time, p.enable_status, p.product_category_id, p.shop_id,
+            pm.product_img_id, pm.img_address, pm.img_desc, pm.create_time, pm.priority as detail_img_priority
+        FROM
+            tb_product as p
+        LEFT JOIN
+            tb_product_img as pm
+        ON
+            p.product_id=pm.product_id
+        WHERE
+            p.product_id=#{productId}
+        ORDER BY
+            pm.priority DESC
+    </select>
+
+    <update id="updateProduct" parameterType="zuoyang.o2o.entity.Product" keyProperty="product_id"
+            useGeneratedKeys="true">
+        UPDATE tb_product
+        <set>
+            <if test="productName!=null">product_name=#{productName},</if>
+            <if test="imgAddr!=null">img_addr=#{imgAddr},</if>
+            <if test="normalPrice!=null">normal_price=#{normalPrice},</if>
+            <if test="promotePrice!=null">promote_price=#{promotePrice},</if>
+            <if test="priority!=null">priority=#{priority},</if>
+            <if test="createTime!=null">create_time=#{createTime},</if>
+            <if test="lastEditTime!=null">last_edit_time=#{lastEditTime},</if>
+            <if test="enableStatus!=null">enable_status=#{enableStatus},</if>
+            <if test="productCategory!=null and productCategory.productCategoryId!=null">
+                product_category_id = #{productCategory.productCategoryId}
+            </if>
+        </set>
+        WHERE
+            product_id=#{productId} and shop_id=#{shopId}
+    </update>
+
     <insert id="insertProduct" parameterType="zuoyang.o2o.entity.Product" useGeneratedKeys="true"
             keyColumn="product_id" keyProperty="productId">
         INSERT INTO
-        tb_product(product_name, img_addr, product_desc, normal_price, promote_price,
-        priority, create_time, last_edit_time, enable_status, product_category_id, shop_id)
+            tb_product(product_name, img_addr, product_desc, normal_price, promote_price,
+            priority, create_time, last_edit_time, enable_status, product_category_id, shop_id)
         VALUES
-        (#{productName}, #{imgAddr}, #{productDesc}, #{normalPrice}, #{promotePrice}, #{priority},
-        #{createTime}, #{lastEditTime}, #{enableStatus}, #{productCategory.productCategoryId}, #{shop.shopId})
+            (#{productName}, #{imgAddr}, #{productDesc}, #{normalPrice}, #{promotePrice}, #{priority},
+            #{createTime}, #{lastEditTime}, #{enableStatus}, #{productCategory.productCategoryId}, #{shop.shopId})
     </insert>
+
+    <delete id="deleteProductByProductId">
+        DELETE FROM tb_product
+        WHERE
+            product_id=#{productId} and shop_id=#{shopId}
+    </delete>
 </mapper>
