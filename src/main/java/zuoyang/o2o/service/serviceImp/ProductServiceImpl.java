@@ -150,7 +150,7 @@ public class ProductServiceImpl implements ProductService {
             product.setEnableStatus(1);
 
             // deal with thumbnail
-            if (thumbnail != null) {
+            if (thumbnail!=null && thumbnail.getImageName()!=null) {
                 // delete the old thumbnail if exist
                 if (tempProduct.getImgAddr() != null) {
                     try {
