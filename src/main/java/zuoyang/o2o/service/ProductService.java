@@ -21,8 +21,21 @@ public interface ProductService {
     ProductExecution addProduct (Product product, ImageHolder productThumbnail,
                                  List<ImageHolder> productImgList) throws ProductOperationException;
 
+    /**
+     * get product basic information and combined the product detail image with it
+     * @param productId
+     * @return
+     */
     Product getProductInfo (Long productId);
 
+    /**
+     *
+     * @param product
+     * @param thumbnail
+     * @param productDetailImageList
+     * @return
+     * @throws ProductOperationException
+     */
     ProductExecution modifyProduct(Product product, ImageHolder thumbnail, List<ImageHolder> productDetailImageList)
         throws ProductOperationException;
 }

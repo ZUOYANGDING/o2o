@@ -149,6 +149,53 @@ class ProductServiceImplTest {
 //        assertEquals(ProductStateEnum.INNER_ERROR.getState(), productExecution.getState());
 //    }
 
+    @Test
+    @Order(3)
+    void modifyProductWithoutThumbnailAndImage() {
+        Product product = new Product();
+        Shop shop = new Shop();
+        ProductCategory productCategory = new ProductCategory();
+        shop.setShopId(31L);
+        productCategory.setProductCategoryId(6L);
+        product.setShop(shop);
+        product.setProductCategory(productCategory);
+        product.setProductId(5L);
+        product.setProductName("test product 3 update");
+        List<ImageHolder> imageHolderList = new ArrayList<>();
+        ProductExecution productExecution = productService.modifyProduct(product, null, imageHolderList);
+        assertEquals(ProductStateEnum.SUCCESS.getState(), productExecution.getState());
+    }
 
+    @Test
+    @Order(4)
+    void modifyProduct() throws FileNotFoundException{
+        Product product = new Product();
+        Shop shop = new Shop();
+        ProductCategory productCategory = new ProductCategory();
+        shop.setShopId(40L);
+        productCategory.setProductCategoryId(8L);
+        product.setProductId(11L);
+        product.setProductName("test product 7 update");
+        product.setShop(shop);
+        product.setProductCategory(productCategory);
+
+        // Thumbnail
+        File thumbnailFile = new File("/Users/zuoyangding/work/image/ff1.jpeg");
+        InputStream is = new FileInputStream(thumbnailFile);
+        ImageHolder imageHolder = new ImageHolder(thumbnailFile.getName(), is);
+
+        // detail image
+        File detailFile_1 = new File("/Users/zuoyangding/work/image/ff2.jpeg");
+        File detailFile_2 = new File("/Users/zuoyangding/work/image/ff3.jpeg");
+        InputStream is_1 = new FileInputStream(detailFile_1);
+        InputStream is_2 = new FileInputStream(detailFile_2);
+        ImageHolder imageHolder1 = new ImageHolder(detailFile_1.getName(), is_1);
+        ImageHolder imageHolder2 = new ImageHolder(detailFile_2.getName(), is_2);
+        List<ImageHolder> imageHolderList = new ArrayList<>();
+        imageHolderList.add(imageHolder1);
+        imageHolderList.add(imageHolder2);
+        ProductExecution productExecution = productService.modifyProduct(product, imageHolder, imageHolderList);
+        assertEquals(ProductStateEnum.SUCCESS.getState(), productExecution.getState());
+    }
 
 }

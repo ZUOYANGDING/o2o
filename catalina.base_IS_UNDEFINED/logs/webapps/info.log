@@ -1,24 +1,12 @@
-2020-06-19 19:50:09.610 [main] INFO  zuoyang.o2o.dao.ProductImgDaoTest - Starting ProductImgDaoTest on dingzuoangdembp.lan with PID 51722 (started by zuoyangding in /Users/zuoyangding/IdeaProjects/o2o)
-2020-06-19 19:50:09.617 [main] INFO  zuoyang.o2o.dao.ProductImgDaoTest - No active profile set, falling back to default profiles: default
-2020-06-19 19:50:12.326 [main] INFO  zuoyang.o2o.dao.ProductImgDaoTest - Started ProductImgDaoTest in 3.083 seconds (JVM running for 4.524)
-2020-06-19 20:01:12.601 [main] INFO  zuoyang.o2o.dao.ProductDaoTest - Starting ProductDaoTest on dingzuoangdembp.lan with PID 51758 (started by zuoyangding in /Users/zuoyangding/IdeaProjects/o2o)
-2020-06-19 20:01:12.603 [main] INFO  zuoyang.o2o.dao.ProductDaoTest - No active profile set, falling back to default profiles: default
-2020-06-19 20:01:14.958 [main] INFO  zuoyang.o2o.dao.ProductDaoTest - Started ProductDaoTest in 2.783 seconds (JVM running for 4.403)
-2020-06-19 20:05:06.348 [main] INFO  zuoyang.o2o.dao.ProductDaoTest - Starting ProductDaoTest on dingzuoangdembp.lan with PID 51765 (started by zuoyangding in /Users/zuoyangding/IdeaProjects/o2o)
-2020-06-19 20:05:06.349 [main] INFO  zuoyang.o2o.dao.ProductDaoTest - No active profile set, falling back to default profiles: default
-2020-06-19 20:05:08.566 [main] INFO  zuoyang.o2o.dao.ProductDaoTest - Started ProductDaoTest in 2.542 seconds (JVM running for 4.013)
-2020-06-19 20:13:27.303 [main] INFO  zuoyang.o2o.dao.ProductDaoTest - Starting ProductDaoTest on dingzuoangdembp.lan with PID 51779 (started by zuoyangding in /Users/zuoyangding/IdeaProjects/o2o)
-2020-06-19 20:13:27.304 [main] INFO  zuoyang.o2o.dao.ProductDaoTest - No active profile set, falling back to default profiles: default
-2020-06-19 20:13:29.484 [main] INFO  zuoyang.o2o.dao.ProductDaoTest - Started ProductDaoTest in 2.598 seconds (JVM running for 4.062)
-2020-06-19 20:17:38.119 [main] INFO  zuoyang.o2o.dao.ProductDaoTest - Starting ProductDaoTest on dingzuoangdembp.lan with PID 51787 (started by zuoyangding in /Users/zuoyangding/IdeaProjects/o2o)
-2020-06-19 20:17:38.120 [main] INFO  zuoyang.o2o.dao.ProductDaoTest - No active profile set, falling back to default profiles: default
-2020-06-19 20:17:40.299 [main] INFO  zuoyang.o2o.dao.ProductDaoTest - Started ProductDaoTest in 2.468 seconds (JVM running for 3.893)
-2020-06-19 20:35:28.420 [main] INFO  zuoyang.o2o.dao.ProductDaoTest - Starting ProductDaoTest on dingzuoangdembp.lan with PID 51813 (started by zuoyangding in /Users/zuoyangding/IdeaProjects/o2o)
-2020-06-19 20:35:28.422 [main] INFO  zuoyang.o2o.dao.ProductDaoTest - No active profile set, falling back to default profiles: default
-2020-06-19 20:35:30.669 [main] INFO  zuoyang.o2o.dao.ProductDaoTest - Started ProductDaoTest in 2.507 seconds (JVM running for 3.88)
-2020-06-19 20:39:21.441 [main] INFO  zuoyang.o2o.dao.ProductDaoTest - Starting ProductDaoTest on dingzuoangdembp.lan with PID 51818 (started by zuoyangding in /Users/zuoyangding/IdeaProjects/o2o)
-2020-06-19 20:39:21.442 [main] INFO  zuoyang.o2o.dao.ProductDaoTest - No active profile set, falling back to default profiles: default
-2020-06-19 20:39:23.596 [main] INFO  zuoyang.o2o.dao.ProductDaoTest - Started ProductDaoTest in 2.418 seconds (JVM running for 3.891)
-2020-06-19 20:51:53.060 [main] INFO  zuoyang.o2o.dao.ProductDaoTest - Starting ProductDaoTest on dingzuoangdembp.lan with PID 51860 (started by zuoyangding in /Users/zuoyangding/IdeaProjects/o2o)
-2020-06-19 20:51:53.062 [main] INFO  zuoyang.o2o.dao.ProductDaoTest - No active profile set, falling back to default profiles: default
-2020-06-19 20:51:55.809 [main] INFO  zuoyang.o2o.dao.ProductDaoTest - Started ProductDaoTest in 3.064 seconds (JVM running for 4.537)
+2020-06-20 08:33:25.906 [main] INFO  z.o2o.service.serviceImp.ProductServiceImplTest - Starting ProductServiceImplTest on dingzuoangdembp.lan with PID 52596 (started by zuoyangding in /Users/zuoyangding/IdeaProjects/o2o)
+2020-06-20 08:33:25.913 [main] INFO  z.o2o.service.serviceImp.ProductServiceImplTest - No active profile set, falling back to default profiles: default
+2020-06-20 08:33:28.753 [main] INFO  z.o2o.service.serviceImp.ProductServiceImplTest - Started ProductServiceImplTest in 3.327 seconds (JVM running for 4.994)
+2020-06-20 08:43:07.695 [main] INFO  z.o2o.service.serviceImp.ProductServiceImplTest - Starting ProductServiceImplTest on dingzuoangdembp.lan with PID 52627 (started by zuoyangding in /Users/zuoyangding/IdeaProjects/o2o)
+2020-06-20 08:43:07.697 [main] INFO  z.o2o.service.serviceImp.ProductServiceImplTest - No active profile set, falling back to default profiles: default
+2020-06-20 08:43:10.350 [main] INFO  z.o2o.service.serviceImp.ProductServiceImplTest - Started ProductServiceImplTest in 2.964 seconds (JVM running for 4.572)
+2020-06-20 08:48:39.508 [main] INFO  z.o2o.service.serviceImp.ProductServiceImplTest - Starting ProductServiceImplTest on dingzuoangdembp.lan with PID 52635 (started by zuoyangding in /Users/zuoyangding/IdeaProjects/o2o)
+2020-06-20 08:48:39.510 [main] INFO  z.o2o.service.serviceImp.ProductServiceImplTest - No active profile set, falling back to default profiles: default
+2020-06-20 08:48:41.644 [main] INFO  z.o2o.service.serviceImp.ProductServiceImplTest - Started ProductServiceImplTest in 2.475 seconds (JVM running for 3.979)
+2020-06-20 08:48:42.675 [main] INFO  zuoyang.o2o.util.ImageUtil - file or directory to delete: /Users/zuoyangding/work/image/upload/images/item/shop/40/product/2839020200618121750.jpeg
+2020-06-20 08:48:43.207 [main] INFO  zuoyang.o2o.service.serviceImp.ProductServiceImpl - Delete product detail image result 5
+2020-06-20 08:48:43.216 [main] INFO  zuoyang.o2o.util.ImageUtil - file or directory to delete: /Users/zuoyangding/work/image/upload/images/item/shop/40/product/11/

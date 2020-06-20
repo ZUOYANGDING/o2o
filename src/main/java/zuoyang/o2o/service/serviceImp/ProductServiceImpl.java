@@ -76,7 +76,7 @@ public class ProductServiceImpl implements ProductService {
     }
 
     /**
-     *
+     * add thumbnail to image storage and save the path to product
      * @param product
      * @param productThumbnail
      */
@@ -86,6 +86,12 @@ public class ProductServiceImpl implements ProductService {
         product.setImgAddr(thumbnailPath);
     }
 
+    /**
+     * add product detail images to image storage and save the path to productImg database
+     * @param product
+     * @param productImgList
+     * @throws ProductOperationException
+     */
     @Transactional
     public void addProductDetailImage(Product product, List<ImageHolder> productImgList)
             throws ProductOperationException{
@@ -193,6 +199,11 @@ public class ProductServiceImpl implements ProductService {
         }
     }
 
+    /**
+     * delete product detail image from image storage and productImg database
+     * @param product
+     * @param productImgList
+     */
     @Transactional
     public void deleteProductDetailImgList(Product product, List<ProductImg> productImgList) {
         Long productId = product.getProductId();
