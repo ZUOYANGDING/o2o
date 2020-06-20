@@ -20,4 +20,9 @@ public interface ProductService {
      */
     ProductExecution addProduct (Product product, ImageHolder productThumbnail,
                                  List<ImageHolder> productImgList) throws ProductOperationException;
+
+    Product getProductInfo (Long productId);
+
+    ProductExecution modifyProduct(Product product, ImageHolder thumbnail, List<ImageHolder> productDetailImageList)
+        throws ProductOperationException;
 }

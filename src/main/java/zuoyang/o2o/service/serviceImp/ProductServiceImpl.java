@@ -1,5 +1,6 @@
 package zuoyang.o2o.service.serviceImp;
 
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 import zuoyang.o2o.dao.ProductDao;
@@ -20,6 +21,7 @@ import java.util.Date;
 import java.util.List;
 
 @Service
+@Slf4j
 public class ProductServiceImpl implements ProductService {
 
     private final ProductDao productDao;
@@ -73,6 +75,11 @@ public class ProductServiceImpl implements ProductService {
         }
     }
 
+    /**
+     *
+     * @param product
+     * @param productThumbnail
+     */
     private void addProductThumbnail(Product product, ImageHolder productThumbnail) {
         String filePath = PathUtil.getProductThumbnailPath(product.getShop().getShopId());
         String thumbnailPath = ImageUtil.generateThumbnail(productThumbnail, filePath);
@@ -110,5 +117,89 @@ public class ProductServiceImpl implements ProductService {
                 throw new ProductOperationException("Store product detail image failed" + e.getMessage());
             }
         }
+    }
+
+    @Override
+    public Product getProductInfo(Long productId) {
+        return productDao.queryProductByProductId(productId);
+    }
+
+    @Override
+    @Transactional
+    public ProductExecution modifyProduct(Product product, ImageHolder thumbnail,
+                                          List<ImageHolder> productDetailImgList) throws ProductOperationException {
+        if (product!=null && product.getShop()!=null && product.getShop().getShopId()!=null) {
+
+            // valid check for productId
+            Product tempProduct = getProductInfo(product.getProductId());
+            if (tempProduct == null) {
+                throw new ProductOperationException("Cannot find matched product");
+            }
+            if (product.getShop().getShopId() != tempProduct.getShop().getShopId()) {
+                throw new ProductOperationException("cannot find matched product in this shop");
+            }
+
+            // set basic info
+            product.setLastEditTime(new Date());
+            product.setEnableStatus(1);
+
+            // deal with thumbnail
+            if (thumbnail != null) {
+                // delete the old thumbnail if exist
+                if (tempProduct.getImgAddr() != null) {
+                    try {
+                        ImageUtil.deleteFileOrDirectory(tempProduct.getImgAddr());
+                    } catch (Exception e) {
+                        throw new ProductOperationException("failed to update the thumbnail " + e.getMessage());
+                    }
+                }
+
+                // setup new thumbnail
+                try {
+                    addProductThumbnail(product, thumbnail);
+                } catch (Exception e) {
+                    throw new ProductOperationException("failed to update the thumbnail " + e.getMessage());
+                }
+            }
+
+            // deal with detail image
+            if (productDetailImgList!=null && productDetailImgList.size()>0) {
+                // delete the old detail images if exist
+                if (tempProduct.getProductImgList() != null) {
+                    deleteProductDetailImgList(tempProduct, tempProduct.getProductImgList());
+                }
+
+                // setup new product detail images
+                try {
+                    addProductDetailImage(product, productDetailImgList);
+                } catch (Exception e) {
+                    throw new ProductOperationException("failed to update detail Image " + e.getMessage());
+                }
+            }
+
+            // update the product to database
+            try {
+                int effNum = productDao.updateProduct(product);
+                if (effNum <= 0) {
+                    throw new ProductOperationException("failed to update product");
+                } else {
+                    return new ProductExecution(ProductStateEnum.SUCCESS, product);
+                }
+            } catch (Exception e) {
+                throw new ProductOperationException("failed to update product " + e.getMessage());
+            }
+        } else {
+            return new ProductExecution(ProductStateEnum.EMPTY_ELEMENT);
+        }
+    }
+
+    @Transactional
+    public void deleteProductDetailImgList(Product product, List<ProductImg> productImgList) {
+        Long productId = product.getProductId();
+        Long shopId = product.getShop().getShopId();
+        int effNum = productImgDao.deleteProductImgByProductId(productId);
+        log.info("Delete product detail image result " + effNum);
+        String deleteFilePath = PathUtil.getProductImagePath(shopId, productId);
+        ImageUtil.deleteFileOrDirectory(deleteFilePath);
     }
 }
