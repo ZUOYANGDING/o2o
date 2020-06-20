@@ -68,7 +68,7 @@
             </if>
         </set>
         WHERE
-            product_id=#{productId} and shop_id=#{shopId}
+            product_id=#{productId} and shop_id=#{shop.shopId}
     </update>
 
     <insert id="insertProduct" parameterType="zuoyang.o2o.entity.Product" useGeneratedKeys="true"

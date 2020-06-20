@@ -49,4 +49,12 @@ class ProductImgDaoTest {
         int effNum = productImgDao.batchInsertProductImg(productImgList);
         assertEquals(2, effNum);
     }
+
+    @Test
+    @Order(2)
+    void deleteProductImgByProductId() {
+        Long productId = 3L;
+        int effNumber = productImgDao.deleteProductImgByProductId(productId);
+        assertEquals(2, effNumber);
+    }
 }
