@@ -16,7 +16,28 @@ $(function(){
      * get productInfo
      * @param productId
      */
-    function getProductInfo(productId) {}
+    function getProductInfo(productId) {
+        $.getJSON(infoUrl, function(data) {
+           if (data.success) {
+               var product = data.product;
+               var productCategoryList = data.productCategoryList;
+               $('#product-name').val(product.productName);
+               $('#product-desc').val(product.productDesc);
+               $('#priority').val(product.priority);
+               $('#normal-price').val(product.normalPrice);
+               $('#promotion-price').val(product.promotePrice);
+
+               var categoryHtml = '';
+               var selectedCategory = product.productCategory.productCategoryId;
+               productCategoryList.map(function (item, index) {
+                   var isSelected = selectedCategory === item.productCategoryId ? 'selected' : '';
+                   categoryHtml += '<option data-value="' + item.productCategoryId + '"' + isSelected + '>' +
+                   item.productCategoryName + '</option>';
+               });
+               $('#category').html(categoryHtml);
+           }
+        });
+    }
 
 
     function getCategory() {
@@ -60,9 +81,12 @@ $(function(){
         }
 
         // thumbnail for product
-        var thumbnail = $('#small-img')[0].files[0];
+        var thumbnail;
         var formData = new FormData();
-        formData.append('thumbnail', thumbnail);
+        if ($('#small-img')[0].files.length>0) {
+            thumbnail = $('#small-img')[0].files[0];
+            formData.append('thumbnail', thumbnail);
+        }
 
         // detail image for product
         $('.detail-img').map(function(index, item) {

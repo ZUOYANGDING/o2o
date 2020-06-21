@@ -104,7 +104,16 @@ public class ProductManagementController {
         // get product thumbnail and detail images, and transfer them to ImageHolder
         try {
             if (commonsMultipartResolver.isMultipart(request)) {
-                getImages(request, thumbnail, productDetailImgList);
+                MultipartHttpServletRequest multipartHttpServletRequest  = (MultipartHttpServletRequest) request;
+
+                // get the size of image file stream from frontend, 0 means null image stream from frontend
+                int multipartFilesSize = multipartHttpServletRequest.getMultiFileMap().size();
+                if (multipartFilesSize > 1) {
+                    getImages(thumbnail, productDetailImgList,
+                            multipartHttpServletRequest, multipartFilesSize);
+                } else {
+                    throw new ProductOperationException("Missing thumbnail or detail image for product adding");
+                }
             }
         } catch (Exception e) {
             modelMap.put("redirect", false);
@@ -185,7 +194,16 @@ public class ProductManagementController {
         // get product thumbnail and detail images, and transfer them to ImageHolder if need to change them
         try {
             if (commonsMultipartResolver.isMultipart(request)) {
-                getImages(request, thumbnail, productDetailImgList);
+                MultipartHttpServletRequest multipartHttpServletRequest  = (MultipartHttpServletRequest) request;
+
+                // get the size of image file stream from frontend, 0 means null image stream from frontend
+                int multipartFilesSize = multipartHttpServletRequest.getMultiFileMap().size();
+                if (multipartFilesSize > 0) {
+                    getImages(thumbnail, productDetailImgList,
+                            multipartHttpServletRequest, multipartFilesSize);
+                } else {
+                    log.info("no update for thumbnail or detail image");
+                }
             }
         } catch (Exception e) {
             modelMap.put("redirect", false);
@@ -232,22 +250,17 @@ public class ProductManagementController {
 
 
     /**
-     * deal with image stream from frontend
-     * @param request
+     *  deal with thumbnail and detail image
      * @param thumbnail
      * @param productDetailImgList
+     * @param multipartHttpServletRequest
+     * @param multipartFilesSize
      * @throws IOException
      * @throws ProductOperationException
      */
-    private void getImages(HttpServletRequest request, ImageHolder thumbnail,
-                           List<ImageHolder> productDetailImgList) throws IOException, ProductOperationException {
-        MultipartHttpServletRequest multipartHttpServletRequest  = (MultipartHttpServletRequest) request;
-
-        // get the size of image file stream from frontend, 0 means null image stream from frontend
-        int multipartFilesSize = multipartHttpServletRequest.getMultiFileMap().size();
-        if (multipartFilesSize<=0) {
-            throw new ProductOperationException("Image for shop request");
-        }
+    private void getImages(ImageHolder thumbnail, List<ImageHolder> productDetailImgList,
+                           MultipartHttpServletRequest multipartHttpServletRequest, int multipartFilesSize)
+            throws IOException, ProductOperationException {
         // get thumbnail file
         CommonsMultipartFile thumbnailImg = (CommonsMultipartFile) multipartHttpServletRequest.getFile("thumbnail");
         if (thumbnailImg != null) {
@@ -259,18 +272,9 @@ public class ProductManagementController {
             thumbnail.setImageName(originalFileName);
             // thumbnail file has been got, size--
             multipartFilesSize--;
+        } else {
+            throw new ProductOperationException("the thumbnail is empty");
         }
-
-        // get detail image file, max number is 6
-        // thumbnail file has been got, size--
-//        multipartFilesSize--;
-//        if (multipartFilesSize <=0 ) {
-//            throw new ProductOperationException("No detail image files");
-//        }
-
-//        if (multipartFilesSize>MAX_IMAGE_UPLOAD) {
-//            log.info("detail images over 6");
-//        }
 
         // get detail image file, max number is 6
         for (int i=0; i<multipartFilesSize; i++) {
