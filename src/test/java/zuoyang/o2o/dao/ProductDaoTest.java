@@ -8,10 +8,7 @@ import org.junit.jupiter.api.extension.ExtendWith;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.junit.jupiter.SpringExtension;
-import zuoyang.o2o.entity.Product;
-import zuoyang.o2o.entity.ProductCategory;
-import zuoyang.o2o.entity.ProductImg;
-import zuoyang.o2o.entity.Shop;
+import zuoyang.o2o.entity.*;
 
 import java.util.Date;
 import java.util.List;
@@ -161,6 +158,54 @@ class ProductDaoTest {
             System.out.println("Image priority "  + img.getPriority());
             System.out.println("Image create time "  + img.getCreateTime());
             System.out.println("Image desc "  + img.getImgDesc());
+        }
+    }
+
+    @Test
+    @Order(5)
+    void queryProductListAndCount() {
+        int rowIndex = 0;
+        int pageSize = 10;
+        Product productCondition = new Product();
+        // query by shop id;
+        Shop shop = new Shop();
+        shop.setShopId(40L);
+        productCondition.setShop(shop);
+
+        // query by productCategory and shop id
+        ProductCategory productCategory = new ProductCategory();
+        productCategory.setProductCategoryId(17L);
+        productCondition.setProductCategory(productCategory);
+
+        // query by productCategory, shopId and productName
+        productCondition.setProductName("test product 8");
+
+        // query by productCategory, shopId, productName and enableStatus
+        productCondition.setEnableStatus(1);
+        List<Product> productList = productDao.queryProductList(productCondition, rowIndex, pageSize);
+        int count = productDao.queryProductCount(productCondition);
+        assertEquals(1, count);
+        for (Product product : productList) {
+            System.out.println("Product Name " + product.getProductName());
+            System.out.println("Product Desc " + product.getProductDesc());
+            System.out.println("Product ImgAddr " + product.getImgAddr());
+            System.out.println("Product shopId " + product.getShop().getShopId());
+            System.out.println("Product promotePrice " + product.getPromotePrice());
+            System.out.println("Product normalPrice " + product.getNormalPrice());
+            System.out.println("Product LastEditTime " + product.getLastEditTime());
+            System.out.println("Product CreateTime " + product.getCreateTime());
+            System.out.println("Product EnableStatus " + product.getEnableStatus());
+            System.out.println("Product Priority " + product.getPriority());
+            System.out.println("Product CategoryId " + product.getProductCategory().getProductCategoryId());
+
+            List<ProductImg> productImgList = product.getProductImgList();
+            for (ProductImg img : productImgList) {
+                System.out.println("Image id "  + img.getProductImgId());
+                System.out.println("Image addr "  + img.getImgAddress());
+                System.out.println("Image priority "  + img.getPriority());
+                System.out.println("Image create time "  + img.getCreateTime());
+                System.out.println("Image desc "  + img.getImgDesc());
+            }
         }
     }
 

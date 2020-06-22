@@ -86,4 +86,56 @@
         WHERE
             product_id=#{productId} and shop_id=#{shopId}
     </delete>
+
+    <select id="queryProductList" resultMap="productMap">
+        SELECT
+            p.product_id, p.product_name, p.img_addr, p.product_desc, p.normal_price, p.promote_price, p.priority,
+            p.create_time, p.last_edit_time, p.enable_status, p.product_category_id, p.shop_id,
+            pm.product_img_id, pm.img_address, pm.img_desc, pm.create_time, pm.priority as detail_img_priority
+        FROM
+            tb_product as p
+        LEFT JOIN
+            tb_product_img as pm
+        ON
+            p.product_id=pm.product_id
+        <where>
+            <if test="productCondition.shop!=null and productCondition.shop.shopId!=null">
+                and p.shop_id=#{productCondition.shop.shopId}
+            </if>
+            <if test="productCondition.productCategory!=null and
+            productCondition.productCategory.productCategoryId!=null">
+                and p.product_category_id=#{productCondition.productCategory.productCategoryId}
+            </if>
+            <if test="productCondition.productName!=null">
+                and p.product_name like '%${productCondition.productName}%'
+            </if>
+            <if test="productCondition.enableStatus!=null">
+                and p.enable_status = #{productCondition.enableStatus}
+            </if>
+        </where>
+        ORDER BY
+            p.priority DESC
+        LIMIT #{rowIndex}, #{pageSize};
+    </select>
+
+    <select id="queryProductCount" resultType="int">
+        SELECT count(1)
+        FROM
+            tb_product
+        <where>
+            <if test="productCondition.shop!=null and productCondition.shop.shopId!=null">
+                and shop_id = #{productCondition.shop.shopId}
+            </if>
+            <if test="productCondition.productCategory!=null and
+            productCondition.productCategory.productCategoryId!=null">
+                and product_category_id = #{productCondition.productCategory.productCategoryId}
+            </if>
+            <if test="productCondition.productName!=null">
+                and product_name like '%${productCondition.productName}%'
+            </if>
+            <if test="productCondition.enableStatus!=null">
+                and enable_status = #{productCondition.enableStatus}
+            </if>
+        </where>
+    </select>
 </mapper>
