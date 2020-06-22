@@ -70,6 +70,45 @@ public class ProductManagementController {
         }
     }
 
+    @GetMapping("/getproductlistbyshop")
+    @ResponseBody
+    private Map<String, Object> getProductListByShop(HttpServletRequest request) {
+        Map<String, Object> modelMap = new HashMap<>();
+        Shop currentShop = (Shop) request.getSession().getAttribute("currentShop");
+        int pageIndex = HttpServletRequestUtil.getInteger(request, "pageIndex");
+        int pageSize = HttpServletRequestUtil.getInteger(request, "pageSize");
+        if (pageIndex>-1 && pageSize>0 && currentShop!=null && currentShop.getShopId()!=null) {
+            Product productCondition = new Product();
+            long productCategoryId = HttpServletRequestUtil.getLong(request, "productCategoryId");
+            String productName = HttpServletRequestUtil.getString(request, "productName");
+            compactProductInfo(productCondition, currentShop, productName, productCategoryId);
+            try {
+                ProductExecution productExecution =
+                        productService.getProductList(productCondition, pageIndex, pageSize);
+                if (productExecution.getState() == ProductStateEnum.SUCCESS.getState()) {
+                    modelMap.put("success", true);
+                    modelMap.put("productList", productExecution.getProductList());
+                    modelMap.put("productCount", productExecution.getCount());
+                } else {
+                    modelMap.put("success", false);
+                    modelMap.put("errMsg", productExecution.getStateInfo());
+                    modelMap.put("redirect", false);
+                }
+                return modelMap;
+            } catch (ProductOperationException e) {
+                modelMap.put("success", false);
+                modelMap.put("errMsg", e.getMessage());
+                modelMap.put("redirect", false);
+                return modelMap;
+            }
+        } else {
+            modelMap.put("success", false);
+            modelMap.put("redirect", true);
+            modelMap.put("url", "/o2o/shopadmin/shoplist");
+            return modelMap;
+        }
+    }
+
     @PostMapping("/addproduct")
     @ResponseBody
     private Map<String, Object> addProduct(HttpServletRequest request) {
@@ -296,4 +335,23 @@ public class ProductManagementController {
         }
     }
 
+    /**
+     * compact all search restriction for product
+     * @param productCondition
+     * @param currentShop
+     * @param productName
+     * @param productCategoryId
+     */
+    private void compactProductInfo(Product productCondition, Shop currentShop,
+                                    String productName, long productCategoryId) {
+        productCondition.setShop(currentShop);
+        if (productCategoryId > -1) {
+            ProductCategory productCategory = new ProductCategory();
+            productCategory.setProductCategoryId(productCategoryId);
+            productCondition.setProductCategory(productCategory);
+        }
+        if (productName != null) {
+            productCondition.setProductName(productName);
+        }
+    }
 }

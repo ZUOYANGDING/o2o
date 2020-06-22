@@ -19,3 +19,9 @@
 2020-06-22 10:47:42.616 [main] INFO  z.o2o.service.serviceImp.ProductServiceImplTest - Starting ProductServiceImplTest on DingZuoyangdeMacBook-Pro.local with PID 57240 (started by zuoyangding in /Users/zuoyangding/IdeaProjects/o2o)
 2020-06-22 10:47:42.623 [main] INFO  z.o2o.service.serviceImp.ProductServiceImplTest - No active profile set, falling back to default profiles: default
 2020-06-22 10:47:44.892 [main] INFO  z.o2o.service.serviceImp.ProductServiceImplTest - Started ProductServiceImplTest in 7.539 seconds (JVM running for 9.279)
+2020-06-22 11:41:59.838 [main] INFO  z.o2o.service.serviceImp.ProductServiceImplTest - Starting ProductServiceImplTest on DingZuoyangdeMacBook-Pro.local with PID 57376 (started by zuoyangding in /Users/zuoyangding/IdeaProjects/o2o)
+2020-06-22 11:41:59.839 [main] INFO  z.o2o.service.serviceImp.ProductServiceImplTest - No active profile set, falling back to default profiles: default
+2020-06-22 11:42:02.420 [main] INFO  z.o2o.service.serviceImp.ProductServiceImplTest - Started ProductServiceImplTest in 8.048 seconds (JVM running for 9.732)
+2020-06-22 11:42:21.134 [restartedMain] INFO  zuoyang.o2o.O2oApplication - Starting O2oApplication on DingZuoyangdeMacBook-Pro.local with PID 57379 (/Users/zuoyangding/IdeaProjects/o2o/target/classes started by zuoyangding in /Users/zuoyangding/IdeaProjects/o2o)
+2020-06-22 11:42:21.138 [restartedMain] INFO  zuoyang.o2o.O2oApplication - No active profile set, falling back to default profiles: default
+2020-06-22 11:42:22.719 [restartedMain] INFO  zuoyang.o2o.O2oApplication - Started O2oApplication in 1.803 seconds (JVM running for 7.851)

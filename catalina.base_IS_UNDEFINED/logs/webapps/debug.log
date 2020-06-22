@@ -59,3 +59,35 @@
 2020-06-22 10:47:45.960 [main] DEBUG zuoyang.o2o.dao.ProductDao.queryProductCount - ==>  Preparing: SELECT count(1) FROM tb_product WHERE product_name like '%product 99%' 
 2020-06-22 10:47:45.960 [main] DEBUG zuoyang.o2o.dao.ProductDao.queryProductCount - ==> Parameters: 
 2020-06-22 10:47:45.961 [main] DEBUG zuoyang.o2o.dao.ProductDao.queryProductCount - <==      Total: 1
+2020-06-22 11:41:59.839 [main] DEBUG z.o2o.service.serviceImp.ProductServiceImplTest - Running with Spring Boot v2.3.0.RELEASE, Spring v5.2.6.RELEASE
+2020-06-22 11:42:03.466 [main] DEBUG zuoyang.o2o.dao.ProductDao.queryProductList - ==>  Preparing: SELECT p.product_id, p.product_name, p.img_addr, p.product_desc, p.normal_price, p.promote_price, p.priority, p.create_time, p.last_edit_time, p.enable_status, p.product_category_id, p.shop_id, pm.product_img_id, pm.img_address, pm.img_desc, pm.create_time, pm.priority as detail_img_priority FROM tb_product as p LEFT JOIN tb_product_img as pm ON p.product_id=pm.product_id WHERE p.product_name like '%product 8%' ORDER BY p.priority DESC LIMIT ?, ?; 
+2020-06-22 11:42:03.533 [main] DEBUG zuoyang.o2o.dao.ProductDao.queryProductList - ==> Parameters: 0(Integer), 3(Integer)
+2020-06-22 11:42:03.579 [main] DEBUG zuoyang.o2o.dao.ProductDao.queryProductList - <==      Total: 3
+2020-06-22 11:42:03.586 [main] DEBUG zuoyang.o2o.dao.ProductDao.queryProductCount - ==>  Preparing: SELECT count(1) FROM tb_product WHERE product_name like '%product 8%' 
+2020-06-22 11:42:03.587 [main] DEBUG zuoyang.o2o.dao.ProductDao.queryProductCount - ==> Parameters: 
+2020-06-22 11:42:03.589 [main] DEBUG zuoyang.o2o.dao.ProductDao.queryProductCount - <==      Total: 1
+2020-06-22 11:42:03.592 [main] DEBUG zuoyang.o2o.dao.ProductDao.queryProductList - ==>  Preparing: SELECT p.product_id, p.product_name, p.img_addr, p.product_desc, p.normal_price, p.promote_price, p.priority, p.create_time, p.last_edit_time, p.enable_status, p.product_category_id, p.shop_id, pm.product_img_id, pm.img_address, pm.img_desc, pm.create_time, pm.priority as detail_img_priority FROM tb_product as p LEFT JOIN tb_product_img as pm ON p.product_id=pm.product_id WHERE p.product_name like '%product 99%' ORDER BY p.priority DESC LIMIT ?, ?; 
+2020-06-22 11:42:03.593 [main] DEBUG zuoyang.o2o.dao.ProductDao.queryProductList - ==> Parameters: 0(Integer), 3(Integer)
+2020-06-22 11:42:03.635 [main] DEBUG zuoyang.o2o.dao.ProductDao.queryProductList - <==      Total: 0
+2020-06-22 11:42:03.636 [main] DEBUG zuoyang.o2o.dao.ProductDao.queryProductCount - ==>  Preparing: SELECT count(1) FROM tb_product WHERE product_name like '%product 99%' 
+2020-06-22 11:42:03.636 [main] DEBUG zuoyang.o2o.dao.ProductDao.queryProductCount - ==> Parameters: 
+2020-06-22 11:42:03.637 [main] DEBUG zuoyang.o2o.dao.ProductDao.queryProductCount - <==      Total: 1
+2020-06-22 11:42:21.137 [restartedMain] DEBUG zuoyang.o2o.O2oApplication - Running with Spring Boot v2.3.0.RELEASE, Spring v5.2.6.RELEASE
+2020-06-22 11:43:03.981 [http-nio-8080-exec-2] DEBUG zuoyang.o2o.dao.ShopDao.queryShopList - ==>  Preparing: SELECT s.shop_id, s.shop_name, s.shop_desc, s.shop_address, s.phone, s.shop_img, s.priority, s.enable_status, s.create_time, s.last_edit_time, s.advice, a.area_id, a.area_name, sc.shop_category_id, sc.shop_category_name FROM tb_shop AS s, tb_area AS a, tb_shop_category AS sc WHERE s.owner_id = ? AND s.area_id = a.area_id AND s.shop_category_id = sc.shop_category_id ORDER BY s.priority DESC LIMIT ?, ?; 
+2020-06-22 11:43:04.001 [http-nio-8080-exec-2] DEBUG zuoyang.o2o.dao.ShopDao.queryShopList - ==> Parameters: 1(Long), 0(Integer), 100(Integer)
+2020-06-22 11:43:04.070 [http-nio-8080-exec-2] DEBUG zuoyang.o2o.dao.ShopDao.queryShopList - <==      Total: 16
+2020-06-22 11:43:04.075 [http-nio-8080-exec-2] DEBUG zuoyang.o2o.dao.ShopDao.queryShopCount - ==>  Preparing: SELECT count(1) FROM tb_shop AS s, tb_shop_category AS sc, tb_area AS a WHERE s.owner_id = ? AND s.area_id = a.area_id AND s.shop_category_id = sc.shop_category_id 
+2020-06-22 11:43:04.076 [http-nio-8080-exec-2] DEBUG zuoyang.o2o.dao.ShopDao.queryShopCount - ==> Parameters: 1(Long)
+2020-06-22 11:43:04.141 [http-nio-8080-exec-2] DEBUG zuoyang.o2o.dao.ShopDao.queryShopCount - <==      Total: 1
+2020-06-22 11:44:00.417 [http-nio-8080-exec-8] DEBUG zuoyang.o2o.dao.ShopDao.queryShopList - ==>  Preparing: SELECT s.shop_id, s.shop_name, s.shop_desc, s.shop_address, s.phone, s.shop_img, s.priority, s.enable_status, s.create_time, s.last_edit_time, s.advice, a.area_id, a.area_name, sc.shop_category_id, sc.shop_category_name FROM tb_shop AS s, tb_area AS a, tb_shop_category AS sc WHERE s.owner_id = ? AND s.area_id = a.area_id AND s.shop_category_id = sc.shop_category_id ORDER BY s.priority DESC LIMIT ?, ?; 
+2020-06-22 11:44:00.418 [http-nio-8080-exec-8] DEBUG zuoyang.o2o.dao.ShopDao.queryShopList - ==> Parameters: 1(Long), 0(Integer), 100(Integer)
+2020-06-22 11:44:00.471 [http-nio-8080-exec-8] DEBUG zuoyang.o2o.dao.ShopDao.queryShopList - <==      Total: 16
+2020-06-22 11:44:00.472 [http-nio-8080-exec-8] DEBUG zuoyang.o2o.dao.ShopDao.queryShopCount - ==>  Preparing: SELECT count(1) FROM tb_shop AS s, tb_shop_category AS sc, tb_area AS a WHERE s.owner_id = ? AND s.area_id = a.area_id AND s.shop_category_id = sc.shop_category_id 
+2020-06-22 11:44:00.473 [http-nio-8080-exec-8] DEBUG zuoyang.o2o.dao.ShopDao.queryShopCount - ==> Parameters: 1(Long)
+2020-06-22 11:44:00.474 [http-nio-8080-exec-8] DEBUG zuoyang.o2o.dao.ShopDao.queryShopCount - <==      Total: 1
+2020-06-22 11:44:47.325 [http-nio-8080-exec-2] DEBUG zuoyang.o2o.dao.ProductDao.queryProductList - ==>  Preparing: SELECT p.product_id, p.product_name, p.img_addr, p.product_desc, p.normal_price, p.promote_price, p.priority, p.create_time, p.last_edit_time, p.enable_status, p.product_category_id, p.shop_id, pm.product_img_id, pm.img_address, pm.img_desc, pm.create_time, pm.priority as detail_img_priority FROM tb_product as p LEFT JOIN tb_product_img as pm ON p.product_id=pm.product_id WHERE p.shop_id=? ORDER BY p.priority DESC LIMIT ?, ?; 
+2020-06-22 11:44:47.326 [http-nio-8080-exec-2] DEBUG zuoyang.o2o.dao.ProductDao.queryProductList - ==> Parameters: 40(Long), 0(Integer), 10(Integer)
+2020-06-22 11:44:47.377 [http-nio-8080-exec-2] DEBUG zuoyang.o2o.dao.ProductDao.queryProductList - <==      Total: 10
+2020-06-22 11:44:47.377 [http-nio-8080-exec-2] DEBUG zuoyang.o2o.dao.ProductDao.queryProductCount - ==>  Preparing: SELECT count(1) FROM tb_product WHERE shop_id = ? 
+2020-06-22 11:44:47.378 [http-nio-8080-exec-2] DEBUG zuoyang.o2o.dao.ProductDao.queryProductCount - ==> Parameters: 40(Long)
+2020-06-22 11:44:47.379 [http-nio-8080-exec-2] DEBUG zuoyang.o2o.dao.ProductDao.queryProductCount - <==      Total: 1
