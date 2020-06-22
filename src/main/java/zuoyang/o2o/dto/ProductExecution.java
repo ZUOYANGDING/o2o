@@ -14,6 +14,7 @@ public class ProductExecution {
     private String stateInfo;
     private Product product;
     private List<Product> productList;
+    private int count;
 
     public ProductExecution(){}
 
@@ -38,9 +39,10 @@ public class ProductExecution {
      * @param productStateEnum
      * @param productList
      */
-    public ProductExecution(ProductStateEnum productStateEnum, List<Product> productList) {
+    public ProductExecution(ProductStateEnum productStateEnum, List<Product> productList, int count) {
         this.state = productStateEnum.getState();
         this.stateInfo = productStateEnum.getStateInfo();
         this.productList = productList;
+        this.count = count;
     }
 }

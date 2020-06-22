@@ -13,6 +13,7 @@ import zuoyang.o2o.enums.ProductStateEnum;
 import zuoyang.o2o.exception.ProductOperationException;
 import zuoyang.o2o.service.ProductService;
 import zuoyang.o2o.util.ImageUtil;
+import zuoyang.o2o.util.PageCalculate;
 import zuoyang.o2o.util.PathUtil;
 
 import java.io.InputStream;
@@ -198,6 +199,31 @@ public class ProductServiceImpl implements ProductService {
             return new ProductExecution(ProductStateEnum.EMPTY_ELEMENT);
         }
     }
+
+    @Override
+    public ProductExecution getProductList(Product productCondition, int pageIndex, int pageSize)
+            throws ProductOperationException{
+        int rowIndex = PageCalculate.calculateRowIndex(pageIndex, pageSize);
+        List<Product> productList;
+        int count;
+        try {
+            // get products under search restriction start from page=pageIndex
+            productList = productDao.queryProductList(productCondition, rowIndex, pageSize);
+            // get the total number of product under same search restriction in database
+            count = productDao.queryProductCount(productCondition);
+        } catch (Exception e) {
+            throw new ProductOperationException("failed to get product list");
+        }
+        ProductExecution productExecution;
+        if (productList!=null && productList.size()!=0) {
+            productExecution = new ProductExecution(ProductStateEnum.SUCCESS, productList, count);
+        } else {
+            productExecution = new ProductExecution(ProductStateEnum.SUCCESS_WITH_EMPTY);
+        }
+        return productExecution;
+    }
+
+
 
     /**
      * delete product detail image from image storage and productImg database

@@ -215,4 +215,23 @@ class ProductServiceImplTest {
         assertEquals(ProductStateEnum.SUCCESS.getState(), productExecution.getState());
     }
 
+    @Test
+    @Order(5)
+    void getProductList() {
+        int pageIndex = 0;
+        int pageSize = 3;
+        Product productCondition = new Product();
+        productCondition.setProductName("product 8");
+        ProductExecution pe = productService.getProductList(productCondition, pageIndex, pageSize);
+        assertEquals(ProductStateEnum.SUCCESS.getState(), pe.getState());
+
+        // with no result for search
+        int pageIndex_1 = 0;
+        int pageSize_1 = 3;
+        Product productCondition_1 = new Product();
+        productCondition_1.setProductName("product 99");
+        ProductExecution pe_1 = productService.getProductList(productCondition_1, pageIndex_1, pageSize_1);
+        assertEquals(ProductStateEnum.SUCCESS_WITH_EMPTY.getState(), pe_1.getState());
+    }
+
 }

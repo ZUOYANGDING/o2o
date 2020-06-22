@@ -6,7 +6,8 @@ import lombok.Getter;
 public enum ProductStateEnum {
     SUCCESS(1, "Operation Success"),
     INNER_ERROR(-1001, "Operation Failed"),
-    EMPTY_ELEMENT(-1002, "Empty required element input");
+    EMPTY_ELEMENT(-1002, "Empty required element input"),
+    SUCCESS_WITH_EMPTY(2, "Operation Success, but with no result return");
 
     private int state;
     private String stateInfo;
