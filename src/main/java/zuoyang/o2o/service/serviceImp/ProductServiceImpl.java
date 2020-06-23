@@ -134,7 +134,8 @@ public class ProductServiceImpl implements ProductService {
     @Override
     @Transactional
     public ProductExecution modifyProduct(Product product, ImageHolder thumbnail,
-                                          List<ImageHolder> productDetailImgList) throws ProductOperationException {
+                                          List<ImageHolder> productDetailImgList)
+            throws ProductOperationException {
         if (product!=null && product.getShop()!=null && product.getShop().getShopId()!=null) {
 
             // valid check for productId
@@ -148,8 +149,6 @@ public class ProductServiceImpl implements ProductService {
 
             // set basic info
             product.setLastEditTime(new Date());
-            product.setEnableStatus(1);
-
             // deal with thumbnail
             if (thumbnail!=null && thumbnail.getImageName()!=null) {
                 // delete the old thumbnail if exist
