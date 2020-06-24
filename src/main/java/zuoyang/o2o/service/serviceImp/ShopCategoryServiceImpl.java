@@ -3,6 +3,7 @@ package zuoyang.o2o.service.serviceImp;
 import org.springframework.stereotype.Service;
 import zuoyang.o2o.dao.ShopCategoryDao;
 import zuoyang.o2o.entity.ShopCategory;
+import zuoyang.o2o.exception.ShopOperationException;
 import zuoyang.o2o.service.ShopCategoryService;
 
 import java.util.List;
@@ -16,7 +17,11 @@ public class ShopCategoryServiceImpl implements ShopCategoryService {
     }
 
     @Override
-    public List<ShopCategory> getShopCategoryList(ShopCategory shopCategoryCondition) {
-        return shopCategoryDao.queryShopCategory(shopCategoryCondition);
+    public List<ShopCategory> getShopCategoryList(ShopCategory shopCategoryCondition) throws ShopOperationException {
+        try {
+            return shopCategoryDao.queryShopCategory(shopCategoryCondition);
+        } catch (Exception e) {
+            throw new ShopOperationException("Failed to fetch shop category list " + e.getMessage());
+        }
     }
 }
