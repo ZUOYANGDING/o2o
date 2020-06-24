@@ -3,7 +3,9 @@ package zuoyang.o2o.service.serviceImp;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 import zuoyang.o2o.dao.ProductCategoryDao;
+import zuoyang.o2o.dao.ProductDao;
 import zuoyang.o2o.dto.ProductCategoryExecution;
+import zuoyang.o2o.entity.Product;
 import zuoyang.o2o.entity.ProductCategory;
 import zuoyang.o2o.enums.ProductCategoryStateEnum;
 import zuoyang.o2o.exception.ProductOperationException;
@@ -14,9 +16,11 @@ import java.util.List;
 @Service
 public class ProductCategoryServiceImpl implements ProductCategoryService {
     private final ProductCategoryDao productCategoryDao;
+    private final ProductDao productDao;
 
-    public ProductCategoryServiceImpl(ProductCategoryDao productCategoryDao) {
+    public ProductCategoryServiceImpl(ProductCategoryDao productCategoryDao, ProductDao productDao) {
         this.productCategoryDao = productCategoryDao;
+        this.productDao = productDao;
     }
 
     @Override
@@ -48,11 +52,18 @@ public class ProductCategoryServiceImpl implements ProductCategoryService {
     @Transactional
     public ProductCategoryExecution deleteProductCategory(Long productCategoryId, Long shopId)
             throws ProductOperationException {
-            //TODO dispatch the connection between product and productCategoryId
+        try {
+            int effNum = productDao.updateProductCategoryToNull(productCategoryId);
+            if (effNum < 0) {
+                throw new ProductOperationException("failed to delete product category");
+            }
+        } catch (Exception e) {
+            throw new ProductOperationException("product category delete failed " + e.getMessage());
+        }
         try {
             int effNum = productCategoryDao.deleteProductCategory(productCategoryId, shopId);
             if (effNum <= 0) {
-                return new ProductCategoryExecution(ProductCategoryStateEnum.INNER_ERROR);
+                throw new ProductOperationException("Failed to delete the product category");
             } else {
                 return new ProductCategoryExecution(ProductCategoryStateEnum.SUCCESS);
             }

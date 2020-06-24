@@ -44,3 +44,15 @@
 2020-06-23 17:59:02.207 [main] INFO  zuoyang.o2o.dao.ProductDaoTest - Starting ProductDaoTest on DingZuoyangdeMacBook-Pro.local with PID 63682 (started by zuoyangding in /Users/zuoyangding/IdeaProjects/o2o)
 2020-06-23 17:59:02.209 [main] INFO  zuoyang.o2o.dao.ProductDaoTest - No active profile set, falling back to default profiles: default
 2020-06-23 17:59:04.869 [main] INFO  zuoyang.o2o.dao.ProductDaoTest - Started ProductDaoTest in 7.997 seconds (JVM running for 9.588)
+2020-06-23 18:09:42.771 [main] INFO  z.o.s.serviceImp.ProductCategoryServiceImplTest - Starting ProductCategoryServiceImplTest on DingZuoyangdeMacBook-Pro.local with PID 63730 (started by zuoyangding in /Users/zuoyangding/IdeaProjects/o2o)
+2020-06-23 18:09:42.773 [main] INFO  z.o.s.serviceImp.ProductCategoryServiceImplTest - No active profile set, falling back to default profiles: default
+2020-06-23 18:09:45.132 [main] INFO  z.o.s.serviceImp.ProductCategoryServiceImplTest - Started ProductCategoryServiceImplTest in 7.663 seconds (JVM running for 9.349)
+2020-06-23 18:10:51.208 [main] INFO  z.o.s.serviceImp.ProductCategoryServiceImplTest - Starting ProductCategoryServiceImplTest on DingZuoyangdeMacBook-Pro.local with PID 63736 (started by zuoyangding in /Users/zuoyangding/IdeaProjects/o2o)
+2020-06-23 18:10:51.209 [main] INFO  z.o.s.serviceImp.ProductCategoryServiceImplTest - No active profile set, falling back to default profiles: default
+2020-06-23 18:10:53.263 [main] INFO  z.o.s.serviceImp.ProductCategoryServiceImplTest - Started ProductCategoryServiceImplTest in 7.336 seconds (JVM running for 8.651)
+2020-06-23 18:12:35.150 [main] INFO  z.o.s.serviceImp.ProductCategoryServiceImplTest - Starting ProductCategoryServiceImplTest on DingZuoyangdeMacBook-Pro.local with PID 63740 (started by zuoyangding in /Users/zuoyangding/IdeaProjects/o2o)
+2020-06-23 18:12:35.151 [main] INFO  z.o.s.serviceImp.ProductCategoryServiceImplTest - No active profile set, falling back to default profiles: default
+2020-06-23 18:12:36.983 [main] INFO  z.o.s.serviceImp.ProductCategoryServiceImplTest - Started ProductCategoryServiceImplTest in 7.102 seconds (JVM running for 8.399)
+2020-06-23 18:13:07.650 [restartedMain] INFO  zuoyang.o2o.O2oApplication - Starting O2oApplication on DingZuoyangdeMacBook-Pro.local with PID 63742 (/Users/zuoyangding/IdeaProjects/o2o/target/classes started by zuoyangding in /Users/zuoyangding/IdeaProjects/o2o)
+2020-06-23 18:13:07.654 [restartedMain] INFO  zuoyang.o2o.O2oApplication - No active profile set, falling back to default profiles: default
+2020-06-23 18:13:09.217 [restartedMain] INFO  zuoyang.o2o.O2oApplication - Started O2oApplication in 1.78 seconds (JVM running for 7.554)

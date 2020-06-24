@@ -82,8 +82,8 @@ class ProductCategoryServiceImplTest {
 
     @Test
     void deleteProductCategory() {
-        Long productCategoryId = 3L;
-        Long shopId = 38L;
+        Long productCategoryId = 9L;
+        Long shopId = 40L;
         ProductCategoryExecution productCategoryExecution =
                 productCategoryService.deleteProductCategory(productCategoryId, shopId);
         assertEquals(1, productCategoryExecution.getState());
