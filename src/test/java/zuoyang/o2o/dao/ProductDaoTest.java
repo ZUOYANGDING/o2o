@@ -209,4 +209,12 @@ class ProductDaoTest {
         }
     }
 
+    @Test
+    @Order(6)
+    void updateProductCategoryToNull() {
+        Long productCategoryId = 2L;
+        int effNum = productDao.updateProductCategoryToNull(productCategoryId);
+        assertEquals(1, effNum);
+    }
+
 }

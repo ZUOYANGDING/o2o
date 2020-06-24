@@ -41,3 +41,6 @@
 2020-06-23 12:15:10.680 [restartedMain] INFO  zuoyang.o2o.O2oApplication - Started O2oApplication in 1.837 seconds (JVM running for 7.643)
 2020-06-23 12:16:01.662 [http-nio-8080-exec-2] INFO  z.o2o.web.shopadmin.ProductManagementController - no update for thumbnail or detail image
 2020-06-23 12:16:25.732 [http-nio-8080-exec-2] INFO  z.o2o.web.shopadmin.ProductManagementController - no update for thumbnail or detail image
+2020-06-23 17:59:02.207 [main] INFO  zuoyang.o2o.dao.ProductDaoTest - Starting ProductDaoTest on DingZuoyangdeMacBook-Pro.local with PID 63682 (started by zuoyangding in /Users/zuoyangding/IdeaProjects/o2o)
+2020-06-23 17:59:02.209 [main] INFO  zuoyang.o2o.dao.ProductDaoTest - No active profile set, falling back to default profiles: default
+2020-06-23 17:59:04.869 [main] INFO  zuoyang.o2o.dao.ProductDaoTest - Started ProductDaoTest in 7.997 seconds (JVM running for 9.588)

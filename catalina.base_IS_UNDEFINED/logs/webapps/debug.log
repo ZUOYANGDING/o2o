@@ -494,3 +494,7 @@
 2020-06-23 12:16:41.599 [http-nio-8080-exec-2] DEBUG zuoyang.o2o.dao.ProductDao.queryProductCount - ==>  Preparing: SELECT count(1) FROM tb_product WHERE shop_id = ? 
 2020-06-23 12:16:41.599 [http-nio-8080-exec-2] DEBUG zuoyang.o2o.dao.ProductDao.queryProductCount - ==> Parameters: 40(Long)
 2020-06-23 12:16:41.600 [http-nio-8080-exec-2] DEBUG zuoyang.o2o.dao.ProductDao.queryProductCount - <==      Total: 1
+2020-06-23 17:59:02.208 [main] DEBUG zuoyang.o2o.dao.ProductDaoTest - Running with Spring Boot v2.3.0.RELEASE, Spring v5.2.6.RELEASE
+2020-06-23 17:59:05.785 [main] DEBUG z.o2o.dao.ProductDao.updateProductCategoryToNull - ==>  Preparing: UPDATE tb_product SET product_category_id = null WHERE product_category_id = ? 
+2020-06-23 17:59:05.830 [main] DEBUG z.o2o.dao.ProductDao.updateProductCategoryToNull - ==> Parameters: 2(Long)
+2020-06-23 17:59:05.836 [main] DEBUG z.o2o.dao.ProductDao.updateProductCategoryToNull - <==    Updates: 1
