@@ -11,7 +11,7 @@ public class HeadLine {
     private Long lindId;
     private String lingImg;
     private String lineLink;
-    private Integer lineName;
+    private String lineName;
     //    larger will be put in front of headline queue
     private Integer priority;
     //    0 for ban, 1 for active;
