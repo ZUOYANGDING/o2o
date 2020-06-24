@@ -9,3 +9,7 @@
 2020-06-24 10:43:47.901 [main] DEBUG zuoyang.o2o.dao.ShopCategoryDao.queryShopCategory - ==>  Preparing: SELECT shop_category_id, shop_category_name, shop_category_desc, shop_category_img, create_time, last_edit_time, parent_id FROM tb_shop_category WHERE parent_id is null ORDER BY priority DESC 
 2020-06-24 10:43:47.952 [main] DEBUG zuoyang.o2o.dao.ShopCategoryDao.queryShopCategory - ==> Parameters: 
 2020-06-24 10:43:48.009 [main] DEBUG zuoyang.o2o.dao.ShopCategoryDao.queryShopCategory - <==      Total: 1
+2020-06-24 10:59:12.280 [main] DEBUG z.o2o.service.serviceImp.HeadLineServiceImplTest - Running with Spring Boot v2.3.0.RELEASE, Spring v5.2.6.RELEASE
+2020-06-24 10:59:15.192 [main] DEBUG zuoyang.o2o.dao.HeadLineDao.queryHeadLineList - ==>  Preparing: SELECT line_id, line_img, line_name, line_link, priority, enable_status, create_time, last_edit_time FROM tb_head_line WHERE enable_status = ? ORDER BY priority DESC 
+2020-06-24 10:59:15.238 [main] DEBUG zuoyang.o2o.dao.HeadLineDao.queryHeadLineList - ==> Parameters: 1(Integer)
+2020-06-24 10:59:15.279 [main] DEBUG zuoyang.o2o.dao.HeadLineDao.queryHeadLineList - <==      Total: 3

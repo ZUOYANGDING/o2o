@@ -7,3 +7,6 @@
 2020-06-24 10:43:45.148 [main] INFO  zuoyang.o2o.dao.ShopCategoryDaoTest - Starting ShopCategoryDaoTest on DingZuoyangdeMacBook-Pro.local with PID 64867 (started by zuoyangding in /Users/zuoyangding/IdeaProjects/o2o)
 2020-06-24 10:43:45.149 [main] INFO  zuoyang.o2o.dao.ShopCategoryDaoTest - No active profile set, falling back to default profiles: default
 2020-06-24 10:43:47.086 [main] INFO  zuoyang.o2o.dao.ShopCategoryDaoTest - Started ShopCategoryDaoTest in 7.19 seconds (JVM running for 8.654)
+2020-06-24 10:59:12.280 [main] INFO  z.o2o.service.serviceImp.HeadLineServiceImplTest - Starting HeadLineServiceImplTest on DingZuoyangdeMacBook-Pro.local with PID 64934 (started by zuoyangding in /Users/zuoyangding/IdeaProjects/o2o)
+2020-06-24 10:59:12.281 [main] INFO  z.o2o.service.serviceImp.HeadLineServiceImplTest - No active profile set, falling back to default profiles: default
+2020-06-24 10:59:14.296 [main] INFO  z.o2o.service.serviceImp.HeadLineServiceImplTest - Started HeadLineServiceImplTest in 7.265 seconds (JVM running for 8.767)
