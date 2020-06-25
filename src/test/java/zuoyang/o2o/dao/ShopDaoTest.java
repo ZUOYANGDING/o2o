@@ -159,18 +159,16 @@ class ShopDaoTest {
     @Test
     void queryShopListAndShopCountForSameParentShopCategory() {
         Shop shopCondition = new Shop();
-        ShopCategory shopCategory = new ShopCategory();
-        Shop parentShop = new Shop();
         ShopCategory parentShopCategory = new ShopCategory();
+        ShopCategory childShopCategory = new ShopCategory();
 
         parentShopCategory.setShopCategoryId(1L);
-        parentShop.setShopCategory(parentShopCategory);
-        shopCategory.setShopCategoryId(2L);
-        shopCondition.setShopCategory(shopCategory);
+        childShopCategory.setParent(parentShopCategory);
+        shopCondition.setShopCategory(childShopCategory);
 
-        List<Shop> shopList = shopDao.queryShopList(shopCondition, 0, 6);
+        List<Shop> shopList = shopDao.queryShopList(shopCondition, 0, 15);
         int count = shopDao.queryShopCount(shopCondition);
-        assertEquals(6, count);
+        assertEquals(10, count);
         for (Shop shop : shopList) {
             System.out.println(shop.getShopName());
         }
