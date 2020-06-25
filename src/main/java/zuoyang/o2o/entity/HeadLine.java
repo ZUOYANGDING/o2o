@@ -8,8 +8,8 @@ import java.util.Date;
 @Getter
 @Setter
 public class HeadLine {
-    private Long lindId;
-    private String lingImg;
+    private Long lineId;
+    private String lineImg;
     private String lineLink;
     private String lineName;
     //    larger will be put in front of headline queue

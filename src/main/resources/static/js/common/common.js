@@ -10,3 +10,7 @@ function getQueryString(name) {
     }
     return '';
 }
+
+function getContextPath() {
+    return "/o2o";
+}
