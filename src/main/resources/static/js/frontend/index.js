@@ -13,12 +13,10 @@ $(function() {
                         + item.shopCategoryId + '>' + '<div class="word">'
                         + '<p class="shop-title">' + item.shopCategoryName
                         + '</p>' + '<p class="shop-desc">'
-                        + item.shopCategoryDescription + '</p>' + '</div>'
+                        + item.shopCategoryDesc + '</p>' + '</div>'
                         + '<div class="shop-classify-img-warp">'
                         + '<img class="shop-img" src="' + getContextPath()
-                        + item.shopCategoryImg + '">'
-                        + '</div>'
-                        + '</div>';
+                        + item.shopCategoryImg + '">' + '</div>' + '</div>';
                 });
                 $('.row').html(categoryHtml);
             } else {
