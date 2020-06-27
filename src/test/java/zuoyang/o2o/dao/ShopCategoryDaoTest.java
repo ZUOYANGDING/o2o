@@ -21,13 +21,7 @@ class ShopCategoryDaoTest {
     @Test
     void queryShopCategoryForRootCategory() {
         List<ShopCategory> shopCategoryList = shopCategoryDao.queryShopCategory(null);
-        assertEquals(1, shopCategoryList.size());
-    }
-
-    @Test
-    void queryShopCategoryForSecondLevelCategory() {
-        List<ShopCategory> shopCategoryList = shopCategoryDao.queryShopCategory(new ShopCategory());
-        assertEquals(1, shopCategoryList.size());
+        assertEquals(5, shopCategoryList.size());
     }
 
     @Test
@@ -35,7 +29,7 @@ class ShopCategoryDaoTest {
         ShopCategory shopCategory = new ShopCategory();
         ShopCategory parentCategory = new ShopCategory();
         parentCategory.setShopCategoryId(1L);
-        shopCategory.setShopCategoryId(2L);
+        shopCategory.setParent(parentCategory);
         List<ShopCategory> shopCategoryList = shopCategoryDao.queryShopCategory(shopCategory);
         assertEquals(1, shopCategoryList.size());
         assertEquals("mac shop", shopCategoryList.get(0).getShopCategoryName());

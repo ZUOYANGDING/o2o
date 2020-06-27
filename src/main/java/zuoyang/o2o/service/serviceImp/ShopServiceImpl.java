@@ -113,10 +113,16 @@ public class ShopServiceImpl implements ShopService {
     }
 
     @Override
-    public ShopExecution getShopList(Shop shopCondition, int pageIndex, int pageSize) {
+    public ShopExecution getShopList(Shop shopCondition, int pageIndex, int pageSize) throws ShopOperationException{
         int rowIndex = PageCalculate.calculateRowIndex(pageIndex, pageSize);
-        List<Shop> shopList = shopDao.queryShopList(shopCondition, rowIndex, pageSize);
-        int count = shopDao.queryShopCount(shopCondition);
+        List<Shop> shopList = null;
+        int count = 0;
+        try {
+            shopList = shopDao.queryShopList(shopCondition, rowIndex, pageSize);
+            count = shopDao.queryShopCount(shopCondition);
+        } catch (Exception e) {
+            throw new ShopOperationException(e.getMessage());
+        }
         // Must have init dataset for shop in database
         // or cause empty return but not error in code
         ShopExecution shopExecution;

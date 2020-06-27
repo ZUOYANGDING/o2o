@@ -16,7 +16,11 @@ public class AreaServiceImpl implements AreaService {
     }
 
     @Override
-    public List<Area> getAreaList() {
-        return areaDao.queryArea();
+    public List<Area> getAreaList() throws RuntimeException{
+        try {
+            return areaDao.queryArea();
+        } catch (Exception e) {
+            throw new RuntimeException(e);
+        }
     }
 }
