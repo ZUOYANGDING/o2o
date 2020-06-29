@@ -64,7 +64,7 @@ public class ShopListController {
                 modelMap.put("errMsg", e.getMessage());
             }
         }
-        modelMap.put("ShopCategoryList", shopCategoryList);
+        modelMap.put("shopCategoryList", shopCategoryList);
 
         // get list of area
         List<Area> areaList = null;
@@ -82,7 +82,7 @@ public class ShopListController {
     }
 
     //return shop list under search restriction
-    @GetMapping("/listshop")
+    @GetMapping("/listshops")
     @ResponseBody
     private Map<String, Object> listShops(HttpServletRequest request) {
         Map<String, Object> modelMap = new HashMap<>();
