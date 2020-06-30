@@ -232,6 +232,18 @@ class ProductServiceImplTest {
         productCondition_1.setProductName("product 99");
         ProductExecution pe_1 = productService.getProductList(productCondition_1, pageIndex_1, pageSize_1);
         assertEquals(ProductStateEnum.SUCCESS_WITH_EMPTY.getState(), pe_1.getState());
+
+        int pageIndex_2 = 0;
+        int pageSize_2 = 10;
+        Product productCondition_2 = new Product();
+        Shop shop = new Shop();
+        shop.setShopId(40L);
+        productCondition_2.setShop(shop);
+        ProductExecution pe_2 = productService.getProductList(productCondition_2, pageIndex_2, pageSize_2);
+        assertEquals(3, pe_2.getProductList().size());
+        pe_2.getProductList().stream().forEach((Product product) ->{
+            System.out.println(product.getProductName());
+        });
     }
 
 }

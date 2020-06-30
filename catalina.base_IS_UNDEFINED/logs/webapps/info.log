@@ -1,38 +1,27 @@
-2020-06-29 10:04:59.760 [restartedMain] INFO  zuoyang.o2o.O2oApplication - Starting O2oApplication on dingzuoangdembp.lan with PID 76315 (/Users/zuoyangding/IdeaProjects/o2o/target/classes started by zuoyangding in /Users/zuoyangding/IdeaProjects/o2o)
-2020-06-29 10:04:59.765 [restartedMain] INFO  zuoyang.o2o.O2oApplication - No active profile set, falling back to default profiles: default
-2020-06-29 10:05:02.947 [restartedMain] INFO  zuoyang.o2o.O2oApplication - Started O2oApplication in 3.537 seconds (JVM running for 4.664)
-2020-06-29 10:12:03.874 [restartedMain] INFO  zuoyang.o2o.O2oApplication - Starting O2oApplication on dingzuoangdembp.lan with PID 76338 (/Users/zuoyangding/IdeaProjects/o2o/target/classes started by zuoyangding in /Users/zuoyangding/IdeaProjects/o2o)
-2020-06-29 10:12:03.879 [restartedMain] INFO  zuoyang.o2o.O2oApplication - No active profile set, falling back to default profiles: default
-2020-06-29 10:12:06.672 [restartedMain] INFO  zuoyang.o2o.O2oApplication - Started O2oApplication in 3.256 seconds (JVM running for 4.391)
-2020-06-29 10:17:54.045 [restartedMain] INFO  zuoyang.o2o.O2oApplication - Starting O2oApplication on dingzuoangdembp.lan with PID 76375 (/Users/zuoyangding/IdeaProjects/o2o/target/classes started by zuoyangding in /Users/zuoyangding/IdeaProjects/o2o)
-2020-06-29 10:17:54.048 [restartedMain] INFO  zuoyang.o2o.O2oApplication - No active profile set, falling back to default profiles: default
-2020-06-29 10:17:58.882 [restartedMain] INFO  zuoyang.o2o.O2oApplication - Starting O2oApplication on dingzuoangdembp.lan with PID 76379 (/Users/zuoyangding/IdeaProjects/o2o/target/classes started by zuoyangding in /Users/zuoyangding/IdeaProjects/o2o)
-2020-06-29 10:17:58.887 [restartedMain] INFO  zuoyang.o2o.O2oApplication - No active profile set, falling back to default profiles: default
-2020-06-29 10:18:01.149 [restartedMain] INFO  zuoyang.o2o.O2oApplication - Started O2oApplication in 2.555 seconds (JVM running for 3.494)
-2020-06-29 10:21:22.834 [restartedMain] INFO  zuoyang.o2o.O2oApplication - Starting O2oApplication on dingzuoangdembp.lan with PID 76388 (/Users/zuoyangding/IdeaProjects/o2o/target/classes started by zuoyangding in /Users/zuoyangding/IdeaProjects/o2o)
-2020-06-29 10:21:22.837 [restartedMain] INFO  zuoyang.o2o.O2oApplication - No active profile set, falling back to default profiles: default
-2020-06-29 10:21:24.748 [restartedMain] INFO  zuoyang.o2o.O2oApplication - Started O2oApplication in 2.178 seconds (JVM running for 3.146)
-2020-06-29 10:38:24.383 [restartedMain] INFO  zuoyang.o2o.O2oApplication - Starting O2oApplication on dingzuoangdembp.lan with PID 76421 (/Users/zuoyangding/IdeaProjects/o2o/target/classes started by zuoyangding in /Users/zuoyangding/IdeaProjects/o2o)
-2020-06-29 10:38:24.387 [restartedMain] INFO  zuoyang.o2o.O2oApplication - No active profile set, falling back to default profiles: default
-2020-06-29 10:38:26.480 [restartedMain] INFO  zuoyang.o2o.O2oApplication - Started O2oApplication in 2.344 seconds (JVM running for 3.256)
-2020-06-29 10:57:59.338 [restartedMain] INFO  zuoyang.o2o.O2oApplication - Starting O2oApplication on dingzuoangdembp.lan with PID 76524 (/Users/zuoyangding/IdeaProjects/o2o/target/classes started by zuoyangding in /Users/zuoyangding/IdeaProjects/o2o)
-2020-06-29 10:57:59.341 [restartedMain] INFO  zuoyang.o2o.O2oApplication - No active profile set, falling back to default profiles: default
-2020-06-29 10:58:01.532 [restartedMain] INFO  zuoyang.o2o.O2oApplication - Started O2oApplication in 2.511 seconds (JVM running for 3.509)
-2020-06-29 20:11:16.384 [restartedMain] INFO  zuoyang.o2o.O2oApplication - Starting O2oApplication on dingzuoangdembp.lan with PID 81199 (/Users/zuoyangding/IdeaProjects/o2o/target/classes started by zuoyangding in /Users/zuoyangding/IdeaProjects/o2o)
-2020-06-29 20:11:16.388 [restartedMain] INFO  zuoyang.o2o.O2oApplication - No active profile set, falling back to default profiles: default
-2020-06-29 20:11:20.378 [restartedMain] INFO  zuoyang.o2o.O2oApplication - Started O2oApplication in 4.389 seconds (JVM running for 5.584)
-2020-06-29 20:23:18.926 [restartedMain] INFO  zuoyang.o2o.O2oApplication - Starting O2oApplication on dingzuoangdembp.lan with PID 81337 (/Users/zuoyangding/IdeaProjects/o2o/target/classes started by zuoyangding in /Users/zuoyangding/IdeaProjects/o2o)
-2020-06-29 20:23:18.930 [restartedMain] INFO  zuoyang.o2o.O2oApplication - No active profile set, falling back to default profiles: default
-2020-06-29 20:23:21.467 [restartedMain] INFO  zuoyang.o2o.O2oApplication - Started O2oApplication in 2.884 seconds (JVM running for 3.802)
-2020-06-29 20:39:46.134 [restartedMain] INFO  zuoyang.o2o.O2oApplication - Starting O2oApplication on dingzuoangdembp.lan with PID 81392 (/Users/zuoyangding/IdeaProjects/o2o/target/classes started by zuoyangding in /Users/zuoyangding/IdeaProjects/o2o)
-2020-06-29 20:39:46.138 [restartedMain] INFO  zuoyang.o2o.O2oApplication - No active profile set, falling back to default profiles: default
-2020-06-29 20:39:48.320 [restartedMain] INFO  zuoyang.o2o.O2oApplication - Started O2oApplication in 2.452 seconds (JVM running for 3.635)
-2020-06-29 21:09:37.270 [restartedMain] INFO  zuoyang.o2o.O2oApplication - Starting O2oApplication on dingzuoangdembp.lan with PID 81464 (/Users/zuoyangding/IdeaProjects/o2o/target/classes started by zuoyangding in /Users/zuoyangding/IdeaProjects/o2o)
-2020-06-29 21:09:37.274 [restartedMain] INFO  zuoyang.o2o.O2oApplication - No active profile set, falling back to default profiles: default
-2020-06-29 21:09:38.920 [restartedMain] INFO  zuoyang.o2o.O2oApplication - Started O2oApplication in 1.947 seconds (JVM running for 3.034)
-2020-06-29 21:42:58.043 [restartedMain] INFO  zuoyang.o2o.O2oApplication - Starting O2oApplication on dingzuoangdembp.lan with PID 81562 (/Users/zuoyangding/IdeaProjects/o2o/target/classes started by zuoyangding in /Users/zuoyangding/IdeaProjects/o2o)
-2020-06-29 21:42:58.047 [restartedMain] INFO  zuoyang.o2o.O2oApplication - No active profile set, falling back to default profiles: default
-2020-06-29 21:42:59.731 [restartedMain] INFO  zuoyang.o2o.O2oApplication - Started O2oApplication in 1.914 seconds (JVM running for 2.873)
-2020-06-29 21:52:22.681 [restartedMain] INFO  zuoyang.o2o.O2oApplication - Starting O2oApplication on dingzuoangdembp.lan with PID 81605 (/Users/zuoyangding/IdeaProjects/o2o/target/classes started by zuoyangding in /Users/zuoyangding/IdeaProjects/o2o)
-2020-06-29 21:52:22.684 [restartedMain] INFO  zuoyang.o2o.O2oApplication - No active profile set, falling back to default profiles: default
-2020-06-29 21:52:24.364 [restartedMain] INFO  zuoyang.o2o.O2oApplication - Started O2oApplication in 1.956 seconds (JVM running for 3.023)
+2020-06-30 11:29:51.684 [restartedMain] INFO  zuoyang.o2o.O2oApplication - Starting O2oApplication on dingzuoangdembp.lan with PID 82421 (/Users/zuoyangding/IdeaProjects/o2o/target/classes started by zuoyangding in /Users/zuoyangding/IdeaProjects/o2o)
+2020-06-30 11:29:51.690 [restartedMain] INFO  zuoyang.o2o.O2oApplication - No active profile set, falling back to default profiles: default
+2020-06-30 11:29:55.357 [restartedMain] INFO  zuoyang.o2o.O2oApplication - Started O2oApplication in 4.141 seconds (JVM running for 5.268)
+2020-06-30 11:31:10.074 [restartedMain] INFO  zuoyang.o2o.O2oApplication - Starting O2oApplication on dingzuoangdembp.lan with PID 82438 (/Users/zuoyangding/IdeaProjects/o2o/target/classes started by zuoyangding in /Users/zuoyangding/IdeaProjects/o2o)
+2020-06-30 11:31:10.078 [restartedMain] INFO  zuoyang.o2o.O2oApplication - No active profile set, falling back to default profiles: default
+2020-06-30 11:31:12.043 [restartedMain] INFO  zuoyang.o2o.O2oApplication - Started O2oApplication in 2.349 seconds (JVM running for 3.257)
+2020-06-30 11:34:07.462 [restartedMain] INFO  zuoyang.o2o.O2oApplication - Starting O2oApplication on dingzuoangdembp.lan with PID 82447 (/Users/zuoyangding/IdeaProjects/o2o/target/classes started by zuoyangding in /Users/zuoyangding/IdeaProjects/o2o)
+2020-06-30 11:34:07.465 [restartedMain] INFO  zuoyang.o2o.O2oApplication - No active profile set, falling back to default profiles: default
+2020-06-30 11:34:09.919 [restartedMain] INFO  zuoyang.o2o.O2oApplication - Started O2oApplication in 2.744 seconds (JVM running for 3.649)
+2020-06-30 11:47:30.537 [main] INFO  z.o2o.service.serviceImp.ProductServiceImplTest - Starting ProductServiceImplTest on dingzuoangdembp.lan with PID 82490 (started by zuoyangding in /Users/zuoyangding/IdeaProjects/o2o)
+2020-06-30 11:47:30.539 [main] INFO  z.o2o.service.serviceImp.ProductServiceImplTest - No active profile set, falling back to default profiles: default
+2020-06-30 11:47:34.098 [main] INFO  z.o2o.service.serviceImp.ProductServiceImplTest - Started ProductServiceImplTest in 3.884 seconds (JVM running for 5.388)
+2020-06-30 11:48:19.096 [main] INFO  z.o2o.service.serviceImp.ProductServiceImplTest - Starting ProductServiceImplTest on dingzuoangdembp.lan with PID 82494 (started by zuoyangding in /Users/zuoyangding/IdeaProjects/o2o)
+2020-06-30 11:48:19.097 [main] INFO  z.o2o.service.serviceImp.ProductServiceImplTest - No active profile set, falling back to default profiles: default
+2020-06-30 11:48:21.252 [main] INFO  z.o2o.service.serviceImp.ProductServiceImplTest - Started ProductServiceImplTest in 2.419 seconds (JVM running for 4.135)
+2020-06-30 11:49:40.815 [restartedMain] INFO  zuoyang.o2o.O2oApplication - Starting O2oApplication on dingzuoangdembp.lan with PID 82499 (/Users/zuoyangding/IdeaProjects/o2o/target/classes started by zuoyangding in /Users/zuoyangding/IdeaProjects/o2o)
+2020-06-30 11:49:40.819 [restartedMain] INFO  zuoyang.o2o.O2oApplication - No active profile set, falling back to default profiles: default
+2020-06-30 11:49:42.560 [restartedMain] INFO  zuoyang.o2o.O2oApplication - Started O2oApplication in 2.004 seconds (JVM running for 3.117)
+2020-06-30 11:53:49.612 [main] INFO  z.o2o.service.serviceImp.ProductServiceImplTest - Starting ProductServiceImplTest on dingzuoangdembp.lan with PID 82506 (started by zuoyangding in /Users/zuoyangding/IdeaProjects/o2o)
+2020-06-30 11:53:49.613 [main] INFO  z.o2o.service.serviceImp.ProductServiceImplTest - No active profile set, falling back to default profiles: default
+2020-06-30 11:53:51.944 [main] INFO  z.o2o.service.serviceImp.ProductServiceImplTest - Started ProductServiceImplTest in 2.672 seconds (JVM running for 4.542)
+2020-06-30 11:56:05.337 [restartedMain] INFO  zuoyang.o2o.O2oApplication - Starting O2oApplication on dingzuoangdembp.lan with PID 82511 (/Users/zuoyangding/IdeaProjects/o2o/target/classes started by zuoyangding in /Users/zuoyangding/IdeaProjects/o2o)
+2020-06-30 11:56:05.339 [restartedMain] INFO  zuoyang.o2o.O2oApplication - No active profile set, falling back to default profiles: default
+2020-06-30 11:56:07.184 [restartedMain] INFO  zuoyang.o2o.O2oApplication - Started O2oApplication in 2.178 seconds (JVM running for 3.754)
+2020-06-30 11:57:22.283 [restartedMain] INFO  zuoyang.o2o.O2oApplication - Starting O2oApplication on dingzuoangdembp.lan with PID 82517 (/Users/zuoyangding/IdeaProjects/o2o/target/classes started by zuoyangding in /Users/zuoyangding/IdeaProjects/o2o)
+2020-06-30 11:57:22.287 [restartedMain] INFO  zuoyang.o2o.O2oApplication - No active profile set, falling back to default profiles: default
+2020-06-30 11:57:23.985 [restartedMain] INFO  zuoyang.o2o.O2oApplication - Started O2oApplication in 1.95 seconds (JVM running for 2.94)
