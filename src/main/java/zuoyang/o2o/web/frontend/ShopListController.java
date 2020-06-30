@@ -103,10 +103,13 @@ public class ShopListController {
 
             try {
                 ShopExecution shopExecution = shopService.getShopList(shopCondition, pageIndex, pageSize);
-                modelMap.put("success", true);
                 if (shopExecution.getShopList()!=null && shopExecution.getShopList().size()>0) {
+                    modelMap.put("success", true);
                     modelMap.put("shopList", shopExecution.getShopList());
                     modelMap.put("count", shopExecution.getCount());
+                } else {
+                    modelMap.put("success", false);
+                    modelMap.put("errMsg", "No shop under search, Please try again");
                 }
             } catch (ShopOperationException e) {
                 modelMap.put("success", false);
@@ -121,7 +124,7 @@ public class ShopListController {
 
     private Shop compactSearchRestriction(long parentId, long shopCategoryId, String shopName, int areaId) {
         Shop shopCondition = new Shop();
-        if (parentId>-1) {
+        if (parentId > -1) {
             ShopCategory parent = new ShopCategory();
             parent.setShopCategoryId(parentId);
             ShopCategory shopCategory = new ShopCategory();
@@ -129,13 +132,9 @@ public class ShopListController {
             shopCondition.setShopCategory(shopCategory);
         }
         if (shopCategoryId > -1) {
-            if (shopCondition.getShopCategory()!=null) {
-                shopCondition.getShopCategory().setShopCategoryId(shopCategoryId);
-            } else {
-                ShopCategory shopCategory = new ShopCategory();
-                shopCategory.setShopCategoryId(shopCategoryId);
-                shopCondition.setShopCategory(shopCategory);
-            }
+            ShopCategory shopCategory = new ShopCategory();
+            shopCategory.setShopCategoryId(shopCategoryId);
+            shopCondition.setShopCategory(shopCategory);
         }
         if (shopName != null) {
             shopCondition.setShopName(shopName);

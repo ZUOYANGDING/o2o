@@ -15,7 +15,7 @@ $(function(){
     var parentId = getQueryString('parentId');
     // child category selected
     var categorySelected = false;
-    if (parentId!=null) {
+    if (parentId) {
         categorySelected = true;
     }
     var shopCategoryId = '';
@@ -89,7 +89,7 @@ $(function(){
                         + ' update</p>' + '<span>click to check details</span>' + '</div>'
                         + '</div>';
                 });
-                $('.list-div').html(shopListHtml);
+                $('.list-div').append(shopListHtml);
                 // get num of shops until right now
                 var totalShops = $('.list-div .card').length;
                 if (totalShops >= maxItems) {
@@ -99,12 +99,14 @@ $(function(){
                 } else {
                     $('.infinite-scroll-preloader').show();
                 }
-                pageNum++;
+                pageNum+=1;
                 // set the loading status to false, let fetch data progress resume
                 loading = false;
                 $.refreshScroller();
             } else {
                 $.toast(data.errMsg);
+                $('.infinite-scroll-preloader').hide();
+                loading = false;
             }
         });
     }
@@ -136,6 +138,10 @@ $(function(){
             } else {
                 $(e.target).addClass('button-fill').siblings().removeClass('button-fill');
             }
+            //reset the shop list
+            $('.list-div').empty();
+            pageNum = 1;
+            addItems(pageNum, pageSize);
         } else {
             // when parentId is null, set it to selected root
             parentId = e.target.dataset.categoryId;
@@ -145,11 +151,11 @@ $(function(){
             } else {
                 $(e.target).addClass('button-fill').siblings().removeClass('button-fill');
             }
+            //reset the shop list
+            $('.list-div').empty();
+            pageNum = 1;
+            addItems(pageNum, pageSize);
         }
-        //reset the shop list
-        $('.list-div').empty();
-        pageNum = 1;
-        addItems(pageNum, pageSize);
     });
 
     // reset shop list when input new shop name
