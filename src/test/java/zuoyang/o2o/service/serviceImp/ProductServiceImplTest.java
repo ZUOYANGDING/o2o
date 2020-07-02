@@ -234,7 +234,7 @@ class ProductServiceImplTest {
         assertEquals(ProductStateEnum.SUCCESS_WITH_EMPTY.getState(), pe_1.getState());
 
         int pageIndex_2 = 0;
-        int pageSize_2 = 10;
+        int pageSize_2 = 3;
         Product productCondition_2 = new Product();
         Shop shop = new Shop();
         shop.setShopId(40L);

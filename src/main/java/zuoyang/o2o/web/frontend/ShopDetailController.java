@@ -70,7 +70,7 @@ public class ShopDetailController {
                 modelMap.put("productCategorySuccess", false);
                 modelMap.put("productErrMsg", e.getMessage());
             }
-
+            modelMap.put("success", true);
             return modelMap;
         } else {
             modelMap.put("success", false);
@@ -113,7 +113,7 @@ public class ShopDetailController {
                     modelMap.put("productList", productExecution.getProductList());
                     modelMap.put("count", productExecution.getCount());
                 } else if (productExecution.getState() == ProductStateEnum.SUCCESS_WITH_EMPTY.getState()) {
-                    modelMap.put("success", true);
+                    modelMap.put("success", false);
                     modelMap.put("errMsg", productExecution.getStateInfo());
                 }
             } catch (ProductOperationException e) {

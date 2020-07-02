@@ -90,14 +90,9 @@
     <select id="queryProductList" resultMap="productMap">
         SELECT
             p.product_id, p.product_name, p.img_addr, p.product_desc, p.normal_price, p.promote_price, p.priority,
-            p.create_time, p.last_edit_time, p.enable_status, p.product_category_id, p.shop_id,
-            pm.product_img_id, pm.img_address, pm.img_desc, pm.create_time, pm.priority as detail_img_priority
+            p.create_time, p.last_edit_time, p.enable_status, p.product_category_id, p.shop_id
         FROM
             tb_product as p
-        LEFT JOIN
-            tb_product_img as pm
-        ON
-            p.product_id=pm.product_id
         <where>
             <if test="productCondition.shop!=null and productCondition.shop.shopId!=null">
                 and p.shop_id=#{productCondition.shop.shopId}
@@ -113,8 +108,7 @@
                 and p.enable_status = #{productCondition.enableStatus}
             </if>
         </where>
-        ORDER BY
-            p.priority DESC
+        ORDER BY p.priority DESC
         LIMIT #{rowIndex}, #{pageSize};
     </select>
 
