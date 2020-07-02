@@ -25,8 +25,9 @@ public interface ProductService {
      * get product basic information and combined the product detail image with it
      * @param productId
      * @return
+     * @throws ProductOperationException
      */
-    Product getProductInfo (Long productId);
+    Product getProductInfo (Long productId) throws ProductOperationException;
 
     /**
      *
@@ -39,5 +40,6 @@ public interface ProductService {
     ProductExecution modifyProduct(Product product, ImageHolder thumbnail, List<ImageHolder> productDetailImageList)
         throws ProductOperationException;
 
-    ProductExecution getProductList(Product productCondition, int pageIndex, int pageSize);
+    ProductExecution getProductList(Product productCondition, int pageIndex, int pageSize)
+            throws ProductOperationException;
 }

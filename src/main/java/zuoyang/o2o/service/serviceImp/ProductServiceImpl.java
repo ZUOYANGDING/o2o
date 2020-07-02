@@ -127,8 +127,12 @@ public class ProductServiceImpl implements ProductService {
     }
 
     @Override
-    public Product getProductInfo(Long productId) {
-        return productDao.queryProductByProductId(productId);
+    public Product getProductInfo(Long productId) throws ProductOperationException{
+        try {
+            return productDao.queryProductByProductId(productId);
+        } catch (Exception e) {
+            throw new ProductOperationException(e.getMessage());
+        }
     }
 
     @Override
