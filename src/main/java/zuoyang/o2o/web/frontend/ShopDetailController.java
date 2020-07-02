@@ -49,11 +49,11 @@ public class ShopDetailController {
                     modelMap.put("shop", currentShop);
                 } else {
                     modelMap.put("shopSuccess", false);
-                    modelMap.put("errMsg", "cannot get shop info");
+                    modelMap.put("shopErrMsg", "cannot get shop info");
                 }
             } catch (Exception e) {
                 modelMap.put("shopSuccess", false);
-                modelMap.put("errMsg", e.getMessage());
+                modelMap.put("shopErrMsg", e.getMessage());
             }
 
             // get product category in this shop
@@ -64,11 +64,11 @@ public class ShopDetailController {
                     modelMap.put("productCategoryList", productCategoryList);
                 } else {
                     modelMap.put("productCategorySuccess", false);
-                    modelMap.put("errMsg", "No productCategory under this shop");
+                    modelMap.put("productErrMsg", "No productCategory under this shop");
                 }
             } catch (Exception e) {
                 modelMap.put("productCategorySuccess", false);
-                modelMap.put("errMsg", e.getMessage());
+                modelMap.put("productErrMsg", e.getMessage());
             }
 
             return modelMap;
