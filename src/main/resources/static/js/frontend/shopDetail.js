@@ -64,6 +64,7 @@ $(function () {
             if (data.success) {
                 maxItem = data.count;
                 var html = '';
+
                 data.productList.map(function (item, index) {
                     html += '' + '<div class="card" data-product-id='
                         + item.productId + '>'
@@ -83,9 +84,11 @@ $(function () {
                         + '</div>';
                 });
                 $('.list-div').append(html);
+
                 var total = $('.list-div .card').length;
                 if (total >= maxItem) {
                     $('.infinite-scroll-preloader').hide();
+                    return;
                 } else {
                     $('.infinite-scroll-preloader').show();
                 }
