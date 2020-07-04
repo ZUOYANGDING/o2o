@@ -57,7 +57,7 @@ $(function() {
         $.openPanel('#panel-right-demo');
     });
 
-    $('.row').on('click', 'shop-classify', function (e) {
+    $('.row').on('click', '.shop-classify', function (e) {
         var shopCategoryId = e.currentTarget.dataset.category;
         var shopListUrl = '/o2o/frontend/shoplist?parentId=' + shopCategoryId;
         window.location.href = shopListUrl;

@@ -31,7 +31,7 @@ $(function () {
             var imgListHtml = '';
             product.productImgList.map(function(item, index) {
                 imgListHtml += '<div> <img src="'
-                    + getContextPath() + item.imgAddr
+                    + getContextPath() + item.imgAddress
                     + '" width="100%" /></div>';
             });
             $('#imgList').html(imgListHtml);

@@ -35,7 +35,7 @@ $(function(){
                 // deal with shop categories from backend
                 var shopCategoryList = data.shopCategoryList;
                 var shopCategoryHtml = '';
-                shopCategoryHtml += '<a href="#" class="button" data-category-id=""> All Shop Categories </a>';
+                shopCategoryHtml += '<a href="#" class="button" data-category-id=""> All categories </a>';
                 shopCategoryList.map(function(item, index) {
                     shopCategoryHtml += '<a href="#" class="button" data-category-id='
                         + item.shopCategoryId
@@ -128,7 +128,7 @@ $(function(){
 
     // reset the search restriction
     $('#shoplist-search-div').on('click', '.button', function (e) {
-        if (parentId!=null && categorySelected) {
+        if (parentId && categorySelected) {
             // a category under the root category
             shopCategoryId = e.target.dataset.categoryId;
             // clear the exist search restriction if it exists
