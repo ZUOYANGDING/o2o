@@ -36,7 +36,8 @@ public class MvcConfiguration implements WebMvcConfigurer {
     public void addResourceHandlers(ResourceHandlerRegistry registry) {
         registry.addResourceHandler("/img/**", "/css/**", "/js/**")
                 .addResourceLocations("classpath:/static/img/", "classpath:/static/css/", "classpath:/static/js/");
-
+        registry.addResourceHandler("/upload/**").
+                addResourceLocations("file:/Users/zuoyangding/work/image/upload/");
     }
 
     // setup default request handler
