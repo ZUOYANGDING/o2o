@@ -31,3 +31,6 @@ catalina.base_IS_UNDEFINED/
 
 ### VS Code ###
 .vscode/
+
+####remote server properties#####
+application-prod.properties

@@ -21,6 +21,6 @@ class AreaDaoTest {
     @Test
     void queryArea() {
         List<Area> areaList = areaDao.queryArea();
-        assertEquals(2, areaList.size());
+        assertEquals(3, areaList.size());
     }
 }
