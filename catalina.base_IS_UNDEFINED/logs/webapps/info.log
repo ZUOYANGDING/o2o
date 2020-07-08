@@ -1,20 +1,9 @@
-2020-07-06 11:03:32.438 [restartedMain] INFO  zuoyang.o2o.O2oApplication - Starting O2oApplication on DingZuoyangdeMacBook-Pro.local with PID 9882 (/Users/zuoyangding/IdeaProjects/o2o/target/classes started by zuoyangding in /Users/zuoyangding/IdeaProjects/o2o)
-2020-07-06 11:03:32.444 [restartedMain] INFO  zuoyang.o2o.O2oApplication - The following profiles are active: application-dev.properties
-2020-07-06 11:06:14.674 [restartedMain] INFO  zuoyang.o2o.O2oApplication - Starting O2oApplication on DingZuoyangdeMacBook-Pro.local with PID 9887 (/Users/zuoyangding/IdeaProjects/o2o/target/classes started by zuoyangding in /Users/zuoyangding/IdeaProjects/o2o)
-2020-07-06 11:06:14.678 [restartedMain] INFO  zuoyang.o2o.O2oApplication - The following profiles are active: dev
-2020-07-06 11:06:16.883 [restartedMain] INFO  zuoyang.o2o.O2oApplication - Started O2oApplication in 2.481 seconds (JVM running for 8.362)
-2020-07-06 11:15:52.858 [main] INFO  zuoyang.o2o.dao.AreaDaoTest - Starting AreaDaoTest on DingZuoyangdeMacBook-Pro.local with PID 9923 (started by zuoyangding in /Users/zuoyangding/IdeaProjects/o2o)
-2020-07-06 11:15:52.859 [main] INFO  zuoyang.o2o.dao.AreaDaoTest - The following profiles are active: prod
-2020-07-06 11:15:54.931 [main] INFO  zuoyang.o2o.dao.AreaDaoTest - Started AreaDaoTest in 7.348 seconds (JVM running for 8.955)
-2020-07-06 11:27:29.322 [main] INFO  zuoyang.o2o.dao.AreaDaoTest - Starting AreaDaoTest on DingZuoyangdeMacBook-Pro.local with PID 9966 (started by zuoyangding in /Users/zuoyangding/IdeaProjects/o2o)
-2020-07-06 11:27:29.323 [main] INFO  zuoyang.o2o.dao.AreaDaoTest - The following profiles are active: dev
-2020-07-06 11:27:32.074 [main] INFO  zuoyang.o2o.dao.AreaDaoTest - Started AreaDaoTest in 8.155 seconds (JVM running for 9.538)
-2020-07-06 11:28:37.232 [main] INFO  zuoyang.o2o.dao.AreaDaoTest - Starting AreaDaoTest on DingZuoyangdeMacBook-Pro.local with PID 9970 (started by zuoyangding in /Users/zuoyangding/IdeaProjects/o2o)
-2020-07-06 11:28:37.233 [main] INFO  zuoyang.o2o.dao.AreaDaoTest - The following profiles are active: dev
-2020-07-06 11:28:39.280 [main] INFO  zuoyang.o2o.dao.AreaDaoTest - Started AreaDaoTest in 7.357 seconds (JVM running for 8.654)
-2020-07-06 11:28:57.422 [main] INFO  zuoyang.o2o.dao.AreaDaoTest - Starting AreaDaoTest on DingZuoyangdeMacBook-Pro.local with PID 9974 (started by zuoyangding in /Users/zuoyangding/IdeaProjects/o2o)
-2020-07-06 11:28:57.423 [main] INFO  zuoyang.o2o.dao.AreaDaoTest - The following profiles are active: dev
-2020-07-06 11:28:59.324 [main] INFO  zuoyang.o2o.dao.AreaDaoTest - Started AreaDaoTest in 7.201 seconds (JVM running for 8.462)
-2020-07-06 11:29:33.971 [main] INFO  zuoyang.o2o.dao.AreaDaoTest - Starting AreaDaoTest on DingZuoyangdeMacBook-Pro.local with PID 9977 (started by zuoyangding in /Users/zuoyangding/IdeaProjects/o2o)
-2020-07-06 11:29:33.972 [main] INFO  zuoyang.o2o.dao.AreaDaoTest - The following profiles are active: prod
-2020-07-06 11:29:35.932 [main] INFO  zuoyang.o2o.dao.AreaDaoTest - Started AreaDaoTest in 7.357 seconds (JVM running for 8.661)
+2020-07-08 00:09:30.088 [restartedMain] INFO  zuoyang.o2o.O2oApplication - Starting O2oApplication on DingZuoyangdeMacBook-Pro.local with PID 18226 (/Users/zuoyangding/IdeaProjects/o2o/target/classes started by zuoyangding in /Users/zuoyangding/IdeaProjects/o2o)
+2020-07-08 00:09:30.095 [restartedMain] INFO  zuoyang.o2o.O2oApplication - The following profiles are active: dev
+2020-07-08 00:09:32.358 [restartedMain] INFO  zuoyang.o2o.O2oApplication - Started O2oApplication in 2.505 seconds (JVM running for 8.343)
+2020-07-08 00:11:41.588 [restartedMain] INFO  zuoyang.o2o.O2oApplication - Starting O2oApplication on DingZuoyangdeMacBook-Pro.local with PID 18248 (/Users/zuoyangding/IdeaProjects/o2o/target/classes started by zuoyangding in /Users/zuoyangding/IdeaProjects/o2o)
+2020-07-08 00:11:41.591 [restartedMain] INFO  zuoyang.o2o.O2oApplication - The following profiles are active: dev
+2020-07-08 00:11:43.381 [restartedMain] INFO  zuoyang.o2o.O2oApplication - Started O2oApplication in 2.034 seconds (JVM running for 7.792)
+2020-07-08 00:12:53.480 [restartedMain] INFO  zuoyang.o2o.O2oApplication - Starting O2oApplication on DingZuoyangdeMacBook-Pro.local with PID 18253 (/Users/zuoyangding/IdeaProjects/o2o/target/classes started by zuoyangding in /Users/zuoyangding/IdeaProjects/o2o)
+2020-07-08 00:12:53.483 [restartedMain] INFO  zuoyang.o2o.O2oApplication - The following profiles are active: dev
+2020-07-08 00:12:55.544 [restartedMain] INFO  zuoyang.o2o.O2oApplication - Started O2oApplication in 2.381 seconds (JVM running for 9.661)
