@@ -1,3 +1,233 @@
 2020-07-08 00:09:30.093 [restartedMain] DEBUG zuoyang.o2o.O2oApplication - Running with Spring Boot v2.3.0.RELEASE, Spring v5.2.6.RELEASE
 2020-07-08 00:11:41.591 [restartedMain] DEBUG zuoyang.o2o.O2oApplication - Running with Spring Boot v2.3.0.RELEASE, Spring v5.2.6.RELEASE
 2020-07-08 00:12:53.482 [restartedMain] DEBUG zuoyang.o2o.O2oApplication - Running with Spring Boot v2.3.0.RELEASE, Spring v5.2.6.RELEASE
+2020-07-08 08:37:58.533 [main] DEBUG zuoyang.o2o.dao.ShopDaoTest - Running with Spring Boot v2.3.0.RELEASE, Spring v5.2.6.RELEASE
+2020-07-08 21:46:07.244 [restartedMain] DEBUG zuoyang.o2o.O2oApplication - Running with Spring Boot v2.3.0.RELEASE, Spring v5.2.6.RELEASE
+2020-07-08 21:46:34.958 [restartedMain] DEBUG zuoyang.o2o.O2oApplication - Running with Spring Boot v2.3.0.RELEASE, Spring v5.2.6.RELEASE
+2020-07-08 21:55:47.372 [restartedMain] DEBUG zuoyang.o2o.O2oApplication - Running with Spring Boot v2.3.0.RELEASE, Spring v5.2.6.RELEASE
+2020-07-08 21:58:46.306 [restartedMain] DEBUG zuoyang.o2o.O2oApplication - Running with Spring Boot v2.3.0.RELEASE, Spring v5.2.6.RELEASE
+2020-07-08 22:00:02.597 [restartedMain] DEBUG zuoyang.o2o.O2oApplication - Running with Spring Boot v2.3.0.RELEASE, Spring v5.2.6.RELEASE
+2020-07-08 22:07:32.793 [restartedMain] DEBUG zuoyang.o2o.O2oApplication - Running with Spring Boot v2.3.0.RELEASE, Spring v5.2.6.RELEASE
+2020-07-08 22:08:54.117 [restartedMain] DEBUG zuoyang.o2o.O2oApplication - Running with Spring Boot v2.3.0.RELEASE, Spring v5.2.6.RELEASE
+2020-07-08 22:16:27.464 [restartedMain] DEBUG zuoyang.o2o.O2oApplication - Running with Spring Boot v2.3.0.RELEASE, Spring v5.2.6.RELEASE
+2020-07-08 22:24:27.442 [restartedMain] DEBUG zuoyang.o2o.O2oApplication - Running with Spring Boot v2.3.0.RELEASE, Spring v5.2.6.RELEASE
+2020-07-08 22:30:25.833 [restartedMain] DEBUG zuoyang.o2o.O2oApplication - Running with Spring Boot v2.3.0.RELEASE, Spring v5.2.6.RELEASE
+2020-07-08 22:33:03.463 [restartedMain] DEBUG zuoyang.o2o.O2oApplication - Running with Spring Boot v2.3.0.RELEASE, Spring v5.2.6.RELEASE
+2020-07-08 22:44:12.489 [restartedMain] DEBUG zuoyang.o2o.O2oApplication - Running with Spring Boot v2.3.0.RELEASE, Spring v5.2.6.RELEASE
+2020-07-08 22:53:10.849 [restartedMain] DEBUG zuoyang.o2o.O2oApplication - Running with Spring Boot v2.3.0.RELEASE, Spring v5.2.6.RELEASE
+2020-07-08 22:55:19.372 [restartedMain] DEBUG zuoyang.o2o.O2oApplication - Running with Spring Boot v2.3.0.RELEASE, Spring v5.2.6.RELEASE
+2020-07-08 23:32:16.982 [restartedMain] DEBUG zuoyang.o2o.O2oApplication - Running with Spring Boot v2.3.0.RELEASE, Spring v5.2.6.RELEASE
+2020-07-08 23:33:35.026 [restartedMain] DEBUG zuoyang.o2o.O2oApplication - Running with Spring Boot v2.3.0.RELEASE, Spring v5.2.6.RELEASE
+2020-07-08 23:33:52.753 [http-nio-8080-exec-1] DEBUG zuoyang.o2o.dao.ShopDao.queryShopList - ==>  Preparing: SELECT s.shop_id, s.shop_name, s.shop_desc, s.shop_address, s.phone, s.shop_img, s.priority, s.enable_status, s.create_time, s.last_edit_time, s.advice, a.area_id, a.area_name, sc.shop_category_id, sc.shop_category_name FROM tb_shop AS s, tb_area AS a, tb_shop_category AS sc WHERE s.area_id = a.area_id AND s.shop_category_id = sc.shop_category_id ORDER BY s.priority DESC LIMIT ?, ?; 
+2020-07-08 23:33:52.764 [http-nio-8080-exec-10] DEBUG zuoyang.o2o.dao.ShopCategoryDao.queryShopCategory - ==>  Preparing: SELECT shop_category_id, shop_category_name, shop_category_desc, shop_category_img, create_time, last_edit_time, parent_id, priority FROM tb_shop_category WHERE parent_id is null ORDER BY priority DESC 
+2020-07-08 23:33:52.776 [http-nio-8080-exec-10] DEBUG zuoyang.o2o.dao.ShopCategoryDao.queryShopCategory - ==> Parameters: 
+2020-07-08 23:33:52.777 [http-nio-8080-exec-1] DEBUG zuoyang.o2o.dao.ShopDao.queryShopList - ==> Parameters: 0(Integer), 3(Integer)
+2020-07-08 23:33:52.829 [http-nio-8080-exec-10] DEBUG zuoyang.o2o.dao.ShopCategoryDao.queryShopCategory - <==      Total: 5
+2020-07-08 23:33:52.834 [http-nio-8080-exec-10] DEBUG zuoyang.o2o.dao.AreaDao.queryArea - ==>  Preparing: SELECT area_id, area_name, priority, create_time, last_edit_time FROM tb_area ORDER BY priority DESC 
+2020-07-08 23:33:52.835 [http-nio-8080-exec-10] DEBUG zuoyang.o2o.dao.AreaDao.queryArea - ==> Parameters: 
+2020-07-08 23:33:52.857 [http-nio-8080-exec-1] DEBUG zuoyang.o2o.dao.ShopDao.queryShopList - <==      Total: 3
+2020-07-08 23:33:52.858 [http-nio-8080-exec-1] DEBUG zuoyang.o2o.dao.ShopDao.queryShopCount - ==>  Preparing: SELECT count(1) FROM tb_shop AS s, tb_shop_category AS sc, tb_area AS a WHERE s.area_id = a.area_id AND s.shop_category_id = sc.shop_category_id 
+2020-07-08 23:33:52.859 [http-nio-8080-exec-1] DEBUG zuoyang.o2o.dao.ShopDao.queryShopCount - ==> Parameters: 
+2020-07-08 23:33:52.865 [http-nio-8080-exec-1] DEBUG zuoyang.o2o.dao.ShopDao.queryShopCount - <==      Total: 1
+2020-07-08 23:33:52.972 [http-nio-8080-exec-10] DEBUG zuoyang.o2o.dao.AreaDao.queryArea - <==      Total: 4
+2020-07-08 23:37:20.811 [restartedMain] DEBUG zuoyang.o2o.O2oApplication - Running with Spring Boot v2.3.0.RELEASE, Spring v5.2.6.RELEASE
+2020-07-08 23:37:38.449 [http-nio-8080-exec-1] DEBUG zuoyang.o2o.dao.ShopDao.queryShopList - ==>  Preparing: SELECT s.shop_id, s.shop_name, s.shop_desc, s.shop_address, s.phone, s.shop_img, s.priority, s.enable_status, s.create_time, s.last_edit_time, s.advice, a.area_id, a.area_name, sc.shop_category_id, sc.shop_category_name FROM tb_shop AS s, tb_area AS a, tb_shop_category AS sc WHERE s.area_id = a.area_id AND s.shop_category_id = sc.shop_category_id ORDER BY s.priority DESC LIMIT ?, ?; 
+2020-07-08 23:37:38.449 [http-nio-8080-exec-10] DEBUG zuoyang.o2o.dao.ShopCategoryDao.queryShopCategory - ==>  Preparing: SELECT shop_category_id, shop_category_name, shop_category_desc, shop_category_img, create_time, last_edit_time, parent_id, priority FROM tb_shop_category WHERE parent_id is null ORDER BY priority DESC 
+2020-07-08 23:37:38.477 [http-nio-8080-exec-10] DEBUG zuoyang.o2o.dao.ShopCategoryDao.queryShopCategory - ==> Parameters: 
+2020-07-08 23:37:38.477 [http-nio-8080-exec-1] DEBUG zuoyang.o2o.dao.ShopDao.queryShopList - ==> Parameters: 0(Integer), 3(Integer)
+2020-07-08 23:37:38.542 [http-nio-8080-exec-10] DEBUG zuoyang.o2o.dao.ShopCategoryDao.queryShopCategory - <==      Total: 5
+2020-07-08 23:37:38.544 [http-nio-8080-exec-1] DEBUG zuoyang.o2o.dao.ShopDao.queryShopList - <==      Total: 3
+2020-07-08 23:37:38.547 [http-nio-8080-exec-10] DEBUG zuoyang.o2o.dao.AreaDao.queryArea - ==>  Preparing: SELECT area_id, area_name, priority, create_time, last_edit_time FROM tb_area ORDER BY priority DESC 
+2020-07-08 23:37:38.548 [http-nio-8080-exec-1] DEBUG zuoyang.o2o.dao.ShopDao.queryShopCount - ==>  Preparing: SELECT count(1) FROM tb_shop AS s, tb_shop_category AS sc, tb_area AS a WHERE s.area_id = a.area_id AND s.shop_category_id = sc.shop_category_id 
+2020-07-08 23:37:38.548 [http-nio-8080-exec-10] DEBUG zuoyang.o2o.dao.AreaDao.queryArea - ==> Parameters: 
+2020-07-08 23:37:38.548 [http-nio-8080-exec-1] DEBUG zuoyang.o2o.dao.ShopDao.queryShopCount - ==> Parameters: 
+2020-07-08 23:37:38.550 [http-nio-8080-exec-10] DEBUG zuoyang.o2o.dao.AreaDao.queryArea - <==      Total: 4
+2020-07-08 23:37:38.550 [http-nio-8080-exec-1] DEBUG zuoyang.o2o.dao.ShopDao.queryShopCount - <==      Total: 1
+2020-07-08 23:37:42.151 [http-nio-8080-exec-3] DEBUG zuoyang.o2o.dao.ShopDao.queryShopList - ==>  Preparing: SELECT s.shop_id, s.shop_name, s.shop_desc, s.shop_address, s.phone, s.shop_img, s.priority, s.enable_status, s.create_time, s.last_edit_time, s.advice, a.area_id, a.area_name, sc.shop_category_id, sc.shop_category_name FROM tb_shop AS s, tb_area AS a, tb_shop_category AS sc WHERE s.area_id = a.area_id AND s.shop_category_id = sc.shop_category_id ORDER BY s.priority DESC LIMIT ?, ?; 
+2020-07-08 23:37:42.152 [http-nio-8080-exec-3] DEBUG zuoyang.o2o.dao.ShopDao.queryShopList - ==> Parameters: 0(Integer), 3(Integer)
+2020-07-08 23:37:42.155 [http-nio-8080-exec-3] DEBUG zuoyang.o2o.dao.ShopDao.queryShopList - <==      Total: 3
+2020-07-08 23:37:42.156 [http-nio-8080-exec-3] DEBUG zuoyang.o2o.dao.ShopDao.queryShopCount - ==>  Preparing: SELECT count(1) FROM tb_shop AS s, tb_shop_category AS sc, tb_area AS a WHERE s.area_id = a.area_id AND s.shop_category_id = sc.shop_category_id 
+2020-07-08 23:37:42.156 [http-nio-8080-exec-3] DEBUG zuoyang.o2o.dao.ShopDao.queryShopCount - ==> Parameters: 
+2020-07-08 23:37:42.157 [http-nio-8080-exec-3] DEBUG zuoyang.o2o.dao.ShopDao.queryShopCount - <==      Total: 1
+2020-07-08 23:37:42.866 [http-nio-8080-exec-2] DEBUG zuoyang.o2o.dao.ShopDao.queryShopList - ==>  Preparing: SELECT s.shop_id, s.shop_name, s.shop_desc, s.shop_address, s.phone, s.shop_img, s.priority, s.enable_status, s.create_time, s.last_edit_time, s.advice, a.area_id, a.area_name, sc.shop_category_id, sc.shop_category_name FROM tb_shop AS s, tb_area AS a, tb_shop_category AS sc WHERE s.area_id = a.area_id AND s.shop_category_id = sc.shop_category_id ORDER BY s.priority DESC LIMIT ?, ?; 
+2020-07-08 23:37:42.867 [http-nio-8080-exec-2] DEBUG zuoyang.o2o.dao.ShopDao.queryShopList - ==> Parameters: 3(Integer), 3(Integer)
+2020-07-08 23:37:42.870 [http-nio-8080-exec-2] DEBUG zuoyang.o2o.dao.ShopDao.queryShopList - <==      Total: 3
+2020-07-08 23:37:42.871 [http-nio-8080-exec-2] DEBUG zuoyang.o2o.dao.ShopDao.queryShopCount - ==>  Preparing: SELECT count(1) FROM tb_shop AS s, tb_shop_category AS sc, tb_area AS a WHERE s.area_id = a.area_id AND s.shop_category_id = sc.shop_category_id 
+2020-07-08 23:37:42.871 [http-nio-8080-exec-2] DEBUG zuoyang.o2o.dao.ShopDao.queryShopCount - ==> Parameters: 
+2020-07-08 23:37:42.872 [http-nio-8080-exec-2] DEBUG zuoyang.o2o.dao.ShopDao.queryShopCount - <==      Total: 1
+2020-07-08 23:37:43.217 [http-nio-8080-exec-5] DEBUG zuoyang.o2o.dao.ShopDao.queryShopList - ==>  Preparing: SELECT s.shop_id, s.shop_name, s.shop_desc, s.shop_address, s.phone, s.shop_img, s.priority, s.enable_status, s.create_time, s.last_edit_time, s.advice, a.area_id, a.area_name, sc.shop_category_id, sc.shop_category_name FROM tb_shop AS s, tb_area AS a, tb_shop_category AS sc WHERE s.area_id = a.area_id AND s.shop_category_id = sc.shop_category_id ORDER BY s.priority DESC LIMIT ?, ?; 
+2020-07-08 23:37:43.217 [http-nio-8080-exec-5] DEBUG zuoyang.o2o.dao.ShopDao.queryShopList - ==> Parameters: 6(Integer), 3(Integer)
+2020-07-08 23:37:43.222 [http-nio-8080-exec-5] DEBUG zuoyang.o2o.dao.ShopDao.queryShopList - <==      Total: 3
+2020-07-08 23:37:43.223 [http-nio-8080-exec-5] DEBUG zuoyang.o2o.dao.ShopDao.queryShopCount - ==>  Preparing: SELECT count(1) FROM tb_shop AS s, tb_shop_category AS sc, tb_area AS a WHERE s.area_id = a.area_id AND s.shop_category_id = sc.shop_category_id 
+2020-07-08 23:37:43.223 [http-nio-8080-exec-5] DEBUG zuoyang.o2o.dao.ShopDao.queryShopCount - ==> Parameters: 
+2020-07-08 23:37:43.224 [http-nio-8080-exec-5] DEBUG zuoyang.o2o.dao.ShopDao.queryShopCount - <==      Total: 1
+2020-07-08 23:37:43.283 [http-nio-8080-exec-8] DEBUG zuoyang.o2o.dao.ShopDao.queryShopList - ==>  Preparing: SELECT s.shop_id, s.shop_name, s.shop_desc, s.shop_address, s.phone, s.shop_img, s.priority, s.enable_status, s.create_time, s.last_edit_time, s.advice, a.area_id, a.area_name, sc.shop_category_id, sc.shop_category_name FROM tb_shop AS s, tb_area AS a, tb_shop_category AS sc WHERE s.area_id = a.area_id AND s.shop_category_id = sc.shop_category_id ORDER BY s.priority DESC LIMIT ?, ?; 
+2020-07-08 23:37:43.284 [http-nio-8080-exec-8] DEBUG zuoyang.o2o.dao.ShopDao.queryShopList - ==> Parameters: 9(Integer), 3(Integer)
+2020-07-08 23:37:43.287 [http-nio-8080-exec-8] DEBUG zuoyang.o2o.dao.ShopDao.queryShopList - <==      Total: 3
+2020-07-08 23:37:43.287 [http-nio-8080-exec-8] DEBUG zuoyang.o2o.dao.ShopDao.queryShopCount - ==>  Preparing: SELECT count(1) FROM tb_shop AS s, tb_shop_category AS sc, tb_area AS a WHERE s.area_id = a.area_id AND s.shop_category_id = sc.shop_category_id 
+2020-07-08 23:37:43.287 [http-nio-8080-exec-8] DEBUG zuoyang.o2o.dao.ShopDao.queryShopCount - ==> Parameters: 
+2020-07-08 23:37:43.288 [http-nio-8080-exec-8] DEBUG zuoyang.o2o.dao.ShopDao.queryShopCount - <==      Total: 1
+2020-07-08 23:37:43.799 [http-nio-8080-exec-1] DEBUG zuoyang.o2o.dao.ShopDao.queryShopList - ==>  Preparing: SELECT s.shop_id, s.shop_name, s.shop_desc, s.shop_address, s.phone, s.shop_img, s.priority, s.enable_status, s.create_time, s.last_edit_time, s.advice, a.area_id, a.area_name, sc.shop_category_id, sc.shop_category_name FROM tb_shop AS s, tb_area AS a, tb_shop_category AS sc WHERE s.area_id = a.area_id AND s.shop_category_id = sc.shop_category_id ORDER BY s.priority DESC LIMIT ?, ?; 
+2020-07-08 23:37:43.800 [http-nio-8080-exec-1] DEBUG zuoyang.o2o.dao.ShopDao.queryShopList - ==> Parameters: 12(Integer), 3(Integer)
+2020-07-08 23:37:43.805 [http-nio-8080-exec-1] DEBUG zuoyang.o2o.dao.ShopDao.queryShopList - <==      Total: 3
+2020-07-08 23:37:43.805 [http-nio-8080-exec-1] DEBUG zuoyang.o2o.dao.ShopDao.queryShopCount - ==>  Preparing: SELECT count(1) FROM tb_shop AS s, tb_shop_category AS sc, tb_area AS a WHERE s.area_id = a.area_id AND s.shop_category_id = sc.shop_category_id 
+2020-07-08 23:37:43.805 [http-nio-8080-exec-1] DEBUG zuoyang.o2o.dao.ShopDao.queryShopCount - ==> Parameters: 
+2020-07-08 23:37:43.806 [http-nio-8080-exec-1] DEBUG zuoyang.o2o.dao.ShopDao.queryShopCount - <==      Total: 1
+2020-07-08 23:37:44.700 [http-nio-8080-exec-2] DEBUG zuoyang.o2o.dao.ShopDao.queryShopList - ==>  Preparing: SELECT s.shop_id, s.shop_name, s.shop_desc, s.shop_address, s.phone, s.shop_img, s.priority, s.enable_status, s.create_time, s.last_edit_time, s.advice, a.area_id, a.area_name, sc.shop_category_id, sc.shop_category_name FROM tb_shop AS s, tb_area AS a, tb_shop_category AS sc WHERE s.area_id = a.area_id AND s.shop_category_id = sc.shop_category_id ORDER BY s.priority DESC LIMIT ?, ?; 
+2020-07-08 23:37:44.700 [http-nio-8080-exec-2] DEBUG zuoyang.o2o.dao.ShopDao.queryShopList - ==> Parameters: 15(Integer), 3(Integer)
+2020-07-08 23:37:44.706 [http-nio-8080-exec-2] DEBUG zuoyang.o2o.dao.ShopDao.queryShopList - <==      Total: 1
+2020-07-08 23:37:44.707 [http-nio-8080-exec-2] DEBUG zuoyang.o2o.dao.ShopDao.queryShopCount - ==>  Preparing: SELECT count(1) FROM tb_shop AS s, tb_shop_category AS sc, tb_area AS a WHERE s.area_id = a.area_id AND s.shop_category_id = sc.shop_category_id 
+2020-07-08 23:37:44.707 [http-nio-8080-exec-2] DEBUG zuoyang.o2o.dao.ShopDao.queryShopCount - ==> Parameters: 
+2020-07-08 23:37:44.709 [http-nio-8080-exec-2] DEBUG zuoyang.o2o.dao.ShopDao.queryShopCount - <==      Total: 1
+2020-07-08 23:37:45.613 [http-nio-8080-exec-7] DEBUG zuoyang.o2o.dao.ShopDao.queryByShopId - ==>  Preparing: SELECT s.shop_id, s.shop_name, s.shop_desc, s.shop_address, s.phone, s.shop_img, s.priority, s.enable_status, s.create_time, s.last_edit_time, s.advice, a.area_id, a.area_name, sc.shop_category_id, sc.shop_category_name FROM tb_shop AS s, tb_area AS a, tb_shop_category AS sc WHERE s.area_id=a.area_id AND s.shop_category_id=sc.shop_category_id AND s.shop_id=? 
+2020-07-08 23:37:45.614 [http-nio-8080-exec-7] DEBUG zuoyang.o2o.dao.ShopDao.queryByShopId - ==> Parameters: 40(Long)
+2020-07-08 23:37:45.617 [http-nio-8080-exec-7] DEBUG zuoyang.o2o.dao.ShopDao.queryByShopId - <==      Total: 1
+2020-07-08 23:37:45.618 [http-nio-8080-exec-7] DEBUG z.o.d.ProductCategoryDao.queryProductCategoryList - ==>  Preparing: SELECT product_category_id, product_category_name, priority, create_time, last_edit_time FROM tb_product_category WHERE shop_id = ? ORDER BY priority DESC 
+2020-07-08 23:37:45.618 [http-nio-8080-exec-7] DEBUG z.o.d.ProductCategoryDao.queryProductCategoryList - ==> Parameters: 40(Long)
+2020-07-08 23:37:45.621 [http-nio-8080-exec-8] DEBUG zuoyang.o2o.dao.ProductDao.queryProductList - ==>  Preparing: SELECT p.product_id, p.product_name, p.img_addr, p.product_desc, p.normal_price, p.promote_price, p.priority, p.create_time, p.last_edit_time, p.enable_status, p.product_category_id, p.shop_id FROM tb_product as p WHERE p.shop_id=? and p.enable_status = ? ORDER BY p.priority DESC LIMIT ?, ?; 
+2020-07-08 23:37:45.622 [http-nio-8080-exec-8] DEBUG zuoyang.o2o.dao.ProductDao.queryProductList - ==> Parameters: 40(Long), 1(Integer), 0(Integer), 3(Integer)
+2020-07-08 23:37:45.624 [http-nio-8080-exec-8] DEBUG zuoyang.o2o.dao.ProductDao.queryProductList - <==      Total: 3
+2020-07-08 23:37:45.625 [http-nio-8080-exec-8] DEBUG zuoyang.o2o.dao.ProductDao.queryProductCount - ==>  Preparing: SELECT count(1) FROM tb_product WHERE shop_id = ? and enable_status = ? 
+2020-07-08 23:37:45.625 [http-nio-8080-exec-8] DEBUG zuoyang.o2o.dao.ProductDao.queryProductCount - ==> Parameters: 40(Long), 1(Integer)
+2020-07-08 23:37:45.626 [http-nio-8080-exec-8] DEBUG zuoyang.o2o.dao.ProductDao.queryProductCount - <==      Total: 1
+2020-07-08 23:37:45.661 [http-nio-8080-exec-7] DEBUG z.o.d.ProductCategoryDao.queryProductCategoryList - <==      Total: 3
+2020-07-08 23:40:20.404 [restartedMain] DEBUG zuoyang.o2o.O2oApplication - Running with Spring Boot v2.3.0.RELEASE, Spring v5.2.6.RELEASE
+2020-07-08 23:40:35.901 [http-nio-8080-exec-3] DEBUG zuoyang.o2o.dao.ShopCategoryDao.queryShopCategory - ==>  Preparing: SELECT shop_category_id, shop_category_name, shop_category_desc, shop_category_img, create_time, last_edit_time, parent_id, priority FROM tb_shop_category WHERE parent_id is null ORDER BY priority DESC 
+2020-07-08 23:40:35.901 [http-nio-8080-exec-4] DEBUG zuoyang.o2o.dao.ShopDao.queryShopList - ==>  Preparing: SELECT s.shop_id, s.shop_name, s.shop_desc, s.shop_address, s.phone, s.shop_img, s.priority, s.enable_status, s.create_time, s.last_edit_time, s.advice, a.area_id, a.area_name, sc.shop_category_id, sc.shop_category_name FROM tb_shop AS s, tb_area AS a, tb_shop_category AS sc WHERE s.area_id = a.area_id AND s.shop_category_id = sc.shop_category_id ORDER BY s.priority DESC LIMIT ?, ?; 
+2020-07-08 23:40:35.928 [http-nio-8080-exec-3] DEBUG zuoyang.o2o.dao.ShopCategoryDao.queryShopCategory - ==> Parameters: 
+2020-07-08 23:40:35.928 [http-nio-8080-exec-4] DEBUG zuoyang.o2o.dao.ShopDao.queryShopList - ==> Parameters: 0(Integer), 3(Integer)
+2020-07-08 23:40:35.947 [http-nio-8080-exec-3] DEBUG zuoyang.o2o.dao.ShopCategoryDao.queryShopCategory - <==      Total: 5
+2020-07-08 23:40:35.953 [http-nio-8080-exec-3] DEBUG zuoyang.o2o.dao.AreaDao.queryArea - ==>  Preparing: SELECT area_id, area_name, priority, create_time, last_edit_time FROM tb_area ORDER BY priority DESC 
+2020-07-08 23:40:35.953 [http-nio-8080-exec-3] DEBUG zuoyang.o2o.dao.AreaDao.queryArea - ==> Parameters: 
+2020-07-08 23:40:36.004 [http-nio-8080-exec-3] DEBUG zuoyang.o2o.dao.AreaDao.queryArea - <==      Total: 4
+2020-07-08 23:40:36.007 [http-nio-8080-exec-4] DEBUG zuoyang.o2o.dao.ShopDao.queryShopList - <==      Total: 3
+2020-07-08 23:40:36.008 [http-nio-8080-exec-4] DEBUG zuoyang.o2o.dao.ShopDao.queryShopCount - ==>  Preparing: SELECT count(1) FROM tb_shop AS s, tb_shop_category AS sc, tb_area AS a WHERE s.area_id = a.area_id AND s.shop_category_id = sc.shop_category_id 
+2020-07-08 23:40:36.008 [http-nio-8080-exec-4] DEBUG zuoyang.o2o.dao.ShopDao.queryShopCount - ==> Parameters: 
+2020-07-08 23:40:36.010 [http-nio-8080-exec-4] DEBUG zuoyang.o2o.dao.ShopDao.queryShopCount - <==      Total: 1
+2020-07-08 23:40:37.096 [http-nio-8080-exec-6] DEBUG zuoyang.o2o.dao.ShopDao.queryShopList - ==>  Preparing: SELECT s.shop_id, s.shop_name, s.shop_desc, s.shop_address, s.phone, s.shop_img, s.priority, s.enable_status, s.create_time, s.last_edit_time, s.advice, a.area_id, a.area_name, sc.shop_category_id, sc.shop_category_name FROM tb_shop AS s, tb_area AS a, tb_shop_category AS sc WHERE s.area_id = a.area_id AND s.shop_category_id = sc.shop_category_id ORDER BY s.priority DESC LIMIT ?, ?; 
+2020-07-08 23:40:37.097 [http-nio-8080-exec-6] DEBUG zuoyang.o2o.dao.ShopDao.queryShopList - ==> Parameters: 3(Integer), 3(Integer)
+2020-07-08 23:40:37.107 [http-nio-8080-exec-6] DEBUG zuoyang.o2o.dao.ShopDao.queryShopList - <==      Total: 3
+2020-07-08 23:40:37.108 [http-nio-8080-exec-6] DEBUG zuoyang.o2o.dao.ShopDao.queryShopCount - ==>  Preparing: SELECT count(1) FROM tb_shop AS s, tb_shop_category AS sc, tb_area AS a WHERE s.area_id = a.area_id AND s.shop_category_id = sc.shop_category_id 
+2020-07-08 23:40:37.108 [http-nio-8080-exec-6] DEBUG zuoyang.o2o.dao.ShopDao.queryShopCount - ==> Parameters: 
+2020-07-08 23:40:37.109 [http-nio-8080-exec-6] DEBUG zuoyang.o2o.dao.ShopDao.queryShopCount - <==      Total: 1
+2020-07-08 23:40:37.578 [http-nio-8080-exec-5] DEBUG zuoyang.o2o.dao.ShopDao.queryShopList - ==>  Preparing: SELECT s.shop_id, s.shop_name, s.shop_desc, s.shop_address, s.phone, s.shop_img, s.priority, s.enable_status, s.create_time, s.last_edit_time, s.advice, a.area_id, a.area_name, sc.shop_category_id, sc.shop_category_name FROM tb_shop AS s, tb_area AS a, tb_shop_category AS sc WHERE s.area_id = a.area_id AND s.shop_category_id = sc.shop_category_id ORDER BY s.priority DESC LIMIT ?, ?; 
+2020-07-08 23:40:37.579 [http-nio-8080-exec-5] DEBUG zuoyang.o2o.dao.ShopDao.queryShopList - ==> Parameters: 6(Integer), 3(Integer)
+2020-07-08 23:40:37.582 [http-nio-8080-exec-5] DEBUG zuoyang.o2o.dao.ShopDao.queryShopList - <==      Total: 3
+2020-07-08 23:40:37.583 [http-nio-8080-exec-5] DEBUG zuoyang.o2o.dao.ShopDao.queryShopCount - ==>  Preparing: SELECT count(1) FROM tb_shop AS s, tb_shop_category AS sc, tb_area AS a WHERE s.area_id = a.area_id AND s.shop_category_id = sc.shop_category_id 
+2020-07-08 23:40:37.583 [http-nio-8080-exec-5] DEBUG zuoyang.o2o.dao.ShopDao.queryShopCount - ==> Parameters: 
+2020-07-08 23:40:37.584 [http-nio-8080-exec-5] DEBUG zuoyang.o2o.dao.ShopDao.queryShopCount - <==      Total: 1
+2020-07-08 23:40:37.930 [http-nio-8080-exec-7] DEBUG zuoyang.o2o.dao.ShopDao.queryShopList - ==>  Preparing: SELECT s.shop_id, s.shop_name, s.shop_desc, s.shop_address, s.phone, s.shop_img, s.priority, s.enable_status, s.create_time, s.last_edit_time, s.advice, a.area_id, a.area_name, sc.shop_category_id, sc.shop_category_name FROM tb_shop AS s, tb_area AS a, tb_shop_category AS sc WHERE s.area_id = a.area_id AND s.shop_category_id = sc.shop_category_id ORDER BY s.priority DESC LIMIT ?, ?; 
+2020-07-08 23:40:37.930 [http-nio-8080-exec-7] DEBUG zuoyang.o2o.dao.ShopDao.queryShopList - ==> Parameters: 9(Integer), 3(Integer)
+2020-07-08 23:40:37.935 [http-nio-8080-exec-7] DEBUG zuoyang.o2o.dao.ShopDao.queryShopList - <==      Total: 3
+2020-07-08 23:40:37.936 [http-nio-8080-exec-7] DEBUG zuoyang.o2o.dao.ShopDao.queryShopCount - ==>  Preparing: SELECT count(1) FROM tb_shop AS s, tb_shop_category AS sc, tb_area AS a WHERE s.area_id = a.area_id AND s.shop_category_id = sc.shop_category_id 
+2020-07-08 23:40:37.936 [http-nio-8080-exec-7] DEBUG zuoyang.o2o.dao.ShopDao.queryShopCount - ==> Parameters: 
+2020-07-08 23:40:37.937 [http-nio-8080-exec-7] DEBUG zuoyang.o2o.dao.ShopDao.queryShopCount - <==      Total: 1
+2020-07-08 23:40:42.517 [http-nio-8080-exec-8] DEBUG zuoyang.o2o.dao.ShopDao.queryShopList - ==>  Preparing: SELECT s.shop_id, s.shop_name, s.shop_desc, s.shop_address, s.phone, s.shop_img, s.priority, s.enable_status, s.create_time, s.last_edit_time, s.advice, a.area_id, a.area_name, sc.shop_category_id, sc.shop_category_name FROM tb_shop AS s, tb_area AS a, tb_shop_category AS sc WHERE s.area_id = a.area_id AND s.shop_category_id = sc.shop_category_id ORDER BY s.priority DESC LIMIT ?, ?; 
+2020-07-08 23:40:42.518 [http-nio-8080-exec-8] DEBUG zuoyang.o2o.dao.ShopDao.queryShopList - ==> Parameters: 12(Integer), 3(Integer)
+2020-07-08 23:40:42.520 [http-nio-8080-exec-8] DEBUG zuoyang.o2o.dao.ShopDao.queryShopList - <==      Total: 3
+2020-07-08 23:40:42.521 [http-nio-8080-exec-8] DEBUG zuoyang.o2o.dao.ShopDao.queryShopCount - ==>  Preparing: SELECT count(1) FROM tb_shop AS s, tb_shop_category AS sc, tb_area AS a WHERE s.area_id = a.area_id AND s.shop_category_id = sc.shop_category_id 
+2020-07-08 23:40:42.521 [http-nio-8080-exec-8] DEBUG zuoyang.o2o.dao.ShopDao.queryShopCount - ==> Parameters: 
+2020-07-08 23:40:42.522 [http-nio-8080-exec-8] DEBUG zuoyang.o2o.dao.ShopDao.queryShopCount - <==      Total: 1
+2020-07-08 23:40:43.542 [http-nio-8080-exec-2] DEBUG zuoyang.o2o.dao.ShopDao.queryByShopId - ==>  Preparing: SELECT s.shop_id, s.shop_name, s.shop_desc, s.shop_address, s.phone, s.shop_img, s.priority, s.enable_status, s.create_time, s.last_edit_time, s.advice, a.area_id, a.area_name, sc.shop_category_id, sc.shop_category_name FROM tb_shop AS s, tb_area AS a, tb_shop_category AS sc WHERE s.area_id=a.area_id AND s.shop_category_id=sc.shop_category_id AND s.shop_id=? 
+2020-07-08 23:40:43.542 [http-nio-8080-exec-2] DEBUG zuoyang.o2o.dao.ShopDao.queryByShopId - ==> Parameters: 40(Long)
+2020-07-08 23:40:43.548 [http-nio-8080-exec-2] DEBUG zuoyang.o2o.dao.ShopDao.queryByShopId - <==      Total: 1
+2020-07-08 23:40:43.548 [http-nio-8080-exec-3] DEBUG zuoyang.o2o.dao.ProductDao.queryProductList - ==>  Preparing: SELECT p.product_id, p.product_name, p.img_addr, p.product_desc, p.normal_price, p.promote_price, p.priority, p.create_time, p.last_edit_time, p.enable_status, p.product_category_id, p.shop_id FROM tb_product as p WHERE p.shop_id=? and p.enable_status = ? ORDER BY p.priority DESC LIMIT ?, ?; 
+2020-07-08 23:40:43.549 [http-nio-8080-exec-3] DEBUG zuoyang.o2o.dao.ProductDao.queryProductList - ==> Parameters: 40(Long), 1(Integer), 0(Integer), 3(Integer)
+2020-07-08 23:40:43.549 [http-nio-8080-exec-2] DEBUG z.o.d.ProductCategoryDao.queryProductCategoryList - ==>  Preparing: SELECT product_category_id, product_category_name, priority, create_time, last_edit_time FROM tb_product_category WHERE shop_id = ? ORDER BY priority DESC 
+2020-07-08 23:40:43.549 [http-nio-8080-exec-2] DEBUG z.o.d.ProductCategoryDao.queryProductCategoryList - ==> Parameters: 40(Long)
+2020-07-08 23:40:43.551 [http-nio-8080-exec-2] DEBUG z.o.d.ProductCategoryDao.queryProductCategoryList - <==      Total: 3
+2020-07-08 23:40:43.596 [http-nio-8080-exec-3] DEBUG zuoyang.o2o.dao.ProductDao.queryProductList - <==      Total: 3
+2020-07-08 23:40:43.597 [http-nio-8080-exec-3] DEBUG zuoyang.o2o.dao.ProductDao.queryProductCount - ==>  Preparing: SELECT count(1) FROM tb_product WHERE shop_id = ? and enable_status = ? 
+2020-07-08 23:40:43.597 [http-nio-8080-exec-3] DEBUG zuoyang.o2o.dao.ProductDao.queryProductCount - ==> Parameters: 40(Long), 1(Integer)
+2020-07-08 23:40:43.599 [http-nio-8080-exec-3] DEBUG zuoyang.o2o.dao.ProductDao.queryProductCount - <==      Total: 1
+2020-07-08 23:40:45.969 [http-nio-8080-exec-4] DEBUG zuoyang.o2o.dao.ShopDao.queryShopList - ==>  Preparing: SELECT s.shop_id, s.shop_name, s.shop_desc, s.shop_address, s.phone, s.shop_img, s.priority, s.enable_status, s.create_time, s.last_edit_time, s.advice, a.area_id, a.area_name, sc.shop_category_id, sc.shop_category_name FROM tb_shop AS s, tb_area AS a, tb_shop_category AS sc WHERE s.area_id = a.area_id AND s.shop_category_id = sc.shop_category_id ORDER BY s.priority DESC LIMIT ?, ?; 
+2020-07-08 23:40:45.970 [http-nio-8080-exec-4] DEBUG zuoyang.o2o.dao.ShopDao.queryShopList - ==> Parameters: 3(Integer), 3(Integer)
+2020-07-08 23:40:45.976 [http-nio-8080-exec-4] DEBUG zuoyang.o2o.dao.ShopDao.queryShopList - <==      Total: 3
+2020-07-08 23:40:45.977 [http-nio-8080-exec-4] DEBUG zuoyang.o2o.dao.ShopDao.queryShopCount - ==>  Preparing: SELECT count(1) FROM tb_shop AS s, tb_shop_category AS sc, tb_area AS a WHERE s.area_id = a.area_id AND s.shop_category_id = sc.shop_category_id 
+2020-07-08 23:40:45.977 [http-nio-8080-exec-4] DEBUG zuoyang.o2o.dao.ShopDao.queryShopCount - ==> Parameters: 
+2020-07-08 23:40:45.978 [http-nio-8080-exec-4] DEBUG zuoyang.o2o.dao.ShopDao.queryShopCount - <==      Total: 1
+2020-07-08 23:40:46.378 [http-nio-8080-exec-6] DEBUG zuoyang.o2o.dao.ShopDao.queryShopList - ==>  Preparing: SELECT s.shop_id, s.shop_name, s.shop_desc, s.shop_address, s.phone, s.shop_img, s.priority, s.enable_status, s.create_time, s.last_edit_time, s.advice, a.area_id, a.area_name, sc.shop_category_id, sc.shop_category_name FROM tb_shop AS s, tb_area AS a, tb_shop_category AS sc WHERE s.area_id = a.area_id AND s.shop_category_id = sc.shop_category_id ORDER BY s.priority DESC LIMIT ?, ?; 
+2020-07-08 23:40:46.379 [http-nio-8080-exec-6] DEBUG zuoyang.o2o.dao.ShopDao.queryShopList - ==> Parameters: 6(Integer), 3(Integer)
+2020-07-08 23:40:46.381 [http-nio-8080-exec-6] DEBUG zuoyang.o2o.dao.ShopDao.queryShopList - <==      Total: 3
+2020-07-08 23:40:46.382 [http-nio-8080-exec-6] DEBUG zuoyang.o2o.dao.ShopDao.queryShopCount - ==>  Preparing: SELECT count(1) FROM tb_shop AS s, tb_shop_category AS sc, tb_area AS a WHERE s.area_id = a.area_id AND s.shop_category_id = sc.shop_category_id 
+2020-07-08 23:40:46.382 [http-nio-8080-exec-6] DEBUG zuoyang.o2o.dao.ShopDao.queryShopCount - ==> Parameters: 
+2020-07-08 23:40:46.384 [http-nio-8080-exec-6] DEBUG zuoyang.o2o.dao.ShopDao.queryShopCount - <==      Total: 1
+2020-07-08 23:40:46.695 [http-nio-8080-exec-5] DEBUG zuoyang.o2o.dao.ShopDao.queryShopList - ==>  Preparing: SELECT s.shop_id, s.shop_name, s.shop_desc, s.shop_address, s.phone, s.shop_img, s.priority, s.enable_status, s.create_time, s.last_edit_time, s.advice, a.area_id, a.area_name, sc.shop_category_id, sc.shop_category_name FROM tb_shop AS s, tb_area AS a, tb_shop_category AS sc WHERE s.area_id = a.area_id AND s.shop_category_id = sc.shop_category_id ORDER BY s.priority DESC LIMIT ?, ?; 
+2020-07-08 23:40:46.695 [http-nio-8080-exec-5] DEBUG zuoyang.o2o.dao.ShopDao.queryShopList - ==> Parameters: 9(Integer), 3(Integer)
+2020-07-08 23:40:46.697 [http-nio-8080-exec-5] DEBUG zuoyang.o2o.dao.ShopDao.queryShopList - <==      Total: 3
+2020-07-08 23:40:46.698 [http-nio-8080-exec-5] DEBUG zuoyang.o2o.dao.ShopDao.queryShopCount - ==>  Preparing: SELECT count(1) FROM tb_shop AS s, tb_shop_category AS sc, tb_area AS a WHERE s.area_id = a.area_id AND s.shop_category_id = sc.shop_category_id 
+2020-07-08 23:40:46.698 [http-nio-8080-exec-5] DEBUG zuoyang.o2o.dao.ShopDao.queryShopCount - ==> Parameters: 
+2020-07-08 23:40:46.698 [http-nio-8080-exec-5] DEBUG zuoyang.o2o.dao.ShopDao.queryShopCount - <==      Total: 1
+2020-07-08 23:40:48.004 [http-nio-8080-exec-7] DEBUG zuoyang.o2o.dao.ShopDao.queryShopList - ==>  Preparing: SELECT s.shop_id, s.shop_name, s.shop_desc, s.shop_address, s.phone, s.shop_img, s.priority, s.enable_status, s.create_time, s.last_edit_time, s.advice, a.area_id, a.area_name, sc.shop_category_id, sc.shop_category_name FROM tb_shop AS s, tb_area AS a, tb_shop_category AS sc WHERE s.shop_category_id in (select shop_category_id from tb_shop_category where parent_id = ?) AND s.area_id = a.area_id AND s.shop_category_id = sc.shop_category_id ORDER BY s.priority DESC LIMIT ?, ?; 
+2020-07-08 23:40:48.005 [http-nio-8080-exec-7] DEBUG zuoyang.o2o.dao.ShopDao.queryShopList - ==> Parameters: 1(Long), 0(Integer), 3(Integer)
+2020-07-08 23:40:48.052 [http-nio-8080-exec-7] DEBUG zuoyang.o2o.dao.ShopDao.queryShopList - <==      Total: 3
+2020-07-08 23:40:48.053 [http-nio-8080-exec-7] DEBUG zuoyang.o2o.dao.ShopDao.queryShopCount - ==>  Preparing: SELECT count(1) FROM tb_shop AS s, tb_shop_category AS sc, tb_area AS a WHERE s.shop_category_id in (select shop_category_id from tb_shop_category where parent_id = ?) AND s.area_id = a.area_id AND s.shop_category_id = sc.shop_category_id 
+2020-07-08 23:40:48.053 [http-nio-8080-exec-7] DEBUG zuoyang.o2o.dao.ShopDao.queryShopCount - ==> Parameters: 1(Long)
+2020-07-08 23:40:48.055 [http-nio-8080-exec-7] DEBUG zuoyang.o2o.dao.ShopDao.queryShopCount - <==      Total: 1
+2020-07-08 23:40:49.159 [http-nio-8080-exec-1] DEBUG zuoyang.o2o.dao.ShopCategoryDao.queryShopCategory - ==>  Preparing: SELECT shop_category_id, shop_category_name, shop_category_desc, shop_category_img, create_time, last_edit_time, parent_id, priority FROM tb_shop_category WHERE parent_id is null ORDER BY priority DESC 
+2020-07-08 23:40:49.160 [http-nio-8080-exec-1] DEBUG zuoyang.o2o.dao.ShopCategoryDao.queryShopCategory - ==> Parameters: 
+2020-07-08 23:40:49.162 [http-nio-8080-exec-1] DEBUG zuoyang.o2o.dao.ShopCategoryDao.queryShopCategory - <==      Total: 5
+2020-07-08 23:40:49.163 [http-nio-8080-exec-1] DEBUG zuoyang.o2o.dao.HeadLineDao.queryHeadLineList - ==>  Preparing: SELECT line_id, line_img, line_name, line_link, priority, enable_status, create_time, last_edit_time FROM tb_head_line WHERE enable_status = ? ORDER BY priority DESC 
+2020-07-08 23:40:49.163 [http-nio-8080-exec-1] DEBUG zuoyang.o2o.dao.HeadLineDao.queryHeadLineList - ==> Parameters: 1(Integer)
+2020-07-08 23:40:49.205 [http-nio-8080-exec-1] DEBUG zuoyang.o2o.dao.HeadLineDao.queryHeadLineList - <==      Total: 3
+2020-07-08 23:40:51.531 [http-nio-8080-exec-10] DEBUG zuoyang.o2o.dao.ShopCategoryDao.queryShopCategory - ==>  Preparing: SELECT shop_category_id, shop_category_name, shop_category_desc, shop_category_img, create_time, last_edit_time, parent_id, priority FROM tb_shop_category WHERE parent_id is not null and parent_id=? ORDER BY priority DESC 
+2020-07-08 23:40:51.531 [http-nio-8080-exec-10] DEBUG zuoyang.o2o.dao.ShopCategoryDao.queryShopCategory - ==> Parameters: 1(Long)
+2020-07-08 23:40:51.532 [http-nio-8080-exec-9] DEBUG zuoyang.o2o.dao.ShopDao.queryShopList - ==>  Preparing: SELECT s.shop_id, s.shop_name, s.shop_desc, s.shop_address, s.phone, s.shop_img, s.priority, s.enable_status, s.create_time, s.last_edit_time, s.advice, a.area_id, a.area_name, sc.shop_category_id, sc.shop_category_name FROM tb_shop AS s, tb_area AS a, tb_shop_category AS sc WHERE s.shop_category_id in (select shop_category_id from tb_shop_category where parent_id = ?) AND s.area_id = a.area_id AND s.shop_category_id = sc.shop_category_id ORDER BY s.priority DESC LIMIT ?, ?; 
+2020-07-08 23:40:51.532 [http-nio-8080-exec-9] DEBUG zuoyang.o2o.dao.ShopDao.queryShopList - ==> Parameters: 1(Long), 0(Integer), 3(Integer)
+2020-07-08 23:40:51.533 [http-nio-8080-exec-10] DEBUG zuoyang.o2o.dao.ShopCategoryDao.queryShopCategory - <==      Total: 1
+2020-07-08 23:40:51.533 [http-nio-8080-exec-10] DEBUG zuoyang.o2o.dao.AreaDao.queryArea - ==>  Preparing: SELECT area_id, area_name, priority, create_time, last_edit_time FROM tb_area ORDER BY priority DESC 
+2020-07-08 23:40:51.533 [http-nio-8080-exec-10] DEBUG zuoyang.o2o.dao.AreaDao.queryArea - ==> Parameters: 
+2020-07-08 23:40:51.534 [http-nio-8080-exec-10] DEBUG zuoyang.o2o.dao.AreaDao.queryArea - <==      Total: 4
+2020-07-08 23:40:51.575 [http-nio-8080-exec-9] DEBUG zuoyang.o2o.dao.ShopDao.queryShopList - <==      Total: 3
+2020-07-08 23:40:51.576 [http-nio-8080-exec-9] DEBUG zuoyang.o2o.dao.ShopDao.queryShopCount - ==>  Preparing: SELECT count(1) FROM tb_shop AS s, tb_shop_category AS sc, tb_area AS a WHERE s.shop_category_id in (select shop_category_id from tb_shop_category where parent_id = ?) AND s.area_id = a.area_id AND s.shop_category_id = sc.shop_category_id 
+2020-07-08 23:40:51.576 [http-nio-8080-exec-9] DEBUG zuoyang.o2o.dao.ShopDao.queryShopCount - ==> Parameters: 1(Long)
+2020-07-08 23:40:51.577 [http-nio-8080-exec-9] DEBUG zuoyang.o2o.dao.ShopDao.queryShopCount - <==      Total: 1
+2020-07-08 23:40:53.129 [http-nio-8080-exec-1] DEBUG zuoyang.o2o.dao.ShopDao.queryShopList - ==>  Preparing: SELECT s.shop_id, s.shop_name, s.shop_desc, s.shop_address, s.phone, s.shop_img, s.priority, s.enable_status, s.create_time, s.last_edit_time, s.advice, a.area_id, a.area_name, sc.shop_category_id, sc.shop_category_name FROM tb_shop AS s, tb_area AS a, tb_shop_category AS sc WHERE s.shop_category_id in (select shop_category_id from tb_shop_category where parent_id = ?) AND s.area_id = a.area_id AND s.shop_category_id = sc.shop_category_id ORDER BY s.priority DESC LIMIT ?, ?; 
+2020-07-08 23:40:53.130 [http-nio-8080-exec-1] DEBUG zuoyang.o2o.dao.ShopDao.queryShopList - ==> Parameters: 1(Long), 0(Integer), 3(Integer)
+2020-07-08 23:40:53.132 [http-nio-8080-exec-1] DEBUG zuoyang.o2o.dao.ShopDao.queryShopList - <==      Total: 3
+2020-07-08 23:40:53.133 [http-nio-8080-exec-1] DEBUG zuoyang.o2o.dao.ShopDao.queryShopCount - ==>  Preparing: SELECT count(1) FROM tb_shop AS s, tb_shop_category AS sc, tb_area AS a WHERE s.shop_category_id in (select shop_category_id from tb_shop_category where parent_id = ?) AND s.area_id = a.area_id AND s.shop_category_id = sc.shop_category_id 
+2020-07-08 23:40:53.133 [http-nio-8080-exec-1] DEBUG zuoyang.o2o.dao.ShopDao.queryShopCount - ==> Parameters: 1(Long)
+2020-07-08 23:40:53.134 [http-nio-8080-exec-1] DEBUG zuoyang.o2o.dao.ShopDao.queryShopCount - <==      Total: 1
+2020-07-08 23:40:54.681 [http-nio-8080-exec-3] DEBUG zuoyang.o2o.dao.ShopDao.queryShopList - ==>  Preparing: SELECT s.shop_id, s.shop_name, s.shop_desc, s.shop_address, s.phone, s.shop_img, s.priority, s.enable_status, s.create_time, s.last_edit_time, s.advice, a.area_id, a.area_name, sc.shop_category_id, sc.shop_category_name FROM tb_shop AS s, tb_area AS a, tb_shop_category AS sc WHERE s.shop_category_id = ? AND s.area_id = a.area_id AND s.shop_category_id = sc.shop_category_id ORDER BY s.priority DESC LIMIT ?, ?; 
+2020-07-08 23:40:54.682 [http-nio-8080-exec-3] DEBUG zuoyang.o2o.dao.ShopDao.queryShopList - ==> Parameters: 2(Long), 0(Integer), 3(Integer)
+2020-07-08 23:40:54.685 [http-nio-8080-exec-3] DEBUG zuoyang.o2o.dao.ShopDao.queryShopList - <==      Total: 3
+2020-07-08 23:40:54.686 [http-nio-8080-exec-3] DEBUG zuoyang.o2o.dao.ShopDao.queryShopCount - ==>  Preparing: SELECT count(1) FROM tb_shop AS s, tb_shop_category AS sc, tb_area AS a WHERE s.shop_category_id = ? AND s.area_id = a.area_id AND s.shop_category_id = sc.shop_category_id 
+2020-07-08 23:40:54.686 [http-nio-8080-exec-3] DEBUG zuoyang.o2o.dao.ShopDao.queryShopCount - ==> Parameters: 2(Long)
+2020-07-08 23:40:54.724 [http-nio-8080-exec-3] DEBUG zuoyang.o2o.dao.ShopDao.queryShopCount - <==      Total: 1
+2020-07-08 23:40:55.485 [http-nio-8080-exec-2] DEBUG zuoyang.o2o.dao.ShopDao.queryShopList - ==>  Preparing: SELECT s.shop_id, s.shop_name, s.shop_desc, s.shop_address, s.phone, s.shop_img, s.priority, s.enable_status, s.create_time, s.last_edit_time, s.advice, a.area_id, a.area_name, sc.shop_category_id, sc.shop_category_name FROM tb_shop AS s, tb_area AS a, tb_shop_category AS sc WHERE s.shop_category_id = ? AND s.area_id = a.area_id AND s.shop_category_id = sc.shop_category_id ORDER BY s.priority DESC LIMIT ?, ?; 
+2020-07-08 23:40:55.485 [http-nio-8080-exec-2] DEBUG zuoyang.o2o.dao.ShopDao.queryShopList - ==> Parameters: 2(Long), 3(Integer), 3(Integer)
+2020-07-08 23:40:55.487 [http-nio-8080-exec-2] DEBUG zuoyang.o2o.dao.ShopDao.queryShopList - <==      Total: 3
+2020-07-08 23:40:55.488 [http-nio-8080-exec-2] DEBUG zuoyang.o2o.dao.ShopDao.queryShopCount - ==>  Preparing: SELECT count(1) FROM tb_shop AS s, tb_shop_category AS sc, tb_area AS a WHERE s.shop_category_id = ? AND s.area_id = a.area_id AND s.shop_category_id = sc.shop_category_id 
+2020-07-08 23:40:55.488 [http-nio-8080-exec-2] DEBUG zuoyang.o2o.dao.ShopDao.queryShopCount - ==> Parameters: 2(Long)
+2020-07-08 23:40:55.491 [http-nio-8080-exec-2] DEBUG zuoyang.o2o.dao.ShopDao.queryShopCount - <==      Total: 1
+2020-07-08 23:40:55.554 [http-nio-8080-exec-4] DEBUG zuoyang.o2o.dao.ShopDao.queryShopList - ==>  Preparing: SELECT s.shop_id, s.shop_name, s.shop_desc, s.shop_address, s.phone, s.shop_img, s.priority, s.enable_status, s.create_time, s.last_edit_time, s.advice, a.area_id, a.area_name, sc.shop_category_id, sc.shop_category_name FROM tb_shop AS s, tb_area AS a, tb_shop_category AS sc WHERE s.shop_category_id = ? AND s.area_id = a.area_id AND s.shop_category_id = sc.shop_category_id ORDER BY s.priority DESC LIMIT ?, ?; 
+2020-07-08 23:40:55.555 [http-nio-8080-exec-4] DEBUG zuoyang.o2o.dao.ShopDao.queryShopList - ==> Parameters: 2(Long), 6(Integer), 3(Integer)
+2020-07-08 23:40:55.559 [http-nio-8080-exec-4] DEBUG zuoyang.o2o.dao.ShopDao.queryShopList - <==      Total: 3
+2020-07-08 23:40:55.560 [http-nio-8080-exec-4] DEBUG zuoyang.o2o.dao.ShopDao.queryShopCount - ==>  Preparing: SELECT count(1) FROM tb_shop AS s, tb_shop_category AS sc, tb_area AS a WHERE s.shop_category_id = ? AND s.area_id = a.area_id AND s.shop_category_id = sc.shop_category_id 
+2020-07-08 23:40:55.560 [http-nio-8080-exec-4] DEBUG zuoyang.o2o.dao.ShopDao.queryShopCount - ==> Parameters: 2(Long)
+2020-07-08 23:40:55.561 [http-nio-8080-exec-4] DEBUG zuoyang.o2o.dao.ShopDao.queryShopCount - <==      Total: 1
+2020-07-08 23:40:55.920 [http-nio-8080-exec-6] DEBUG zuoyang.o2o.dao.ShopDao.queryShopList - ==>  Preparing: SELECT s.shop_id, s.shop_name, s.shop_desc, s.shop_address, s.phone, s.shop_img, s.priority, s.enable_status, s.create_time, s.last_edit_time, s.advice, a.area_id, a.area_name, sc.shop_category_id, sc.shop_category_name FROM tb_shop AS s, tb_area AS a, tb_shop_category AS sc WHERE s.shop_category_id = ? AND s.area_id = a.area_id AND s.shop_category_id = sc.shop_category_id ORDER BY s.priority DESC LIMIT ?, ?; 
+2020-07-08 23:40:55.921 [http-nio-8080-exec-6] DEBUG zuoyang.o2o.dao.ShopDao.queryShopList - ==> Parameters: 2(Long), 9(Integer), 3(Integer)
+2020-07-08 23:40:55.964 [http-nio-8080-exec-6] DEBUG zuoyang.o2o.dao.ShopDao.queryShopList - <==      Total: 2
+2020-07-08 23:40:55.965 [http-nio-8080-exec-6] DEBUG zuoyang.o2o.dao.ShopDao.queryShopCount - ==>  Preparing: SELECT count(1) FROM tb_shop AS s, tb_shop_category AS sc, tb_area AS a WHERE s.shop_category_id = ? AND s.area_id = a.area_id AND s.shop_category_id = sc.shop_category_id 
+2020-07-08 23:40:55.965 [http-nio-8080-exec-6] DEBUG zuoyang.o2o.dao.ShopDao.queryShopCount - ==> Parameters: 2(Long)
+2020-07-08 23:40:55.967 [http-nio-8080-exec-6] DEBUG zuoyang.o2o.dao.ShopDao.queryShopCount - <==      Total: 1
+2020-07-08 23:40:59.389 [http-nio-8080-exec-7] DEBUG zuoyang.o2o.dao.ShopDao.queryByShopId - ==>  Preparing: SELECT s.shop_id, s.shop_name, s.shop_desc, s.shop_address, s.phone, s.shop_img, s.priority, s.enable_status, s.create_time, s.last_edit_time, s.advice, a.area_id, a.area_name, sc.shop_category_id, sc.shop_category_name FROM tb_shop AS s, tb_area AS a, tb_shop_category AS sc WHERE s.area_id=a.area_id AND s.shop_category_id=sc.shop_category_id AND s.shop_id=? 
+2020-07-08 23:40:59.390 [http-nio-8080-exec-7] DEBUG zuoyang.o2o.dao.ShopDao.queryByShopId - ==> Parameters: 40(Long)
+2020-07-08 23:40:59.391 [http-nio-8080-exec-7] DEBUG zuoyang.o2o.dao.ShopDao.queryByShopId - <==      Total: 1
+2020-07-08 23:40:59.392 [http-nio-8080-exec-7] DEBUG z.o.d.ProductCategoryDao.queryProductCategoryList - ==>  Preparing: SELECT product_category_id, product_category_name, priority, create_time, last_edit_time FROM tb_product_category WHERE shop_id = ? ORDER BY priority DESC 
+2020-07-08 23:40:59.392 [http-nio-8080-exec-7] DEBUG z.o.d.ProductCategoryDao.queryProductCategoryList - ==> Parameters: 40(Long)
+2020-07-08 23:40:59.394 [http-nio-8080-exec-8] DEBUG zuoyang.o2o.dao.ProductDao.queryProductList - ==>  Preparing: SELECT p.product_id, p.product_name, p.img_addr, p.product_desc, p.normal_price, p.promote_price, p.priority, p.create_time, p.last_edit_time, p.enable_status, p.product_category_id, p.shop_id FROM tb_product as p WHERE p.shop_id=? and p.enable_status = ? ORDER BY p.priority DESC LIMIT ?, ?; 
+2020-07-08 23:40:59.394 [http-nio-8080-exec-7] DEBUG z.o.d.ProductCategoryDao.queryProductCategoryList - <==      Total: 3
+2020-07-08 23:40:59.395 [http-nio-8080-exec-8] DEBUG zuoyang.o2o.dao.ProductDao.queryProductList - ==> Parameters: 40(Long), 1(Integer), 0(Integer), 3(Integer)
+2020-07-08 23:40:59.398 [http-nio-8080-exec-8] DEBUG zuoyang.o2o.dao.ProductDao.queryProductList - <==      Total: 3
+2020-07-08 23:40:59.399 [http-nio-8080-exec-8] DEBUG zuoyang.o2o.dao.ProductDao.queryProductCount - ==>  Preparing: SELECT count(1) FROM tb_product WHERE shop_id = ? and enable_status = ? 
+2020-07-08 23:40:59.399 [http-nio-8080-exec-8] DEBUG zuoyang.o2o.dao.ProductDao.queryProductCount - ==> Parameters: 40(Long), 1(Integer)
+2020-07-08 23:40:59.400 [http-nio-8080-exec-8] DEBUG zuoyang.o2o.dao.ProductDao.queryProductCount - <==      Total: 1
+2020-07-08 23:41:01.127 [http-nio-8080-exec-3] DEBUG zuoyang.o2o.dao.ProductDao.queryProductByProductId - ==>  Preparing: SELECT p.product_id, p.product_name, p.img_addr, p.product_desc, p.normal_price, p.promote_price, p.priority, p.create_time, p.last_edit_time, p.enable_status, p.product_category_id, p.shop_id, pm.product_img_id, pm.img_address, pm.img_desc, pm.create_time, pm.priority as detail_img_priority FROM tb_product as p LEFT JOIN tb_product_img as pm ON p.product_id=pm.product_id WHERE p.product_id=? ORDER BY pm.priority DESC 
+2020-07-08 23:41:01.127 [http-nio-8080-exec-3] DEBUG zuoyang.o2o.dao.ProductDao.queryProductByProductId - ==> Parameters: 13(Long)
+2020-07-08 23:41:01.131 [http-nio-8080-exec-3] DEBUG zuoyang.o2o.dao.ProductDao.queryProductByProductId - <==      Total: 3
+2020-07-08 23:48:23.742 [main] DEBUG zuoyang.o2o.dao.AreaDaoTest - Running with Spring Boot v2.3.0.RELEASE, Spring v5.2.6.RELEASE
+2020-07-08 23:48:28.766 [main] DEBUG zuoyang.o2o.dao.AreaDao.queryArea - ==>  Preparing: SELECT area_id, area_name, priority, create_time, last_edit_time FROM tb_area ORDER BY priority DESC 
+2020-07-08 23:48:28.805 [main] DEBUG zuoyang.o2o.dao.AreaDao.queryArea - ==> Parameters: 
+2020-07-08 23:48:29.016 [main] DEBUG zuoyang.o2o.dao.AreaDao.queryArea - <==      Total: 3

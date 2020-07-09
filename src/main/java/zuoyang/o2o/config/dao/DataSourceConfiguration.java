@@ -5,6 +5,7 @@ import org.mybatis.spring.annotation.MapperScan;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
+import zuoyang.o2o.util.DESUtil;
 
 import java.beans.PropertyVetoException;
 
@@ -28,9 +29,9 @@ public class DataSourceConfiguration {
         // set url
         comboPooledDataSource.setJdbcUrl(jdbcUrl);
         // set username
-        comboPooledDataSource.setUser(jdbcUserName);
+        comboPooledDataSource.setUser(DESUtil.getDecryptString(jdbcUserName));
         // set password
-        comboPooledDataSource.setPassword(jdbcPassword);
+        comboPooledDataSource.setPassword(DESUtil.getDecryptString(jdbcPassword));
 
         //setup c3p0 connection pool
         // max number of thread in pool

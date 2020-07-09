@@ -13,7 +13,6 @@ public class DESUtil {
 
     // set security key
     private static String KEY_STRING = "mySecurityKeySet";
-    private static String CHARSET = "UTF-8";
     private static String ALGORITHM = "DES";
 
     static {
@@ -60,9 +59,7 @@ public class DESUtil {
     }
 
     public static void main(String[] args) {
-        System.out.println(getEncryptString("root"));
-        System.out.println(getEncryptString("112357"));
-        System.out.println(getDecryptString("SzQgd8SKui8="));
-        System.out.println(getDecryptString("Ugha86a+lAg="));
+        System.out.println(getDecryptString("gr2T+I8yDyw="));
+        System.out.println(getDecryptString("ZznbKgXG/xY337aXK0KATA=="));
     }
 }
