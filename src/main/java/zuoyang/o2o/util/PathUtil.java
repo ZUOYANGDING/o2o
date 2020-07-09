@@ -9,6 +9,7 @@ public class PathUtil {
     private static String winPath;
     private static String linuxPath;
     private static String shopPath;
+    private static String waterMarkPath;
 
     // set up base path in windows os
     @Value("${win_base_path}")
@@ -24,6 +25,15 @@ public class PathUtil {
     @Value("${shop_relevant_path}")
     public void setShopPath(String shopPath) {
         PathUtil.shopPath = shopPath;
+    }
+
+    @Value("${water_mark_path}")
+    public void setWaterMarkPath(String waterMarkPath) {
+        PathUtil.waterMarkPath = waterMarkPath;
+    }
+
+    public static String getWaterMarkPath() {
+        return waterMarkPath;
     }
 
     public static String getImageBasePath() {

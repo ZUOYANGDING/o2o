@@ -31,13 +31,16 @@ public class MvcConfiguration implements WebMvcConfigurer {
 //        this.applicationContext = applicationContext;
 //    }
 //
+    @Value("${replace_file_path}")
+    private String replaceFilePath;
+
     // setup static resources
     @Override
     public void addResourceHandlers(ResourceHandlerRegistry registry) {
         registry.addResourceHandler("/img/**", "/css/**", "/js/**")
                 .addResourceLocations("classpath:/static/img/", "classpath:/static/css/", "classpath:/static/js/");
         registry.addResourceHandler("/upload/**").
-                addResourceLocations("file:/Users/zuoyangding/work/image/upload/");
+                addResourceLocations("file:" + replaceFilePath);
     }
 
     // setup default request handler

@@ -1,8 +1,29 @@
-2020-06-16 10:42:14.598 [main] ERROR zuoyang.o2o.util.ImageUtil - javax.imageio.IIOException: Can't read input file!
-2020-06-16 10:42:14.601 [main] ERROR zuoyang.o2o.util.ImageUtil - watermarkpath: /Users/zuoyangding/work/image/watermark.jpg
-2020-06-16 10:43:48.806 [main] ERROR zuoyang.o2o.util.ImageUtil - javax.imageio.IIOException: Can't read input file!
-2020-06-16 10:43:48.807 [main] ERROR zuoyang.o2o.util.ImageUtil - watermarkpath: /Users/zuoyangding/work/image/watermark.jpg
-2020-06-16 10:52:16.962 [main] ERROR zuoyang.o2o.util.ImageUtil - javax.imageio.IIOException: Can't read input file!
-2020-06-16 10:52:16.963 [main] ERROR zuoyang.o2o.util.ImageUtil - watermarkpath: /Users/zuoyangding/work/image/watermark.jpg
-2020-06-16 10:59:17.106 [main] ERROR zuoyang.o2o.util.ImageUtil - Can't read input file!
-2020-06-16 10:59:17.106 [main] ERROR zuoyang.o2o.util.ImageUtil - watermarkpath: /Users/zuoyangding/work/image/watermark.jpg
+2020-07-09 07:12:29.481 [http-nio-8080-exec-7] ERROR zuoyang.o2o.service.serviceImp.ShopServiceImpl - 
+### Error updating database.  Cause: java.sql.SQLIntegrityConstraintViolationException: Column 'owner_id' cannot be null
+### The error may exist in file [/Users/zuoyangding/IdeaProjects/o2o/target/classes/mapper/ShopDao.xml]
+### The error may involve zuoyang.o2o.dao.ShopDao.insertShop-Inline
+### The error occurred while setting parameters
+### SQL: INSERT INTO         tb_shop(shop_name, shop_desc, shop_address, phone, shop_img, priority, enable_status, create_time,         last_edit_time, advice, area_id, owner_id, shop_category_id)         VALUES         (?, ?, ?, ?, ?, ?, ?,         ?, ?, ?, ?, ?, ?)
+### Cause: java.sql.SQLIntegrityConstraintViolationException: Column 'owner_id' cannot be null
+; Column 'owner_id' cannot be null; nested exception is java.sql.SQLIntegrityConstraintViolationException: Column 'owner_id' cannot be null
+2020-07-09 07:16:03.305 [http-nio-8080-exec-4] ERROR zuoyang.o2o.service.serviceImp.ShopServiceImpl - 
+### Error updating database.  Cause: java.sql.SQLIntegrityConstraintViolationException: Column 'owner_id' cannot be null
+### The error may exist in file [/Users/zuoyangding/IdeaProjects/o2o/target/classes/mapper/ShopDao.xml]
+### The error may involve zuoyang.o2o.dao.ShopDao.insertShop-Inline
+### The error occurred while setting parameters
+### SQL: INSERT INTO         tb_shop(shop_name, shop_desc, shop_address, phone, shop_img, priority, enable_status, create_time,         last_edit_time, advice, area_id, owner_id, shop_category_id)         VALUES         (?, ?, ?, ?, ?, ?, ?,         ?, ?, ?, ?, ?, ?)
+### Cause: java.sql.SQLIntegrityConstraintViolationException: Column 'owner_id' cannot be null
+; Column 'owner_id' cannot be null; nested exception is java.sql.SQLIntegrityConstraintViolationException: Column 'owner_id' cannot be null
+2020-07-09 07:25:05.428 [http-nio-8080-exec-7] ERROR zuoyang.o2o.util.ImageUtil - java.lang.NullPointerException
+2020-07-09 07:25:05.429 [http-nio-8080-exec-7] ERROR zuoyang.o2o.util.ImageUtil - watermarkpath: /Users/zuoyangding/work/image/watermark.jpg
+2020-07-09 07:25:05.430 [http-nio-8080-exec-7] ERROR zuoyang.o2o.service.serviceImp.ShopServiceImpl - store shop image failed: failed to create imagejava.lang.NullPointerException
+2020-07-09 07:25:05.431 [http-nio-8080-exec-7] ERROR zuoyang.o2o.service.serviceImp.ShopServiceImpl - store shop image failed: failed to create imagejava.lang.NullPointerException
+2020-07-09 07:35:04.164 [http-nio-8080-exec-1] ERROR zuoyang.o2o.util.ImageUtil - java.lang.NullPointerException
+2020-07-09 07:35:04.165 [http-nio-8080-exec-1] ERROR zuoyang.o2o.util.ImageUtil - watermarkpath: /Users/zuoyangding/work/image/watermark.jpg
+2020-07-09 07:35:04.166 [http-nio-8080-exec-1] ERROR zuoyang.o2o.service.serviceImp.ShopServiceImpl - store shop image failed: failed to create imagejava.lang.NullPointerException
+2020-07-09 07:35:04.166 [http-nio-8080-exec-1] ERROR zuoyang.o2o.service.serviceImp.ShopServiceImpl - store shop image failed: failed to create imagejava.lang.NullPointerException
+2020-07-09 07:38:08.927 [http-nio-8080-exec-6] ERROR zuoyang.o2o.util.ImageUtil - java.lang.NullPointerException
+2020-07-09 07:38:08.927 [http-nio-8080-exec-6] ERROR zuoyang.o2o.util.ImageUtil - basePath: /Users/zuoyangding/work/image
+2020-07-09 07:38:08.927 [http-nio-8080-exec-6] ERROR zuoyang.o2o.util.ImageUtil - watermarkpath: null
+2020-07-09 07:38:08.929 [http-nio-8080-exec-6] ERROR zuoyang.o2o.service.serviceImp.ShopServiceImpl - store shop image failed: failed to create imagejava.lang.NullPointerException
+2020-07-09 07:38:08.929 [http-nio-8080-exec-6] ERROR zuoyang.o2o.service.serviceImp.ShopServiceImpl - store shop image failed: failed to create imagejava.lang.NullPointerException

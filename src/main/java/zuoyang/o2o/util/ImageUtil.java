@@ -3,6 +3,7 @@ package zuoyang.o2o.util;
 import lombok.extern.slf4j.Slf4j;
 import net.coobird.thumbnailator.Thumbnails;
 import net.coobird.thumbnailator.geometry.Positions;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.web.multipart.commons.CommonsMultipartFile;
 import zuoyang.o2o.dto.ImageHolder;
 
@@ -19,6 +20,7 @@ public class ImageUtil {
     private static String basePath = PathUtil.getImageBasePath();
     private static final SimpleDateFormat simpleDateFormat = new SimpleDateFormat("yyyyMMddHHmmss");
     private static final Random random = new Random();
+    private static String waterMarkPath = PathUtil.getWaterMarkPath();
 
     /**
      * Transfer the CommonsMultipartFile, which is fileItem in source code, to classic java file
@@ -55,15 +57,15 @@ public class ImageUtil {
         log.debug("current complete file path: " + destFile);
 
         try {
-            // TODO path of the watermark should be rewrite when deploy the project
             Thumbnails.of(imageHolder.getImage()).size(200, 200).
                     watermark(Positions.BOTTOM_RIGHT,
-                            ImageIO.read(new File("/Users/zuoyangding/IdeaProjects/o2o/src/main/resources/watermark.jpg")),
+                            ImageIO.read(new File(waterMarkPath)),
                             0.25f).
                     outputQuality(0.9f).toFile(destFile);
         } catch (Exception e) {
             log.error(e.toString());
-            log.error("watermarkpath: " + basePath +"/watermark.jpg");
+            log.error("basePath: " + basePath);
+            log.error("watermarkpath: " + waterMarkPath);
             // remove the directory for shop
             if (create) {
                 String createdDirectory = basePath + targetPath;
@@ -95,11 +97,12 @@ public class ImageUtil {
         try {
             Thumbnails.of(imageHolder.getImage()).size(337, 640).
                     watermark(Positions.BOTTOM_RIGHT,
-                            ImageIO.read(new File("/Users/zuoyangding/IdeaProjects/o2o/src/main/resources/watermark.jpg")),
+                            ImageIO.read(new File(waterMarkPath)),
                             0.25f).outputQuality(0.9f).toFile(destFile);
         } catch (Exception e) {
             log.error(e.getMessage());
-            log.error("watermarkpath: " + basePath +"/watermark.jpg");
+            log.error("basePath: " + basePath);
+            log.error("watermarkpath: " + waterMarkPath);
             if (create) {
                 String createdDirectory = basePath + targetPath;
                 removeCreatedDirectory(createdDirectory);

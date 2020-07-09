@@ -283,6 +283,8 @@ public class ShopManagementController {
         PersonInfo user = new PersonInfo();
         user.setUserId(1L);
         user.setName("test user name");
+        //TODO should be delete after create the login module
+        request.getSession().setAttribute("user", user);
         try {
             Shop shopCondition = new Shop();
             shopCondition.setPersonInfo(user);
