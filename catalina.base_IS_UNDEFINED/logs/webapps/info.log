@@ -1,30 +1,3 @@
-2020-07-09 06:11:14.221 [main] INFO  zuoyang.o2o.dao.AreaDaoTest - Starting AreaDaoTest on DingZuoyangdeMacBook-Pro.local with PID 21263 (started by zuoyangding in /Users/zuoyangding/IdeaProjects/o2o)
-2020-07-09 06:11:14.225 [main] INFO  zuoyang.o2o.dao.AreaDaoTest - The following profiles are active: prod
-2020-07-09 06:11:16.440 [main] INFO  zuoyang.o2o.dao.AreaDaoTest - Started AreaDaoTest in 7.488 seconds (JVM running for 8.682)
-2020-07-09 06:50:09.864 [restartedMain] INFO  zuoyang.o2o.O2oApplication - Starting O2oApplication on DingZuoyangdeMacBook-Pro.local with PID 21420 (/Users/zuoyangding/IdeaProjects/o2o/target/classes started by zuoyangding in /Users/zuoyangding/IdeaProjects/o2o)
-2020-07-09 06:50:09.867 [restartedMain] INFO  zuoyang.o2o.O2oApplication - The following profiles are active: dev
-2020-07-09 06:50:12.770 [restartedMain] INFO  zuoyang.o2o.O2oApplication - Started O2oApplication in 3.124 seconds (JVM running for 9.138)
-2020-07-09 06:55:47.940 [restartedMain] INFO  zuoyang.o2o.O2oApplication - Starting O2oApplication on DingZuoyangdeMacBook-Pro.local with PID 21449 (/Users/zuoyangding/IdeaProjects/o2o/target/classes started by zuoyangding in /Users/zuoyangding/IdeaProjects/o2o)
-2020-07-09 06:55:47.942 [restartedMain] INFO  zuoyang.o2o.O2oApplication - The following profiles are active: dev
-2020-07-09 06:55:49.648 [restartedMain] INFO  zuoyang.o2o.O2oApplication - Started O2oApplication in 1.925 seconds (JVM running for 7.667)
-2020-07-09 07:11:32.067 [restartedMain] INFO  zuoyang.o2o.O2oApplication - Starting O2oApplication on DingZuoyangdeMacBook-Pro.local with PID 21478 (/Users/zuoyangding/IdeaProjects/o2o/target/classes started by zuoyangding in /Users/zuoyangding/IdeaProjects/o2o)
-2020-07-09 07:11:32.071 [restartedMain] INFO  zuoyang.o2o.O2oApplication - The following profiles are active: dev
-2020-07-09 07:11:33.729 [restartedMain] INFO  zuoyang.o2o.O2oApplication - Started O2oApplication in 1.881 seconds (JVM running for 7.566)
-2020-07-09 07:24:11.473 [restartedMain] INFO  zuoyang.o2o.O2oApplication - Starting O2oApplication on DingZuoyangdeMacBook-Pro.local with PID 21537 (/Users/zuoyangding/IdeaProjects/o2o/target/classes started by zuoyangding in /Users/zuoyangding/IdeaProjects/o2o)
-2020-07-09 07:24:11.475 [restartedMain] INFO  zuoyang.o2o.O2oApplication - The following profiles are active: dev
-2020-07-09 07:24:13.292 [restartedMain] INFO  zuoyang.o2o.O2oApplication - Started O2oApplication in 2.111 seconds (JVM running for 8.248)
-2020-07-09 07:25:05.429 [http-nio-8080-exec-7] INFO  zuoyang.o2o.util.ImageUtil - delete the created directory: /Users/zuoyangding/work/image/upload/images/item/shop/45/
-2020-07-09 07:34:11.832 [restartedMain] INFO  zuoyang.o2o.O2oApplication - Starting O2oApplication on DingZuoyangdeMacBook-Pro.local with PID 21581 (/Users/zuoyangding/IdeaProjects/o2o/target/classes started by zuoyangding in /Users/zuoyangding/IdeaProjects/o2o)
-2020-07-09 07:34:11.835 [restartedMain] INFO  zuoyang.o2o.O2oApplication - The following profiles are active: dev
-2020-07-09 07:34:13.966 [restartedMain] INFO  zuoyang.o2o.O2oApplication - Started O2oApplication in 2.37 seconds (JVM running for 8.198)
-2020-07-09 07:35:04.165 [http-nio-8080-exec-1] INFO  zuoyang.o2o.util.ImageUtil - delete the created directory: /Users/zuoyangding/work/image/upload/images/item/shop/46/
-2020-07-09 07:37:18.194 [restartedMain] INFO  zuoyang.o2o.O2oApplication - Starting O2oApplication on DingZuoyangdeMacBook-Pro.local with PID 21593 (/Users/zuoyangding/IdeaProjects/o2o/target/classes started by zuoyangding in /Users/zuoyangding/IdeaProjects/o2o)
-2020-07-09 07:37:18.196 [restartedMain] INFO  zuoyang.o2o.O2oApplication - The following profiles are active: dev
-2020-07-09 07:37:19.952 [restartedMain] INFO  zuoyang.o2o.O2oApplication - Started O2oApplication in 1.978 seconds (JVM running for 7.741)
-2020-07-09 07:38:08.928 [http-nio-8080-exec-6] INFO  zuoyang.o2o.util.ImageUtil - delete the created directory: /Users/zuoyangding/work/image/upload/images/item/shop/47/
-2020-07-09 07:45:56.069 [restartedMain] INFO  zuoyang.o2o.O2oApplication - Starting O2oApplication on DingZuoyangdeMacBook-Pro.local with PID 21620 (/Users/zuoyangding/IdeaProjects/o2o/target/classes started by zuoyangding in /Users/zuoyangding/IdeaProjects/o2o)
-2020-07-09 07:45:56.072 [restartedMain] INFO  zuoyang.o2o.O2oApplication - The following profiles are active: dev
-2020-07-09 07:45:57.778 [restartedMain] INFO  zuoyang.o2o.O2oApplication - Started O2oApplication in 1.924 seconds (JVM running for 7.644)
-2020-07-09 07:53:25.463 [restartedMain] INFO  zuoyang.o2o.O2oApplication - Starting O2oApplication on DingZuoyangdeMacBook-Pro.local with PID 21663 (/Users/zuoyangding/IdeaProjects/o2o/target/classes started by zuoyangding in /Users/zuoyangding/IdeaProjects/o2o)
-2020-07-09 07:53:25.467 [restartedMain] INFO  zuoyang.o2o.O2oApplication - The following profiles are active: dev
-2020-07-09 07:53:27.197 [restartedMain] INFO  zuoyang.o2o.O2oApplication - Started O2oApplication in 1.955 seconds (JVM running for 2.741)
+2020-07-10 11:08:57.168 [restartedMain] INFO  zuoyang.o2o.O2oApplication - Starting O2oApplication on DingZuoyangdeMacBook-Pro.local with PID 84852 (/Users/zuoyangding/IdeaProjects/o2o/target/classes started by zuoyangding in /Users/zuoyangding/IdeaProjects/o2o)
+2020-07-10 11:08:57.174 [restartedMain] INFO  zuoyang.o2o.O2oApplication - The following profiles are active: dev
+2020-07-10 11:08:59.597 [restartedMain] INFO  zuoyang.o2o.O2oApplication - Started O2oApplication in 2.715 seconds (JVM running for 8.648)

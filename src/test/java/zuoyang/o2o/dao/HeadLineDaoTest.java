@@ -26,6 +26,6 @@ class HeadLineDaoTest {
         HeadLine headLine = new HeadLine();
         headLine.setEnableStatus(1);
         List<HeadLine> headLineList = headLineDao.queryHeadLineList(headLine);
-        assertEquals(3, headLineList.size());
+        assertEquals(2, headLineList.size());
     }
 }
