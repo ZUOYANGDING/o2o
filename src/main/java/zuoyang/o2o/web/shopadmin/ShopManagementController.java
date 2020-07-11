@@ -281,8 +281,8 @@ public class ShopManagementController {
         Map<String, Object> modelMap = new HashMap<>();
         //TODO get user from session, after create the login module
         PersonInfo user = new PersonInfo();
-        user.setUserId(1L);
-//        user.setUserId(13L);
+//        user.setUserId(1L);
+        user.setUserId(13L);
         user.setName("test user name");
         //TODO should be delete after create the login module
         request.getSession().setAttribute("user", user);
