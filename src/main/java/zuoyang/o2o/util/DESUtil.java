@@ -59,7 +59,6 @@ public class DESUtil {
     }
 
     public static void main(String[] args) {
-        System.out.println(getDecryptString("gr2T+I8yDyw="));
-        System.out.println(getDecryptString("ZznbKgXG/xY337aXK0KATA=="));
+
     }
 }
