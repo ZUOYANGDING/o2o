@@ -1,10 +1,14 @@
 package zuoyang.o2o.util.wechat;
 
 
+import javax.net.ssl.X509TrustManager;
 import java.security.cert.CertificateException;
 import java.security.cert.X509Certificate;
 
-public class MyX509TrustManager {
+/**
+ * certification manager
+ */
+public class MyX509TrustManager implements X509TrustManager {
     /**
      * check certificate of client, if not trust throw exception, here use empty body to trust any certification
      * @param chain

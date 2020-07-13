@@ -3,10 +3,12 @@ package zuoyang.o2o.util.wechat;
 import com.fasterxml.jackson.core.JsonParseException;
 import com.fasterxml.jackson.databind.JsonMappingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
-import lombok.Value;
 import lombok.extern.slf4j.Slf4j;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Component;
+import zuoyang.o2o.dto.WeChatUser;
 import zuoyang.o2o.dto.WeChatUserAccessToken;
+import zuoyang.o2o.util.DESUtil;
 
 import javax.net.ssl.HttpsURLConnection;
 import javax.net.ssl.SSLContext;
@@ -15,30 +17,35 @@ import javax.net.ssl.TrustManager;
 import java.io.*;
 import java.net.ConnectException;
 import java.net.URL;
+import java.nio.charset.StandardCharsets;
 
 
 @Slf4j
 @Component
 public class WeChatUtil {
-    private static String WECHATAPPID;
-    private static String WECHATAPPSECRET;
+    private static String WECHAT_APPID;
+    private static String WECHAT_APP_SECRET;
 
-    @Value("${wechat.appID}")
+    @Value("${wechat_appID}")
     public void setWeChatAppId(String weChatAppId) {
-        WECHATAPPID = weChatAppId;
+        WECHAT_APPID = weChatAppId;
     }
 
-    @Value("${wechat.appsecret}")
+    @Value("${wechat_appsecret}")
     public void setWeChatAppSecret(String weChatAppSecret) {
-        WECHATAPPSECRET = weChatAppSecret;
+        WECHAT_APP_SECRET = weChatAppSecret;
     }
 
-    public static WeChatUserAccessToken getUserAccessToken(String code) {
-        log.debug("wechat_appid: " + WECHATAPPID);
-        log.debug("wechat_appsecret: " + WECHATAPPSECRET);
+    public WeChatUserAccessToken getUserAccessToken(String code) {
+        log.debug("wechat_appid: " + WECHAT_APPID);
+        log.debug("wechat_appsecret: " + WECHAT_APP_SECRET);
         // set the url for wechat pre-defined
-        String url = "https://api.weixin.qq.com/sns/oauth2/access_token?appid=" + WECHATAPPID + "&secret=" +
-                WECHATAPPSECRET + "&code=" + code + "&grant_type=authorization_code";
+        String url = "https://api.weixin.qq.com/sns/oauth2/access_token?appid=" +
+                DESUtil.getDecryptString(WECHAT_APPID)
+                + "&secret="
+                + DESUtil.getDecryptString(WECHAT_APP_SECRET) + "&code="
+                + code
+                + "&grant_type=authorization_code";
         // send https request with the code, appid and wechatsecret, get token string
         String tokenStr = sendHttpsRequest(url, "GET", null);
 
@@ -59,26 +66,54 @@ public class WeChatUtil {
             log.error("io error throw out when get access token " + e.getMessage());
             e.printStackTrace();
         }
-        if (weChatUserAccessToken == null) {
+        if (weChatUserAccessToken.getOpenId() == null) {
             log.error("user access token is empty ");
             return null;
         }
         return weChatUserAccessToken;
     }
 
+    public WeChatUser getUserInfo(String accessToken, String openId) {
+        String url = "https://api.weixin.qq.com/sns/userinfo?access_token=" + accessToken +
+                "&openid=" + openId + "&lang=zh_CN";
+        String userStr = sendHttpsRequest(url, "GET", null);
+
+        log.debug("user info: " + userStr);
+
+        // map the json user info to a webChat user dto
+        ObjectMapper objectMapper = new ObjectMapper();
+        WeChatUser weChatUser = new WeChatUser();
+        try {
+            weChatUser = objectMapper.readValue(userStr, WeChatUser.class);
+        } catch (JsonParseException e) {
+            log.error("Parse to WeChatUser failed...");
+            e.printStackTrace();
+        } catch (JsonMappingException e) {
+            log.error("Mapping to WeChatUser failed...");
+            e.printStackTrace();
+        } catch (IOException e) {
+            log.error("IO error when mapping to WeChatUser");
+            e.printStackTrace();
+        }
+        if (weChatUser.getOpenId() == null) {
+            log.error("weChatUser is null");
+            return null;
+        }
+        return weChatUser;
+    }
 
     /**
-     * create the https request to get the access token in json pattern from weChat
+     * create the https request to get info in json pattern from weChat
      * @param url
      * @param requestMethod
      * @param outputStr
      * @return
      */
-    private static String sendHttpsRequest(String url, String requestMethod, String outputStr) {
+    private String sendHttpsRequest(String url, String requestMethod, String outputStr) {
         StringBuffer buffer = new StringBuffer();
         try {
             // create X509 certification manager
-            TrustManager[] trustManagers = {(TrustManager) new MyX509TrustManager()};
+            TrustManager[] trustManagers = {new MyX509TrustManager()};
             SSLContext sslContext = SSLContext.getInstance("SSL", "SunJSSE");
             sslContext.init(null, trustManagers, new java.security.SecureRandom());
             SSLSocketFactory ssf = sslContext.getSocketFactory();
@@ -95,13 +130,13 @@ public class WeChatUtil {
             // send data if needed
             if (outputStr != null) {
                 OutputStream outputStream = httpsURLConnection.getOutputStream();
-                outputStream.write(outputStr.getBytes("UTF-8"));
+                outputStream.write(outputStr.getBytes(StandardCharsets.UTF_8));
                 outputStream.close();
             }
 
             // get the return token and transfer it to string
             InputStream inputStream = httpsURLConnection.getInputStream();
-            InputStreamReader inputStreamReader = new InputStreamReader(inputStream, "utf-8");
+            InputStreamReader inputStreamReader = new InputStreamReader(inputStream, StandardCharsets.UTF_8);
             BufferedReader bufferedReader = new BufferedReader(inputStreamReader);
             String tempStr = null;
             while ((tempStr = bufferedReader.readLine())!=null) {

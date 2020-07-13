@@ -4,7 +4,7 @@ import java.security.MessageDigest;
 import java.util.Arrays;
 
 public class SignUtil {
-    private static String token = "o2o";
+    private static String token = "o2o_1";
 
     public static boolean checkUserSignature(String signature, String timeStamp, String nonce) {
         String[] signatureArray = new String[] {token, timeStamp, nonce};

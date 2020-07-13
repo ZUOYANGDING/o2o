@@ -34,6 +34,9 @@ public class WeChatUser implements Serializable {
     // user avatar
     @JsonProperty("headimgurl")
     private String headImgUrl;
+    // privilege, does not use here, but need for mapping process
+    @JsonProperty("privilege")
+    String[] privilege;
 
     @Override
     public String toString() {
