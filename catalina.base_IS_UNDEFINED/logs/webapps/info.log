@@ -1,3 +1,9 @@
-2020-07-10 11:08:57.168 [restartedMain] INFO  zuoyang.o2o.O2oApplication - Starting O2oApplication on DingZuoyangdeMacBook-Pro.local with PID 84852 (/Users/zuoyangding/IdeaProjects/o2o/target/classes started by zuoyangding in /Users/zuoyangding/IdeaProjects/o2o)
-2020-07-10 11:08:57.174 [restartedMain] INFO  zuoyang.o2o.O2oApplication - The following profiles are active: dev
-2020-07-10 11:08:59.597 [restartedMain] INFO  zuoyang.o2o.O2oApplication - Started O2oApplication in 2.715 seconds (JVM running for 8.648)
+2020-07-14 00:04:02.962 [main] INFO  zuoyang.o2o.dao.PersonInfoDaoTest - Starting PersonInfoDaoTest on DingZuoyangdeMacBook-Pro.local with PID 97690 (started by zuoyangding in /Users/zuoyangding/IdeaProjects/o2o)
+2020-07-14 00:04:02.967 [main] INFO  zuoyang.o2o.dao.PersonInfoDaoTest - The following profiles are active: dev
+2020-07-14 00:04:06.102 [main] INFO  zuoyang.o2o.dao.PersonInfoDaoTest - Started PersonInfoDaoTest in 8.439 seconds (JVM running for 10.622)
+2020-07-14 00:17:05.953 [main] INFO  zuoyang.o2o.dao.WeChatAuthDaoTest - Starting WeChatAuthDaoTest on DingZuoyangdeMacBook-Pro.local with PID 97714 (started by zuoyangding in /Users/zuoyangding/IdeaProjects/o2o)
+2020-07-14 00:17:05.954 [main] INFO  zuoyang.o2o.dao.WeChatAuthDaoTest - The following profiles are active: dev
+2020-07-14 00:17:08.284 [main] INFO  zuoyang.o2o.dao.WeChatAuthDaoTest - Started WeChatAuthDaoTest in 7.671 seconds (JVM running for 9.17)
+2020-07-14 00:20:05.278 [main] INFO  zuoyang.o2o.dao.WeChatAuthDaoTest - Starting WeChatAuthDaoTest on DingZuoyangdeMacBook-Pro.local with PID 97730 (started by zuoyangding in /Users/zuoyangding/IdeaProjects/o2o)
+2020-07-14 00:20:05.279 [main] INFO  zuoyang.o2o.dao.WeChatAuthDaoTest - The following profiles are active: dev
+2020-07-14 00:20:07.573 [main] INFO  zuoyang.o2o.dao.WeChatAuthDaoTest - Started WeChatAuthDaoTest in 7.655 seconds (JVM running for 9.199)

@@ -1,28 +1,27 @@
-2020-07-10 11:08:57.173 [restartedMain] DEBUG zuoyang.o2o.O2oApplication - Running with Spring Boot v2.3.0.RELEASE, Spring v5.2.6.RELEASE
-2020-07-10 11:09:32.514 [http-nio-8080-exec-9] DEBUG zuoyang.o2o.dao.ShopDao.queryShopList - ==>  Preparing: SELECT s.shop_id, s.shop_name, s.shop_desc, s.shop_address, s.phone, s.shop_img, s.priority, s.enable_status, s.create_time, s.last_edit_time, s.advice, a.area_id, a.area_name, sc.shop_category_id, sc.shop_category_name FROM tb_shop AS s, tb_area AS a, tb_shop_category AS sc WHERE s.owner_id = ? AND s.area_id = a.area_id AND s.shop_category_id = sc.shop_category_id ORDER BY s.priority DESC LIMIT ?, ?; 
-2020-07-10 11:09:32.559 [http-nio-8080-exec-9] DEBUG zuoyang.o2o.dao.ShopDao.queryShopList - ==> Parameters: 1(Long), 0(Integer), 100(Integer)
-2020-07-10 11:09:32.594 [http-nio-8080-exec-9] DEBUG zuoyang.o2o.dao.ShopDao.queryShopList - <==      Total: 17
-2020-07-10 11:09:32.599 [http-nio-8080-exec-9] DEBUG zuoyang.o2o.dao.ShopDao.queryShopCount - ==>  Preparing: SELECT count(1) FROM tb_shop AS s, tb_shop_category AS sc, tb_area AS a WHERE s.owner_id = ? AND s.area_id = a.area_id AND s.shop_category_id = sc.shop_category_id 
-2020-07-10 11:09:32.600 [http-nio-8080-exec-9] DEBUG zuoyang.o2o.dao.ShopDao.queryShopCount - ==> Parameters: 1(Long)
-2020-07-10 11:09:32.601 [http-nio-8080-exec-9] DEBUG zuoyang.o2o.dao.ShopDao.queryShopCount - <==      Total: 1
-2020-07-10 11:09:36.423 [http-nio-8080-exec-2] DEBUG zuoyang.o2o.dao.ProductDao.queryProductList - ==>  Preparing: SELECT p.product_id, p.product_name, p.img_addr, p.product_desc, p.normal_price, p.promote_price, p.priority, p.create_time, p.last_edit_time, p.enable_status, p.product_category_id, p.shop_id FROM tb_product as p WHERE p.shop_id=? ORDER BY p.priority DESC LIMIT ?, ?; 
-2020-07-10 11:09:36.423 [http-nio-8080-exec-2] DEBUG zuoyang.o2o.dao.ProductDao.queryProductList - ==> Parameters: 40(Long), 0(Integer), 999(Integer)
-2020-07-10 11:09:36.427 [http-nio-8080-exec-2] DEBUG zuoyang.o2o.dao.ProductDao.queryProductList - <==      Total: 3
-2020-07-10 11:09:36.428 [http-nio-8080-exec-2] DEBUG zuoyang.o2o.dao.ProductDao.queryProductCount - ==>  Preparing: SELECT count(1) FROM tb_product WHERE shop_id = ? 
-2020-07-10 11:09:36.428 [http-nio-8080-exec-2] DEBUG zuoyang.o2o.dao.ProductDao.queryProductCount - ==> Parameters: 40(Long)
-2020-07-10 11:09:36.430 [http-nio-8080-exec-2] DEBUG zuoyang.o2o.dao.ProductDao.queryProductCount - <==      Total: 1
-2020-07-10 11:09:38.238 [http-nio-8080-exec-5] DEBUG z.o.d.ProductCategoryDao.queryProductCategoryList - ==>  Preparing: SELECT product_category_id, product_category_name, priority, create_time, last_edit_time FROM tb_product_category WHERE shop_id = ? ORDER BY priority DESC 
-2020-07-10 11:09:38.238 [http-nio-8080-exec-5] DEBUG z.o.d.ProductCategoryDao.queryProductCategoryList - ==> Parameters: 40(Long)
-2020-07-10 11:09:38.240 [http-nio-8080-exec-5] DEBUG z.o.d.ProductCategoryDao.queryProductCategoryList - <==      Total: 3
-2020-07-10 11:10:12.802 [http-nio-8080-exec-3] DEBUG zuoyang.o2o.util.ImageUtil - current relative file path: /upload/images/item/shop/40/product/8503920200710111012.jpeg
-2020-07-10 11:10:12.802 [http-nio-8080-exec-3] DEBUG zuoyang.o2o.util.ImageUtil - current complete file path: /Users/zuoyangding/work/image/upload/images/item/shop/40/product/8503920200710111012.jpeg
-2020-07-10 11:10:12.854 [http-nio-8080-exec-3] DEBUG zuoyang.o2o.dao.ProductDao.insertProduct - ==>  Preparing: INSERT INTO tb_product(product_name, img_addr, product_desc, normal_price, promote_price, priority, create_time, last_edit_time, enable_status, product_category_id, shop_id) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?) 
-2020-07-10 11:10:12.857 [http-nio-8080-exec-3] DEBUG zuoyang.o2o.dao.ProductDao.insertProduct - ==> Parameters: test product(String), /upload/images/item/shop/40/product/8503920200710111012.jpeg(String), test desc(String), 3(String), 2(String), 6(Integer), 2020-07-10 11:10:12.783(Timestamp), 2020-07-10 11:10:12.783(Timestamp), 1(Integer), 8(Long), 40(Long)
-2020-07-10 11:10:12.899 [http-nio-8080-exec-3] DEBUG zuoyang.o2o.dao.ProductDao.insertProduct - <==    Updates: 1
-2020-07-10 11:10:12.909 [http-nio-8080-exec-3] DEBUG zuoyang.o2o.util.ImageUtil - current relative file path: /upload/images/item/shop/40/product/15/8594420200710111012.jpeg
-2020-07-10 11:10:12.910 [http-nio-8080-exec-3] DEBUG zuoyang.o2o.util.ImageUtil - current complete file path: /Users/zuoyangding/work/image/upload/images/item/shop/40/product/15/8594420200710111012.jpeg
-2020-07-10 11:10:12.920 [http-nio-8080-exec-3] DEBUG zuoyang.o2o.util.ImageUtil - current relative file path: /upload/images/item/shop/40/product/15/6947920200710111012.jpeg
-2020-07-10 11:10:12.920 [http-nio-8080-exec-3] DEBUG zuoyang.o2o.util.ImageUtil - current complete file path: /Users/zuoyangding/work/image/upload/images/item/shop/40/product/15/6947920200710111012.jpeg
-2020-07-10 11:10:12.933 [http-nio-8080-exec-3] DEBUG z.o2o.dao.ProductImgDao.batchInsertProductImg - ==>  Preparing: INSERT INTO tb_product_img(img_address, img_desc, priority, create_time, last_edit_time, product_id) VALUES (?, ?, ?, ?, ?, ?) , (?, ?, ?, ?, ?, ?) 
-2020-07-10 11:10:12.933 [http-nio-8080-exec-3] DEBUG z.o2o.dao.ProductImgDao.batchInsertProductImg - ==> Parameters: /upload/images/item/shop/40/product/15/8594420200710111012.jpeg(String), null, null, 2020-07-10 11:10:12.92(Timestamp), 2020-07-10 11:10:12.92(Timestamp), 15(Long), /upload/images/item/shop/40/product/15/6947920200710111012.jpeg(String), null, null, 2020-07-10 11:10:12.931(Timestamp), 2020-07-10 11:10:12.931(Timestamp), 15(Long)
-2020-07-10 11:10:12.935 [http-nio-8080-exec-3] DEBUG z.o2o.dao.ProductImgDao.batchInsertProductImg - <==    Updates: 2
+2020-07-14 00:04:02.965 [main] DEBUG zuoyang.o2o.dao.PersonInfoDaoTest - Running with Spring Boot v2.3.0.RELEASE, Spring v5.2.6.RELEASE
+2020-07-14 00:04:07.064 [main] DEBUG zuoyang.o2o.dao.PersonInfoDao.insertPersonInfo - ==>  Preparing: INSERT INTO tb_person_info(name, profile_img, email, gender, user_status, user_type, create_time, last_edit_time) VALUES (?, ?, ?, ?, ?, ?, ?, ?) 
+2020-07-14 00:04:07.121 [main] DEBUG zuoyang.o2o.dao.PersonInfoDao.insertPersonInfo - ==> Parameters: test nick name(String), test profile image(String), test email(String), m(String), 1(Integer), 2(Integer), 2020-07-14 00:04:06.524(Timestamp), 2020-07-14 00:04:06.524(Timestamp)
+2020-07-14 00:04:07.143 [main] DEBUG zuoyang.o2o.dao.PersonInfoDao.insertPersonInfo - <==    Updates: 1
+2020-07-14 00:04:07.189 [main] DEBUG zuoyang.o2o.dao.PersonInfoDao.queryPersonInfoById - ==>  Preparing: SELECT user_id, name, profile_img, email, gender, user_status, user_type, create_time, last_edit_time FROM tb_person_info WHERE user_id = ? 
+2020-07-14 00:04:07.190 [main] DEBUG zuoyang.o2o.dao.PersonInfoDao.queryPersonInfoById - ==> Parameters: 2(Long)
+2020-07-14 00:04:07.234 [main] DEBUG zuoyang.o2o.dao.PersonInfoDao.queryPersonInfoById - <==      Total: 1
+2020-07-14 00:17:05.954 [main] DEBUG zuoyang.o2o.dao.WeChatAuthDaoTest - Running with Spring Boot v2.3.0.RELEASE, Spring v5.2.6.RELEASE
+2020-07-14 00:17:09.178 [main] DEBUG zuoyang.o2o.dao.PersonInfoDao.queryPersonInfoById - ==>  Preparing: SELECT user_id, name, profile_img, email, gender, user_status, user_type, create_time, last_edit_time FROM tb_person_info WHERE user_id = ? 
+2020-07-14 00:17:09.252 [main] DEBUG zuoyang.o2o.dao.PersonInfoDao.queryPersonInfoById - ==> Parameters: 2(Long)
+2020-07-14 00:17:09.305 [main] DEBUG zuoyang.o2o.dao.PersonInfoDao.queryPersonInfoById - <==      Total: 1
+2020-07-14 00:17:09.314 [main] DEBUG zuoyang.o2o.dao.WeChatAuthDao.insertWeChatAuth - ==>  Preparing: INSERT INTO tb_wechat_auth(open_id, user_id, create_time) VALUES (?, ?, ?) 
+2020-07-14 00:17:09.318 [main] DEBUG zuoyang.o2o.dao.WeChatAuthDao.insertWeChatAuth - ==> Parameters: 123456(String), 2(Long), null
+2020-07-14 00:17:09.323 [main] DEBUG zuoyang.o2o.dao.WeChatAuthDao.insertWeChatAuth - <==    Updates: 1
+2020-07-14 00:17:09.345 [main] DEBUG z.o2o.dao.WeChatAuthDao.queryWeChatAuthByOpenId - ==>  Preparing: SELECT w.wechat_auth_id, w.open_id, w.create_time, p.user_id, p.name, p.profile_img, p.email, p.gender, p.user_status, p.user_type, p.create_time, p.last_edit_time FROM tb_wechat_auth as w LEFT JOIN tb_person_info as p ON w.user_id = p.user_id WHERE w.open_id = ? 
+2020-07-14 00:17:09.346 [main] DEBUG z.o2o.dao.WeChatAuthDao.queryWeChatAuthByOpenId - ==> Parameters: 123456(String)
+2020-07-14 00:17:09.349 [main] DEBUG z.o2o.dao.WeChatAuthDao.queryWeChatAuthByOpenId - <==      Total: 1
+2020-07-14 00:20:05.279 [main] DEBUG zuoyang.o2o.dao.WeChatAuthDaoTest - Running with Spring Boot v2.3.0.RELEASE, Spring v5.2.6.RELEASE
+2020-07-14 00:20:08.393 [main] DEBUG zuoyang.o2o.dao.PersonInfoDao.queryPersonInfoById - ==>  Preparing: SELECT user_id, name, profile_img, email, gender, user_status, user_type, create_time, last_edit_time FROM tb_person_info WHERE user_id = ? 
+2020-07-14 00:20:08.461 [main] DEBUG zuoyang.o2o.dao.PersonInfoDao.queryPersonInfoById - ==> Parameters: 2(Long)
+2020-07-14 00:20:08.503 [main] DEBUG zuoyang.o2o.dao.PersonInfoDao.queryPersonInfoById - <==      Total: 1
+2020-07-14 00:20:08.509 [main] DEBUG zuoyang.o2o.dao.WeChatAuthDao.insertWeChatAuth - ==>  Preparing: INSERT INTO tb_wechat_auth(open_id, user_id, create_time) VALUES (?, ?, ?) 
+2020-07-14 00:20:08.514 [main] DEBUG zuoyang.o2o.dao.WeChatAuthDao.insertWeChatAuth - ==> Parameters: 123456(String), 2(Long), 2020-07-14 00:20:08.509(Timestamp)
+2020-07-14 00:20:08.517 [main] DEBUG zuoyang.o2o.dao.WeChatAuthDao.insertWeChatAuth - <==    Updates: 1
+2020-07-14 00:20:08.534 [main] DEBUG z.o2o.dao.WeChatAuthDao.queryWeChatAuthByOpenId - ==>  Preparing: SELECT w.wechat_auth_id, w.open_id, w.create_time, p.user_id, p.name, p.profile_img, p.email, p.gender, p.user_status, p.user_type, p.create_time, p.last_edit_time FROM tb_wechat_auth as w LEFT JOIN tb_person_info as p ON w.user_id = p.user_id WHERE w.open_id = ? 
+2020-07-14 00:20:08.534 [main] DEBUG z.o2o.dao.WeChatAuthDao.queryWeChatAuthByOpenId - ==> Parameters: 123456(String)
+2020-07-14 00:20:08.537 [main] DEBUG z.o2o.dao.WeChatAuthDao.queryWeChatAuthByOpenId - <==      Total: 1
