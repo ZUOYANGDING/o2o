@@ -6,6 +6,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import zuoyang.o2o.dto.WeChatUser;
 import zuoyang.o2o.dto.WeChatUserAccessToken;
+import zuoyang.o2o.entity.WeChatAuth;
 import zuoyang.o2o.util.wechat.WeChatUtil;
 
 import javax.servlet.http.HttpServletRequest;
@@ -31,7 +32,7 @@ public class WeChatLoginController {
         log.debug("state: " + roleType);
         WeChatUser weChatUser = null;
         String openId = null;
-        String auth = null;
+        WeChatAuth weChatAuth = null;
         String accessToken = null;
         if (code != null) {
             WeChatUserAccessToken weChatUserAccessToken;

@@ -1,27 +1,23 @@
-2020-07-14 00:04:02.965 [main] DEBUG zuoyang.o2o.dao.PersonInfoDaoTest - Running with Spring Boot v2.3.0.RELEASE, Spring v5.2.6.RELEASE
-2020-07-14 00:04:07.064 [main] DEBUG zuoyang.o2o.dao.PersonInfoDao.insertPersonInfo - ==>  Preparing: INSERT INTO tb_person_info(name, profile_img, email, gender, user_status, user_type, create_time, last_edit_time) VALUES (?, ?, ?, ?, ?, ?, ?, ?) 
-2020-07-14 00:04:07.121 [main] DEBUG zuoyang.o2o.dao.PersonInfoDao.insertPersonInfo - ==> Parameters: test nick name(String), test profile image(String), test email(String), m(String), 1(Integer), 2(Integer), 2020-07-14 00:04:06.524(Timestamp), 2020-07-14 00:04:06.524(Timestamp)
-2020-07-14 00:04:07.143 [main] DEBUG zuoyang.o2o.dao.PersonInfoDao.insertPersonInfo - <==    Updates: 1
-2020-07-14 00:04:07.189 [main] DEBUG zuoyang.o2o.dao.PersonInfoDao.queryPersonInfoById - ==>  Preparing: SELECT user_id, name, profile_img, email, gender, user_status, user_type, create_time, last_edit_time FROM tb_person_info WHERE user_id = ? 
-2020-07-14 00:04:07.190 [main] DEBUG zuoyang.o2o.dao.PersonInfoDao.queryPersonInfoById - ==> Parameters: 2(Long)
-2020-07-14 00:04:07.234 [main] DEBUG zuoyang.o2o.dao.PersonInfoDao.queryPersonInfoById - <==      Total: 1
-2020-07-14 00:17:05.954 [main] DEBUG zuoyang.o2o.dao.WeChatAuthDaoTest - Running with Spring Boot v2.3.0.RELEASE, Spring v5.2.6.RELEASE
-2020-07-14 00:17:09.178 [main] DEBUG zuoyang.o2o.dao.PersonInfoDao.queryPersonInfoById - ==>  Preparing: SELECT user_id, name, profile_img, email, gender, user_status, user_type, create_time, last_edit_time FROM tb_person_info WHERE user_id = ? 
-2020-07-14 00:17:09.252 [main] DEBUG zuoyang.o2o.dao.PersonInfoDao.queryPersonInfoById - ==> Parameters: 2(Long)
-2020-07-14 00:17:09.305 [main] DEBUG zuoyang.o2o.dao.PersonInfoDao.queryPersonInfoById - <==      Total: 1
-2020-07-14 00:17:09.314 [main] DEBUG zuoyang.o2o.dao.WeChatAuthDao.insertWeChatAuth - ==>  Preparing: INSERT INTO tb_wechat_auth(open_id, user_id, create_time) VALUES (?, ?, ?) 
-2020-07-14 00:17:09.318 [main] DEBUG zuoyang.o2o.dao.WeChatAuthDao.insertWeChatAuth - ==> Parameters: 123456(String), 2(Long), null
-2020-07-14 00:17:09.323 [main] DEBUG zuoyang.o2o.dao.WeChatAuthDao.insertWeChatAuth - <==    Updates: 1
-2020-07-14 00:17:09.345 [main] DEBUG z.o2o.dao.WeChatAuthDao.queryWeChatAuthByOpenId - ==>  Preparing: SELECT w.wechat_auth_id, w.open_id, w.create_time, p.user_id, p.name, p.profile_img, p.email, p.gender, p.user_status, p.user_type, p.create_time, p.last_edit_time FROM tb_wechat_auth as w LEFT JOIN tb_person_info as p ON w.user_id = p.user_id WHERE w.open_id = ? 
-2020-07-14 00:17:09.346 [main] DEBUG z.o2o.dao.WeChatAuthDao.queryWeChatAuthByOpenId - ==> Parameters: 123456(String)
-2020-07-14 00:17:09.349 [main] DEBUG z.o2o.dao.WeChatAuthDao.queryWeChatAuthByOpenId - <==      Total: 1
-2020-07-14 00:20:05.279 [main] DEBUG zuoyang.o2o.dao.WeChatAuthDaoTest - Running with Spring Boot v2.3.0.RELEASE, Spring v5.2.6.RELEASE
-2020-07-14 00:20:08.393 [main] DEBUG zuoyang.o2o.dao.PersonInfoDao.queryPersonInfoById - ==>  Preparing: SELECT user_id, name, profile_img, email, gender, user_status, user_type, create_time, last_edit_time FROM tb_person_info WHERE user_id = ? 
-2020-07-14 00:20:08.461 [main] DEBUG zuoyang.o2o.dao.PersonInfoDao.queryPersonInfoById - ==> Parameters: 2(Long)
-2020-07-14 00:20:08.503 [main] DEBUG zuoyang.o2o.dao.PersonInfoDao.queryPersonInfoById - <==      Total: 1
-2020-07-14 00:20:08.509 [main] DEBUG zuoyang.o2o.dao.WeChatAuthDao.insertWeChatAuth - ==>  Preparing: INSERT INTO tb_wechat_auth(open_id, user_id, create_time) VALUES (?, ?, ?) 
-2020-07-14 00:20:08.514 [main] DEBUG zuoyang.o2o.dao.WeChatAuthDao.insertWeChatAuth - ==> Parameters: 123456(String), 2(Long), 2020-07-14 00:20:08.509(Timestamp)
-2020-07-14 00:20:08.517 [main] DEBUG zuoyang.o2o.dao.WeChatAuthDao.insertWeChatAuth - <==    Updates: 1
-2020-07-14 00:20:08.534 [main] DEBUG z.o2o.dao.WeChatAuthDao.queryWeChatAuthByOpenId - ==>  Preparing: SELECT w.wechat_auth_id, w.open_id, w.create_time, p.user_id, p.name, p.profile_img, p.email, p.gender, p.user_status, p.user_type, p.create_time, p.last_edit_time FROM tb_wechat_auth as w LEFT JOIN tb_person_info as p ON w.user_id = p.user_id WHERE w.open_id = ? 
-2020-07-14 00:20:08.534 [main] DEBUG z.o2o.dao.WeChatAuthDao.queryWeChatAuthByOpenId - ==> Parameters: 123456(String)
-2020-07-14 00:20:08.537 [main] DEBUG z.o2o.dao.WeChatAuthDao.queryWeChatAuthByOpenId - <==      Total: 1
+2020-07-15 08:43:19.594 [main] DEBUG z.o2o.service.serviceImp.WeChatAuthServiceImplTest - Running with Spring Boot v2.3.0.RELEASE, Spring v5.2.6.RELEASE
+2020-07-15 08:43:23.086 [main] DEBUG z.o2o.dao.WeChatAuthDao.queryWeChatAuthByOpenId - ==>  Preparing: SELECT w.wechat_auth_id, w.open_id, w.create_time, p.user_id, p.name, p.profile_img, p.email, p.gender, p.user_status, p.user_type, p.create_time, p.last_edit_time FROM tb_wechat_auth as w LEFT JOIN tb_person_info as p ON w.user_id = p.user_id WHERE w.open_id = ? 
+2020-07-15 08:43:23.155 [main] DEBUG z.o2o.dao.WeChatAuthDao.queryWeChatAuthByOpenId - ==> Parameters: 123456(String)
+2020-07-15 08:43:23.199 [main] DEBUG z.o2o.dao.WeChatAuthDao.queryWeChatAuthByOpenId - <==      Total: 1
+2020-07-15 09:35:24.366 [main] DEBUG z.o2o.service.serviceImp.WeChatAuthServiceImplTest - Running with Spring Boot v2.3.0.RELEASE, Spring v5.2.6.RELEASE
+2020-07-15 09:39:38.617 [main] DEBUG z.o2o.service.serviceImp.WeChatAuthServiceImplTest - Running with Spring Boot v2.3.0.RELEASE, Spring v5.2.6.RELEASE
+2020-07-15 09:39:41.337 [main] DEBUG zuoyang.o2o.dao.PersonInfoDao.insertPersonInfo - ==>  Preparing: INSERT INTO tb_person_info(name, profile_img, email, gender, user_status, user_type, create_time, last_edit_time) VALUES (?, ?, ?, ?, ?, ?, ?, ?) 
+2020-07-15 09:39:41.398 [main] DEBUG zuoyang.o2o.dao.PersonInfoDao.insertPersonInfo - ==> Parameters: test name 1(String), test image(String), test email(String), M(String), 1(Integer), 1(Integer), 2020-07-15 09:39:41.306(Timestamp), 2020-07-15 09:39:41.306(Timestamp)
+2020-07-15 09:39:41.399 [main] DEBUG zuoyang.o2o.dao.PersonInfoDao.insertPersonInfo - <==    Updates: 1
+2020-07-15 09:39:41.412 [main] DEBUG z.o2o.service.serviceImp.WeChatAuthServiceImpl - personInfo.userId: 3
+2020-07-15 09:39:41.413 [main] DEBUG zuoyang.o2o.dao.WeChatAuthDao.insertWeChatAuth - ==>  Preparing: INSERT INTO tb_wechat_auth(open_id, user_id, create_time) VALUES (?, ?, ?) 
+2020-07-15 09:39:41.415 [main] DEBUG zuoyang.o2o.dao.WeChatAuthDao.insertWeChatAuth - ==> Parameters: 654321(String), 3(Long), 2020-07-15 09:39:41.306(Timestamp)
+2020-07-15 09:39:41.417 [main] DEBUG zuoyang.o2o.dao.WeChatAuthDao.insertWeChatAuth - <==    Updates: 1
+2020-07-15 09:44:05.862 [main] DEBUG z.o2o.service.serviceImp.WeChatAuthServiceImplTest - Running with Spring Boot v2.3.0.RELEASE, Spring v5.2.6.RELEASE
+2020-07-15 09:44:08.505 [main] DEBUG zuoyang.o2o.dao.PersonInfoDao.insertPersonInfo - ==>  Preparing: INSERT INTO tb_person_info(name, profile_img, email, gender, user_status, user_type, create_time, last_edit_time) VALUES (?, ?, ?, ?, ?, ?, ?, ?) 
+2020-07-15 09:44:08.563 [main] DEBUG zuoyang.o2o.dao.PersonInfoDao.insertPersonInfo - ==> Parameters: test name 2(String), test image 2(String), test email 2(String), F(String), null, 1(Integer), null, null
+2020-07-15 09:45:57.558 [main] DEBUG z.o2o.service.serviceImp.WeChatAuthServiceImplTest - Running with Spring Boot v2.3.0.RELEASE, Spring v5.2.6.RELEASE
+2020-07-15 09:46:00.338 [main] DEBUG zuoyang.o2o.dao.PersonInfoDao.insertPersonInfo - ==>  Preparing: INSERT INTO tb_person_info(name, profile_img, email, gender, user_status, user_type, create_time, last_edit_time) VALUES (?, ?, ?, ?, ?, ?, ?, ?) 
+2020-07-15 09:46:00.401 [main] DEBUG zuoyang.o2o.dao.PersonInfoDao.insertPersonInfo - ==> Parameters: test name 2(String), test image 2(String), test email 2(String), F(String), 1(Integer), 1(Integer), 2020-07-15 09:45:59.894(Timestamp), 2020-07-15 09:45:59.894(Timestamp)
+2020-07-15 09:46:00.407 [main] DEBUG zuoyang.o2o.dao.PersonInfoDao.insertPersonInfo - <==    Updates: 1
+2020-07-15 09:46:00.431 [main] DEBUG zuoyang.o2o.dao.WeChatAuthDao.insertWeChatAuth - ==>  Preparing: INSERT INTO tb_wechat_auth(open_id, user_id, create_time) VALUES (?, ?, ?) 
+2020-07-15 09:46:00.434 [main] DEBUG zuoyang.o2o.dao.WeChatAuthDao.insertWeChatAuth - ==> Parameters: abcdefg(String), 4(Long), 2020-07-15 09:46:00.429(Timestamp)
+2020-07-15 09:46:00.436 [main] DEBUG zuoyang.o2o.dao.WeChatAuthDao.insertWeChatAuth - <==    Updates: 1
