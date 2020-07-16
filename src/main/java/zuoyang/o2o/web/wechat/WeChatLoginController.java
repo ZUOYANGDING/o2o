@@ -25,6 +25,8 @@ public class WeChatLoginController {
     private final WeChatUtil weChatUtil;
     private final WeChatAuthService weChatAuthService;
     private final PersonInfoService personInfoService;
+    private final String FRONT_END = "1";
+    private final String SHOP_END = "2";
 
 
     public WeChatLoginController(WeChatUtil weChatUtil, WeChatAuthService weChatAuthService,
@@ -85,7 +87,11 @@ public class WeChatLoginController {
                             getPersonInfo().getUserId());
                     if (personInfo != null) {
                         request.getSession().setAttribute("user", personInfo);
-                        return "frontend/index";
+                        if (roleType.equalsIgnoreCase(FRONT_END)) {
+                            return "frontend/index";
+                        } else {
+                            return "shop/shopList";
+                        }
                     } else {
                         log.error("No matching user when get personInfo....");
                         return null;
@@ -101,7 +107,11 @@ public class WeChatLoginController {
         } else if (weChatAuth!=null && weChatUser!=null){
             log.debug("userId: " + weChatAuth.getPersonInfo().getUserId());
             request.getSession().setAttribute("user", weChatAuth.getPersonInfo());
-            return "frontend/index";
+            if (roleType.equalsIgnoreCase(FRONT_END)) {
+                return "frontend/index";
+            } else {
+                return "shop/shopList";
+            }
         } else {
             return null;
         }
