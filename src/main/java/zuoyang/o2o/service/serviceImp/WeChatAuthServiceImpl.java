@@ -29,11 +29,7 @@ public class WeChatAuthServiceImpl implements WeChatAuthService {
     public WeChatAuth getWeChatAuthByOpenId(String openId) throws WeChatAuthOperationException{
         try {
             WeChatAuth weChatAuth = weChatAuthDao.queryWeChatAuthByOpenId(openId);
-            if (weChatAuth != null) {
-                return weChatAuth;
-            } else {
-                throw new WeChatAuthOperationException("failed to get weChatAuth by openId");
-            }
+            return weChatAuth;
         } catch (Exception e) {
             throw new WeChatAuthOperationException(e.getMessage());
         }

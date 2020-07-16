@@ -8,6 +8,7 @@ import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Component;
 import zuoyang.o2o.dto.WeChatUser;
 import zuoyang.o2o.dto.WeChatUserAccessToken;
+import zuoyang.o2o.entity.PersonInfo;
 import zuoyang.o2o.util.DESUtil;
 
 import javax.net.ssl.HttpsURLConnection;
@@ -100,6 +101,14 @@ public class WeChatUtil {
             return null;
         }
         return weChatUser;
+    }
+
+    public PersonInfo createPersonInfoFromWeChatUser(WeChatUser weChatUser) {
+        PersonInfo personInfo = new PersonInfo();
+        personInfo.setName(weChatUser.getNickName());
+        personInfo.setGender(weChatUser.getSex() + "");
+        personInfo.setProfileImg(weChatUser.getHeadImgUrl());
+        return personInfo;
     }
 
     /**

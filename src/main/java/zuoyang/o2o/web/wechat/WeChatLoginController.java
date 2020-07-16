@@ -4,9 +4,15 @@ import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
+import zuoyang.o2o.dto.WeChatAuthExecution;
 import zuoyang.o2o.dto.WeChatUser;
 import zuoyang.o2o.dto.WeChatUserAccessToken;
+import zuoyang.o2o.entity.PersonInfo;
 import zuoyang.o2o.entity.WeChatAuth;
+import zuoyang.o2o.enums.WeChatAuthStateEnum;
+import zuoyang.o2o.exception.WeChatAuthOperationException;
+import zuoyang.o2o.service.PersonInfoService;
+import zuoyang.o2o.service.WeChatAuthService;
 import zuoyang.o2o.util.wechat.WeChatUtil;
 
 import javax.servlet.http.HttpServletRequest;
@@ -17,9 +23,15 @@ import javax.servlet.http.HttpServletResponse;
 @Slf4j
 public class WeChatLoginController {
     private final WeChatUtil weChatUtil;
+    private final WeChatAuthService weChatAuthService;
+    private final PersonInfoService personInfoService;
 
-    public WeChatLoginController(WeChatUtil weChatUtil) {
+
+    public WeChatLoginController(WeChatUtil weChatUtil, WeChatAuthService weChatAuthService,
+                                 PersonInfoService personInfoService) {
         this.weChatUtil = weChatUtil;
+        this.weChatAuthService = weChatAuthService;
+        this.personInfoService = personInfoService;
     }
 
     @GetMapping("/logincheck")
@@ -48,15 +60,47 @@ public class WeChatLoginController {
                 log.debug("Wechat User: " + weChatUser);
                 if (weChatUser != null && openId!=null) {
                     request.getSession().setAttribute("openId", openId);
+                    weChatAuth = weChatAuthService.getWeChatAuthByOpenId(weChatUser.getOpenId());
+                } else {
+                    log.error("cannot get weChatUser...");
                 }
-
             } catch (Exception e) {
                 log.error("get wechat user login check failed....");
                 e.printStackTrace();
             }
         }
-        //TODO logic to transfer the wechatUser into wechatAuth and personalInfo
-        if (weChatUser != null) {
+        // create new weChatAuth for new weChat user, even the user have account login without weChat
+        // there is no hook from weChat login to a existing user
+        if (weChatAuth == null && weChatUser!=null) {
+            weChatAuth = new WeChatAuth();
+            weChatAuth.setOpenId(weChatUser.getOpenId());
+            PersonInfo personInfo = weChatUtil.createPersonInfoFromWeChatUser(weChatUser);
+            personInfo.setUserType(1);
+            weChatAuth.setPersonInfo(personInfo);
+            try {
+                WeChatAuthExecution weChatAuthExecution = weChatAuthService.addWeChatAuth(weChatAuth);
+                if (weChatAuthExecution.getState() == WeChatAuthStateEnum.SUCCESS.getState()) {
+                    log.debug("userId: " + weChatAuthExecution.getWeChatAuth().getPersonInfo().getUserId());
+                    personInfo = personInfoService.getPersonInfoById(weChatAuthExecution.getWeChatAuth().
+                            getPersonInfo().getUserId());
+                    if (personInfo != null) {
+                        request.getSession().setAttribute("user", personInfo);
+                        return "frontend/index";
+                    } else {
+                        log.error("No matching user when get personInfo....");
+                        return null;
+                    }
+                } else {
+                    log.error(weChatAuthExecution.getStateInfo());
+                    return null;
+                }
+            } catch (WeChatAuthOperationException e) {
+                log.error(e.getMessage());
+                return null;
+            }
+        } else if (weChatAuth!=null && weChatUser!=null){
+            log.debug("userId: " + weChatAuth.getPersonInfo().getUserId());
+            request.getSession().setAttribute("user", weChatAuth.getPersonInfo());
             return "frontend/index";
         } else {
             return null;
