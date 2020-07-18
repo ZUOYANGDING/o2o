@@ -7,6 +7,6 @@ import java.util.List;
 
 public interface AreaService {
     // Key for redis cache
-    static final String AREA_LIST_KEY = "areaList";
+    public static final String AREA_LIST_KEY = "areaList";
     List<Area> getAreaList() throws AreaOperationException;
 }

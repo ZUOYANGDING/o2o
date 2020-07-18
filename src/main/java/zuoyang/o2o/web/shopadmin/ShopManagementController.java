@@ -141,7 +141,7 @@ public class ShopManagementController {
     private Map<String , Object> getShopInfo() {
         Map<String, Object> shopInfoMap = new HashMap<>();
         try {
-            // get all shop categories in second level (under root level, no shop link to root categories directly)
+            // get all shop categories in sub level (under root level, no shop link to root categories directly)
             List<ShopCategory> shopCategoryList = shopCategoryService.getShopCategoryList(new ShopCategory());
             List<Area> areaList = areaService.getAreaList();
             shopInfoMap.put("success", true);

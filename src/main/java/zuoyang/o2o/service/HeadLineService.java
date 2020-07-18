@@ -6,6 +6,6 @@ import zuoyang.o2o.exception.HeadLineOperationException;
 import java.util.List;
 
 public interface HeadLineService {
-    static final String HEAD_LINE_KEY = "headlineList";
+    public static final String HEAD_LINE_KEY = "headlineList";
     List<HeadLine> getHeadLineList(HeadLine headLine) throws HeadLineOperationException;
 }

@@ -1,27 +1,24 @@
-2020-07-17 10:38:46.598 [main] INFO  zuoyang.o2o.service.serviceImp.AreaServiceImplTest - Starting AreaServiceImplTest on DingZuoyangdeMacBook-Pro.local with PID 7005 (started by zuoyangding in /Users/zuoyangding/IdeaProjects/o2o)
-2020-07-17 10:38:46.602 [main] INFO  zuoyang.o2o.service.serviceImp.AreaServiceImplTest - The following profiles are active: dev
-2020-07-17 10:40:26.912 [main] INFO  zuoyang.o2o.service.serviceImp.AreaServiceImplTest - Starting AreaServiceImplTest on DingZuoyangdeMacBook-Pro.local with PID 7028 (started by zuoyangding in /Users/zuoyangding/IdeaProjects/o2o)
-2020-07-17 10:40:26.914 [main] INFO  zuoyang.o2o.service.serviceImp.AreaServiceImplTest - The following profiles are active: dev
-2020-07-17 10:45:36.645 [main] INFO  zuoyang.o2o.service.serviceImp.AreaServiceImplTest - Starting AreaServiceImplTest on DingZuoyangdeMacBook-Pro.local with PID 7069 (started by zuoyangding in /Users/zuoyangding/IdeaProjects/o2o)
-2020-07-17 10:45:36.647 [main] INFO  zuoyang.o2o.service.serviceImp.AreaServiceImplTest - The following profiles are active: dev
-2020-07-17 10:45:39.537 [main] INFO  zuoyang.o2o.service.serviceImp.AreaServiceImplTest - Started AreaServiceImplTest in 8.276 seconds (JVM running for 10.073)
-2020-07-17 11:27:19.119 [restartedMain] INFO  zuoyang.o2o.O2oApplication - Starting O2oApplication on DingZuoyangdeMacBook-Pro.local with PID 7331 (/Users/zuoyangding/IdeaProjects/o2o/target/classes started by zuoyangding in /Users/zuoyangding/IdeaProjects/o2o)
-2020-07-17 11:27:19.123 [restartedMain] INFO  zuoyang.o2o.O2oApplication - The following profiles are active: dev
-2020-07-17 11:27:21.586 [restartedMain] INFO  zuoyang.o2o.O2oApplication - Started O2oApplication in 2.759 seconds (JVM running for 8.821)
-2020-07-17 11:29:11.676 [restartedMain] INFO  zuoyang.o2o.O2oApplication - Starting O2oApplication on DingZuoyangdeMacBook-Pro.local with PID 7374 (/Users/zuoyangding/IdeaProjects/o2o/target/classes started by zuoyangding in /Users/zuoyangding/IdeaProjects/o2o)
-2020-07-17 11:29:11.679 [restartedMain] INFO  zuoyang.o2o.O2oApplication - The following profiles are active: dev
-2020-07-17 11:29:13.406 [restartedMain] INFO  zuoyang.o2o.O2oApplication - Started O2oApplication in 1.944 seconds (JVM running for 7.73)
-2020-07-17 23:20:16.591 [main] INFO  z.o2o.service.serviceImp.HeadLineServiceImplTest - Starting HeadLineServiceImplTest on DingZuoyangdeMacBook-Pro.local with PID 8746 (started by zuoyangding in /Users/zuoyangding/IdeaProjects/o2o)
-2020-07-17 23:20:16.592 [main] INFO  z.o2o.service.serviceImp.HeadLineServiceImplTest - The following profiles are active: dev
-2020-07-17 23:27:44.726 [main] INFO  z.o2o.service.serviceImp.HeadLineServiceImplTest - Starting HeadLineServiceImplTest on DingZuoyangdeMacBook-Pro.local with PID 8917 (started by zuoyangding in /Users/zuoyangding/IdeaProjects/o2o)
-2020-07-17 23:27:44.727 [main] INFO  z.o2o.service.serviceImp.HeadLineServiceImplTest - The following profiles are active: dev
-2020-07-17 23:27:48.056 [main] INFO  z.o2o.service.serviceImp.HeadLineServiceImplTest - Started HeadLineServiceImplTest in 3.695 seconds (JVM running for 5.378)
-2020-07-17 23:28:29.757 [main] INFO  z.o2o.service.serviceImp.HeadLineServiceImplTest - Starting HeadLineServiceImplTest on DingZuoyangdeMacBook-Pro.local with PID 8929 (started by zuoyangding in /Users/zuoyangding/IdeaProjects/o2o)
-2020-07-17 23:28:29.758 [main] INFO  z.o2o.service.serviceImp.HeadLineServiceImplTest - The following profiles are active: dev
-2020-07-17 23:28:32.288 [main] INFO  z.o2o.service.serviceImp.HeadLineServiceImplTest - Started HeadLineServiceImplTest in 2.913 seconds (JVM running for 4.433)
-2020-07-17 23:28:51.604 [restartedMain] INFO  zuoyang.o2o.O2oApplication - Starting O2oApplication on DingZuoyangdeMacBook-Pro.local with PID 8931 (/Users/zuoyangding/IdeaProjects/o2o/target/classes started by zuoyangding in /Users/zuoyangding/IdeaProjects/o2o)
-2020-07-17 23:28:51.607 [restartedMain] INFO  zuoyang.o2o.O2oApplication - The following profiles are active: dev
-2020-07-17 23:28:53.362 [restartedMain] INFO  zuoyang.o2o.O2oApplication - Started O2oApplication in 1.979 seconds (JVM running for 7.768)
-2020-07-17 23:45:26.457 [restartedMain] INFO  zuoyang.o2o.O2oApplication - Starting O2oApplication on DingZuoyangdeMacBook-Pro.local with PID 9060 (/Users/zuoyangding/IdeaProjects/o2o/target/classes started by zuoyangding in /Users/zuoyangding/IdeaProjects/o2o)
-2020-07-17 23:45:26.460 [restartedMain] INFO  zuoyang.o2o.O2oApplication - The following profiles are active: dev
-2020-07-17 23:45:28.462 [restartedMain] INFO  zuoyang.o2o.O2oApplication - Started O2oApplication in 2.283 seconds (JVM running for 3.409)
+2020-07-18 10:44:16.949 [main] INFO  z.o.service.serviceImp.ShopCategoryServiceImplTest - Starting ShopCategoryServiceImplTest on DingZuoyangdeMacBook-Pro.local with PID 9959 (started by zuoyangding in /Users/zuoyangding/IdeaProjects/o2o)
+2020-07-18 10:44:16.953 [main] INFO  z.o.service.serviceImp.ShopCategoryServiceImplTest - The following profiles are active: dev
+2020-07-18 10:44:19.605 [main] INFO  z.o.service.serviceImp.ShopCategoryServiceImplTest - Started ShopCategoryServiceImplTest in 7.968 seconds (JVM running for 9.344)
+2020-07-18 10:44:36.671 [main] INFO  z.o.service.serviceImp.ShopCategoryServiceImplTest - Starting ShopCategoryServiceImplTest on DingZuoyangdeMacBook-Pro.local with PID 9963 (started by zuoyangding in /Users/zuoyangding/IdeaProjects/o2o)
+2020-07-18 10:44:36.672 [main] INFO  z.o.service.serviceImp.ShopCategoryServiceImplTest - The following profiles are active: dev
+2020-07-18 10:44:38.837 [main] INFO  z.o.service.serviceImp.ShopCategoryServiceImplTest - Started ShopCategoryServiceImplTest in 7.442 seconds (JVM running for 8.867)
+2020-07-18 10:48:30.193 [main] INFO  z.o.service.serviceImp.ShopCategoryServiceImplTest - Starting ShopCategoryServiceImplTest on DingZuoyangdeMacBook-Pro.local with PID 9969 (started by zuoyangding in /Users/zuoyangding/IdeaProjects/o2o)
+2020-07-18 10:48:30.193 [main] INFO  z.o.service.serviceImp.ShopCategoryServiceImplTest - The following profiles are active: dev
+2020-07-18 10:48:32.250 [main] INFO  z.o.service.serviceImp.ShopCategoryServiceImplTest - Started ShopCategoryServiceImplTest in 7.415 seconds (JVM running for 8.94)
+2020-07-18 10:49:01.958 [main] INFO  z.o.service.serviceImp.ShopCategoryServiceImplTest - Starting ShopCategoryServiceImplTest on DingZuoyangdeMacBook-Pro.local with PID 9972 (started by zuoyangding in /Users/zuoyangding/IdeaProjects/o2o)
+2020-07-18 10:49:01.959 [main] INFO  z.o.service.serviceImp.ShopCategoryServiceImplTest - The following profiles are active: dev
+2020-07-18 10:49:04.052 [main] INFO  z.o.service.serviceImp.ShopCategoryServiceImplTest - Started ShopCategoryServiceImplTest in 7.404 seconds (JVM running for 8.833)
+2020-07-18 10:49:30.944 [main] INFO  z.o.service.serviceImp.ShopCategoryServiceImplTest - Starting ShopCategoryServiceImplTest on DingZuoyangdeMacBook-Pro.local with PID 9975 (started by zuoyangding in /Users/zuoyangding/IdeaProjects/o2o)
+2020-07-18 10:49:30.945 [main] INFO  z.o.service.serviceImp.ShopCategoryServiceImplTest - The following profiles are active: dev
+2020-07-18 10:49:33.178 [main] INFO  z.o.service.serviceImp.ShopCategoryServiceImplTest - Started ShopCategoryServiceImplTest in 7.512 seconds (JVM running for 8.77)
+2020-07-18 10:50:03.497 [main] INFO  z.o.service.serviceImp.ShopCategoryServiceImplTest - Starting ShopCategoryServiceImplTest on DingZuoyangdeMacBook-Pro.local with PID 9978 (started by zuoyangding in /Users/zuoyangding/IdeaProjects/o2o)
+2020-07-18 10:50:03.498 [main] INFO  z.o.service.serviceImp.ShopCategoryServiceImplTest - The following profiles are active: dev
+2020-07-18 10:50:05.595 [main] INFO  z.o.service.serviceImp.ShopCategoryServiceImplTest - Started ShopCategoryServiceImplTest in 7.415 seconds (JVM running for 8.771)
+2020-07-18 10:52:28.361 [main] INFO  z.o.service.serviceImp.ShopCategoryServiceImplTest - Starting ShopCategoryServiceImplTest on DingZuoyangdeMacBook-Pro.local with PID 9985 (started by zuoyangding in /Users/zuoyangding/IdeaProjects/o2o)
+2020-07-18 10:52:28.362 [main] INFO  z.o.service.serviceImp.ShopCategoryServiceImplTest - The following profiles are active: dev
+2020-07-18 10:52:30.498 [main] INFO  z.o.service.serviceImp.ShopCategoryServiceImplTest - Started ShopCategoryServiceImplTest in 7.405 seconds (JVM running for 8.679)
+2020-07-18 10:53:00.596 [restartedMain] INFO  zuoyang.o2o.O2oApplication - Starting O2oApplication on DingZuoyangdeMacBook-Pro.local with PID 9987 (/Users/zuoyangding/IdeaProjects/o2o/target/classes started by zuoyangding in /Users/zuoyangding/IdeaProjects/o2o)
+2020-07-18 10:53:00.599 [restartedMain] INFO  zuoyang.o2o.O2oApplication - The following profiles are active: dev
+2020-07-18 10:53:02.227 [restartedMain] INFO  zuoyang.o2o.O2oApplication - Started O2oApplication in 1.837 seconds (JVM running for 7.601)
