@@ -11,3 +11,17 @@
 2020-07-17 11:29:11.676 [restartedMain] INFO  zuoyang.o2o.O2oApplication - Starting O2oApplication on DingZuoyangdeMacBook-Pro.local with PID 7374 (/Users/zuoyangding/IdeaProjects/o2o/target/classes started by zuoyangding in /Users/zuoyangding/IdeaProjects/o2o)
 2020-07-17 11:29:11.679 [restartedMain] INFO  zuoyang.o2o.O2oApplication - The following profiles are active: dev
 2020-07-17 11:29:13.406 [restartedMain] INFO  zuoyang.o2o.O2oApplication - Started O2oApplication in 1.944 seconds (JVM running for 7.73)
+2020-07-17 23:20:16.591 [main] INFO  z.o2o.service.serviceImp.HeadLineServiceImplTest - Starting HeadLineServiceImplTest on DingZuoyangdeMacBook-Pro.local with PID 8746 (started by zuoyangding in /Users/zuoyangding/IdeaProjects/o2o)
+2020-07-17 23:20:16.592 [main] INFO  z.o2o.service.serviceImp.HeadLineServiceImplTest - The following profiles are active: dev
+2020-07-17 23:27:44.726 [main] INFO  z.o2o.service.serviceImp.HeadLineServiceImplTest - Starting HeadLineServiceImplTest on DingZuoyangdeMacBook-Pro.local with PID 8917 (started by zuoyangding in /Users/zuoyangding/IdeaProjects/o2o)
+2020-07-17 23:27:44.727 [main] INFO  z.o2o.service.serviceImp.HeadLineServiceImplTest - The following profiles are active: dev
+2020-07-17 23:27:48.056 [main] INFO  z.o2o.service.serviceImp.HeadLineServiceImplTest - Started HeadLineServiceImplTest in 3.695 seconds (JVM running for 5.378)
+2020-07-17 23:28:29.757 [main] INFO  z.o2o.service.serviceImp.HeadLineServiceImplTest - Starting HeadLineServiceImplTest on DingZuoyangdeMacBook-Pro.local with PID 8929 (started by zuoyangding in /Users/zuoyangding/IdeaProjects/o2o)
+2020-07-17 23:28:29.758 [main] INFO  z.o2o.service.serviceImp.HeadLineServiceImplTest - The following profiles are active: dev
+2020-07-17 23:28:32.288 [main] INFO  z.o2o.service.serviceImp.HeadLineServiceImplTest - Started HeadLineServiceImplTest in 2.913 seconds (JVM running for 4.433)
+2020-07-17 23:28:51.604 [restartedMain] INFO  zuoyang.o2o.O2oApplication - Starting O2oApplication on DingZuoyangdeMacBook-Pro.local with PID 8931 (/Users/zuoyangding/IdeaProjects/o2o/target/classes started by zuoyangding in /Users/zuoyangding/IdeaProjects/o2o)
+2020-07-17 23:28:51.607 [restartedMain] INFO  zuoyang.o2o.O2oApplication - The following profiles are active: dev
+2020-07-17 23:28:53.362 [restartedMain] INFO  zuoyang.o2o.O2oApplication - Started O2oApplication in 1.979 seconds (JVM running for 7.768)
+2020-07-17 23:45:26.457 [restartedMain] INFO  zuoyang.o2o.O2oApplication - Starting O2oApplication on DingZuoyangdeMacBook-Pro.local with PID 9060 (/Users/zuoyangding/IdeaProjects/o2o/target/classes started by zuoyangding in /Users/zuoyangding/IdeaProjects/o2o)
+2020-07-17 23:45:26.460 [restartedMain] INFO  zuoyang.o2o.O2oApplication - The following profiles are active: dev
+2020-07-17 23:45:28.462 [restartedMain] INFO  zuoyang.o2o.O2oApplication - Started O2oApplication in 2.283 seconds (JVM running for 3.409)
