@@ -52,7 +52,8 @@ public class RedisConfiguration {
 
     @Bean(name="jedisWritePool")
     public JedisPoolWriper createJedisPoolWriper() {
-        jedisPoolWriper = new JedisPoolWriper(jedisPoolConfig, hostName, port);
+        final String pw = DESUtil.getDecryptString(password);
+        jedisPoolWriper = new JedisPoolWriper(jedisPoolConfig, hostName, port, pw);
         return jedisPoolWriper;
     }
 

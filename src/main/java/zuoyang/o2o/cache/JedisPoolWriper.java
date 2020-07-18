@@ -20,9 +20,10 @@ public class JedisPoolWriper {
      * @param host
      * @param port
      */
-    public JedisPoolWriper(final JedisPoolConfig jedisPoolConfig, final String host, final int port) {
+    public JedisPoolWriper(final JedisPoolConfig jedisPoolConfig, final String host, final int port,
+                           final String pw) {
         try {
-            jedisPool = new JedisPool(jedisPoolConfig, host, port);
+            jedisPool = new JedisPool(jedisPoolConfig, host, port, 2000, pw);
         } catch (Exception e) {
             log.error("create jedis pool ");
             e.printStackTrace();
