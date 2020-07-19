@@ -262,3 +262,35 @@
 2020-07-18 10:59:09.241 [http-nio-8080-exec-4] DEBUG zuoyang.o2o.service.serviceImp.AreaServiceImpl - get area list from redis.....
 2020-07-18 10:59:22.299 [http-nio-8080-exec-7] DEBUG z.o2o.service.serviceImp.ShopCategoryServiceImpl - get value from redis........
 2020-07-18 10:59:22.301 [http-nio-8080-exec-7] DEBUG zuoyang.o2o.service.serviceImp.AreaServiceImpl - get area list from redis.....
+2020-07-18 16:39:29.663 [main] DEBUG zuoyang.o2o.service.serviceImp.AreaServiceImplTest - Running with Spring Boot v2.3.0.RELEASE, Spring v5.2.6.RELEASE
+2020-07-18 16:39:32.858 [main] DEBUG zuoyang.o2o.service.serviceImp.CacheServiceImpl - clean the cache with keyPrefix: areaList
+2020-07-18 16:39:32.887 [main] DEBUG zuoyang.o2o.service.serviceImp.AreaServiceImpl - get area list from mysql.....
+2020-07-18 16:39:33.401 [main] DEBUG zuoyang.o2o.dao.AreaDao.queryArea - ==>  Preparing: SELECT area_id, area_name, priority, create_time, last_edit_time FROM tb_area ORDER BY priority DESC 
+2020-07-18 16:39:33.458 [main] DEBUG zuoyang.o2o.dao.AreaDao.queryArea - ==> Parameters: 
+2020-07-18 16:39:33.503 [main] DEBUG zuoyang.o2o.dao.AreaDao.queryArea - <==      Total: 4
+2020-07-18 16:39:56.509 [main] DEBUG zuoyang.o2o.service.serviceImp.AreaServiceImplTest - Running with Spring Boot v2.3.0.RELEASE, Spring v5.2.6.RELEASE
+2020-07-18 16:39:58.965 [main] DEBUG zuoyang.o2o.service.serviceImp.AreaServiceImpl - get area list from redis.....
+2020-07-18 21:48:30.633 [main] DEBUG z.o2o.service.serviceImp.HeadLineServiceImplTest - Running with Spring Boot v2.3.0.RELEASE, Spring v5.2.6.RELEASE
+2020-07-18 21:48:35.247 [main] DEBUG zuoyang.o2o.service.serviceImp.CacheServiceImpl - clean the cache with keyPrefix: headlineList
+2020-07-18 21:48:35.276 [main] DEBUG zuoyang.o2o.service.serviceImp.HeadLineServiceImpl - read value from mysql..........
+2020-07-18 21:48:35.869 [main] DEBUG zuoyang.o2o.dao.HeadLineDao.queryHeadLineList - ==>  Preparing: SELECT line_id, line_img, line_name, line_link, priority, enable_status, create_time, last_edit_time FROM tb_head_line WHERE enable_status = ? ORDER BY priority DESC 
+2020-07-18 21:48:35.916 [main] DEBUG zuoyang.o2o.dao.HeadLineDao.queryHeadLineList - ==> Parameters: 1(Integer)
+2020-07-18 21:48:35.963 [main] DEBUG zuoyang.o2o.dao.HeadLineDao.queryHeadLineList - <==      Total: 3
+2020-07-18 21:48:54.741 [main] DEBUG z.o2o.service.serviceImp.HeadLineServiceImplTest - Running with Spring Boot v2.3.0.RELEASE, Spring v5.2.6.RELEASE
+2020-07-18 21:48:57.685 [main] DEBUG zuoyang.o2o.service.serviceImp.HeadLineServiceImpl - read value from redis...............
+2020-07-18 21:53:51.148 [main] DEBUG z.o.service.serviceImp.ShopCategoryServiceImplTest - Running with Spring Boot v2.3.0.RELEASE, Spring v5.2.6.RELEASE
+2020-07-18 21:53:53.770 [main] DEBUG zuoyang.o2o.service.serviceImp.CacheServiceImpl - clean the cache with keyPrefix: shopCategoryList
+2020-07-18 21:53:53.804 [main] DEBUG z.o2o.service.serviceImp.ShopCategoryServiceImpl - get shop list from mysql.....
+2020-07-18 21:53:54.321 [main] DEBUG zuoyang.o2o.dao.ShopCategoryDao.queryShopCategory - ==>  Preparing: SELECT shop_category_id, shop_category_name, shop_category_desc, shop_category_img, create_time, last_edit_time, parent_id, priority FROM tb_shop_category WHERE parent_id is null ORDER BY priority DESC 
+2020-07-18 21:53:54.387 [main] DEBUG zuoyang.o2o.dao.ShopCategoryDao.queryShopCategory - ==> Parameters: 
+2020-07-18 21:53:54.443 [main] DEBUG zuoyang.o2o.dao.ShopCategoryDao.queryShopCategory - <==      Total: 5
+2020-07-18 21:53:54.512 [main] DEBUG zuoyang.o2o.service.serviceImp.CacheServiceImpl - clean the cache with keyPrefix: shopCategoryList
+2020-07-18 21:53:54.513 [main] DEBUG z.o2o.service.serviceImp.ShopCategoryServiceImpl - get shop list from mysql.....
+2020-07-18 21:53:54.522 [main] DEBUG zuoyang.o2o.dao.ShopCategoryDao.queryShopCategory - ==>  Preparing: SELECT shop_category_id, shop_category_name, shop_category_desc, shop_category_img, create_time, last_edit_time, parent_id, priority FROM tb_shop_category WHERE parent_id is not null and parent_id=? ORDER BY priority DESC 
+2020-07-18 21:53:54.523 [main] DEBUG zuoyang.o2o.dao.ShopCategoryDao.queryShopCategory - ==> Parameters: 4(Long)
+2020-07-18 21:53:54.525 [main] DEBUG zuoyang.o2o.dao.ShopCategoryDao.queryShopCategory - <==      Total: 1
+2020-07-18 21:53:54.531 [main] DEBUG zuoyang.o2o.service.serviceImp.CacheServiceImpl - clean the cache with keyPrefix: shopCategoryList
+2020-07-18 21:53:54.532 [main] DEBUG z.o2o.service.serviceImp.ShopCategoryServiceImpl - get shop list from mysql.....
+2020-07-18 21:53:54.533 [main] DEBUG zuoyang.o2o.dao.ShopCategoryDao.queryShopCategory - ==>  Preparing: SELECT shop_category_id, shop_category_name, shop_category_desc, shop_category_img, create_time, last_edit_time, parent_id, priority FROM tb_shop_category WHERE parent_id is not null ORDER BY priority DESC 
+2020-07-18 21:53:54.533 [main] DEBUG zuoyang.o2o.dao.ShopCategoryDao.queryShopCategory - ==> Parameters: 
+2020-07-18 21:53:54.536 [main] DEBUG zuoyang.o2o.dao.ShopCategoryDao.queryShopCategory - <==      Total: 5
