@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="zuoyang.o2o.dao.LocalAuthDao">
+    <resultMap id="localAuthMap" type="zuoyang.o2o.entity.LocalAuth">
+        <id column="local_auth_id" property="localAuthId"/>
+        <result column="username" property="username"/>
+        <result column="password" property="password"/>
+        <result column="create_time" property="createTime"/>
+        <result column="last_edit_time" property="lastEditTime"/>
+        <association property="personInfo" column="user_id" javaType="zuoyang.o2o.entity.PersonInfo">
+            <id column="user_id" property="userId"/>
+            <result column="name" property="name"/>
+            <result column="profile_img" property="profileImg"/>
+            <result column="email" property="email"/>
+            <result column="gender" property="gender"/>
+            <result column="user_status" property="userStatus"/>
+            <result column="user_type" property="userType"/>
+            <result column="create_time" property="createTime"/>
+            <result column="last_edit_time" property="lastEditTime"/>
+        </association>
+    </resultMap>
+
+    <select id="queryLocalByUserNameAndPassword" resultType="localAuthMap" parameterType="String">
+        SELECT
+            l.local_auth_id, l.password, l.username, l.create_time, l.last_edit_time,
+            p.user_id, p.name, p.profile_img, p.email, p.gender, p.user_status, p.user_type, p.create_time,
+            p.last_edit_time
+        FROM
+            tb_local_auth as l
+        LEFT JOIN
+            tb_person_info as p
+        ON
+            l.user_id=p.user_id
+        WHERE
+            l.passord=#{password} AND l.username=#{username}
+    </select>
+
+    <select id="queryLocalByUserId" resultType="localAuthMap" parameterType="Long">
+        SELECT
+            l.local_auth_id, l.password, l.username, l.create_time, l.last_edit_time,
+            p.user_id, p.name, p.profile_img, p.email, p.gender, p.user_status, p.user_type, p.create_time,
+            p.last_edit_time
+        FROM
+            tb_local_auth as l
+        LEFT JOIN
+            tb_person_info as p
+        ON
+            l.user_id=p.user_id
+        WHERE
+            l.user_id=#{user_id}
+    </select>
+
+    <insert id="insertLocalAuth" keyColumn="local_auth_id" useGeneratedKeys="true"
+            parameterType="zuoyang.o2o.entity.LocalAuth" keyProperty="localAuthId">
+        INSERT INTO
+            tb_local_auth(password, username, user_id, create_time, last_edit_time)
+        VALUES
+            (#{password}, #{username}, #{personInfo.userId}, #{createTime}, #{lastEditTime})
+    </insert>
+
+    <update id="updateLocalAuth">
+        UPDATE
+            tb_local_auth
+        <set>
+            <if test="newPassword!=null">password=#{newPassword},</if>
+            <if test="lastEditTime!=null">last_edit_time=#{last_edit_time}</if>
+        </set>
+        WHERE
+            user_id=#{userId} AND username=#{username} AND password=#{password}
+    </update>
+</mapper>

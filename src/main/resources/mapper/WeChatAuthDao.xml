@@ -5,8 +5,8 @@
 <mapper namespace="zuoyang.o2o.dao.WeChatAuthDao">
     <resultMap id="weChatAuthMap" type="zuoyang.o2o.entity.WeChatAuth">
         <id column="wechat_auth_id" property="wechatAuthId"/>
-        <id column="open_id" property="openId"/>
-        <id column="create_time" property="createTime"/>
+        <result column="open_id" property="openId"/>
+        <result column="create_time" property="createTime"/>
         <association property="personInfo" column="user_id" javaType="zuoyang.o2o.entity.PersonInfo">
             <id column="user_id" property="userId"/>
             <result column="name" property="name"/>
