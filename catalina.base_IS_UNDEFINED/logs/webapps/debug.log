@@ -1,9 +1,73 @@
-2020-07-20 00:00:12.046 [restartedMain] DEBUG zuoyang.o2o.O2oApplication - Running with Spring Boot v2.3.0.RELEASE, Spring v5.2.6.RELEASE
-2020-07-20 00:02:23.215 [restartedMain] DEBUG zuoyang.o2o.O2oApplication - Running with Spring Boot v2.3.0.RELEASE, Spring v5.2.6.RELEASE
-2020-07-20 00:14:22.297 [restartedMain] DEBUG zuoyang.o2o.O2oApplication - Running with Spring Boot v2.3.0.RELEASE, Spring v5.2.6.RELEASE
-2020-07-20 00:23:03.271 [restartedMain] DEBUG zuoyang.o2o.O2oApplication - Running with Spring Boot v2.3.0.RELEASE, Spring v5.2.6.RELEASE
-2020-07-20 00:30:10.285 [restartedMain] DEBUG zuoyang.o2o.O2oApplication - Running with Spring Boot v2.3.0.RELEASE, Spring v5.2.6.RELEASE
-2020-07-20 00:59:12.450 [restartedMain] DEBUG zuoyang.o2o.O2oApplication - Running with Spring Boot v2.3.0.RELEASE, Spring v5.2.6.RELEASE
-2020-07-20 01:06:22.224 [restartedMain] DEBUG zuoyang.o2o.O2oApplication - Running with Spring Boot v2.3.0.RELEASE, Spring v5.2.6.RELEASE
-2020-07-20 01:26:10.357 [restartedMain] DEBUG zuoyang.o2o.O2oApplication - Running with Spring Boot v2.3.0.RELEASE, Spring v5.2.6.RELEASE
-2020-07-20 01:27:32.587 [restartedMain] DEBUG zuoyang.o2o.O2oApplication - Running with Spring Boot v2.3.0.RELEASE, Spring v5.2.6.RELEASE
+2020-07-23 09:11:55.466 [main] DEBUG zuoyang.o2o.dao.LocalAuthDaoTest - Running with Spring Boot v2.3.0.RELEASE, Spring v5.2.6.RELEASE
+2020-07-23 09:12:00.146 [main] DEBUG zuoyang.o2o.dao.PersonInfoDao.queryPersonInfoById - ==>  Preparing: SELECT user_id, name, profile_img, email, gender, user_status, user_type, create_time, last_edit_time FROM tb_person_info WHERE user_id = ? 
+2020-07-23 09:12:00.216 [main] DEBUG zuoyang.o2o.dao.PersonInfoDao.queryPersonInfoById - ==> Parameters: 2(Long)
+2020-07-23 09:12:00.261 [main] DEBUG zuoyang.o2o.dao.PersonInfoDao.queryPersonInfoById - <==      Total: 1
+2020-07-23 09:14:31.179 [main] DEBUG zuoyang.o2o.dao.LocalAuthDaoTest - Running with Spring Boot v2.3.0.RELEASE, Spring v5.2.6.RELEASE
+2020-07-23 09:14:34.213 [main] DEBUG zuoyang.o2o.dao.PersonInfoDao.queryPersonInfoById - ==>  Preparing: SELECT user_id, name, profile_img, email, gender, user_status, user_type, create_time, last_edit_time FROM tb_person_info WHERE user_id = ? 
+2020-07-23 09:14:34.276 [main] DEBUG zuoyang.o2o.dao.PersonInfoDao.queryPersonInfoById - ==> Parameters: 2(Long)
+2020-07-23 09:14:34.316 [main] DEBUG zuoyang.o2o.dao.PersonInfoDao.queryPersonInfoById - <==      Total: 1
+2020-07-23 09:14:34.323 [main] DEBUG zuoyang.o2o.dao.LocalAuthDao.insertLocalAuth - ==>  Preparing: INSERT INTO tb_local_auth(password, username, user_id, create_time, last_edit_time) VALUES (?, ?, ?, ?, ?) 
+2020-07-23 09:14:34.327 [main] DEBUG zuoyang.o2o.dao.LocalAuthDao.insertLocalAuth - ==> Parameters: 123456(String), test user 1(String), 2(Long), 2020-07-23 09:14:34.323(Timestamp), 2020-07-23 09:14:34.323(Timestamp)
+2020-07-23 09:14:34.333 [main] DEBUG zuoyang.o2o.dao.LocalAuthDao.insertLocalAuth - <==    Updates: 1
+2020-07-23 09:22:32.985 [main] DEBUG zuoyang.o2o.dao.LocalAuthDaoTest - Running with Spring Boot v2.3.0.RELEASE, Spring v5.2.6.RELEASE
+2020-07-23 09:22:35.911 [main] DEBUG z.o.d.L.queryLocalAuthByUserNameAndPassWord - ==>  Preparing: SELECT l.local_auth_id, l.password, l.username, l.user_id, l.create_time, l.last_edit_time p.user_id, p.name, p.profile_img, p.email, p.gender, p.user_status, p.user_type, p.create_time, p.last_edit.time FROM tb_local_auth AS l LEFT JOIN tb_person_info AS p ON l.user_id=p.user_id WHERE l.username=? AND l.password=? 
+2020-07-23 09:22:35.973 [main] DEBUG z.o.d.L.queryLocalAuthByUserNameAndPassWord - ==> Parameters: test user 1(String), 123456(String)
+2020-07-23 09:25:06.646 [main] DEBUG zuoyang.o2o.dao.LocalAuthDaoTest - Running with Spring Boot v2.3.0.RELEASE, Spring v5.2.6.RELEASE
+2020-07-23 09:25:09.355 [main] DEBUG z.o.d.L.queryLocalAuthByUserNameAndPassWord - ==>  Preparing: SELECT l.local_auth_id, l.password, l.username, l.user_id, l.create_time, l.last_edit_time, p.user_id, p.name, p.profile_img, p.email, p.gender, p.user_status, p.user_type, p.create_time, p.last_edit.time FROM tb_local_auth AS l LEFT JOIN tb_person_info AS p ON l.user_id=p.user_id WHERE l.username=? AND l.password=? 
+2020-07-23 09:25:09.416 [main] DEBUG z.o.d.L.queryLocalAuthByUserNameAndPassWord - ==> Parameters: test user 1(String), 123456(String)
+2020-07-23 09:25:48.158 [main] DEBUG zuoyang.o2o.dao.LocalAuthDaoTest - Running with Spring Boot v2.3.0.RELEASE, Spring v5.2.6.RELEASE
+2020-07-23 09:25:50.798 [main] DEBUG z.o.d.L.queryLocalAuthByUserNameAndPassWord - ==>  Preparing: SELECT l.local_auth_id, l.password, l.username, l.user_id, l.create_time, l.last_edit_time, p.user_id, p.name, p.profile_img, p.email, p.gender, p.user_status, p.user_type, p.create_time, p.last_edit_time FROM tb_local_auth AS l LEFT JOIN tb_person_info AS p ON l.user_id=p.user_id WHERE l.username=? AND l.password=? 
+2020-07-23 09:25:50.847 [main] DEBUG z.o.d.L.queryLocalAuthByUserNameAndPassWord - ==> Parameters: test user 1(String), 123456(String)
+2020-07-23 09:26:49.967 [main] DEBUG zuoyang.o2o.dao.LocalAuthDaoTest - Running with Spring Boot v2.3.0.RELEASE, Spring v5.2.6.RELEASE
+2020-07-23 09:26:52.839 [main] DEBUG z.o.d.L.queryLocalAuthByUserNameAndPassWord - ==>  Preparing: SELECT l.local_auth_id, l.password, l.username, l.user_id, l.create_time, l.last_edit_time, p.user_id, p.name, p.profile_img, p.email, p.gender, p.user_status, p.user_type, p.create_time, p.last_edit_time FROM tb_local_auth AS l LEFT JOIN tb_person_info AS p ON l.user_id=p.user_id WHERE l.username=? AND l.password=? 
+2020-07-23 09:26:52.900 [main] DEBUG z.o.d.L.queryLocalAuthByUserNameAndPassWord - ==> Parameters: test user 1(String), 123456(String)
+2020-07-23 09:26:52.934 [main] DEBUG z.o.d.L.queryLocalAuthByUserNameAndPassWord - <==      Total: 1
+2020-07-23 09:30:42.485 [main] DEBUG zuoyang.o2o.dao.LocalAuthDaoTest - Running with Spring Boot v2.3.0.RELEASE, Spring v5.2.6.RELEASE
+2020-07-23 09:30:45.638 [main] DEBUG z.o2o.dao.LocalAuthDao.queryLocalAuthByUserId - ==>  Preparing: SELECT l.local_auth_id, l.password, l.username, l.user_id, l.create_time, l.last_edit_time p.user_id, p.name, p.profile_img, p.email, p.gender, p.user_status, p.user_type, p.create_time, p.last_edit.time FROM tb_local_auth AS l LEFT JOIN tb_person_info AS p ON l.user_id=p.user_id WHERE l.user_id=? 
+2020-07-23 09:30:45.703 [main] DEBUG z.o2o.dao.LocalAuthDao.queryLocalAuthByUserId - ==> Parameters: 2(Long)
+2020-07-23 09:31:07.989 [main] DEBUG zuoyang.o2o.dao.LocalAuthDaoTest - Running with Spring Boot v2.3.0.RELEASE, Spring v5.2.6.RELEASE
+2020-07-23 09:31:11.111 [main] DEBUG z.o2o.dao.LocalAuthDao.queryLocalAuthByUserId - ==>  Preparing: SELECT l.local_auth_id, l.password, l.username, l.user_id, l.create_time, l.last_edit_time, p.user_id, p.name, p.profile_img, p.email, p.gender, p.user_status, p.user_type, p.create_time, p.last_edit.time FROM tb_local_auth AS l LEFT JOIN tb_person_info AS p ON l.user_id=p.user_id WHERE l.user_id=? 
+2020-07-23 09:31:11.173 [main] DEBUG z.o2o.dao.LocalAuthDao.queryLocalAuthByUserId - ==> Parameters: 2(Long)
+2020-07-23 09:31:39.123 [main] DEBUG zuoyang.o2o.dao.LocalAuthDaoTest - Running with Spring Boot v2.3.0.RELEASE, Spring v5.2.6.RELEASE
+2020-07-23 09:31:41.846 [main] DEBUG z.o2o.dao.LocalAuthDao.queryLocalAuthByUserId - ==>  Preparing: SELECT l.local_auth_id, l.password, l.username, l.user_id, l.create_time, l.last_edit_time, p.user_id, p.name, p.profile_img, p.email, p.gender, p.user_status, p.user_type, p.create_time, p.last_edit_time FROM tb_local_auth AS l LEFT JOIN tb_person_info AS p ON l.user_id=p.user_id WHERE l.user_id=? 
+2020-07-23 09:31:41.911 [main] DEBUG z.o2o.dao.LocalAuthDao.queryLocalAuthByUserId - ==> Parameters: 2(Long)
+2020-07-23 09:31:41.945 [main] DEBUG z.o2o.dao.LocalAuthDao.queryLocalAuthByUserId - <==      Total: 1
+2020-07-23 09:51:26.333 [main] DEBUG zuoyang.o2o.dao.LocalAuthDaoTest - Running with Spring Boot v2.3.0.RELEASE, Spring v5.2.6.RELEASE
+2020-07-23 09:51:29.390 [main] DEBUG zuoyang.o2o.dao.LocalAuthDao.updateLocalAuth - ==>  Preparing: UPDATE tb_local_auth SET password=? last_edit_time=? WHERE user_id=? AND username=? AND password=? 
+2020-07-23 09:51:29.453 [main] DEBUG zuoyang.o2o.dao.LocalAuthDao.updateLocalAuth - ==> Parameters: 654321(String), 2020-07-23 09:51:28.925(Timestamp), 2(Long), test user 1(String), 123456(String)
+2020-07-23 09:53:34.605 [main] DEBUG zuoyang.o2o.dao.LocalAuthDaoTest - Running with Spring Boot v2.3.0.RELEASE, Spring v5.2.6.RELEASE
+2020-07-23 09:53:37.317 [main] DEBUG zuoyang.o2o.dao.LocalAuthDao.updateLocalAuth - ==>  Preparing: UPDATE tb_local_auth SET password=?, last_edit_time=? WHERE user_id=? AND username=? AND password=? 
+2020-07-23 09:53:37.379 [main] DEBUG zuoyang.o2o.dao.LocalAuthDao.updateLocalAuth - ==> Parameters: 654321(String), 2020-07-23 09:53:36.893(Timestamp), 2(Long), test user 1(String), 123456(String)
+2020-07-23 09:53:37.385 [main] DEBUG zuoyang.o2o.dao.LocalAuthDao.updateLocalAuth - <==    Updates: 1
+2020-07-23 09:55:54.289 [main] DEBUG zuoyang.o2o.dao.LocalAuthDaoTest - Running with Spring Boot v2.3.0.RELEASE, Spring v5.2.6.RELEASE
+2020-07-23 09:55:57.065 [main] DEBUG zuoyang.o2o.dao.LocalAuthDao.updateLocalAuth - ==>  Preparing: UPDATE tb_local_auth SET password=? WHERE user_id=? AND username=? AND password=? 
+2020-07-23 09:55:57.124 [main] DEBUG zuoyang.o2o.dao.LocalAuthDao.updateLocalAuth - ==> Parameters: 654321(String), 2(Long), test user 1(String), 123456(String)
+2020-07-23 09:55:57.127 [main] DEBUG zuoyang.o2o.dao.LocalAuthDao.updateLocalAuth - <==    Updates: 0
+2020-07-23 09:56:40.888 [main] DEBUG zuoyang.o2o.dao.LocalAuthDaoTest - Running with Spring Boot v2.3.0.RELEASE, Spring v5.2.6.RELEASE
+2020-07-23 09:56:43.723 [main] DEBUG zuoyang.o2o.dao.LocalAuthDao.updateLocalAuth - ==>  Preparing: UPDATE tb_local_auth SET password=?, last_edit_time=? WHERE user_id=? AND username=? AND password=? 
+2020-07-23 09:56:43.786 [main] DEBUG zuoyang.o2o.dao.LocalAuthDao.updateLocalAuth - ==> Parameters: 654321(String), 2020-07-23 09:56:43.252(Timestamp), 2(Long), test user 1(String), 123456(String)
+2020-07-23 09:56:43.788 [main] DEBUG zuoyang.o2o.dao.LocalAuthDao.updateLocalAuth - <==    Updates: 0
+2020-07-23 09:57:18.445 [main] DEBUG zuoyang.o2o.dao.LocalAuthDaoTest - Running with Spring Boot v2.3.0.RELEASE, Spring v5.2.6.RELEASE
+2020-07-23 09:57:21.174 [main] DEBUG zuoyang.o2o.dao.LocalAuthDao.updateLocalAuth - ==>  Preparing: UPDATE tb_local_auth SET password=?, last_edit_time=? WHERE user_id=? AND username=? AND password=? 
+2020-07-23 09:57:21.240 [main] DEBUG zuoyang.o2o.dao.LocalAuthDao.updateLocalAuth - ==> Parameters: 6543210(String), 2020-07-23 09:57:20.734(Timestamp), 2(Long), test user 1(String), 123456(String)
+2020-07-23 09:57:21.242 [main] DEBUG zuoyang.o2o.dao.LocalAuthDao.updateLocalAuth - <==    Updates: 0
+2020-07-23 09:58:46.473 [main] DEBUG zuoyang.o2o.dao.LocalAuthDaoTest - Running with Spring Boot v2.3.0.RELEASE, Spring v5.2.6.RELEASE
+2020-07-23 09:58:49.263 [main] DEBUG zuoyang.o2o.dao.LocalAuthDao.updateLocalAuth - ==>  Preparing: UPDATE tb_local_auth SET password=?, last_edit_time=? WHERE user_id=? AND username=? AND password=? 
+2020-07-23 09:58:49.321 [main] DEBUG zuoyang.o2o.dao.LocalAuthDao.updateLocalAuth - ==> Parameters: 6543210(String), 2020-07-23 09:58:48.835(Timestamp), 2(Long), test user 1(String), 123456(String)
+2020-07-23 09:58:49.323 [main] DEBUG zuoyang.o2o.dao.LocalAuthDao.updateLocalAuth - <==    Updates: 0
+2020-07-23 10:11:36.251 [main] DEBUG zuoyang.o2o.dao.LocalAuthDaoTest - Running with Spring Boot v2.3.0.RELEASE, Spring v5.2.6.RELEASE
+2020-07-23 10:11:39.248 [main] DEBUG zuoyang.o2o.dao.LocalAuthDao.updateLocalAuth - ==>  Preparing: UPDATE tb_local_auth SET password=?, last_edit_time=? WHERE user_id=? AND username=? AND password=? 
+2020-07-23 10:11:39.306 [main] DEBUG zuoyang.o2o.dao.LocalAuthDao.updateLocalAuth - ==> Parameters: 6543210(String), 2020-07-23 10:11:38.792(Timestamp), 2(Long), test user 1(String), 123456(String)
+2020-07-23 10:11:39.309 [main] DEBUG zuoyang.o2o.dao.LocalAuthDao.updateLocalAuth - <==    Updates: 0
+2020-07-23 10:12:00.368 [main] DEBUG zuoyang.o2o.dao.LocalAuthDaoTest - Running with Spring Boot v2.3.0.RELEASE, Spring v5.2.6.RELEASE
+2020-07-23 10:12:03.241 [main] DEBUG zuoyang.o2o.dao.LocalAuthDao.updateLocalAuth - ==>  Preparing: UPDATE tb_local_auth SET password=?, last_edit_time=? WHERE user_id=? AND username=? AND password=? 
+2020-07-23 10:12:03.304 [main] DEBUG zuoyang.o2o.dao.LocalAuthDao.updateLocalAuth - ==> Parameters: 6543210(String), 2020-07-23 10:12:02.784(Timestamp), 2(Long), test user 1(String), 654321(String)
+2020-07-23 10:12:03.310 [main] DEBUG zuoyang.o2o.dao.LocalAuthDao.updateLocalAuth - <==    Updates: 1
+2020-07-23 10:12:30.827 [main] DEBUG zuoyang.o2o.dao.LocalAuthDaoTest - Running with Spring Boot v2.3.0.RELEASE, Spring v5.2.6.RELEASE
+2020-07-23 10:12:33.478 [main] DEBUG zuoyang.o2o.dao.LocalAuthDao.updateLocalAuth - ==>  Preparing: UPDATE tb_local_auth SET password=? WHERE user_id=? AND username=? AND password=? 
+2020-07-23 10:12:33.539 [main] DEBUG zuoyang.o2o.dao.LocalAuthDao.updateLocalAuth - ==> Parameters: 6543210(String), 2(Long), test user 1(String), 6543210(String)
+2020-07-23 10:12:33.543 [main] DEBUG zuoyang.o2o.dao.LocalAuthDao.updateLocalAuth - <==    Updates: 1
+2020-07-23 10:13:23.715 [main] DEBUG zuoyang.o2o.dao.LocalAuthDaoTest - Running with Spring Boot v2.3.0.RELEASE, Spring v5.2.6.RELEASE
+2020-07-23 10:13:26.527 [main] DEBUG zuoyang.o2o.dao.LocalAuthDao.updateLocalAuth - ==>  Preparing: UPDATE tb_local_auth SET password=?, last_edit_time=? WHERE user_id=? AND username=? AND password=? 
+2020-07-23 10:13:26.588 [main] DEBUG zuoyang.o2o.dao.LocalAuthDao.updateLocalAuth - ==> Parameters: 123456(String), 2020-07-23 10:13:26.087(Timestamp), 2(Long), test user 1(String), 6543210(String)
+2020-07-23 10:13:26.592 [main] DEBUG zuoyang.o2o.dao.LocalAuthDao.updateLocalAuth - <==    Updates: 1

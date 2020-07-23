@@ -1,18 +1,57 @@
-2020-07-20 00:00:12.042 [restartedMain] INFO  zuoyang.o2o.O2oApplication - Starting O2oApplication on DingZuoyangdeMacBook-Pro.local with PID 14188 (/Users/zuoyangding/IdeaProjects/o2o/target/classes started by zuoyangding in /Users/zuoyangding/IdeaProjects/o2o)
-2020-07-20 00:00:12.047 [restartedMain] INFO  zuoyang.o2o.O2oApplication - The following profiles are active: dev
-2020-07-20 00:02:23.212 [restartedMain] INFO  zuoyang.o2o.O2oApplication - Starting O2oApplication on DingZuoyangdeMacBook-Pro.local with PID 14215 (/Users/zuoyangding/IdeaProjects/o2o/target/classes started by zuoyangding in /Users/zuoyangding/IdeaProjects/o2o)
-2020-07-20 00:02:23.215 [restartedMain] INFO  zuoyang.o2o.O2oApplication - The following profiles are active: dev
-2020-07-20 00:14:22.294 [restartedMain] INFO  zuoyang.o2o.O2oApplication - Starting O2oApplication on DingZuoyangdeMacBook-Pro.local with PID 14263 (/Users/zuoyangding/IdeaProjects/o2o/target/classes started by zuoyangding in /Users/zuoyangding/IdeaProjects/o2o)
-2020-07-20 00:14:22.298 [restartedMain] INFO  zuoyang.o2o.O2oApplication - The following profiles are active: dev
-2020-07-20 00:23:03.268 [restartedMain] INFO  zuoyang.o2o.O2oApplication - Starting O2oApplication on DingZuoyangdeMacBook-Pro.local with PID 14327 (/Users/zuoyangding/IdeaProjects/o2o/target/classes started by zuoyangding in /Users/zuoyangding/IdeaProjects/o2o)
-2020-07-20 00:23:03.271 [restartedMain] INFO  zuoyang.o2o.O2oApplication - The following profiles are active: dev
-2020-07-20 00:30:10.282 [restartedMain] INFO  zuoyang.o2o.O2oApplication - Starting O2oApplication on DingZuoyangdeMacBook-Pro.local with PID 14349 (/Users/zuoyangding/IdeaProjects/o2o/target/classes started by zuoyangding in /Users/zuoyangding/IdeaProjects/o2o)
-2020-07-20 00:30:10.285 [restartedMain] INFO  zuoyang.o2o.O2oApplication - The following profiles are active: dev
-2020-07-20 00:59:12.448 [restartedMain] INFO  zuoyang.o2o.O2oApplication - Starting O2oApplication on DingZuoyangdeMacBook-Pro.local with PID 14439 (/Users/zuoyangding/IdeaProjects/o2o/target/classes started by zuoyangding in /Users/zuoyangding/IdeaProjects/o2o)
-2020-07-20 00:59:12.451 [restartedMain] INFO  zuoyang.o2o.O2oApplication - The following profiles are active: dev
-2020-07-20 01:06:22.221 [restartedMain] INFO  zuoyang.o2o.O2oApplication - Starting O2oApplication on DingZuoyangdeMacBook-Pro.local with PID 14444 (/Users/zuoyangding/IdeaProjects/o2o/target/classes started by zuoyangding in /Users/zuoyangding/IdeaProjects/o2o)
-2020-07-20 01:06:22.224 [restartedMain] INFO  zuoyang.o2o.O2oApplication - The following profiles are active: dev
-2020-07-20 01:26:10.355 [restartedMain] INFO  zuoyang.o2o.O2oApplication - Starting O2oApplication on DingZuoyangdeMacBook-Pro.local with PID 14551 (/Users/zuoyangding/IdeaProjects/o2o/target/classes started by zuoyangding in /Users/zuoyangding/IdeaProjects/o2o)
-2020-07-20 01:26:10.358 [restartedMain] INFO  zuoyang.o2o.O2oApplication - The following profiles are active: dev
-2020-07-20 01:27:32.585 [restartedMain] INFO  zuoyang.o2o.O2oApplication - Starting O2oApplication on DingZuoyangdeMacBook-Pro.local with PID 14564 (/Users/zuoyangding/IdeaProjects/o2o/target/classes started by zuoyangding in /Users/zuoyangding/IdeaProjects/o2o)
-2020-07-20 01:27:32.587 [restartedMain] INFO  zuoyang.o2o.O2oApplication - The following profiles are active: dev
+2020-07-23 09:11:55.461 [main] INFO  zuoyang.o2o.dao.LocalAuthDaoTest - Starting LocalAuthDaoTest on DingZuoyangdeMacBook-Pro.local with PID 3146 (started by zuoyangding in /Users/zuoyangding/IdeaProjects/o2o)
+2020-07-23 09:11:55.468 [main] INFO  zuoyang.o2o.dao.LocalAuthDaoTest - The following profiles are active: dev
+2020-07-23 09:11:59.280 [main] INFO  zuoyang.o2o.dao.LocalAuthDaoTest - Started LocalAuthDaoTest in 4.307 seconds (JVM running for 5.9)
+2020-07-23 09:14:31.179 [main] INFO  zuoyang.o2o.dao.LocalAuthDaoTest - Starting LocalAuthDaoTest on DingZuoyangdeMacBook-Pro.local with PID 3153 (started by zuoyangding in /Users/zuoyangding/IdeaProjects/o2o)
+2020-07-23 09:14:31.179 [main] INFO  zuoyang.o2o.dao.LocalAuthDaoTest - The following profiles are active: dev
+2020-07-23 09:14:33.381 [main] INFO  zuoyang.o2o.dao.LocalAuthDaoTest - Started LocalAuthDaoTest in 2.52 seconds (JVM running for 3.793)
+2020-07-23 09:22:32.985 [main] INFO  zuoyang.o2o.dao.LocalAuthDaoTest - Starting LocalAuthDaoTest on DingZuoyangdeMacBook-Pro.local with PID 3163 (started by zuoyangding in /Users/zuoyangding/IdeaProjects/o2o)
+2020-07-23 09:22:32.985 [main] INFO  zuoyang.o2o.dao.LocalAuthDaoTest - The following profiles are active: dev
+2020-07-23 09:22:35.120 [main] INFO  zuoyang.o2o.dao.LocalAuthDaoTest - Started LocalAuthDaoTest in 7.44 seconds (JVM running for 8.8)
+2020-07-23 09:25:06.646 [main] INFO  zuoyang.o2o.dao.LocalAuthDaoTest - Starting LocalAuthDaoTest on DingZuoyangdeMacBook-Pro.local with PID 3168 (started by zuoyangding in /Users/zuoyangding/IdeaProjects/o2o)
+2020-07-23 09:25:06.646 [main] INFO  zuoyang.o2o.dao.LocalAuthDaoTest - The following profiles are active: dev
+2020-07-23 09:25:08.666 [main] INFO  zuoyang.o2o.dao.LocalAuthDaoTest - Started LocalAuthDaoTest in 7.298 seconds (JVM running for 8.551)
+2020-07-23 09:25:48.158 [main] INFO  zuoyang.o2o.dao.LocalAuthDaoTest - Starting LocalAuthDaoTest on DingZuoyangdeMacBook-Pro.local with PID 3176 (started by zuoyangding in /Users/zuoyangding/IdeaProjects/o2o)
+2020-07-23 09:25:48.159 [main] INFO  zuoyang.o2o.dao.LocalAuthDaoTest - The following profiles are active: dev
+2020-07-23 09:25:50.165 [main] INFO  zuoyang.o2o.dao.LocalAuthDaoTest - Started LocalAuthDaoTest in 7.305 seconds (JVM running for 8.624)
+2020-07-23 09:26:49.966 [main] INFO  zuoyang.o2o.dao.LocalAuthDaoTest - Starting LocalAuthDaoTest on DingZuoyangdeMacBook-Pro.local with PID 3181 (started by zuoyangding in /Users/zuoyangding/IdeaProjects/o2o)
+2020-07-23 09:26:49.967 [main] INFO  zuoyang.o2o.dao.LocalAuthDaoTest - The following profiles are active: dev
+2020-07-23 09:26:52.085 [main] INFO  zuoyang.o2o.dao.LocalAuthDaoTest - Started LocalAuthDaoTest in 7.405 seconds (JVM running for 8.631)
+2020-07-23 09:30:42.485 [main] INFO  zuoyang.o2o.dao.LocalAuthDaoTest - Starting LocalAuthDaoTest on DingZuoyangdeMacBook-Pro.local with PID 3188 (started by zuoyangding in /Users/zuoyangding/IdeaProjects/o2o)
+2020-07-23 09:30:42.486 [main] INFO  zuoyang.o2o.dao.LocalAuthDaoTest - The following profiles are active: dev
+2020-07-23 09:30:44.781 [main] INFO  zuoyang.o2o.dao.LocalAuthDaoTest - Started LocalAuthDaoTest in 2.708 seconds (JVM running for 4.038)
+2020-07-23 09:31:07.988 [main] INFO  zuoyang.o2o.dao.LocalAuthDaoTest - Starting LocalAuthDaoTest on DingZuoyangdeMacBook-Pro.local with PID 3192 (started by zuoyangding in /Users/zuoyangding/IdeaProjects/o2o)
+2020-07-23 09:31:07.989 [main] INFO  zuoyang.o2o.dao.LocalAuthDaoTest - The following profiles are active: dev
+2020-07-23 09:31:10.283 [main] INFO  zuoyang.o2o.dao.LocalAuthDaoTest - Started LocalAuthDaoTest in 2.635 seconds (JVM running for 3.852)
+2020-07-23 09:31:39.122 [main] INFO  zuoyang.o2o.dao.LocalAuthDaoTest - Starting LocalAuthDaoTest on DingZuoyangdeMacBook-Pro.local with PID 3196 (started by zuoyangding in /Users/zuoyangding/IdeaProjects/o2o)
+2020-07-23 09:31:39.123 [main] INFO  zuoyang.o2o.dao.LocalAuthDaoTest - The following profiles are active: dev
+2020-07-23 09:31:41.186 [main] INFO  zuoyang.o2o.dao.LocalAuthDaoTest - Started LocalAuthDaoTest in 2.394 seconds (JVM running for 3.595)
+2020-07-23 09:51:26.332 [main] INFO  zuoyang.o2o.dao.LocalAuthDaoTest - Starting LocalAuthDaoTest on DingZuoyangdeMacBook-Pro.local with PID 3244 (started by zuoyangding in /Users/zuoyangding/IdeaProjects/o2o)
+2020-07-23 09:51:26.334 [main] INFO  zuoyang.o2o.dao.LocalAuthDaoTest - The following profiles are active: dev
+2020-07-23 09:51:28.563 [main] INFO  zuoyang.o2o.dao.LocalAuthDaoTest - Started LocalAuthDaoTest in 7.585 seconds (JVM running for 9.011)
+2020-07-23 09:53:34.604 [main] INFO  zuoyang.o2o.dao.LocalAuthDaoTest - Starting LocalAuthDaoTest on DingZuoyangdeMacBook-Pro.local with PID 3250 (started by zuoyangding in /Users/zuoyangding/IdeaProjects/o2o)
+2020-07-23 09:53:34.605 [main] INFO  zuoyang.o2o.dao.LocalAuthDaoTest - The following profiles are active: dev
+2020-07-23 09:53:36.628 [main] INFO  zuoyang.o2o.dao.LocalAuthDaoTest - Started LocalAuthDaoTest in 2.312 seconds (JVM running for 3.451)
+2020-07-23 09:55:54.289 [main] INFO  zuoyang.o2o.dao.LocalAuthDaoTest - Starting LocalAuthDaoTest on DingZuoyangdeMacBook-Pro.local with PID 3258 (started by zuoyangding in /Users/zuoyangding/IdeaProjects/o2o)
+2020-07-23 09:55:54.290 [main] INFO  zuoyang.o2o.dao.LocalAuthDaoTest - The following profiles are active: dev
+2020-07-23 09:55:56.356 [main] INFO  zuoyang.o2o.dao.LocalAuthDaoTest - Started LocalAuthDaoTest in 7.342 seconds (JVM running for 8.594)
+2020-07-23 09:56:40.888 [main] INFO  zuoyang.o2o.dao.LocalAuthDaoTest - Starting LocalAuthDaoTest on DingZuoyangdeMacBook-Pro.local with PID 3262 (started by zuoyangding in /Users/zuoyangding/IdeaProjects/o2o)
+2020-07-23 09:56:40.888 [main] INFO  zuoyang.o2o.dao.LocalAuthDaoTest - The following profiles are active: dev
+2020-07-23 09:56:42.971 [main] INFO  zuoyang.o2o.dao.LocalAuthDaoTest - Started LocalAuthDaoTest in 7.409 seconds (JVM running for 8.756)
+2020-07-23 09:57:18.444 [main] INFO  zuoyang.o2o.dao.LocalAuthDaoTest - Starting LocalAuthDaoTest on DingZuoyangdeMacBook-Pro.local with PID 3266 (started by zuoyangding in /Users/zuoyangding/IdeaProjects/o2o)
+2020-07-23 09:57:18.445 [main] INFO  zuoyang.o2o.dao.LocalAuthDaoTest - The following profiles are active: dev
+2020-07-23 09:57:20.456 [main] INFO  zuoyang.o2o.dao.LocalAuthDaoTest - Started LocalAuthDaoTest in 7.296 seconds (JVM running for 8.566)
+2020-07-23 09:58:46.473 [main] INFO  zuoyang.o2o.dao.LocalAuthDaoTest - Starting LocalAuthDaoTest on DingZuoyangdeMacBook-Pro.local with PID 3269 (started by zuoyangding in /Users/zuoyangding/IdeaProjects/o2o)
+2020-07-23 09:58:46.474 [main] INFO  zuoyang.o2o.dao.LocalAuthDaoTest - The following profiles are active: dev
+2020-07-23 09:58:48.568 [main] INFO  zuoyang.o2o.dao.LocalAuthDaoTest - Started LocalAuthDaoTest in 7.36 seconds (JVM running for 8.515)
+2020-07-23 10:11:36.250 [main] INFO  zuoyang.o2o.dao.LocalAuthDaoTest - Starting LocalAuthDaoTest on DingZuoyangdeMacBook-Pro.local with PID 3352 (started by zuoyangding in /Users/zuoyangding/IdeaProjects/o2o)
+2020-07-23 10:11:36.251 [main] INFO  zuoyang.o2o.dao.LocalAuthDaoTest - The following profiles are active: dev
+2020-07-23 10:11:38.441 [main] INFO  zuoyang.o2o.dao.LocalAuthDaoTest - Started LocalAuthDaoTest in 2.575 seconds (JVM running for 3.916)
+2020-07-23 10:12:00.367 [main] INFO  zuoyang.o2o.dao.LocalAuthDaoTest - Starting LocalAuthDaoTest on DingZuoyangdeMacBook-Pro.local with PID 3358 (started by zuoyangding in /Users/zuoyangding/IdeaProjects/o2o)
+2020-07-23 10:12:00.368 [main] INFO  zuoyang.o2o.dao.LocalAuthDaoTest - The following profiles are active: dev
+2020-07-23 10:12:02.489 [main] INFO  zuoyang.o2o.dao.LocalAuthDaoTest - Started LocalAuthDaoTest in 2.424 seconds (JVM running for 3.667)
+2020-07-23 10:12:30.826 [main] INFO  zuoyang.o2o.dao.LocalAuthDaoTest - Starting LocalAuthDaoTest on DingZuoyangdeMacBook-Pro.local with PID 3361 (started by zuoyangding in /Users/zuoyangding/IdeaProjects/o2o)
+2020-07-23 10:12:30.827 [main] INFO  zuoyang.o2o.dao.LocalAuthDaoTest - The following profiles are active: dev
+2020-07-23 10:12:32.770 [main] INFO  zuoyang.o2o.dao.LocalAuthDaoTest - Started LocalAuthDaoTest in 7.268 seconds (JVM running for 8.57)
+2020-07-23 10:13:23.714 [main] INFO  zuoyang.o2o.dao.LocalAuthDaoTest - Starting LocalAuthDaoTest on DingZuoyangdeMacBook-Pro.local with PID 3364 (started by zuoyangding in /Users/zuoyangding/IdeaProjects/o2o)
+2020-07-23 10:13:23.715 [main] INFO  zuoyang.o2o.dao.LocalAuthDaoTest - The following profiles are active: dev
+2020-07-23 10:13:25.795 [main] INFO  zuoyang.o2o.dao.LocalAuthDaoTest - Started LocalAuthDaoTest in 5.981 seconds (JVM running for 7.35)

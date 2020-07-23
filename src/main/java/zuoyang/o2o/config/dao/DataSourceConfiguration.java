@@ -47,5 +47,4 @@ public class DataSourceConfiguration {
         comboPooledDataSource.setAcquireRetryAttempts(2);
         return comboPooledDataSource;
     }
-
 }
