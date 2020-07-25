@@ -38,7 +38,7 @@ class LocalAuthDaoTest {
     @Test
     void queryLocalAuthByUserNameAndPassWord() {
         String userName = "test user 1";
-        String password = "123456";
+        String password = "123455";
         LocalAuth localAuth = localAuthDao.queryLocalAuthByUserNameAndPassWord(userName, password);
         assertNotNull(localAuth);
         PersonInfo personInfo = localAuth.getPersonInfo();
