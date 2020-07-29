@@ -11,6 +11,12 @@ public interface LocalAuthService {
 
     LocalAuth getLocalAuthByUserId (long userId) throws LocalAuthOperationException;
 
+    /**
+     * bind the new localAuth with existing personInfo (created when login with weChat)
+     * @param localAuth
+     * @return
+     * @throws LocalAuthOperationException
+     */
     LocalAuthExecution createNewLocalAuth(LocalAuth localAuth) throws LocalAuthOperationException;
 
     LocalAuthExecution updateLocalAuth(long userId, String username, String password, String newPassword)
