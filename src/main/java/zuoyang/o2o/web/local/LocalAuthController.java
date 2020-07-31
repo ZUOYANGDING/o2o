@@ -142,10 +142,32 @@ public class LocalAuthController {
 
         if (username!=null && password!=null) {
             try {
-                LocalAuth localAuth = new LocalAuth();
-                localAuth.setUsername(username);
-                localAuth.setPassword(password);
+                LocalAuth localAuth = localAuthService.getLocalAuthByUsernameAndPassword(username, password);
+                if (localAuth!=null && localAuth.getPersonInfo()!=null && localAuth.getPersonInfo().getUserId()>0) {
+                    modelMap.put("success", true);
+                    request.getSession().setAttribute("user", localAuth.getPersonInfo());
+                } else {
+                    modelMap.put("success", false);
+                    modelMap.put("errMsg", LocalAuthStateEnum.INVALID_ARGS.getStateInfo());
+                }
+            } catch (LocalAuthOperationException e) {
+                modelMap.put("success", false);
+                modelMap.put("errMsg", e.getMessage());
             }
+        } else {
+            modelMap.put("success", false);
+            modelMap.put("errMsg", "username/password cannot be empty");
         }
+        return modelMap;
+    }
+
+
+    @PostMapping("/logout")
+    @ResponseBody
+    private Map<String, Object> logoutOperation(HttpServletRequest request) {
+        Map<String, Object> modelMap = new HashMap<>();
+        request.getSession().setAttribute("user", null);
+        modelMap.put("success", true);
+        return modelMap;
     }
 }
