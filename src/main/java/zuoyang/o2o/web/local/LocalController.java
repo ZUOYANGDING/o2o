@@ -10,4 +10,9 @@ public class LocalController {
     private String accountBind() {
         return "local/accountbind";
     }
+
+    @RequestMapping("/login")
+    private String login() {
+        return "local/login";
+    }
 }
